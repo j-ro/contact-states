@@ -158,6 +158,10 @@ window.Utils || (Utils = {});
     }
     
     console.log(formID);
+    console.log(id);
+    console.log(joinedClassList);
+    console.log(action);
+    console.log(name);
 
     var possibleSelectors = [];
     id && possibleSelectors.push(u.render('#{{ id }}', {
