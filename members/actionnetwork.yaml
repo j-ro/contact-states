@@ -1,0 +1,31 @@
+bioguide: actionnetwork
+contact_form:
+  method: post
+  action: "http://corporateactionnetwork.org/contact-form-testing/#cntctfrm_contact_form"
+  steps:
+    - visit: "http://corporateactionnetwork.org/contact-form-testing/"
+    - fill_in:
+        - name: cntctfrm_contact_name
+          selector: "#cntctfrm_contact_name"
+          value: $NAME_FULL
+          required: true
+        - name: cntctfrm_contact_email
+          selector: "#cntctfrm_contact_email"
+          value: $EMAIL
+          required: true
+        - name: cntctfrm_contact_subject
+          selector: "#cntctfrm_contact_subject"
+          value: $SUBJECT
+          required: true
+        - name: cntctfrm_contact_message
+          selector: "#cntctfrm_contact_message"
+          value: $MESSAGE
+          required: true
+    - click_on:
+        - value: Submit
+          selector: "#cntctfrm_contact_form input[type='submit'][value='Submit']"
+  success:
+    headers:
+      status: 200
+    body:
+      contains: Thank you for contacting us.
