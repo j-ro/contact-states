@@ -831,6 +831,7 @@ CCH.prototype.initialize = function() {
 };
 
 CCH.prototype.popupMain = function() {
+	console.log('start');
   this.resetForm();
   this.popupTargetDiv()
     .off('.cch')
