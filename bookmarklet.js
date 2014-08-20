@@ -157,7 +157,7 @@ window.Utils || (Utils = {});
 	    var formId = form.attr('id');
     }
     
-    console.log(formID);
+    //console.log(formID);
     console.log(id);
     console.log(joinedClassList);
     console.log(action);
