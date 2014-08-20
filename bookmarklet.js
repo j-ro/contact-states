@@ -772,7 +772,7 @@ window.CCH || (CCH = function(){
 
   this.us = new UnitedStates();
   this.ghAuthKey = window.ghAuthKey;
-  this.scriptUrl = "http://jasonandmelinda.com/can/bookmarklet.js";
+  this.scriptUrl = "https://rawgit.com/j-ro/contact-states/gh-pages/bookmarklet.js";
   this.chooseVsCheckThreshold = 4;
   this.legislator = null;
   this.startPage = null;
