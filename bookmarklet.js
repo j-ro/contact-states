@@ -1088,9 +1088,11 @@ CCH.prototype.fillInStep = function(els){
           //$(element).val(Forms.zips[this.currentLegislator().bioguide()].Zip);
           $(element).val('20001');
         } else if (mappedValue === '$ADDRESS_ZIP4') {
-          $(element).val(Forms.zips[this.currentLegislator().bioguide()].Plus_Four);
+          //$(element).val(Forms.zips[this.currentLegislator().bioguide()].Plus_Four);
+          $(element).val('0000');
         } else {
-          $(element).val(Forms.zips[this.currentLegislator().bioguide()].Zip + '-' + Forms.zips[this.currentLegislator().bioguide()].Plus_Four);
+          //$(element).val(Forms.zips[this.currentLegislator().bioguide()].Zip + '-' + Forms.zips[this.currentLegislator().bioguide()].Plus_Four);
+          $(element).val('200010000');
         }
       } else {
         $(element).val(Forms.sampleLetter[mappedValue]);
