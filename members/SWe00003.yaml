@@ -1,88 +1,103 @@
 bioguide: SWe00003
 contact_form:
-  method: POST
-  action: "http://216.226.177.218/forms/contact.aspx"
+  method: post
+  action: contact.aspx
   steps:
-    - visit: http://216.226.177.218/forms/contact.aspx
+    - visit: "http://216.226.177.218/forms/contact.aspx"
     - fill_in:
-      - name: ctl00$ContentPlaceHolder1$FIRST_NAME
-        selector: "#ctl00_ContentPlaceHolder1_FIRST_NAME"
-        value: $NAME_FIRST
-        required: Yes
-      - name: ctl00$ContentPlaceHolder1$LAST_NAME
-        selector: "#ctl00_ContentPlaceHolder1_LAST_NAME"
-        value: $NAME_LAST
-        required: Yes
-      - name: ctl00$ContentPlaceHolder1$STREET_ADDRESS
-        selector: "#ctl00_ContentPlaceHolder1_STREET_ADDRESS"
-        value: $ADDRESS_STREET
-        required: Yes
-      - name: ctl00$ContentPlaceHolder1$CITY
-        selector: "#ctl00_ContentPlaceHolder1_CITY"
-        value: $ADDRESS_CITY
-        required: Yes
-      - name: ctl00$ContentPlaceHolder1$STATE
-        selector: "#ctl00_ContentPlaceHolder1_STATE"
-        value: "$ADDRESS_STATE"
-        required: Yes
-      - name: ctl00$ContentPlaceHolder1$EMAILADDR
-        selector: "#ctl00_ContentPlaceHolder1_EMAILADDR" 
-        value: $EMAIL
-        required: Yes
-      - name: ctl00$ContentPlaceHolder1$ZIP_CODE
-        selector: "#ctl00_ContentPlaceHolder1_ZIP_CODE-zip5"
-        value: $ADDRESS_ZIP5
-        required: Yes
-      - name: ctl00$ContentPlaceHolder1$COMMENTS
-        selector: "#ctl00_ContentPlaceHolder1_COMMENTS"
-        value: $MESSAGE
-        required: Yes
+        - name: ctl00$ContentPlaceHolder1$FIRST_NAME
+          selector: "#ctl00_ContentPlaceHolder1_FIRST_NAME"
+          value: $NAME_FIRST
+          required: true
+        - name: ctl00$ContentPlaceHolder1$LAST_NAME
+          selector: "#ctl00_ContentPlaceHolder1_LAST_NAME"
+          value: $NAME_LAST
+          required: true
+        - name: ctl00$ContentPlaceHolder1$EMAILADDR
+          selector: "#ctl00_ContentPlaceHolder1_EMAILADDR"
+          value: $EMAIL
+          required: true
+        - name: ctl00$ContentPlaceHolder1$PHONE1
+          selector: "#ctl00_ContentPlaceHolder1_PHONE1"
+          value: $PHONE
+          required: true
+        - name: ctl00$ContentPlaceHolder1$PHONE2
+          selector: "#ctl00_ContentPlaceHolder1_PHONE2"
+          value: $PHONE
+          required: true
+        - name: ctl00$ContentPlaceHolder1$PHONE3
+          selector: "#ctl00_ContentPlaceHolder1_PHONE3"
+          value: $PHONE
+          required: true
+        - name: ctl00$ContentPlaceHolder1$STREET_ADDRESS
+          selector: "#ctl00_ContentPlaceHolder1_STREET_ADDRESS"
+          value: $ADDRESS_STREET
+          required: true
+        - name: ctl00$ContentPlaceHolder1$CITY
+          selector: "#ctl00_ContentPlaceHolder1_CITY"
+          value: $ADDRESS_CITY
+          required: true
+        - name: ctl00$ContentPlaceHolder1$STATE
+          selector: "#ctl00_ContentPlaceHolder1_STATE"
+          value: $ADDRESS_STATE_POSTAL_ABBREV
+          required: true
+        - name: ctl00$ContentPlaceHolder1$ZIP_CODE
+          selector: "#ctl00_ContentPlaceHolder1_ZIP_CODE"
+          value: $ADDRESS_ZIP5
+          required: true
+        - name: ctl00$ContentPlaceHolder1$COMMENTS
+          selector: "#ctl00_ContentPlaceHolder1_COMMENTS"
+          value: $MESSAGE
+          required: true
+        - name: recaptcha_response_field
+          selector: "#recaptcha_response_field"
+          captcha_selector: "#recaptcha_image img"
+          value: "$CAPTCHA_SOLUTION"
     - select:
-      - name: ctl00$ContentPlaceHolder1$PREFIX
-        selector: "#ctl00_ContentPlaceHolder1_PREFIX"
-        value: $NAME_PREFIX
-        options:
-          - "Mr."
-          - "Mrs."
-          - "Ms."
-          - "Dr."
-        required: Yes
-      - name: ctl00$ContentPlaceHolder1$EMAIL_ISSUE
-        selector: "#ctl00_ContentPlaceHolder1_EMAIL_ISSUE"
-        value: $TOPIC
-        required: Yes
-        options:
-          "Conservation": "CONSERVATION"
-          "Department of Human Resources": "DHR"
-          "Disaster Assistance": "DISASTER"
-          "Driver License": "DPS-DRIVERS LICENSE"
-          "Economy & Budget": "BUD"
-          "Education": "EDU-GENERAL"
-          "Environment": "ENVIRONMENT"
-          "Healthcare": "HC-GENERAL"
-          "Immigration": "ISSUE-IMMIGRATION"
-          "Insurance": "INSURANCE-GENERAL"
-          "Labor": "LABOR"
-          "Legislative Session 2014": "LS2011"
-          "Military": "MILITARY"
-          "NRA - Second Amendment": "NRA"
-          "Pardons & Paroles": "PARDONS &PAROLES"
-          "Request for Flag": "FLAG"
-          "Request for Funding": "REQUEST FOR FUNDING"
-          "Request for Greeting Letter": "LETTERS - CEREMONIAL"
-          "Request Photo/Request for Item": "REQUEST FOR ITEMS"
-          "Senior Assistance": "SENIOR SERVICES-GEN"
-          "Transportation": "DOT"
-          "Other Issue": "MISCELLANEOUS"
-    - name: recaptcha_response_field
-        selector: "#recaptcha_response_field"
-        captcha_selector: "#recaptcha_image img"
-        value: "$CAPTCHA_SOLUTION"
+        - name: ctl00$ContentPlaceHolder1$PREFIX
+          selector: "#ctl00_ContentPlaceHolder1_PREFIX"
+          value: $NAME_PREFIX
+          required: true
+          options:
+            - "Select Prefix:"
+            - Mr.
+            - Ms.
+            - Mrs.
+            - Dr.
+        - name: ctl00$ContentPlaceHolder1$EMAIL_ISSUE
+          selector: "#ctl00_ContentPlaceHolder1_EMAIL_ISSUE"
+          value: $TOPIC
+          required: true
+          options:
+            "Select Issue:": "Select Issue:"
+            Conservation: CONSERVATION
+            Department of Human Resources: DHR
+            Disaster Assistance: DISASTER
+            Driver License: DPS-DRIVERS LICENSE
+            "Economy & Budget": BUD
+            Education: EDU-GENERAL
+            Environment: ENVIRONMENT
+            Healthcare: HC-GENERAL
+            Immigration: ISSUE-IMMIGRATION
+            Insurance: INSURANCE-GENERAL
+            Labor: LABOR
+            Legislative Session 2014: LS2011
+            Military: MILITARY
+            NRA - Second Amendment: NRA
+            "Pardons & Paroles": "PARDONS &PAROLES"
+            Request for Flag: FLAG
+            Request for Funding: REQUEST FOR FUNDING
+            Request for Greeting Letter: LETTERS - CEREMONIAL
+            Request Photo/Request for Item: REQUEST FOR ITEMS
+            Senior Assistance: SENIOR SERVICES-GEN
+            Transportation: DOT
+            Other Issue: MISCELLANEOUS
     - click_on:
-      - value: "Email This Form"
-        selector: "#ctl00_ContentPlaceHolder1_btnEmail"
+        - value: Email This Form
+          selector: "#ctl00_ContentPlaceHolder1_btnEmail"
   success:
     headers:
       status: 200
     body:
-      contains: "Thank you"
+      contains: Your email has been submitted.
+
