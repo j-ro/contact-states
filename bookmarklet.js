@@ -145,12 +145,17 @@ window.Utils || (Utils = {});
         width = $el.attr('width'),
         tagName = $el[0].tagName.toLowerCase(),
         form = $el.parents('form'),
-        formId = form.attr('id'),
         formSelector = u.getSelector(form, depth+1),
         classedParent = $el.parents('[class]').eq(0),
         classedParentSelector = u.getSelector(classedParent, depth+1),
         iddParent = $el.parents('[id]').eq(0),
         iddParentSelector = u.getSelector(iddParent, depth+1);
+        
+    if (form.attr('id')) {
+	    var formId = form.attr('id').replace(':','\:');
+    } else {
+	    var formId = form.attr('id');
+    }
 
     var possibleSelectors = [];
     id && possibleSelectors.push(u.render('#{{ id }}', {
