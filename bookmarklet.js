@@ -852,13 +852,14 @@ CCH.prototype.popupMain = function() {
 };
 
 CCH.prototype.parentMain = function() {
-  if (location.href.match(/\.(house|senate)(forms)?\.gov/)) {
+  //if (location.href.match(/\.(house|senate)(forms)?\.gov/)) {
     // we're on a form page, open the popup and inject the script
     this.popupWindow().ghAuthKey = this.ghAuthKey;
     var scr = this.popupWindow().document.createElement('script');
     scr.src = this.scriptUrl;
     this.popupWindow().document.head.appendChild(scr);
-  } else {
+  /*
+} else {
     // we're on a random page, add the select box
     var target = this.topWindowBody().append(this.templates.layout()).find('.cch-target');
     target.append(this.templates.selectLegislator(this.us));
@@ -866,6 +867,7 @@ CCH.prototype.parentMain = function() {
       location.href = $(this).val();
     });
   };
+*/
 };
 
 CCH.prototype.topWindow = function() {
