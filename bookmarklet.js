@@ -836,7 +836,7 @@ CCH.prototype.popupMain = function() {
     .off('.cch')
     .empty()
     .append(this.templates.popup({
-      legislator: this.currentLegislator(),
+      //legislator: this.currentLegislator(),
       forms: this.topWindowBody().find('form')
     }));
   this.popupTargetDiv()
