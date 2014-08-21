@@ -798,7 +798,6 @@ window.CCH || (CCH = function(){
 });
 
 CCH.prototype.initialize = function() {
-	console.log('init start');
   var self = this;
   // Github oauth key
   $.ajaxSetup({
@@ -813,7 +812,6 @@ CCH.prototype.initialize = function() {
       constantsDownloaded = Forms.getConstantsAsync();
 
   $.when(legislatorsDownloaded, sampleLetterDownloaded, zipsDownloaded, constantsDownloaded).done(function(){
-	  console.log('done');
     self.us.legislators.sort(function(a,b){
       return a.bioguide() > b.bioguide() ? 1 : -1;
     });
@@ -823,7 +821,7 @@ CCH.prototype.initialize = function() {
         // we're in the main browser window.
         self.parentMain();
       } else {
-	      console.log('yes');
+	      //console.log('yes');
         // we're on the popup.
         self.popup = window;
         self.popupMain();
@@ -834,7 +832,7 @@ CCH.prototype.initialize = function() {
 };
 
 CCH.prototype.popupMain = function() {
-	console.log('start');
+	//console.log('start');
   this.resetForm();
   this.popupTargetDiv()
     .off('.cch')
