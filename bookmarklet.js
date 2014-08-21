@@ -812,6 +812,7 @@ CCH.prototype.initialize = function() {
       constantsDownloaded = Forms.getConstantsAsync();
 
   $.when(legislatorsDownloaded, sampleLetterDownloaded, zipsDownloaded, constantsDownloaded).done(function(){
+	  console.log('done');
     self.us.legislators.sort(function(a,b){
       return a.bioguide() > b.bioguide() ? 1 : -1;
     });
