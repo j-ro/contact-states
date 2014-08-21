@@ -798,6 +798,7 @@ window.CCH || (CCH = function(){
 });
 
 CCH.prototype.initialize = function() {
+	console.log('init start');
   var self = this;
   // Github oauth key
   $.ajaxSetup({
