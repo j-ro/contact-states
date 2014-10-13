@@ -23,7 +23,7 @@ contact_form:
           required: true
         - name: Topic
           selector: "#Topic"
-          value: $TOPIC
+          value: $SUBJECT
           required: true
         - name: Message
           selector: "#Message"
