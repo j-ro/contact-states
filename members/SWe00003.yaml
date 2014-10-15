@@ -53,6 +53,7 @@ contact_form:
           selector: "#recaptcha_response_field"
           captcha_selector: "#recaptcha_image img"
           value: "$CAPTCHA_SOLUTION"
+          required: true
     - select:
         - name: ctl00$ContentPlaceHolder1$PREFIX
           selector: "#ctl00_ContentPlaceHolder1_PREFIX"
