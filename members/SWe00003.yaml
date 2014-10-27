@@ -55,6 +55,22 @@ contact_form:
           value: "$CAPTCHA_SOLUTION"
           required: true
     - click_on:
+       - selector: "#ctl00_ContentPlaceHolder1_PREFIX_chzn"
+    - wait:
+       - value: 1
+    - click_on:
+       - selector: "#ctl00_ContentPlaceHolder1_PREFIX_chzn .chzn-results li[data-option-array-index=1]"
+    - wait:
+       - value: 1
+    - click_on:
+       - selector: "#ctl00_ContentPlaceHolder1_EMAIL_ISSUE_chzn"
+    - wait:
+       - value: 1
+    - click_on:
+       - selector: "#ctl00_ContentPlaceHolder1_EMAIL_ISSUE_chzn .chzn-results li[data-option-array-index=22]"
+    - wait:
+       - value: 1
+    - click_on:
         - value: Email This Form
           selector: "#ctl00_ContentPlaceHolder1_btnEmail"
   success:
