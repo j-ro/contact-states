@@ -113,8 +113,8 @@ contact_form:
             - Sr.
             - The Honorable
             - The Reverend
-    - wait:
-        - value: 1
+    - find:
+        - selector: "select[name='interest']"
     - click_on:
         - selector: "select[name='interest'] option[value='1']"
     - click_on:
