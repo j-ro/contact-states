@@ -60,17 +60,15 @@ contact_form:
           value: $NAME_PREFIX
           required: true
           options:
-            - "Select Prefix:"
-            - Mr.
-            - Ms.
-            - Mrs.
-            - Dr.
+            "Mr.": Mr.
+            "Ms.": Ms.
+            "Mrs.": Mrs.
+            "Dr.": Dr.
         - name: ctl00$ContentPlaceHolder1$EMAIL_ISSUE
           selector: "#ctl00_ContentPlaceHolder1_EMAIL_ISSUE"
           value: $TOPIC
           required: true
           options:
-            "Select Issue:": "Select Issue:"
             Conservation: CONSERVATION
             Department of Human Resources: DHR
             Disaster Assistance: DISASTER
