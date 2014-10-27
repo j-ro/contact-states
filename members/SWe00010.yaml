@@ -113,7 +113,11 @@ contact_form:
             - Sr.
             - The Honorable
             - The Reverend
-    - click_on:
+     - wait:
+        - value: 1
+     - click_on:
+        - selector: "select[name='interest'] option[value='1']"
+     - click_on:
         - value: Submit
           selector: "#thisform input[name='Submit']"
   success:
