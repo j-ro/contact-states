@@ -54,15 +54,6 @@ contact_form:
           captcha_selector: "#recaptcha_image img"
           value: "$CAPTCHA_SOLUTION"
           required: true
-    - select:
-        - name: ctl00$ContentPlaceHolder1$PREFIX
-          selector: "#ctl00_ContentPlaceHolder1_PREFIX"
-          value: Mr.
-          required: true
-        - name: ctl00$ContentPlaceHolder1$EMAIL_ISSUE
-          selector: "#ctl00_ContentPlaceHolder1_EMAIL_ISSUE"
-          value: MISCELLANEOUS
-          required: true
     - click_on:
         - value: Email This Form
           selector: "#ctl00_ContentPlaceHolder1_btnEmail"
