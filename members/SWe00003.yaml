@@ -59,7 +59,7 @@ contact_form:
     - wait:
        - value: 1
     - click_on:
-       - selector: "#ctl00_ContentPlaceHolder1_PREFIX_chzn .chzn-results li[data-option-array-index=1]"
+       - selector: "#ctl00_ContentPlaceHolder1_PREFIX_chzn .chzn-results li[data-option-array-index='1']"
     - wait:
        - value: 1
     - click_on:
@@ -67,7 +67,7 @@ contact_form:
     - wait:
        - value: 1
     - click_on:
-       - selector: "#ctl00_ContentPlaceHolder1_EMAIL_ISSUE_chzn .chzn-results li[data-option-array-index=22]"
+       - selector: "#ctl00_ContentPlaceHolder1_EMAIL_ISSUE_chzn .chzn-results li[data-option-array-index='22']"
     - wait:
        - value: 1
     - click_on:
