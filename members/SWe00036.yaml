@@ -76,6 +76,8 @@ contact_form:
           selector: "textarea[name='j_id0:j_id2:j_id3:j_id4:j_id39:j_id42:1:j_id48']"
           value: $MESSAGE
           required: true
+    - wait:
+        - value: 10
     - click_on:
         - value: Submit
           selector: "input[name='j_id0:j_id2:j_id3:j_id4:j_id72:j_id75']"
