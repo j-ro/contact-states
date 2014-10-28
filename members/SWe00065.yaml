@@ -129,7 +129,11 @@ contact_form:
             Other: OTHER
     - click_on:
         - value: Submit
-          selector: "#btn_submit2"
+          selector: "#btn_submit"
+    - wait:
+        - value: 5
+    - find:
+        - selector: "#lbl_header_html"
   success:
     headers:
       status: 200
