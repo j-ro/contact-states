@@ -44,13 +44,9 @@ contact_form:
     - select:
         - name: category
           selector: "#category_select"
-          value: $TOPIC
+          value: "28"
           required: true
           options:
-            Request a Proclamation: "31"
-            Apply for a Board or Commission Appointment: "32"
-            Request Meeting Appearance or Appointment: "33"
-            Request use modified State Seal: "34"
             Agriculture: "1"
             Arts/Museums/History: "2"
             Business and Commerce: "3"
@@ -113,10 +109,6 @@ contact_form:
             - Sr.
             - The Honorable
             - The Reverend
-    - find:
-        - selector: "select[name='interest']"
-    - click_on:
-        - selector: "select[name='interest'] option[value='1']"
     - click_on:
         - value: Submit
           selector: "#thisform input[name='Submit']"
