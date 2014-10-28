@@ -77,12 +77,13 @@ contact_form:
           value: $MESSAGE
           required: true
     - wait:
-        - value: 10
+        - value: 12
     - click_on:
         - value: Submit
           selector: "input[name='j_id0:j_id2:j_id3:j_id4:j_id72:j_id75']"
     - find:
-        - selector: ".response-page"
+        - selector: "h1"
+          value: "Thank You"
   success:
     headers:
       status: 200
