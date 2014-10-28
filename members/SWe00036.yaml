@@ -30,9 +30,9 @@ contact_form:
           value: $ADDRESS_ZIP5
           required: true
         - name: j_id0:j_id2:j_id3:j_id4:j_id61:j_id64:9:j_id70
-           selector: "#j_id0\:j_id2\:j_id3\:j_id4\:j_id61\:j_id64\:9\:j_id70"
-           value: Out of State
-           required: true
+          selector: "#j_id0\:j_id2\:j_id3\:j_id4\:j_id61\:j_id64\:9\:j_id70"
+          value: Out of State
+          required: true
     - select:
         - name: j_id0:j_id2:j_id3:j_id4:j_id11:j_id16
           selector: "name=['j_id0\:j_id2\:j_id3\:j_id4\:j_id11\:j_id16']"
