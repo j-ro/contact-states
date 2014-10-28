@@ -110,7 +110,12 @@ contact_form:
             - The Honorable
             - The Reverend
     - find:
-        - selector: "input[name='interest']"
+        - selector: "select[name='interest']"
+    - select:
+        - name: interest
+          selector: "select[name='interest']"
+          value: "1"
+          required: true
     - click_on:
         - value: Submit
           selector: "#thisform input[name='Submit']"
