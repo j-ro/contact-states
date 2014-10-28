@@ -79,6 +79,8 @@ contact_form:
     - click_on:
         - value: Submit
           selector: "input[name='j_id0:j_id2:j_id3:j_id4:j_id72:j_id75']"
+    - find:
+        - selector: ".response-page"
   success:
     headers:
       status: 200
