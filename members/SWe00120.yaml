@@ -33,8 +33,8 @@ contact_form:
           selector: "[id='prefix#']"
           value: $PHONE
           required: true
-        - name: Fextension
-          selector: "input[name='extension']"
+        - name: extension
+          selector: "[id='extension#']"
           value: $PHONE
           required: true
         - name: emailaddress
