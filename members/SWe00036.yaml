@@ -77,7 +77,7 @@ contact_form:
           value: $MESSAGE
           required: true
     - wait:
-        - value: 12
+        - value: 5
     - click_on:
         - value: Submit
           selector: "input[name='j_id0:j_id2:j_id3:j_id4:j_id72:j_id75']"
