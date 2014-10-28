@@ -6,36 +6,36 @@ contact_form:
     - visit: "http://stateofco.force.com/Correspondence?type=Share%20Your%20Opinion&amp;retUrl=http://www.colorado.gov/govhdir/confirm/share-opinion.html"
     - fill_in:
         - name: j_id0:j_id2:j_id3:j_id4:j_id61:j_id64:0:j_id70
-          selector: "#j_id0\:j_id2\:j_id3\:j_id4\:j_id61\:j_id64\:0\:j_id70"
+          selector: "input[name='j_id0:j_id2:j_id3:j_id4:j_id61:j_id64:0:j_id70']"
           value: $NAME_FIRST
           required: true
         - name: j_id0:j_id2:j_id3:j_id4:j_id61:j_id64:1:j_id70
-          selector: "#j_id0\:j_id2\:j_id3\:j_id4\:j_id61\:j_id64\:1\:j_id70"
+          selector: "input[name='j_id0:j_id2:j_id3:j_id4:j_id61:j_id64:1:j_id70']"
           value: $NAME_LAST
           required: true
         - name: j_id0:j_id2:j_id3:j_id4:j_id61:j_id64:2:j_id70
-          selector: "#j_id0\:j_id2\:j_id3\:j_id4\:j_id61\:j_id64\:2\:j_id70"
+          selector: "input[name='j_id0:j_id2:j_id3:j_id4:j_id61:j_id64:2:j_id70']"
           value: $EMAIL
           required: true
         - name: j_id0:j_id2:j_id3:j_id4:j_id61:j_id64:4:j_id70
-          selector: "#j_id0\:j_id2\:j_id3\:j_id4\:j_id61\:j_id64\:4\:j_id70"
+          selector: "input[name='j_id0:j_id2:j_id3:j_id4:j_id61:j_id64:4:j_id70']"
           value: $ADDRESS_STREET
           required: true
         - name: j_id0:j_id2:j_id3:j_id4:j_id61:j_id64:6:j_id70
-          selector: "#j_id0\:j_id2\:j_id3\:j_id4\:j_id61\:j_id64\:6\:j_id70"
+          selector: "input[name='j_id0:j_id2:j_id3:j_id4:j_id61:j_id64:6:j_id70']"
           value: $ADDRESS_CITY
           required: true
         - name: j_id0:j_id2:j_id3:j_id4:j_id61:j_id64:8:j_id70
-          selector: "#j_id0\:j_id2\:j_id3\:j_id4\:j_id61\:j_id64\:8\:j_id70"
+          selector: "input[name='j_id0:j_id2:j_id3:j_id4:j_id61:j_id64:8:j_id70']"
           value: $ADDRESS_ZIP5
           required: true
         - name: j_id0:j_id2:j_id3:j_id4:j_id61:j_id64:9:j_id70
-          selector: "#j_id0\:j_id2\:j_id3\:j_id4\:j_id61\:j_id64\:9\:j_id70"
+          selector: "input[name='j_id0:j_id2:j_id3:j_id4:j_id61:j_id64:9:j_id70']"
           value: Out of State
           required: true
     - select:
         - name: j_id0:j_id2:j_id3:j_id4:j_id11:j_id16
-          selector: "name=['j_id0\:j_id2\:j_id3\:j_id4\:j_id11\:j_id16']"
+          selector: "select[name='j_id0:j_id2:j_id3:j_id4:j_id11:j_id16']"
           value: $TOPIC
           required: true
           options:
@@ -68,17 +68,17 @@ contact_form:
             Treasury: "Treasury"
     - fill_in:
         - name: j_id0:j_id2:j_id3:j_id4:j_id39:j_id42:0:j_id48
-          selector: "#j_id0\:j_id2\:j_id3\:j_id4\:j_id39\:j_id42\:0\:j_id48"
+          selector: "input[name='j_id0:j_id2:j_id3:j_id4:j_id39:j_id42:0:j_id48']"
           value: $SUBJECT
           required: true
     - fill_in:
         - name: j_id0:j_id2:j_id3:j_id4:j_id39:j_id42:1:j_id48
-          selector: "#j_id0\:j_id2\:j_id3\:j_id4\:j_id39\:j_id42\:1\:j_id48"
+          selector: "input[name='j_id0:j_id2:j_id3:j_id4:j_id39:j_id42:1:j_id48']"
           value: $MESSAGE
           required: true
     - click_on:
         - value: Submit
-          selector: "#j_id0\:j_id2\:j_id3\:j_id4\:j_id72\:j_id75"
+          selector: "input[name='j_id0:j_id2:j_id3:j_id4:j_id72:j_id75']"
   success:
     headers:
       status: 200
