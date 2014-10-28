@@ -78,7 +78,7 @@ contact_form:
         - value: Continue
           selector: "form.content input[name='Submit']"
     - find:
-        - selector: "input[name='message']"
+        - selector: "textarea[name='message']"
     - fill_in:
         - name: message
           selector: "form.content textarea[name='message']"
