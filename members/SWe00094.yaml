@@ -29,12 +29,11 @@ contact_form:
           required: true
         - name: ctl00$Main$Issues$uxZip
           selector: "#ctl00_Main_Issues_uxZip"
-          value: $ADDRESS_ZIP5
+          value: "66612"
           required: true
         - name: ctl00$Main$Issues$uxPhone
           selector: "#ctl00_Main_Issues_uxPhone"
-          value: $PHONE
-          required: true
+          value: "1111111111"
         - name: ctl00$Main$Issues$uxMessage
           selector: "#Main_Issues_uxMessage"
           value: $MESSAGE
@@ -44,10 +43,6 @@ contact_form:
           captcha_selector: "#ctl00_Main_Issues_RadCaptcha1_CaptchaImageUP"
           value: $CAPTCHA_SOLUTION
           required: true
-    - click_on:
-        - selector: "#ctl00_Main_Issues_uxZip"
-    - click_on:
-        - selector: "#ctl00_Main_Issues_uxPhone"
     - select:
         - name: ctl00$Main$Issues$uxPrefixList
           selector: "#Main_Issues_uxPrefixList"
