@@ -27,20 +27,13 @@ contact_form:
           selector: "#Main_Issues_uxCity"
           value: $ADDRESS_CITY
           required: true
-        - name: ctl00_Main_Issues_uxZip_ClientState
-          selector: "#ctl00_Main_Issues_uxZip_ClientState"
-          value: "66612"
-          required: true
         - name: ctl00$Main$Issues$uxZip
           selector: "#ctl00_Main_Issues_uxZip"
-          value: "{\"enabled\":true,\"emptyMessage\":\"\",\"validationText\":\"66612-\","valueAsString":\"66612-____\",\"valueWithPromptAndLiterals\":\"66612-____\",\"lastSetTextBoxValue\":\"66612-____\"}"
+          value: $ADDRESS_ZIP5
           required: true
         - name: ctl00$Main$Issues$uxPhone
           selector: "#ctl00_Main_Issues_uxPhone"
-          value: "1111111111"
-        - name: ctl00_Main_Issues_uxPhone_ClientState
-          selector: "#ctl00_Main_Issues_uxPhone_ClientState"
-          value: "{\"enabled\":true,\"emptyMessage\":\"\",\"validationText\":\"(111) 111-1111\",\"valueAsString\":\"(111) 111-1111\",\"valueWithPromptAndLiterals\":\"(111) 111-1111\",\"lastSetTextBoxValue\":\"(111) 111-1111\"}"
+          value: $PHONE
           required: true
         - name: ctl00$Main$Issues$uxMessage
           selector: "#Main_Issues_uxMessage"
@@ -51,6 +44,10 @@ contact_form:
           captcha_selector: "#ctl00_Main_Issues_RadCaptcha1_CaptchaImageUP"
           value: $CAPTCHA_SOLUTION
           required: true
+    - click_on:
+        - selector: "#ctl00_Main_Issues_uxZip"
+    - click_on:
+        - selector: "#ctl00_Main_Issues_uxPhone"
     - select:
         - name: ctl00$Main$Issues$uxPrefixList
           selector: "#Main_Issues_uxPrefixList"
