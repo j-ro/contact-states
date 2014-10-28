@@ -34,6 +34,7 @@ contact_form:
         - name: ctl00$Main$Issues$uxPhone
           selector: "#ctl00_Main_Issues_uxPhone"
           value: "1111111111"
+          required: true
         - name: ctl00$Main$Issues$uxMessage
           selector: "#Main_Issues_uxMessage"
           value: $MESSAGE
