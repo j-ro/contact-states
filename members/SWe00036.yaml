@@ -73,7 +73,7 @@ contact_form:
           required: true
     - fill_in:
         - name: j_id0:j_id2:j_id3:j_id4:j_id39:j_id42:1:j_id48
-          selector: "input[name='j_id0:j_id2:j_id3:j_id4:j_id39:j_id42:1:j_id48']"
+          selector: "textarea[name='j_id0:j_id2:j_id3:j_id4:j_id39:j_id42:1:j_id48']"
           value: $MESSAGE
           required: true
     - click_on:
