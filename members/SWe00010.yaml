@@ -109,6 +109,8 @@ contact_form:
             - Sr.
             - The Honorable
             - The Reverend
+    - find:
+        - selector: "input[name='interest']"
     - click_on:
         - value: Submit
           selector: "#thisform input[name='Submit']"
