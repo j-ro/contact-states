@@ -5,6 +5,10 @@ contact_form:
   steps:
     - visit: "https://fortress.wa.gov/es/governor/"
     - fill_in:
+        - name: Msg
+          selector: "#Msg"
+          value: $MESSAGE
+          required: true
         - name: First
           selector: "#First"
           value: $NAME_FIRST
@@ -28,13 +32,6 @@ contact_form:
         - name: Email
           selector: "#Email"
           value: $EMAIL
-          required: true
-    -find:
-        - selector: "#Msg"
-    -fill_in:
-        - name: Msg
-          selector: "#Msg"
-          value: $MESSAGE
           required: true
     - select:
         - name: Subject
