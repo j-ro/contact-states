@@ -6,39 +6,39 @@ contact_form:
     - visit: "http://senatortomcullerton.com/index.php/contact-us"
     - fill_in:
         - name: "form[firstName]"
-          selector: "#userForm #firstName"
+          selector: "#rt-mainbody #firstName"
           value: $NAME_FIRST
           required: true
         - name: "form[lastName]"
-          selector: "#userForm #lastName"
+          selector: "#rt-mainbody #lastName"
           value: $NAME_LAST
           required: true
         - name: "form[address]"
-          selector: "#userForm #address"
+          selector: "#rt-mainbody #address"
           value: $ADDRESS_STREET
           required: true
         - name: "form[city]"
-          selector: "#userForm #city"
+          selector: "#rt-mainbody #city"
           value: $ADDRESS_CITY
           required: true
         - name: "form[state]"
-          selector: "#userForm #state"
+          selector: "#rt-mainbody #state"
           value: $ADDRESS_STATE_POSTAL_ABBREV
           required: true
         - name: "form[zipCode]"
-          selector: "#userForm #zipCode"
+          selector: "#rt-mainbody #zipCode"
           value: $ADDRESS_ZIP5
           required: true
         - name: "form[phone]"
-          selector: "#userForm #phone"
+          selector: "#rt-mainbody #phone"
           value: $PHONE
           required: false
         - name: "form[email]"
-          selector: "#userForm #email"
+          selector: "#rt-mainbody #email"
           value: $EMAIL
           required: true
         - name: "form[essay1]"
-          selector: "#userForm #essay1"
+          selector: "#rt-mainbody #essay1"
           value: $MESSAGE
           required: true
         - name: "form[tcullerton]"
@@ -48,7 +48,7 @@ contact_form:
           required: true
     - select:
         - name: "form[issue][]"
-          selector: "#userForm #issue"
+          selector: "#rt-mainbody #issue"
           value: $TOPIC
           required: true
           options:
