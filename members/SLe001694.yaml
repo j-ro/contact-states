@@ -31,8 +31,11 @@ contact_form:
     - click_on:
         - value: Send message
           selector: "form.ajaxForm.feedback_form input[name='commit']"
+    - find:
+        - selector: "h2"
+          value: "Latest News"
   success:
     headers:
       status: 200
     body:
-      contains: "Tell all your friends, they should join you!"
+      contains: "Latest News"
