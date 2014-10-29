@@ -41,8 +41,7 @@ contact_form:
           selector: "#rt-mainbody #essay1"
           value: $MESSAGE
           required: true
-        - name: "form[tcullerton]"
-          selector: "#captchaTxt41"
+        - selector: "#captchaTxt41"
           captcha_selector: "#captcha41"
           value: $CAPTCHA_SOLUTION
           required: true
