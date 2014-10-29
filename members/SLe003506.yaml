@@ -1,9 +1,9 @@
 bioguide: SLe003506
 contact_form:
   method: post
-  action: Contact.aspx
+  action: Webmail.aspx
   steps:
-    - visit: "http://www.senate.mo.gov/D29WebApps/Contact.aspx"
+    - visit: "http://www.senate.mo.gov/D29WebApps/Webmail.aspx"
     - fill_in:
         - name: txtName
           selector: "#txtName"
