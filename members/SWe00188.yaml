@@ -37,7 +37,6 @@ contact_form:
           selector: "#comments"
           value: $MESSAGE
           required: true
-    - select: []
     - click_on:
         - value: Send Comments
           selector: "#Submit1"
