@@ -1,9 +1,9 @@
-bioguide: SLe005904
+bioguide: state_sc_sldu_6_state_sen_michael_l_fair
 contact_form:
   method: POST
   action: /email.php
   steps:
-    - visit: "http://www.scstatehouse.gov/email.php?T=M&C=1847727051"
+    - visit: "http://www.scstatehouse.gov/email.php?T=M&C=554545388"
     - fill_in:
         - name: FIRSTNAME
           selector: "#contactform_FIRSTNAME"
@@ -106,8 +106,11 @@ contact_form:
     - click_on:
         - value: Send
           selector: "#contactform_sendbutton"
+    - find:
+        - selector: "h2"
+          value: "Columbia Address"
   success:
     headers:
       status: 200
     body:
-      contains: Message Sent
+      contains: Columbia Address
