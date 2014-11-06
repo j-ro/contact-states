@@ -49,7 +49,7 @@ contact_form:
         - value: Send
           selector: "#theForm input[name='B1']"
     - find:
-        selector: "form[name='f1']"
+        - selector: "form[name='f1']"
     - click_on:
         - value: Send this message.
           selector: "form[name='f1'] input[name='B1']"
