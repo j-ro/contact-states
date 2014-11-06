@@ -1,9 +1,9 @@
-bioguide: SLe005545
+bioguide: state_pa_sldl_69_state_rep_carl_walker_metzgar
 contact_form:
   method: post
   action: /contact.aspx
   steps:
-    - visit: "http://www.repsankey.com/contact.aspx"
+    - visit: "http://www.repmetzgar.com/Contact.aspx"
     - fill_in:
         - name: ctl00$cphContent$txtFirstName
           selector: "#ctl00_cphContent_txtFirstName"
@@ -39,7 +39,7 @@ contact_form:
           required: true
         - name: ctl00$cphContent$RadCaptcha1$CaptchaTextBox
           selector: "#ctl00_cphContent_RadCaptcha1_CaptchaTextBox"
-          captcha_selector: "#ctl00_cphContent_RadCaptcha1_CaptchaImageUP"
+          captcha_selectL "#ctl00_cphContent_RadCaptcha1_CaptchaImageUP"
           value: $CAPTCHA_SOLUTION
           required: true
     - select:
@@ -119,4 +119,4 @@ contact_form:
     headers:
       status: 200
     body:
-      contains: ""
+      contains: Thank you for contacting my office.
