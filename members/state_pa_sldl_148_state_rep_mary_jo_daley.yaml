@@ -1,9 +1,9 @@
-bioguide: state_pa_sldl_146_state_rep_mark_painter
+bioguide: state_pa_sldl_148_state_rep_mary_jo_daley
 contact_form:
   method: POST
   action: confirm.asp
   steps:
-    - visit: "http://www.pahouse.com/contact/viaLDPC.asp?district=146"
+    - visit: "http://www.pahouse.com/contact/viaLDPC.asp?district=148"
     - fill_in:
         - name: txtFirstName
           selector: "#theForm input[name='txtFirstName']"
