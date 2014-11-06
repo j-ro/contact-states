@@ -50,7 +50,6 @@ contact_form:
           selector: "#theForm input[name='B1']"
     - find:
         selector: "form[name='f1']"
-    - fill_in: []
     - click_on:
         - value: Send this message.
           selector: "form[name='f1'] input[name='B1']"

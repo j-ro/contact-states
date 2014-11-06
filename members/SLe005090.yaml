@@ -49,11 +49,6 @@ contact_form:
           selector: "#tbxMessage"
           value: $MESSAGE
           required: true
-        - name: ctl00$cphContent$RadCaptcha1$CaptchaTextBox
-          selector: "#ctl00_cphContent_RadCaptcha1_CaptchaTextBox"
-          captcha_selector: "#ctl00_cphContent_RadCaptcha1_CaptchaImageUP"
-          value: $CAPTCHA_SOLUTION
-          required: true
     - select:
         - name: ddlState
           selector: "#ddlState"
