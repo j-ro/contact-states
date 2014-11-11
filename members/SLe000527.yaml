@@ -1,4 +1,4 @@
-bioguide: SLe000526
+bioguide: SLe000527
 contact_form:
   method: post
   action: ContactPopupSubmit.php
