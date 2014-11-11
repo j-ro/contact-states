@@ -107,9 +107,10 @@ contact_form:
         - value: Send
           selector: "#contactform_sendbutton"
     - find:
-        - selector: "#breadcrumbs"
+        - selector: "#dialoglayer"
+          value: "Message Sent"
   success:
     headers:
       status: 200
     body:
-      contains: Columbia Address
+      contains: Message Sent
