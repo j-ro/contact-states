@@ -107,8 +107,7 @@ contact_form:
         - value: Send
           selector: "#contactform_sendbutton"
     - find:
-        - selector: "h2"
-          value: "Columbia Address"
+        - selector: "#breadcrumbs"
   success:
     headers:
       status: 200
