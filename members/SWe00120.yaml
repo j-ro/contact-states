@@ -1,7 +1,6 @@
 bioguide: SWe00120
 contact_form:
   method: post
-  action: 
   steps:
     - visit: "http://www.governor.maryland.gov/mail/"
     - fill_in:
