@@ -19,6 +19,7 @@ contact_form:
           required: true
         - name: ctl00$ContentPlaceHolder1$txtInput
           selector: "#ContentPlaceHolder1_txtInput"
+          captcha_selector: "#ContentPlaceHolder1_ImgCaptcha"
           value: $CAPTCHA_SOLUTION
           required: true
     - click_on:
