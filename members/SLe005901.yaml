@@ -106,6 +106,9 @@ contact_form:
     - click_on:
         - value: Send
           selector: "#contactform_sendbutton"
+    - find:
+        - selector: "#dialoglayer"
+          value: "Message Sent"
   success:
     headers:
       status: 200
