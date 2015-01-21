@@ -12,7 +12,7 @@ contact_form:
         - value: Select
           selector: "#Button1"
     - find:
-        selector: "#DropDownList1"
+        - selector: "#DropDownList1"
     - fill_in:
         - name: txtFirst
           selector: "#txtFirst"
