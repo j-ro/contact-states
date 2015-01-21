@@ -5,12 +5,12 @@ contact_form:
   steps:
     - visit: "https://arkansasgov.wufoo.com/embed/z10gjhti00fynaz/def/embedKey=z10gjhti00fynaz249576&entsource=&referrer=http%3Awuslashwuslashgovernor.arkansas.govwuslash&header=hide#public"
     - fill_in:
-        - name: Field1
-          selector: "#Field1"
+        - name: Field9
+          selector: "#Field9"
           value: $NAME_FIRST
           required: true
-        - name: Field2
-          selector: "#Field2"
+        - name: Field11
+          selector: "#Field11"
           value: $NAME_LAST
           required: true
         - name: Field3
