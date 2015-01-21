@@ -3,7 +3,16 @@ contact_form:
   method: post
   action: assistance.aspx
   steps:
-    - visit: "https://gov.texas.gov/contact/assistance.aspx"
+    - visit: "https://gov.texas.gov/contact/contact.aspx"
+    - check:
+        - name: rblPath
+          selector: "#rblPath_0"
+          value: "1"
+    - click_on:
+        - value: Select
+          selector: "#Button1"
+    - find:
+        selector: "#DropDownList1"
     - fill_in:
         - name: txtFirst
           selector: "#txtFirst"
