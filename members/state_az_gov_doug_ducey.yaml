@@ -5,7 +5,7 @@ contact_form:
   steps:
     - visit: "http://www.azgovernor.gov/governor/form/contact-governor-ducey"
     - check:
-        -name: "submitted[reason]"
+        - name: "submitted[reason]"
           selector: "#edit-submitted-reason-2"
           value: "Comment"
     - fill_in:
