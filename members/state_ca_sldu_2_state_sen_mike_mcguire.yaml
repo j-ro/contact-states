@@ -3,7 +3,7 @@ contact_form:
   method: post
   action: ContactPopupSubmit.php
   steps:
-    - visit: "http://lcmspubcontact.lc.ca.gov/PublicLCMS/ContactPopup.php?district=SD23"
+    - visit: "https://lcmspubcontact.lc.ca.gov/PublicLCMS/ContactPopup.php?district=SD02"
     - fill_in:
         - name: txtFirstName
           selector: "#txtFirstName"
