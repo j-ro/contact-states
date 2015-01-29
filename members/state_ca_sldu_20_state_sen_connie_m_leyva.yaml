@@ -1,9 +1,9 @@
-bioguide: state_ca_sldu_2_state_sen_mike_mcguire
+bioguide: state_ca_sldu_20_state_sen_connie_m_leyva
 contact_form:
   method: post
   action: ContactPopupSubmit.php
   steps:
-    - visit: "http://lcmspubcontact.lc.ca.gov/PublicLCMS/ContactPopup.php?district=SD23"
+    - visit: "https://lcmspubcontact.lc.ca.gov/PublicLCMS/ContactPopup.php?district=SD20"
     - fill_in:
         - name: txtFirstName
           selector: "#txtFirstName"

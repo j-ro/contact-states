@@ -1,9 +1,9 @@
-bioguide: SLe000450
+bioguide: state_ca_sldu_28_state_sen_jeff_stone
 contact_form:
   method: post
   action: ContactPopupSubmit.php
   steps:
-    - visit: "https://lcmspubcontact.lc.ca.gov/PublicLCMS/ContactPopup.php?district=SD10"
+    - visit: "https://lcmspubcontact.lc.ca.gov/PublicLCMS/ContactPopup.php?district=SD28"
     - fill_in:
         - name: txtFirstName
           selector: "#txtFirstName"

@@ -1,9 +1,9 @@
-bioguide: SLe000450
+bioguide: state_ca_sldu_32_state_sen_tony_mendoza
 contact_form:
   method: post
   action: ContactPopupSubmit.php
   steps:
-    - visit: "https://lcmspubcontact.lc.ca.gov/PublicLCMS/ContactPopup.php?district=SD10"
+    - visit: "https://lcmspubcontact.lc.ca.gov/PublicLCMS/ContactPopup.php?district=SD32"
     - fill_in:
         - name: txtFirstName
           selector: "#txtFirstName"
