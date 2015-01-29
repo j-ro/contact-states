@@ -20,7 +20,7 @@ contact_form:
         - name: Field4
           selector: "#Field4"
           value: $MESSAGE
-          required: false
+          required: true
     - click_on:
         - value: Submit
           selector: "#saveForm"
