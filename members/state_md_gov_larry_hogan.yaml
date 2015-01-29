@@ -31,15 +31,15 @@ contact_form:
           required: true
         - name: areacode
           selector: "#AreaCode"
-          value: '111'
+          value: $PHONE
           required: true
         - name: phoneprefix
           selector: "input[name='phoneprefix']"
-          value: '111'
+          value: $PHONE
           required: true
         - name: extension
           selector: "input[name='extension']"
-          value: '111'
+          value: $PHONE
           required: true
         - name: emailaddress
           selector: "#emailaddress"
@@ -54,8 +54,8 @@ contact_form:
           value: $MESSAGE
           required: true
     - select:
-        - name: DropDownList1
-          selector: "#DropDownList1"
+        - name: pickSubject
+          selector: "#pickSubject"
           value: $TOPIC
           required: true
           options:
