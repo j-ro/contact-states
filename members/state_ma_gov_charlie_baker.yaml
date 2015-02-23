@@ -52,4 +52,4 @@ contact_form:
     headers:
       status: 200
     body:
-      contains: "Page not found (error 404)"
+      contains: "Thank You For Your Email"
