@@ -31,15 +31,15 @@ contact_form:
           required: true
         - name: Field17
           selector: "#Field17"
-          value: "111"
+          value: $PHONE
           required: true
         - name: Field17-1
           selector: "#Field17-1"
-          value: "111"
+          value: $PHONE
           required: true
         - name: Field17-2
           selector: "#Field17-2"
-          value: "1111"
+          value: $PHONE
           required: true
         - name: Field4
           selector: "#Field4"
