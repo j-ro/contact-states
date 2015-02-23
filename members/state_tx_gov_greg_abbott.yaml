@@ -122,19 +122,14 @@ contact_form:
           value: $TOPIC
           required: true
           options:
-            Texas Tax Relief - Franchise Tax Reduction: "114"
-            Texas Tax Relief - Property Tax Cut: "115"
-            Texas Tax Relief - Refund: "116"
-            Texas Tax Relief - Sales Tax Cut: "117"
-            Texas Tax Relief - Other: "118"
-            Education - Public: "96"
-            Environment: "100"
-            Immigration: "98"
-            Gun Control: "113"
-            Renewable Energy: "90"
-            Transportation: "101"
-            Water Issues: "105"
-            Other: "74"
+            Education - Public: "157"
+            Environment: "152"
+            Gun Control: "158"
+            Immigration: "140"
+            Renewable Energy: "155"
+            Transportation: "153"
+            Water Issues: "156"
+            Other: "160"
     - check:
         - name: RadioButtonList1
           selector: "#RadioButtonList1_0"
