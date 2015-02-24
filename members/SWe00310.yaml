@@ -49,7 +49,7 @@ contact_form:
         - value: Submit
           selector: input.wpcf7-form-control.wpcf7-submit.btn-send
     - find:
-        - selector: "div"
+        - selector: "div.wpcf7-response-output"
           value: "Your message was sent successfully. Thanks."
   success:
     headers:
