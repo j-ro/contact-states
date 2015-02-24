@@ -140,7 +140,7 @@ contact_form:
           selector: "#contactbutton"
     - find:
         - selector: "p"
-          value: "Thank you for contacting the Office of Governor Mark Dayton and the Lt. Governor, Yvonne Prettner Solon. We appreciate your feedback and suggestions about how we, together, can build a better Minnesota. A member of our staff will read your message promptly."
+          value: "Thank you for contacting the Office of Governor Mark Dayton and the Lt. Governor, Tina Smith. We appreciate your feedback and suggestions about how we, together, can build a better Minnesota. A member of our staff will read your message promptly."
   success:
     headers:
       status: 200
