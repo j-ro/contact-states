@@ -96,7 +96,6 @@ contact_form:
           options:
             "Elections": Elections
             "Notary": Notary
-            "Other":
     - click_on:
         - value: Submit
           selector: "button[type='submit']"
