@@ -1,9 +1,9 @@
-bioguide: state_ca_sldl_37_state_sen_john_moorlach
+bioguide: state_ca_sldu_21_state_sen_sharon_runner
 contact_form:
   method: post
   action: ContactPopupSubmit.php
   steps:
-    - visit: "https://lcmspubcontact.lc.ca.gov/PublicLCMS/ContactPopup.php?district=SD37"
+    - visit: "https://lcmspubcontact.lc.ca.gov/PublicLCMS/ContactPopup.php?district=SD21"
     - fill_in:
         - name: txtFirstName
           selector: "#txtFirstName"
