@@ -4,6 +4,8 @@ contact_form:
   action: "http://senatortomcullerton.com/index.php/contact-us"
   steps:
     - visit: "http://senatortomcullerton.com/index.php/contact-us"
+    - wait:
+        - value: 1
     - fill_in:
         - name: "form[firstName]"
           selector: "#rt-mainbody #firstName"
@@ -42,8 +44,8 @@ contact_form:
           value: $MESSAGE
           required: true
         - name: "form[tcullerton]"
-          selector: "#captchaTxt41"
-          captcha_selector: "#captcha41"
+          selector: "#captchaTxt36"
+          captcha_selector: "#captcha36"
           value: $CAPTCHA_SOLUTION
           required: true
     - select:
