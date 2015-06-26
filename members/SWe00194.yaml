@@ -11,35 +11,22 @@ contact_form:
           required: true
           options:
             Addiction Services: Addiction Services
-            Agriculture: Agriculture
             Arts and History: Arts and History
-            Children and Families: Children and Families
-            "Child Support / Custody": "Child Support / Custody"
+            Business: Business
+            "Child Support": "Child Support"
             Civil Service Commission: Civil Service Commission
-            Corrections: Corrections
-            Developmentaly Disabled: Developmentaly Disabled
+            Consumer Affairs: Consumer Affairs
+            Developmental Disabilities: Developmental Disabilities
+            Division on Elections: Division on Elections
             "Disability / Unemployment": "Disability / Unemployment"
-            Economic Growth: Economic Growth
-            Education: Education
-            Elections: Elections
-            Environment: Environment
-            Health: Health and Senior Services
-            Housing: Housing
-            Human Services: Human Services
-            Insurance: Insurance
-            Invitations: Invitations
+            "Family Care/Medicaid": "Family Care/Medicaid"
             Labor: Labor
-            Law and Public Safety: Law and Public Safety
             Lottery: Lottery
-            Mental Health: Mental Health
-            Military Affairs: Military Affairs
-            "NJ FamilyCare / KidCare": "NJ FamilyCare / KidCare"
+            Mental Health Services: Mental Health Services
             Pensions and Retirements: Pensions and Retirements
-            Public Utilities: Public Utilities
-            "Requesting Proclamations / Special Letter": "Requesting Proclamations / Special Letter"
-            Taxation: Taxation
+            Temporary Disability: Temporary Disability
             "Transportation / Motor Vehicles": "Transportation / Motor Vehicles"
-            Vital Statistics: Vital Statistics
+            Unemployment: Unemployment
     - click_on:
         - value: Continue...
           selector: "#govmail input[name='Submit']"
