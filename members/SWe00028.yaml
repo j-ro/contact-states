@@ -91,6 +91,9 @@ contact_form:
     - click_on:
         - value: Send Email
           selector: "form.content input[name='submit']"
+    - find:
+        - selector: "b"
+          value: "EMAIL COMPLETE"
   success:
     headers:
       status: 200
