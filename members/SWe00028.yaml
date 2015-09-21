@@ -48,8 +48,6 @@ contact_form:
             Labor and Workforce Development Agency: "38192"
             Legislation Issues/Concerns: "6157"
             Medi-Cal Issues/Concerns: "5824"
-            OTHER: "1"
-            Pardon - Request: "44283"
             Parole - Governors Review: "54336"
             Parole Issues/Concerns: "38196"
             Press Office: "34661"
@@ -91,9 +89,6 @@ contact_form:
     - click_on:
         - value: Send Email
           selector: "form.content input[name='submit']"
-    - find:
-        - selector: "b"
-          value: "EMAIL COMPLETE"
   success:
     headers:
       status: 200
