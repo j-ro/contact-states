@@ -23,6 +23,9 @@ contact_form:
           required: true
     - javascript:
         - value: "document.querySelector('#edit-captcha-response').value = parseInt(document.querySelector('.field-prefix').innerHTML.split(' ')[0]) + parseInt(document.querySelector('.field-prefix').innerHTML.split(' ')[2]);"
+    - click_on:
+        - value: Submit
+          selector: "#edit-submit"
   success:
     headers:
       status: 200
