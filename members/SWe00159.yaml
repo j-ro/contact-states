@@ -22,7 +22,7 @@ contact_form:
           value: $MESSAGE
           required: true
     - javascript:
-        - value: "captcha_array = document.querySelector('.field-prefix').innerHTML.split(' '); document.querySelector('#edit-captcha-response').value = parseInt(captcha_array[0]) + parseInt(captcha_array [2]);"
+        - value: "document.querySelector('#edit-captcha-response').value = parseInt(document.querySelector('.field-prefix').innerHTML.split(' ')[0]) + parseInt(document.querySelector('.field-prefix').innerHTML.split(' ')[2]);"
   success:
     headers:
       status: 200
