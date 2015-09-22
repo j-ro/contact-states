@@ -3,7 +3,7 @@ contact_form:
   method: post
   action: /contact/email-pat
   steps:
-    - visit: "http://www.governor.nc.gov/contact/email-pat"
+    - visit: "http://governor.nc.gov/contact/email-governor"
     - fill_in:
         - name: "submitted[first_name]"
           selector: "#edit-submitted-first-name"
