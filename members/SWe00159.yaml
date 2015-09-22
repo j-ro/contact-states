@@ -22,7 +22,7 @@ contact_form:
           value: $MESSAGE
           required: true
     - javascript:
-        - value: "var array = document.querySelector('.field-prefix').innerHTML.split(' '); document.querySelector('#edit-captcha-response').value = parseInt(array[0]) + parseInt(array [2]);"
+        - value: "captcha_array = document.querySelector('.field-prefix').innerHTML.split(' '); document.querySelector('#edit-captcha-response').value = parseInt(captcha_array[0]) + parseInt(captcha_array [2]);"
     - click_on:
         - value: Submit
           selector: "#edit-submit"
