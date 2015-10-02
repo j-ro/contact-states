@@ -23,7 +23,6 @@ contact_form:
           value: $TOPIC
           required: true
           options:
-            "--": "1"
             Animal Issues/Concerns: "6154"
             Attorney General: "5511"
             Caltrans: "5541"
