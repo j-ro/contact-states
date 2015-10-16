@@ -41,6 +41,12 @@ contact_form:
           selector: "#theForm textarea[name='txtMsg']"
           value: $MESSAGE
           required: true
+        - name: "g-recaptcha-response"
+          captcha_selector: ".g-recaptcha iframe"
+          value: "$CAPTCHA_SOLUTION"
+          required: true
+          options:
+            google_recaptcha: true
     - uncheck:
         - name: EmailAlertCHECK
           selector: "#EmailAlertCHECK"

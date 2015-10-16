@@ -41,11 +41,12 @@ contact_form:
           selector: "#input-page-ContactForm-Message"
           value: $MESSAGE
           required: true
-        - name: recaptcha_response_field
-          selector: "#recaptcha_response_field"
-          captcha_selector: "#recaptcha_challenge_image"
-          value: $CAPTCHA_SOLUTION
+        - name: "g-recaptcha-response"
+          captcha_selector: ".g-recaptcha iframe"
+          value: "$CAPTCHA_SOLUTION"
           required: true
+          options:
+            google_recaptcha: true
     - uncheck:
         - selector: "#page-ContactForm-EmailAlertCHECK"
           value: "2"
