@@ -5,12 +5,12 @@ contact_form:
   steps:
     - visit: "http://wpcontact.pasenategop.com/contact.aspx?websiteid=40"
     - fill_in:
-        - name: txtFirstName
-          selector: "#form1 input[name='txtFirstName']"
+        - name: txtFirstname
+          selector: "#form1 input[name='txtFirstname']"
           value: $NAME_FIRST
           required: true
-        - name: txtLastName
-          selector: "#form1 input[name='txtLastName']"
+        - name: txtLastname
+          selector: "#form1 input[name='txtLastname']"
           value: $NAME_LAST
           required: true
         - name: txtAddress1
@@ -20,10 +20,6 @@ contact_form:
         - name: txtCity
           selector: "#form1 input[name='txtCity']"
           value: $ADDRESS_CITY
-          required: true
-        - name: txtState
-          selector: "#form1 input[name='txtState']"
-          value: $ADDRESS_STATE_POSTAL_ABBREV
           required: true
         - name: txtZip
           selector: "#form1 input[name='txtZip']"
@@ -37,6 +33,14 @@ contact_form:
           selector: "#txtComments"
           value: $MESSAGE
           required: true
+    - click_on:
+       - selector: "#ddlIssue_Input"
+    - wait:
+       - value: 1
+    - click_on:
+       - selector: ".rcbList li:last-child"
+    - wait:
+       - value: 1
     - click_on:
         - value: Submit
           selector: "#bSubmit_input"
