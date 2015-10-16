@@ -5,56 +5,58 @@ contact_form:
   steps:
     - visit: "http://www.pahouse.com/contact/viaLDPC.asp?district=153"
     - fill_in:
-        - name: txtFirstName
-          selector: "#theForm input[name='txtFirstName']"
+        - name:
+          selector: "#input-page-ContactForm-fName"
           value: $NAME_FIRST
           required: true
-        - name: txtLastName
-          selector: "#theForm input[name='txtLastName']"
+        - name:
+          selector: "#input-page-ContactForm-lName"
           value: $NAME_LAST
           required: true
-        - name: txtAddress1
-          selector: "#theForm input[name='txtAddress1']"
+        - name:
+          selector: "#input-page-ContactForm-Address"
           value: $ADDRESS_STREET
           required: true
-        - name: txtCity
-          selector: "#theForm input[name='txtCity']"
+        - name:
+          selector: "#input-page-ContactForm-City"
           value: $ADDRESS_CITY
           required: true
-        - name: txtState
-          selector: "#theForm input[name='txtState']"
-          value: $ADDRESS_STATE_POSTAL_ABBREV
-          required: true
-        - name: txtZip
-          selector: "#theForm input[name='txtZip']"
+        - name:
+          selector: "#input-page-ContactForm-Zip"
           value: $ADDRESS_ZIP5
           required: true
-        - name: txtEmail
-          selector: "#theForm input[name='txtEmail']"
+        - name:
+          selector: "#input-page-ContactForm-Email"
           value: $EMAIL
           required: true
-        - name: txtSubject
-          selector: "#theForm input[name='txtSubject']"
+        - name:
+          selector: "#input-page-ContactForm-Phone"
+          value: $PHONE
+          required: true
+        - name:
+          selector: "#input-page-ContactForm-Subject"
           value: $SUBJECT
           required: true
-        - name: txtMsg
-          selector: "#theForm textarea[name='txtMsg']"
+        - name:
+          selector: "#input-page-ContactForm-Message"
           value: $MESSAGE
           required: true
+        - name: recaptcha_response_field
+          selector: "#recaptcha_response_field"
+          captcha_selector: "#recaptcha_challenge_image"
+          value: $CAPTCHA_SOLUTION
+          required: true
     - uncheck:
-        - name: EmailAlertCHECK
-          selector: "#EmailAlertCHECK"
+        - selector: "#page-ContactForm-EmailAlertCHECK"
           value: "2"
+          name:
     - click_on:
-        - value: Send
-          selector: "#theForm input[name='B1']"
+        - selector: "#pageContactForm-submit"
     - find:
-        - selector: "form[name='f1']"
-    - click_on:
-        - value: Send this message.
-          selector: "form[name='f1'] input[name='B1']"
+        - selector: "p"
+          value: "Thank you. Your feedback has been sent."
   success:
     headers:
       status: 200
     body:
-      contains: Thank you.
+      contains: Thank you. Your feedback has been sent.
