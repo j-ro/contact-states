@@ -21,10 +21,6 @@ contact_form:
           selector: "#txtZip"
           value: $ADDRESS_ZIP5
           required: true
-        - name: txtZip4
-          selector: "#txtZip4"
-          value: $ADDRESS_ZIP4
-          required: true
         - name: txtEmail
           selector: "#txtEmail"
           value: $EMAIL
