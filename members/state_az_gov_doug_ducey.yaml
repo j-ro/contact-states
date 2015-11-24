@@ -21,10 +21,6 @@ contact_form:
           selector: "#edit-submitted-email-address"
           value: $EMAIL
           required: true
-        - name: "submitted[zip_code]"
-          selector: "#edit-submitted-zip-code"
-          value: $ADDRESS_ZIP5
-          required: true
         - name: "submitted[topic]"
           selector: "#edit-submitted-topic"
           value: $SUBJECT
@@ -33,11 +29,12 @@ contact_form:
           selector: "#edit-submitted-comments"
           value: $MESSAGE
           required: true
-        - name: recaptcha_response_field
-          selector: "#recaptcha_response_field"
-          captcha_selector: "#recaptcha_challenge_image"
-          value: $CAPTCHA_SOLUTION
+        - name: "g-recaptcha-response"
+          captcha_selector: ".g-recaptcha iframe"
+          value: "$CAPTCHA_SOLUTION"
           required: true
+          options:
+            google_recaptcha: true
     - select:
         - name: "submitted[salutation]"
           selector: "#edit-submitted-salutation"
