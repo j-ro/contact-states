@@ -31,44 +31,43 @@ contact_form:
           required: true
     - select:
         - name: Subject
-          selector: "#Subject"
+          selector: "#SelectedSubject"
           value: $TOPIC
           required: true
           options:
-            - 2013 BILLS
-            - Agriculture
-            - Animals
-            - Budget
-            - Budget Idea
-            - Casinos
-            - Commerce/Business
-            - Economic Development
-            - Education/Schools
-            - Emergency Preparedness
-            - Employment
-            - Energy
-            - Environment
-            - Health Care
-            - Housing
-            - Immigration
-            - "L&I"
-            - Legal/Crime/Law Enforcement
-            - Legislation
-            - Licensing
-            - Marriage Equality
-            - Mortgage/Loans/Banking/Forclosure
-            - Natural Resources
-            - Parks and Recreation
-            - Social Services
-            - Sports
-            - Taxes
-            - Transportation
-            - Tribal
-            - Unemployment Assistance
-            - Utilities
-            - Veterans
-            - Weapons
-            - Other
+            Agriculture: 1b440443-d263-e411-8d8b-005056ba7b6d
+            Animals: 1373e4b0-8eb7-e411-87cd-005056ba1e27
+            Budget: 2b73e4b0-8eb7-e411-87cd-005056ba1e27
+            Commerce/Business/Economic Development: 3973e4b0-8eb7-e411-87cd-005056ba1e27
+            DEL: 4973e4b0-8eb7-e411-87cd-005056ba1e27
+            Education/Schools: 7373e4b0-8eb7-e411-87cd-005056ba1e27
+            Emergency Preparedness: 7973e4b0-8eb7-e411-87cd-005056ba1e27
+            Energy: 27440443-d263-e411-8d8b-005056ba7b6d
+            Environment: 29440443-d263-e411-8d8b-005056ba7b6d
+            FEDSTATE: b373e4b0-8eb7-e411-87cd-005056ba1e27
+            Gun Control: 4d440443-d263-e411-8d8b-005056ba7b6d
+            Health Care: 2b440443-d263-e411-8d8b-005056ba7b6d
+            Housing: 2d440443-d263-e411-8d8b-005056ba7b6d
+            Immigration: e773e4b0-8eb7-e411-87cd-005056ba1e27
+            Initiative: e973e4b0-8eb7-e411-87cd-005056ba1e27
+            Labor and Industries: cb440443-d263-e411-8d8b-005056ba7b6d
+            Legal/Crime/Law Enforcement: fb73e4b0-8eb7-e411-87cd-005056ba1e27
+            Legislative Bills and Comments: fd73e4b0-8eb7-e411-87cd-005056ba1e27
+            Licensing: ff73e4b0-8eb7-e411-87cd-005056ba1e27
+            Marijuana: 5d440443-d263-e411-8d8b-005056ba7b6d
+            Mortgage/Loans/Banking/Forclosure: 39440443-d263-e411-8d8b-005056ba7b6d
+            Natural Resources: 3b440443-d263-e411-8d8b-005056ba7b6d
+            Other: 4f440443-d263-e411-8d8b-005056ba7b6d
+            Parks and Recreation: 3d440443-d263-e411-8d8b-005056ba7b6d
+            Public Health: 203ff019-aebb-e411-87cd-005056ba1e27
+            Social Services: 3f440443-d263-e411-8d8b-005056ba7b6d
+            Taxes: 41440443-d263-e411-8d8b-005056ba7b6d
+            Transportation: 43440443-d263-e411-8d8b-005056ba7b6d
+            Tribal: 45440443-d263-e411-8d8b-005056ba7b6d
+            Unemployment Assistance: 47440443-d263-e411-8d8b-005056ba7b6d
+            Utilities: 49440443-d263-e411-8d8b-005056ba7b6d
+            Veterans: 67440443-d263-e411-8d8b-005056ba7b6d
+            "Workers' Compensation": 31440443-d263-e411-8d8b-005056ba7b6d
     - javascript:
         - value: "document.querySelector('.textContainer').innerHTML = 'something'"
           within_frame: ".cke_wysiwyg_frame"
