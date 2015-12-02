@@ -69,7 +69,7 @@ contact_form:
             Veterans: 67440443-d263-e411-8d8b-005056ba7b6d
             "Workers' Compensation": 31440443-d263-e411-8d8b-005056ba7b6d
     - javascript:
-        - value: "CKEDITOR.instances.Msg.setData('$MESSAGE')"
+        - value: "CKEDITOR.instances.Msg.setData('seomting')"
     - click_on:
         - value: Submit
           selector: "#neColumn form input[type='submit'][value='Submit']"
