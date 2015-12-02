@@ -69,11 +69,9 @@ contact_form:
             Veterans: 67440443-d263-e411-8d8b-005056ba7b6d
             "Workers' Compensation": 31440443-d263-e411-8d8b-005056ba7b6d
     - wait:
-        - value: 5
+        - value: 1
     - javascript:
         - value: "CKEDITOR.instances.Msg.destroy()"
-    - wait:
-        - value: 5
     - fill_in:
         - name: Msg
           selector: "#Msg"
