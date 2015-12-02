@@ -77,7 +77,7 @@ contact_form:
           required: true
     - click_on:
         - value: Submit
-          selector: "#neColumn form input[type='submit'][value='Submit']"
+          selector: "#oneColumn form input[type='submit'][value='Submit']"
   success:
     headers:
       status: 200
