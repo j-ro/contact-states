@@ -71,7 +71,7 @@ contact_form:
     - wait:
         - value: 5
     - javascript:
-        - value: "CKEDITOR.instances.Msg.setData('seomting')"
+        - value: "CKEDITOR.instances.Msg.setData('$MESSAGE')"
     - wait:
         - value: 5
     - click_on:
