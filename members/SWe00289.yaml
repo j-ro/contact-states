@@ -68,11 +68,8 @@ contact_form:
             Utilities: 49440443-d263-e411-8d8b-005056ba7b6d
             Veterans: 67440443-d263-e411-8d8b-005056ba7b6d
             "Workers' Compensation": 31440443-d263-e411-8d8b-005056ba7b6d
-    - wait:
-        - value: 5
     - javascript:
-        - value: "document.querySelector('.textContainer').innerHTML = 'something'"
-          within_frame: "#cke_Msg iframe"
+        - value: "CKEDITOR.instances.Msg.setData('something')"
     - click_on:
         - value: Submit
           selector: "#oneColumn form input[type='submit'][value='Submit']"
