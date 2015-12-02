@@ -72,7 +72,7 @@ contact_form:
         - value: 5
     - javascript:
         - value: "document.querySelector('.textContainer').innerHTML = 'something'"
-          within_frame: ".cke_wysiwyg_frame"
+          within_frame: "#cke_Msg iframe"
     - click_on:
         - value: Submit
           selector: "#oneColumn form input[type='submit'][value='Submit']"
