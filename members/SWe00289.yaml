@@ -71,9 +71,14 @@ contact_form:
     - wait:
         - value: 5
     - javascript:
-        - value: "CKEDITOR.instances.Msg.setData('$MESSAGE')"
+        - value: "CKEDITOR.instances.Msg.destroy()"
     - wait:
         - value: 5
+    - fill_in:
+        - name: Msg
+          selector: "#Msg"
+          value: $MESSAGE
+          required: true
     - click_on:
         - value: Submit
           selector: "#neColumn form input[type='submit'][value='Submit']"
