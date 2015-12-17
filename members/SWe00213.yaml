@@ -17,10 +17,6 @@ contact_form:
           selector: "#txtZIPCode_text"
           value: $ADDRESS_ZIP5
           required: true
-        - name: txtPhone
-          selector: "#txtPhone_Value"
-          value: $PHONE
-          required: true
         - name: txtEmail_text
           selector: "#txtEmail_text"
           value: $EMAIL
@@ -34,7 +30,7 @@ contact_form:
           value: $MESSAGE
           required: true
     - javascript:
-        - value: "document.querySelector('#rcbIssue_ClientState').value = '{\"logEntries\":[],\"value\":\"General\",\"text\":\"General\",\"enabled\":true}';"
+        - value: "Telerik.Web.UI.RadComboBox.ComboBoxes[0].get_items()._array[1].select()"
     - click_on:
         - value: Submit
           selector: "#btnSubmit"
