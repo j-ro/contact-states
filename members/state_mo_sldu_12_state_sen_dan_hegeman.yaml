@@ -40,6 +40,8 @@ contact_form:
     - click_on:
         - value: Send Message
           selector: "#btnSend"
+    - wait:
+        - value: 2
   success:
     headers:
       status: 200
