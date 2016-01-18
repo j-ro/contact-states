@@ -50,9 +50,10 @@ contact_form:
     - uncheck:
         - selector: "#page-ContactForm-EmailAlertCHECK"
           value: "2"
-          name:
     - click_on:
-        - selector: "#pageContactForm-submit"
+        - selector: "#pageContactForm-submit"    
+    - wait:
+        - value: 2
     - find:
         - selector: "p"
           value: "Thank you. Your feedback has been sent."
