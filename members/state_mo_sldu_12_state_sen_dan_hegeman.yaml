@@ -4,6 +4,9 @@ contact_form:
   action: Contact.aspx
   steps:
     - visit: "http://www.senate.mo.gov/D12WebApps/Contact.aspx"
+    - javascript:
+        - value: "Array.prototype.forEach.call(document.querySelectorAll('style,[rel=\"stylesheet\"],[type=\"text/css\"]'), function(element){ 
+try{ element.parentNode.removeChild(element) } catch(err){} });"
     - fill_in:
         - name: txtName
           selector: "#txtName"
@@ -40,8 +43,6 @@ contact_form:
     - click_on:
         - value: Send Message
           selector: "#btnSend"
-    - wait:
-        - value: 2
   success:
     headers:
       status: 200
