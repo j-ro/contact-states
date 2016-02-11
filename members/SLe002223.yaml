@@ -4,6 +4,8 @@ contact_form:
   action: /contact
   steps:
     - visit: "http://www.reggie4ky.com/contact"
+    - wait:
+        - value: 2
     - fill_in:
         - name: name
           selector: "#edit-name"
