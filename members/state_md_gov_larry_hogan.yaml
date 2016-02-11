@@ -72,6 +72,9 @@ contact_form:
     - click_on:
         - value: Submit
           selector: "#btnSbt"
+    - find:
+        - selector: h1
+          value: "Thank you for Writing..."
   success:
     headers:
       status: 200
