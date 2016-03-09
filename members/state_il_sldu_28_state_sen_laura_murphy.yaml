@@ -11,7 +11,7 @@ contact_form:
           required: true
         - name: "form[lastName]"
           selector: "#lastName"
-          value: $NAME_FIRST
+          value: $NAME_LAST
           required: true
         - name: "form[address]"
           selector: "#address"
@@ -27,7 +27,7 @@ contact_form:
           required: true
         - name: "form[email]"
           selector: "#email"
-          value: $ADDRESS_ZIP5
+          value: $EMAIL
           required: true
         - name: "form[essay1]"
           selector: "#essay1"
