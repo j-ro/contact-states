@@ -6,41 +6,41 @@ contact_form:
     - visit: "http://www.senatorlauramurphy.com/contact-us"
     - fill_in:
         - name: "form[firstName]"
-          selector: "#firstName"
+          selector: "#userForm #firstName"
           value: $NAME_FIRST
           required: true
         - name: "form[lastName]"
-          selector: "#lastName"
+          selector: "#userForm #lastName"
           value: $NAME_LAST
           required: true
         - name: "form[address]"
-          selector: "#address"
+          selector: "#userForm #address"
           value: $ADDRESS_STREET
           required: true
         - name: "form[city]"
-          selector: "#city"
+          selector: "#userForm #city"
           value: $ADDRESS_CITY
           required: true
         - name: "form[zipCode]"
-          selector: "#zipCode"
+          selector: "#userForm #zipCode"
           value: $ADDRESS_ZIP5
           required: true
         - name: "form[email]"
-          selector: "#email"
+          selector: "#userForm #email"
           value: $EMAIL
           required: true
         - name: "form[essay1]"
-          selector: "#essay1"
+          selector: "#userForm #essay1"
           value: $MESSAGE
           required: true
         - name: "form[murphy]"
-          selector: "#captchaTxt36"
-          captcha_selector: "#captcha36"
+          selector: "#userForm #captchaTxt36"
+          captcha_selector: "#userForm #captcha36"
           value: $CAPTCHA_SOLUTION
           required: true
     - select:
         - name: "form[issue][]"
-          selector: "#issue"
+          selector: "#userForm #issue"
           value: $TOPIC
           required: true
           options:
@@ -70,7 +70,7 @@ contact_form:
             Veterans: Veterans
     - click_on:
         - value: Send
-          selector: "Send"
+          selector: "#userForm #Send"
   success:
     headers:
       status: 200
