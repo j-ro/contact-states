@@ -6,41 +6,41 @@ contact_form:
     - visit: "http://www.senatorlauramurphy.com/contact-us"
     - fill_in:
         - name: "form[firstName]"
-          selector: "#userForm #firstName"
+          selector: "#rt-mainbody #firstName"
           value: $NAME_FIRST
           required: true
         - name: "form[lastName]"
-          selector: "#userForm #lastName"
+          selector: "#rt-mainbody #lastName"
           value: $NAME_LAST
           required: true
         - name: "form[address]"
-          selector: "#userForm #address"
+          selector: "#rt-mainbody #address"
           value: $ADDRESS_STREET
           required: true
         - name: "form[city]"
-          selector: "#userForm #city"
+          selector: "#rt-mainbody #city"
           value: $ADDRESS_CITY
           required: true
         - name: "form[zipCode]"
-          selector: "#userForm #zipCode"
+          selector: "#rt-mainbody #zipCode"
           value: $ADDRESS_ZIP5
           required: true
         - name: "form[email]"
-          selector: "#userForm #email"
+          selector: "#rt-mainbody #email"
           value: $EMAIL
           required: true
         - name: "form[essay1]"
-          selector: "#userForm #essay1"
+          selector: "#rt-mainbody #essay1"
           value: $MESSAGE
           required: true
         - name: "form[murphy]"
-          selector: "#userForm #captchaTxt36"
-          captcha_selector: "#userForm #captcha36"
+          selector: "#rt-mainbody #captchaTxt36"
+          captcha_selector: "#rt-mainbody #captcha36"
           value: $CAPTCHA_SOLUTION
           required: true
     - select:
         - name: "form[issue][]"
-          selector: "#userForm #issue"
+          selector: "#rt-mainbody #issue"
           value: $TOPIC
           required: true
           options:
@@ -70,7 +70,7 @@ contact_form:
             Veterans: Veterans
     - click_on:
         - value: Send
-          selector: "#userForm #Send"
+          selector: "#rt-mainbody #Send"
   success:
     headers:
       status: 200
