@@ -70,7 +70,7 @@ contact_form:
             Veterans: Veterans
     - click_on:
         - value: Send
-          selector: "#rt-mainbody #Send"
+          selector: "Send"
   success:
     headers:
       status: 200
