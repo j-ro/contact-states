@@ -1,0 +1,118 @@
+bioguide: state_ok_governor_mary_fallin
+contact_form:
+  method: post
+  action: 
+  steps:
+    - visit: "https://www.ok.gov/triton/modules/formbuilder/form.php?form_id=0d5f27f90f279a5b64535ec11836feaa07db37cbb20807e960b2c0aa58b9f358"
+    - fill_in:
+        - name: Name
+          selector: "#Name"
+          value: $NAME_FIRST $NAME_LAST
+          required: true
+        - name: Address
+          selector: "#Address"
+          value: $ADDRESS_STREET
+          required: true
+        - name: City
+          selector: "#City"
+          value: $ADDRESS_CITY
+          required: true
+        - name: Zipcode
+          selector: "#Zipcode"
+          value: $ADDRESS_ZIP5
+          required: true
+        - name: Email
+          selector: "#Email"
+          value: $EMAIL
+          required: true
+        - name: Phone
+          selector: "#Phone"
+          value: $PHONE
+          required: true
+        - name: Subject
+          selector: "input#Subject"
+          value: $SUBJECT
+          required: true
+        - name: Message
+          selector: "textarea#Subject"
+          value: $MESSAGE
+          required: true
+        - name: "g-recaptcha-response"
+          captcha_selector: ".g-recaptcha iframe"
+          value: "$CAPTCHA_SOLUTION"
+          required: true
+          options:
+            google_recaptcha: true
+    - select:
+        - name: State
+          selector: "#State"
+          value: $ADDRESS_STATE_POSTAL_ABBREV
+          required: true
+          options:
+            - AL
+            - AK
+            - AR
+            - AZ
+            - CA
+            - CO
+            - CT
+            - DC
+            - DE
+            - FL
+            - GA
+            - HI
+            - IA
+            - ID
+            - IL
+            - IN
+            - KS
+            - KY
+            - LA
+            - MA
+            - MD
+            - ME
+            - MI
+            - MN
+            - MO
+            - MS
+            - MT
+            - NC
+            - ND
+            - NE
+            - NH
+            - NJ
+            - NM
+            - NV
+            - NY
+            - OH
+            - OK
+            - OR
+            - PA
+            - RI
+            - SC
+            - SD
+            - TN
+            - TX
+            - UT
+            - VA
+            - VI
+            - VT
+            - WA
+            - WI
+            - WV
+            - WY
+        - name: Reply_requested
+          selector: "#Reply_requested"
+          value: Yes
+          required: true
+          options:
+            - Yes
+            - No
+    - click_on:
+        - value: Submit
+          selector: "input[type='submit']"
+  success:
+    headers:
+      status: 200
+    body:
+      contains: Your form has been submitted successfully.
