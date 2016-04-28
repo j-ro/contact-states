@@ -7,7 +7,7 @@ contact_form:
     - fill_in:
         - name: Name
           selector: "#Name"
-          value: $NAME_FIRST $NAME_LAST
+          value: $NAME_FIRST
           required: true
         - name: Address
           selector: "#Address"
@@ -34,7 +34,7 @@ contact_form:
           value: $SUBJECT
           required: true
         - name: Message
-          selector: "textarea#Subject"
+          selector: "#Message"
           value: $MESSAGE
           required: true
         - name: "g-recaptcha-response"
