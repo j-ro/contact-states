@@ -103,11 +103,11 @@ contact_form:
             - WY
         - name: Reply_requested
           selector: "#Reply_requested"
-          value: Yes
+          value: "Yes"
           required: true
           options:
-            - Yes
-            - No
+            Yes: Yes
+            No: No
     - click_on:
         - value: Submit
           selector: "input[type='submit']"
