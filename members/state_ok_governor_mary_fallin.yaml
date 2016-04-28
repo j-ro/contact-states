@@ -110,7 +110,7 @@ contact_form:
             No: No
     - click_on:
         - value: Submit
-          selector: "input[type='submit']"
+          selector: "input[type='submit'][value='Submit']"
   success:
     headers:
       status: 200
