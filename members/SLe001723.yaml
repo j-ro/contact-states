@@ -1,4 +1,4 @@
-bioguide: SLe001694
+bioguide: SLe001723
 contact_form:
   method: POST
   action: /forms/feedbacks
