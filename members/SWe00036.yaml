@@ -17,18 +17,6 @@ contact_form:
           selector: "#tfa_64"
           value: $EMAIL
           required: true
-        - name: j_id0:j_id2:j_id3:j_id4:j_id61:j_id64:4:j_id70
-          selector: "input[name='j_id0:j_id2:j_id3:j_id4:j_id61:j_id64:4:j_id70']"
-          value: $ADDRESS_STREET
-          required: true
-        - name: j_id0:j_id2:j_id3:j_id4:j_id61:j_id64:6:j_id70
-          selector: "input[name='j_id0:j_id2:j_id3:j_id4:j_id61:j_id64:6:j_id70']"
-          value: $ADDRESS_CITY
-          required: true
-        - name: j_id0:j_id2:j_id3:j_id4:j_id61:j_id64:8:j_id70
-          selector: "input[name='j_id0:j_id2:j_id3:j_id4:j_id61:j_id64:8:j_id70']"
-          value: $ADDRESS_ZIP5
-          required: true
         - name: tfa_2748
           selector: "#tfa_2748"
           value: $SUBJECT
