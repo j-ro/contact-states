@@ -1,20 +1,20 @@
 bioguide: SWe00036
 contact_form:
   method: post
-  action: /Correspondence/WebformPage
+  action: https://www.tfaforms.com/responses/processor?hostURL=https://www.colorado.gov/governor/share-your-comments
   steps:
-    - visit: "http://stateofco.force.com/Correspondence?type=Share%20Your%20Opinion&amp;retUrl=http://www.colorado.gov/govhdir/confirm/share-opinion.html"
+    - visit: "https://www.tfaforms.com/406958?hostURL=https%3A%2F%2Fwww.colorado.gov%2Fgovernor%2Fshare-your-comments"
     - fill_in:
-        - name: j_id0:j_id2:j_id3:j_id4:j_id61:j_id64:0:j_id70
-          selector: "input[name='j_id0:j_id2:j_id3:j_id4:j_id61:j_id64:0:j_id70']"
+        - name: tfa_62
+          selector: "#tfa_62"
           value: $NAME_FIRST
           required: true
-        - name: j_id0:j_id2:j_id3:j_id4:j_id61:j_id64:1:j_id70
-          selector: "input[name='j_id0:j_id2:j_id3:j_id4:j_id61:j_id64:1:j_id70']"
+        - name: tfa_63
+          selector: "#tfa_63"
           value: $NAME_LAST
           required: true
-        - name: j_id0:j_id2:j_id3:j_id4:j_id61:j_id64:2:j_id70
-          selector: "input[name='j_id0:j_id2:j_id3:j_id4:j_id61:j_id64:2:j_id70']"
+        - name: tfa_64
+          selector: "#tfa_64"
           value: $EMAIL
           required: true
         - name: j_id0:j_id2:j_id3:j_id4:j_id61:j_id64:4:j_id70
@@ -29,62 +29,97 @@ contact_form:
           selector: "input[name='j_id0:j_id2:j_id3:j_id4:j_id61:j_id64:8:j_id70']"
           value: $ADDRESS_ZIP5
           required: true
-    - select:
-        - name: j_id0:j_id2:j_id3:j_id4:j_id11:j_id16
-          selector: "select[name='j_id0:j_id2:j_id3:j_id4:j_id11:j_id16']"
-          value: "Other"
-          required: true
-          options:
-            Attorney General: "AG"
-            Agriculture: "CDE"
-            Higher Education: "CDHE"
-            Human Services: "CDHS"
-            Labor and Employment: "CDLE"
-            Transportation: "CDOT"
-            Public Health and Environment: "CDPHE"
-            Energy: "CEO"
-            Military and Veterans: "DMVA"
-            Natural Resources: "DNR"
-            Corrections: "DOC"
-            Local: "DOLA"
-            Revenue: "DOR"
-            Regulatory Affairs: "DORA"
-            State Personnel: "DPA"
-            Public Safety: "DPS"
-            Federal Issue: "Federal"
-            Health Care: "HCPF"
-            Immigration: "Immigration"
-            "Judicial/Courts": "Judicial"
-            Lieutenant Governor: "Lieutenant Governor"
-            Economic Development: "OEDIT"
-            Information Technology: "OIT"
-            Budget: "OSPB"
-            Other: "Other"
-            Secretary of State: "SoS"
-            Treasury: "Treasury"
-        - name: j_id0:j_id2:j_id3:j_id4:j_id61:j_id64:9:j_id70
-          selector: "select[name='j_id0:j_id2:j_id3:j_id4:j_id61:j_id64:9:j_id70']"
-          value: Out of State
-          required: true
-    - fill_in:
-        - name: j_id0:j_id2:j_id3:j_id4:j_id39:j_id42:0:j_id48
-          selector: "input[name='j_id0:j_id2:j_id3:j_id4:j_id39:j_id42:0:j_id48']"
+        - name: tfa_2748
+          selector: "#tfa_2748"
           value: $SUBJECT
           required: true
-    - fill_in:
-        - name: j_id0:j_id2:j_id3:j_id4:j_id39:j_id42:1:j_id48
-          selector: "textarea[name='j_id0:j_id2:j_id3:j_id4:j_id39:j_id42:1:j_id48']"
+        - name: tfa_2725
+          selector: "#tfa_2725"
           value: $MESSAGE
           required: true
-    - wait:
-        - value: 5
+    - check:
+        - name: "tfa_2744"
+          selector: "#tfa_2746"
+          value: "tfa_2746"
+          required: true
+    - select:
+        - name: tfa_71
+          selector: "#tfa_71"
+          value: $ADDRESS_COUNTY
+          required: true
+          options:
+            Out of State: tfa_212
+            Adams: tfa_142
+            Alamosa: tfa_143
+            Arapahoe: tfa_144
+            Archuleta: tfa_145
+            Baca: tfa_146
+            Bent: tfa_147
+            Boulder: tfa_148
+            Broomfield: tfa_149
+            Chaffee: tfa_150
+            Cheyenne: tfa_151
+            Clear Creek: tfa_152
+            Conejos: tfa_153
+            Costilla: tfa_154
+            Crowley: tfa_155
+            Custer: tfa_156
+            Delta: tfa_157
+            Denver: tfa_158
+            Dolores: tfa_159
+            Douglas: tfa_160
+            Eagle: tfa_161
+            Elbert: tfa_162
+            El Paso: tfa_163
+            Fremont: tfa_164
+            Garfield: tfa_165
+            Gilpin: tfa_166
+            Grand: tfa_167
+            Gunnison: tfa_168
+            Hinsdale: tfa_169
+            Huerfano: tfa_170
+            Jackson: tfa_171
+            Jefferson: tfa_172
+            Kiowa: tfa_173
+            Kit Carson: tfa_174
+            Lake: tfa_175
+            La Plata: tfa_176
+            Larimer: tfa_177
+            Las Animas: tfa_178
+            Lincoln: tfa_179
+            Logan: tfa_180
+            Mesa: tfa_181
+            Mineral: tfa_182
+            Moffat: tfa_183
+            Montezuma: tfa_184
+            Montrose: tfa_185
+            Morgan: tfa_186
+            Otero: tfa_187
+            Ouray: tfa_188
+            Park: tfa_189
+            Phillips: tfa_190
+            Pitkin: tfa_191
+            Prowers: tfa_192
+            Pueblo: tfa_193
+            Rio Blanco: tfa_194
+            Rio Grande: tfa_195
+            Routt: tfa_196
+            Saguache: tfa_197
+            San Juan: tfa_198
+            San Miguel: tfa_199
+            Sedgwick: tfa_200
+            Summit: tfa_201
+            Teller: tfa_202
+            Washington: tfa_203
+            Weld: tfa_204
+            Yuma: tfa_205
     - click_on:
         - value: Submit
-          selector: "input[name='j_id0:j_id2:j_id3:j_id4:j_id72:j_id75']"
-    - wait:
-        - value: 5
+          selector: ".primaryAction"
+    - find:
+        - selector: ".wFormThankYou"
   success:
     headers:
       status: 200
     body:
-      contains: Thank you!
+      contains: Thank you
