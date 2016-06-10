@@ -4,6 +4,8 @@ contact_form:
   action: "/action.cfm?md=form&task=submitForm&fmid=4&sfmid=0"
   steps:
     - visit: "http://gov.louisiana.gov/index.cfm/form/home/4"
+    - wait:
+        - value: 5
     - fill_in:
         - name: firstName
           selector: "form[name='frmXForm'] input[name='firstName']"
