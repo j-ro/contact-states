@@ -1,63 +1,164 @@
 bioguide: state_il_gov_bruce_rauner
 contact_form:
   method: post
-  action: /gov/Pages/ContacttheGovernor.aspx
+  action: /gov/contactus/Pages/VoiceAnOpinion.aspx
   steps:
-    - visit: "https://www2.illinois.gov/gov/Pages/ContacttheGovernor.aspx"
+    - visit: "http://www.illinois.gov/gov/contactus/Pages/VoiceAnOpinion.aspx"
     - fill_in:
-        - name: ctl00$SPWebPartManager1$g_54549226_8ec6_4af8_9a82_a19ee028d074$FirstName
-          selector: "#ctl00_SPWebPartManager1_g_54549226_8ec6_4af8_9a82_a19ee028d074_FirstName"
+        - name: ctl00$m$g_3a01d56e_b68a_485b_a7d3_43e25d8506d3$First_x0020_Name
+          selector: "#ctl00_m_g_3a01d56e_b68a_485b_a7d3_43e25d8506d3_First_x0020_Name"
           value: $NAME_FIRST
           required: true
-        - name: ctl00$SPWebPartManager1$g_54549226_8ec6_4af8_9a82_a19ee028d074$LastName
-          selector: "#ctl00_SPWebPartManager1_g_54549226_8ec6_4af8_9a82_a19ee028d074_LastName"
+        - name: ctl00$m$g_3a01d56e_b68a_485b_a7d3_43e25d8506d3$Last_x0020_Name
+          selector: "#ctl00_m_g_3a01d56e_b68a_485b_a7d3_43e25d8506d3_Last_x0020_Name"
           value: $NAME_LAST
           required: true
-        - name: ctl00$SPWebPartManager1$g_54549226_8ec6_4af8_9a82_a19ee028d074$Address
-          selector: "#ctl00_SPWebPartManager1_g_54549226_8ec6_4af8_9a82_a19ee028d074_Address"
+        - name: ctl00$m$g_3a01d56e_b68a_485b_a7d3_43e25d8506d3$Address
+          selector: "#ctl00_m_g_3a01d56e_b68a_485b_a7d3_43e25d8506d3_Address"
           value: $ADDRESS_STREET
           required: true
-        - name: ctl00$SPWebPartManager1$g_54549226_8ec6_4af8_9a82_a19ee028d074$City
-          selector: "#ctl00_SPWebPartManager1_g_54549226_8ec6_4af8_9a82_a19ee028d074_City"
+        - name: ctl00$m$g_3a01d56e_b68a_485b_a7d3_43e25d8506d3$City
+          selector: "#ctl00_m_g_3a01d56e_b68a_485b_a7d3_43e25d8506d3_City"
           value: $ADDRESS_CITY
           required: true
-        - name: ctl00$SPWebPartManager1$g_54549226_8ec6_4af8_9a82_a19ee028d074$State
-          selector: "#ctl00_SPWebPartManager1_g_54549226_8ec6_4af8_9a82_a19ee028d074_State"
-          value: $ADDRESS_STATE_POSTAL_ABBREV
-          required: true
-        - name: ctl00$SPWebPartManager1$g_54549226_8ec6_4af8_9a82_a19ee028d074$Zip
-          selector: "#ctl00_SPWebPartManager1_g_54549226_8ec6_4af8_9a82_a19ee028d074_Zip"
+        - name: ctl00$m$g_3a01d56e_b68a_485b_a7d3_43e25d8506d3$Zip
+          selector: "#ctl00_m_g_3a01d56e_b68a_485b_a7d3_43e25d8506d3_Zip"
           value: $ADDRESS_ZIP5
           required: true
-        - name: ctl00$SPWebPartManager1$g_54549226_8ec6_4af8_9a82_a19ee028d074$Email
-          selector: "#ctl00_SPWebPartManager1_g_54549226_8ec6_4af8_9a82_a19ee028d074_Email"
+        - name: ctl00$m$g_3a01d56e_b68a_485b_a7d3_43e25d8506d3$Phone
+          selector: "#ctl00_m_g_3a01d56e_b68a_485b_a7d3_43e25d8506d3_Phone"
+          value: $PHONE
+          required: true
+        - name: ctl00$m$g_3a01d56e_b68a_485b_a7d3_43e25d8506d3$Email
+          selector: "#ctl00_m_g_3a01d56e_b68a_485b_a7d3_43e25d8506d3_Email"
           value: $EMAIL
           required: true
-        - name: ctl00$SPWebPartManager1$g_54549226_8ec6_4af8_9a82_a19ee028d074$CitizenQuestion
-          selector: "#ctl00_SPWebPartManager1_g_54549226_8ec6_4af8_9a82_a19ee028d074_CitizenQuestion"
+        - name: ctl00$m$g_3a01d56e_b68a_485b_a7d3_43e25d8506d3$Comment
+          selector: "#ctl00_m_g_3a01d56e_b68a_485b_a7d3_43e25d8506d3_Comment"
           value: $MESSAGE
           required: true
     - select:
-        - name: ctl00$SPWebPartManager1$g_54549226_8ec6_4af8_9a82_a19ee028d074$Subject
-          selector: "#ctl00_SPWebPartManager1_g_54549226_8ec6_4af8_9a82_a19ee028d074_Subject"
+        - name: ctl00$m$g_3a01d56e_b68a_485b_a7d3_43e25d8506d3$Subject
+          selector: "#ctl00_m_g_3a01d56e_b68a_485b_a7d3_43e25d8506d3_Subject"
           value: $TOPIC
           required: true
           options:
-            (None): "1"
-            Administrative: "2"
-            Arts: "3"
-            Budget/Vendor Payments: "4"
-            Education: "5"
-            Environment / Energy: "6"
-            Finance: "7"
-            Healthcare / Insurance: "8"
-            Labor: "9"
-            Military Affairs: "10"
-            Other: "11"
-            Public Safety: "12"
+            Advertising Tax: "40054"
+            After School Program Funding: "40055"
+            AIDS Support Programs: "40056"
+            Animal Cruelty and Testing: "40057"
+            Autism Awareness &amp; Programs: "40058"
+            Automatic Voter Registration: "40059"
+            Benefits &amp; Support for Undocumented Immigrants: "40060"
+            Bobcat Hunting: "40061"
+            Budget Spending Reductions: "40062"
+            Campaign Finance Reform: "40063"
+            Child Care Assistance Program (CCAP): "40064"
+            Child Support Reform: "40065"
+            Childcare Funding: "40066"
+            Clean Energy Jobs: "40067"
+            Clean Water Rule: "40068"
+            Closure of State Museums: "40069"
+            Coal Ash Threat to Vermilion River: "40070"
+            Community Care Program (CCP): "40071"
+            Concealed Carry: "40072"
+            Criminal record expungement/sealing: "40073"
+            Death Penalty: "40074"
+            Delays in State Services (not related to the budget impasse): "40075"
+            Developmentally Disabled Programs Funding: "40076"
+            DHS-DRS Overtime Cap: "40077"
+            Disability Care Wage Increase: "40078"
+            Driver Tax: "40079"
+            Drug Prevention Programs: "40080"
+            Early Intervention Programs: "40081"
+            Education Policy Reform: "40082"
+            Environment-friendly Policies: "40083"
+            Expansion of Route 53: "40084"
+            Fracking: "40085"
+            Funding for Adult Education Classes: "40086"
+            Funding for Amtrak Train Services: "40087"
+            Funding for Disability Programs: "40088"
+            Funding for Domestic Violence Programs: "40089"
+            Funding for Energy Assistance Programs: "40090"
+            Funding for Immigrant Services: "40091"
+            Funding for Nursing Homes: "40092"
+            Funding for Planned Parenthood: "40093"
+            Funding for Social Services Programs: "40094"
+            Funding for the Illinois Breast and Cervical Cancer Program (IBCCP): "40095"
+            Funding for the Meals On Wheels Program: "40096"
+            Funding the Obama Presidential Library: "40097"
+            Gambling Expansion: "40098"
+            Great Lakes Basin Railroad Project: "40099"
+            Gun Control: "40100"
+            Gun Violence: "40101"
+            Healthcare Reform: "40103"
+            Higher Education Funding: "40104"
+            Home Birth Safety Act: "40105"
+            Homeless Services: "40106"
+            Illiana Tollway Expansion: "40107"
+            Illinois Arts funding: "40108"
+            Illinois Tourism: "40109"
+            Immigration Reform: "40110"
+            Income Tax Increase: "40111"
+            Independent Maps: "40112"
+            Infrastructure Funding: "40113"
+            Labor Unions: "40114"
+            Longmeadow Parkway: "40115"
+            Mandatory School Vaccines: "40116"
+            MAP Grants: "40117"
+            Medicaid Coverage of Single-Pill HIV Treatments: "40118"
+            Medicaid Exemption of Sickle Cell Disease from 30-Day Readmission Rule: "40119"
+            Medicaid Sole Source Provider RFP for Incontinence Supplies: "40120"
+            Medical Marijuana: "40121"
+            Mental Health Funding: "40122"
+            Minimum Wage Increase: "40123"
+            Next Generation Energy Plan: "40124"
+            Nurse Licensure Compact: "40125"
+            Optometric Practice Act: "40126"
+            Pension Reform: "40127"
+            Pet Population Control: "40128"
+            Prison Reform: "40129"
+            Progressive Income Tax : "40130"
+            Property Tax Freeze: "40131"
+            Public Education Funding : "40132"
+            Public Transit Funding: "40133"
+            Reaching a Budget Agreement: "40134"
+            Recreational Marijuana : "40135"
+            Renewable Energy : "40136"
+            Right to Work: "40137"
+            Sales Tax on Services: "40138"
+            Soft Drink Tax: "40140"
+            State Parks: "40141"
+            Syrian Refugees : "40142"
+            Tax Reform: "40143"
+            Taxing Retirement Income: "40144"
+            Term Limits: "40145"
+            The Clean Power Plan: "40146"
+            "The Governor's Budgetary Actions": "40147"
+            "The Governor's Job Performance": "40148"
+            "The Governor's Turnaround Agenda": "40149"
+            The Waukesha Diversion Proposal: "40150"
+            Timber Creek B&amp;B Human Rights Act Ruling: "40151"
+            Transgender Bathroom Access: "40152"
+            Transport Alcoholic Beverages Safely (TABS) Act: "40153"
+            Veterans Support: "40154"
+            Voter Identification Law: "40156"
+            Welfare Reform: "40157"
+            Wildlife Conservation: "40158"
+            Workers Compensation Reform: "40159"
+            Youth Program Funding: "40160"
+            (Other - Subject not listed): "36"
+        - name: ctl00$m$g_3a01d56e_b68a_485b_a7d3_43e25d8506d3$Position
+          selector: "#ctl00_m_g_3a01d56e_b68a_485b_a7d3_43e25d8506d3_Position"
+          value: "None"
+          required: true
+          options:
+            Support: "Support"
+            Oppose: "Oppose"
+            None: "None"
     - click_on:
         - value: Submit
-          selector: "#ctl00_SPWebPartManager1_g_54549226_8ec6_4af8_9a82_a19ee028d074_SOIFeedbackSubmit"
+          selector: "#ctl00_m_g_3a01d56e_b68a_485b_a7d3_43e25d8506d3_SOIFeedbackSubmit"
   success:
     headers:
       status: 200
