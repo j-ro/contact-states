@@ -4,6 +4,8 @@ contact_form:
   action: /contact/email-pat
   steps:
     - visit: "http://governor.nc.gov/contact/email-governor"
+    - wait:
+        value: 3
     - fill_in:
         - name: "submitted[first_name]"
           selector: "#edit-submitted-first-name"
@@ -21,8 +23,11 @@ contact_form:
           selector: "#edit-submitted-message"
           value: $MESSAGE
           required: true
-    - javascript:
-        - value: "document.querySelector('#edit-captcha-response').value = parseInt(document.querySelector('.field-prefix').innerHTML.split(' ')[0]) + parseInt(document.querySelector('.field-prefix').innerHTML.split(' ')[2]);"
+        - name: recaptcha_response_field
+          selector: "#recaptcha_response_field"
+          captcha_selector: "#recaptcha_challenge_image"
+          value: $CAPTCHA_SOLUTION
+          required: true
     - click_on:
         - value: Submit
           selector: "#edit-submit"
