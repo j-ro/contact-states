@@ -23,10 +23,17 @@ contact_form:
           selector: "#edit-submitted-message"
           value: $MESSAGE
           required: true
-        - name: recaptcha_response_field
-          selector: "#recaptcha_response_field"
-          captcha_selector: "#recaptcha_challenge_image"
-          value: $CAPTCHA_SOLUTION
+    - javascript:
+        - value: "document.querySelector('#edit-captcha-response').value = parseInt(document.querySelector('.field-prefix').innerHTML.split(' ')[0]) + parseInt(document.querySelector('.field-prefix').innerHTML.split(' ')[2]);"
+    - click_on:
+        - value: Submit
+          selector: "#edit-submit"
+  success:
+    headers:
+      status: 200
+    body:
+      contains: "Thank you for"
+
           required: true
     - click_on:
         - value: Submit
