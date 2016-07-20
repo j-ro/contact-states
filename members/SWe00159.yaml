@@ -4,8 +4,6 @@ contact_form:
   action: /contact/email-pat
   steps:
     - visit: "http://governor.nc.gov/contact/email-governor"
-    - wait:
-        value: 3
     - fill_in:
         - name: "submitted[first_name]"
           selector: "#edit-submitted-first-name"
