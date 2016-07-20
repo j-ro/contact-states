@@ -31,13 +31,3 @@ contact_form:
       status: 200
     body:
       contains: "Thank you for"
-
-          required: true
-    - click_on:
-        - value: Submit
-          selector: "#edit-submit"
-  success:
-    headers:
-      status: 200
-    body:
-      contains: "Thank you for"
