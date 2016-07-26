@@ -28,6 +28,8 @@ contact_form:
     - click_on:
         - value: Send
           selector: "input.wpcf7-form-control.wpcf7-submit"
+    - wait:
+        - value: 10
     - find:
         - selector: ".wpcf7-mail-sent-ok"
   success:
