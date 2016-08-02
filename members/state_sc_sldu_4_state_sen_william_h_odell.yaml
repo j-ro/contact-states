@@ -3,7 +3,7 @@ contact_form:
   method: POST
   action: /email.php
   steps:
-    - visit: "http://www.scstatehouse.gov/member.php?code=1427272556"
+    - visit: "http://www.scstatehouse.gov/email.php?T=M&C=635227197"
     - fill_in:
         - name: FIRSTNAME
           selector: "#contactform_FIRSTNAME"
