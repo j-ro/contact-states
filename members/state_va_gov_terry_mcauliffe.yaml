@@ -39,7 +39,7 @@ contact_form:
           required: true
     - check:
         - name: ResponseRequired
-          selector: "#ResponseRequired"
+          selector: "#ResponseRequired[value='Yes']"
           value: "Yes"
     - click_on:
         - value: Submit
