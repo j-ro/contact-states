@@ -29,12 +29,6 @@ contact_form:
           selector: "#edit-submitted-comments"
           value: $MESSAGE
           required: true
-        - name: "g-recaptcha-response"
-          captcha_selector: ".g-recaptcha iframe"
-          value: "$CAPTCHA_SOLUTION"
-          required: true
-          options:
-            google_recaptcha: true
     - select:
         - name: "submitted[salutation]"
           selector: "#edit-submitted-salutation"
@@ -64,6 +58,8 @@ contact_form:
             "Taxes": "Taxes"
             "Veterans & Military": "Veterans &amp; Military"
             "Other": "Other"
+    - recaptcha:
+        - value: true
     - click_on:
         - value: Send Email
           selector: ".webform-submit"
