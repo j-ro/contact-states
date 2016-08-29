@@ -30,7 +30,7 @@ contact_form:
           value: $ADDRESS_ZIP5
           required: true
         - name: EMAIL
-          selector: "#email"
+          selector: "#contact #email"
           value: $EMAIL
           required: true
         - name: SUBJECT
@@ -135,6 +135,8 @@ contact_form:
           options:
             "NO": "NO"
             "YES": "YES"
+    - recaptcha:
+        - value: true
     - click_on:
         - value: Submit Information
           selector: "#contactbutton"
