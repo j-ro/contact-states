@@ -10,8 +10,8 @@ contact_form:
         - selector: "input.ui-select-search[placeholder='* Required - Type to search proceedings. Press ENTER key after each selection']"
           value: "FM Table of allotments, Pima Arizona"
           required: true
-    - javascript:
-        - value: "document.querySelector('.ui-select-choices-row.ng-scope.active').click()"
+#     - javascript:
+#         - value: "document.querySelector('.ui-select-choices-row.ng-scope.active').click()"
 #     - fill_in:
 #         - selector: "input.ui-select-search[placeholder='*Required - Add Filer(s). Press ENTER key after each entry']"
 #           value: $NAME_FULL
