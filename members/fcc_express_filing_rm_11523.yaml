@@ -14,16 +14,16 @@ contact_form:
 #         - value: 1
     - javascript:
         - value: "(function() { var scope = angular.element(document.querySelector('input.ui-select-search[placeholder=\"* Required - Type to search proceedings. Press ENTER key after each selection\"]')).scope(); scope.$apply(function(){ scope.$select.search = 'FM Table of allotments, Pima Arizona'; });})()"
-#     - find:
-#         - selector: ".ui-select-choices-row.ng-scope.active"
-#     - javascript:
-#         - value: "document.querySelector('.ui-select-choices-row.ng-scope.active').click()"
-#     - fill_in:
-#         - selector: "input.ui-select-search[placeholder='*Required - Add Filer(s). Press ENTER key after each entry']"
-#           value: $NAME_FULL
-#           required: true
-#     - javascript:
-#         - value: "var e = new KeyboardEvent('keydown', {bubbles : true, cancelable : true, key : 'Enter'}); document.querySelector('input.ui-select-search[placeholder=\"*Required - Add Filer(s). Press ENTER key after each entry\"]').dispatchEvent(e);"
+    - find:
+        - selector: ".ui-select-choices-row.ng-scope.active"
+    - javascript:
+        - value: "(function() { document.querySelector('.ui-select-choices-row.ng-scope.active').click(); })()"
+    - fill_in:
+        - selector: "input.ui-select-search[placeholder='*Required - Add Filer(s). Press ENTER key after each entry']"
+          value: $NAME_FULL
+          required: true
+    - javascript:
+        - value: "(function() { var e = new KeyboardEvent('keydown', {bubbles : true, cancelable : true, key : 'Enter'}); document.querySelector('input.ui-select-search[placeholder=\"*Required - Add Filer(s). Press ENTER key after each entry\"]').dispatchEvent(e); })()"
     - fill_in:
         - name: "email"
           selector: "#email"
