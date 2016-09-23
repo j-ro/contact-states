@@ -8,8 +8,8 @@ contact_form:
         - selector: "input.ui-select-search[placeholder='* Required - Type to search proceedings. Press ENTER key after each selection']"
     - javascript:
         - value: "var scope = angular.element(document.querySelector('input.ui-select-search[placeholder=\"* Required - Type to search proceedings. Press ENTER key after each selection\"]')).scope(); scope.$apply(function(){ scope.$select.search = 'FM Table of allotments, Pima Arizona'; });"
-    - find:
-        - selector: ".ui-select-choices-row.ng-scope.active"
+#     - find:
+#         - selector: ".ui-select-choices-row.ng-scope.active"
     - javascript:
         - value: "document.querySelector('.ui-select-choices-row.ng-scope.active').click()"
 #     - fill_in:
