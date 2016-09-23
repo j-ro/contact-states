@@ -9,7 +9,7 @@ contact_form:
     - wait:
         - value: 5
     - javascript:
-        - value: if (document.querySelector('input.ui-select-search[placeholder="* Required - Type to search proceedings. Press ENTER key after each selection"]').length) { document.querySelector('.page').style.backgroundColor = 'red' } else { document.querySelector('.page').style.backgroundColor = 'blue' };
+        - value: "if (document.querySelector('input.ui-select-search').length) { document.querySelector('.page').style.backgroundColor = 'red' } else { document.querySelector('.page').style.backgroundColor = 'blue' };"
 #         - value: "var scope = angular.element(document.querySelector('input.ui-select-search[placeholder=\"* Required - Type to search proceedings. Press ENTER key after each selection\"]')).scope(); scope.$apply(function(){ scope.$select.search = 'FM Table of allotments, Pima Arizona'; });"
 #     - find:
 #         - selector: ".ui-select-choices-row.ng-scope.active"
