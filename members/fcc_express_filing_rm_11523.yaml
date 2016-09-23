@@ -18,11 +18,11 @@ contact_form:
 #           required: true
 #     - javascript:
 #         - value: "var e = new KeyboardEvent('keydown', {bubbles : true, cancelable : true, key : 'Enter'}); document.querySelector('input.ui-select-search[placeholder=\"*Required - Add Filer(s). Press ENTER key after each entry\"]').dispatchEvent(e);"
-#     - fill_in:
-#         - name: "email"
-#           selector: "#email"
-#           value: $EMAIL
-#           required: true
+    - fill_in:
+        - name: "email"
+          selector: "#email"
+          value: $EMAIL
+          required: true
 #         - name: address1
 #           selector: "#address1"
 #           value: $ADDRESS_STREET
@@ -110,4 +110,4 @@ contact_form:
     headers:
       status: 200
     body:
-      contains: RECEIVED2
+      contains: RECEIVED
