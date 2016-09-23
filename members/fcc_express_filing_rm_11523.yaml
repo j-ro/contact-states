@@ -101,6 +101,8 @@ contact_form:
     - find:
         - selector: "h3"
           value: "YOUR FILING HAS NOT YET BEEN SUBMITTED!"
+    - find:
+        - selector: ".btn-primary"
     - click_on:
         - selector: ".btn-primary"
     - find:
