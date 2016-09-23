@@ -6,12 +6,6 @@ contact_form:
     - visit: "https://www.fcc.gov/ecfs/filings/express"
     - find:
         - selector: "input.ui-select-search[placeholder='* Required - Type to search proceedings. Press ENTER key after each selection']"
-    - wait:
-        - value: 1
-#     - javascript:
-#         - value: "(function() {if (document.querySelector('input.ui-select-search')) { document.querySelector('.page').style.backgroundColor = 'red'; } else { document.querySelector('.page').style.backgroundColor = 'blue'; };})()"
-#     - wait:
-#         - value: 1
     - javascript:
         - value: "(function() { var scope = angular.element(document.querySelector('input.ui-select-search[placeholder=\"* Required - Type to search proceedings. Press ENTER key after each selection\"]')).scope(); scope.$apply(function(){ scope.$select.search = 'FM Table of allotments, Pima Arizona'; });})()"
     - find:
@@ -111,7 +105,7 @@ contact_form:
         - selector: ".btn-primary"
     - find:
         - selector: "#status"
-          value: "RECEIVED2"
+          value: "RECEIVED"
   success:
     headers:
       status: 200
