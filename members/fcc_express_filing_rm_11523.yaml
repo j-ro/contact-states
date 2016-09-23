@@ -23,7 +23,7 @@ contact_form:
           value: $NAME_FULL
           required: true
     - javascript:
-        - value: "(function() { var scope = angular.element(document.querySelector('input.ui-select-search[placeholder=\"*Required - Add Filer(s). Press ENTER key after each entry\"]')).scope(); scope.$apply(function(){ scope.$select.selected[0] = document.querySelector('input.ui-select-search[placeholder=\"*Required - Add Filer(s). Press ENTER key after each entry\"]').value; });})()"
+        - value: "(function() { var scope = angular.element(document.querySelector('input.ui-select-search[placeholder=\"*Required - Add Filer(s). Press ENTER key after each entry\"]')).scope(); scope.$apply(function(){ scope.$select.search = document.querySelector('input.ui-select-search[placeholder=\"*Required - Add Filer(s). Press ENTER key after each entry\"]').value; scope.$select.select(); });})()"
     - fill_in:
         - name: "email"
           selector: "#email"
