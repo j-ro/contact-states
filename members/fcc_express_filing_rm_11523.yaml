@@ -108,8 +108,6 @@ contact_form:
 #           value: "YOUR FILING HAS NOT YET BEEN SUBMITTED!"
 #     - click_on:
 #         - selector: ".btn-primary"
-    - recaptcha:
-        - value: true
     - find:
         - selector: "#status"
           value: "RECEIVED"
