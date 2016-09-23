@@ -8,15 +8,15 @@ contact_form:
         - selector: "input.ui-select-search[placeholder='* Required - Type to search proceedings. Press ENTER key after each selection']"
     - wait:
         - value: 5
-#     - javascript:
-#         - value: "if (document.querySelector('input.ui-select-search')) { document.querySelector('.page').style.backgroundColor = 'red'; } else { document.querySelector('.page').style.backgroundColor = 'blue'; };"
-#     - wait:
-#         - value: 1
-        - value: "var scope = angular.element(document.querySelector('input.ui-select-search[placeholder=\"* Required - Type to search proceedings. Press ENTER key after each selection\"]')).scope(); scope.$apply(function(){ scope.$select.search = 'FM Table of allotments, Pima Arizona'; });"
-    - find:
-        - selector: ".ui-select-choices-row.ng-scope.active"
     - javascript:
-        - value: "document.querySelector('.ui-select-choices-row.ng-scope.active').click()"
+        - value: "if (document.querySelector('input.ui-select-search[placeholder=\"* Required - Type to search proceedings. Press ENTER key after each selection\"]')) { document.querySelector('.page').style.backgroundColor = 'red'; } else { document.querySelector('.page').style.backgroundColor = 'blue'; };"
+    - wait:
+        - value: 1
+#         - value: "var scope = angular.element(document.querySelector('input.ui-select-search[placeholder=\"* Required - Type to search proceedings. Press ENTER key after each selection\"]')).scope(); scope.$apply(function(){ scope.$select.search = 'FM Table of allotments, Pima Arizona'; });"
+#     - find:
+#         - selector: ".ui-select-choices-row.ng-scope.active"
+#     - javascript:
+#         - value: "document.querySelector('.ui-select-choices-row.ng-scope.active').click()"
 #     - fill_in:
 #         - selector: "input.ui-select-search[placeholder='*Required - Add Filer(s). Press ENTER key after each entry']"
 #           value: $NAME_FULL
