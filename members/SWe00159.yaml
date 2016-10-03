@@ -21,8 +21,6 @@ contact_form:
           selector: "#edit-submitted-message"
           value: $MESSAGE
           required: true
-    - javascript:
-        - value: "document.querySelector('#edit-captcha-response').value = parseInt(document.querySelector('.field-prefix').innerHTML.split(' ')[0]) + parseInt(document.querySelector('.field-prefix').innerHTML.split(' ')[2]);"
     - recaptcha:
         - value: true
     - click_on:
