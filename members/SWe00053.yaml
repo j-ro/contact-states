@@ -29,9 +29,9 @@ contact_form:
         - value: Send
           selector: "input.wpcf7-form-control.wpcf7-submit"
     - wait:
-        - value: 10
+        - value: 1
     - find:
-        - selector: ".wpcf7-mail-sent-ok"
+        - selector: ".ajax-loader"
   success:
     headers:
       status: 200
