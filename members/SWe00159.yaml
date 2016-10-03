@@ -21,8 +21,6 @@ contact_form:
           selector: "#edit-submitted-message"
           value: $MESSAGE
           required: true
-    - recaptcha:
-        - value: true
     - click_on:
         - value: Submit
           selector: "#edit-submit"
