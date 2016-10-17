@@ -107,9 +107,8 @@ contact_form:
         - selector: ".btn-primary"
     - find:
         - selector: "#status"
-          value: "RECEIVED"
   success:
     headers:
       status: 200
     body:
-      contains: RECEIVED
+      contains: Status
