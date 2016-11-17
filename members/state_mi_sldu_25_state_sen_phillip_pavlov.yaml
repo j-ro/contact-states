@@ -1,0 +1,51 @@
+bioguide: state_mi_sldu_25_state_sen_phillip_pavlov
+contact_form:
+  method: post
+  action: "ima_form_post.asp"
+  steps:
+    - visit: "http://www.senate.michigan.gov/ima_form.asp?name=comment25&form_path=e:/webforms/rep"
+    - fill_in:
+        - name: first_name
+          selector: "input[name='first_name']"
+          value: $NAME_FIRST
+          required: true
+        - name: last_name
+          selector: "input[name='last_name']"
+          value: $NAME_LAST
+          required: true
+        - name: street_address
+          selector: "input[name='street_address']"
+          value: $ADDRESS_STREET
+          required: true
+        - name: city
+          selector: "input[name='city']"
+          value: $ADDRESS_CITY
+          required: true
+        - name: zip_5
+          selector: "input[name='zip_5']"
+          value: $ADDRESS_ZIP5
+          required: true
+        - name: phone
+          selector: "input[name='phone']"
+          value: $PHONE
+          required: true
+        - name: email
+          selector: "input[name='email']"
+          value: $EMAIL
+          required: true
+        - name: subject
+          selector: "input[name='subject']"
+          value: $SUBJECT
+          required: true
+        - name: message
+          selector: "input[name='message']"
+          value: $MESSAGE
+          required: true
+    - click_on:
+        - value: Submit Form
+          selector: "input[name='submit']"
+  success:
+    headers:
+      status: 200
+    body:
+      contains: Your request has been sent
