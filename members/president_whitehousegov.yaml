@@ -1,0 +1,114 @@
+bioguide: president_whitehousegov
+contact_form:
+  method: post
+  action: "/contact/questions-comments?initialWidth=912&childId=forall-iframe-embed-2&parentUrl=https%3A%2F%2Fwww.whitehouse.gov%2Fcontact"
+  steps:
+    - visit: "https://forms.whitehouse.gov/contact/questions-comments?initialWidth=912&childId=forall-iframe-embed-2&parentUrl=https%3A%2F%2Fwww.whitehouse.gov%2Fcontact"
+    - fill_in:
+        - name: "submitted[00Nj0000000VDNE]"
+          selector: "#edit-submitted-00nj0000000vdne"
+          value: $NAME_FIRST
+          required: true
+        - name: "submitted[00Nj0000000VDNF]"
+          selector: "#edit-submitted-00nj0000000vdnf"
+          value: $NAME_LAST
+          required: true
+        - name: "submitted[00Nj0000000VDNQ]"
+          selector: "#edit-submitted-00nj0000000vdnq"
+          value: $ADDRESS_STREET
+          required: true
+        - name: "submitted[00Nj0000000VDMz]"
+          selector: "#edit-submitted-00nj0000000vdmz"
+          value: $ADDRESS_CITY
+          required: true
+        - name: "submitted[postal_code_us]"
+          selector: "#edit-submitted-postal-code-us"
+          value: $ADDRESS_ZIP5
+          required: true
+        - name: "submitted[email]"
+          selector: "#edit-submitted-email"
+          value: $EMAIL
+          required: true
+        - name: "submitted[phone_us]"
+          selector: "#edit-submitted-phone-us"
+          value: $PHONE
+          required: true
+        - name: "submitted[description]"
+          selector: "#edit-submitted-description"
+          value: $MESSAGE
+          required: true
+    - select:
+        - name: "submitted[00Nj0000000VDNX]"
+          selector: "#edit-submitted-00nj0000000vdnx"
+          value: "President Obama"
+          required: true
+          options:
+            Reflections for President Obama: "President Obama"
+        - name: "submitted[us_states]"
+          selector: "#edit-submitted-us-states"
+          value: $ADDRESS_STATE_FULL
+          required: true
+          options:
+            - Alabama
+            - Alaska
+            - Arizona
+            - Arkansas
+            - California
+            - Colorado
+            - Connecticut
+            - Delaware
+            - District of Columbia
+            - Florida
+            - Georgia
+            - Hawaii
+            - Idaho
+            - Illinois
+            - Indiana
+            - Iowa
+            - Kansas
+            - Kentucky
+            - Louisiana
+            - Maine
+            - Maryland
+            - Massachusetts
+            - Michigan
+            - Minnesota
+            - Mississippi
+            - Missouri
+            - Montana
+            - Nebraska
+            - Nevada
+            - New Hampshire
+            - New Jersey
+            - New Mexico
+            - New York
+            - North Carolina
+            - North Dakota
+            - Ohio
+            - Oklahoma
+            - Oregon
+            - Pennsylvania
+            - Rhode Island
+            - South Carolina
+            - South Dakota
+            - Tennessee
+            - Texas
+            - Utah
+            - Vermont
+            - Virginia
+            - Washington
+            - West Virginia
+            - Wisconsin
+            - Wyoming
+    - uncheck:
+        - name: "submitted[interest][ODS - Contact Us]"
+          selector: "#edit-submitted-interest-1"
+          value: "ODS - Contact Us"
+    - click_on:
+        - value: Send
+          selector: ".form-submit"
+  success:
+    headers:
+      status: 200
+    body:
+      contains: Thank you for contacting President Obama.
