@@ -1,9 +1,9 @@
 bioguide: SWe00159
 contact_form:
   method: post
-  action: /contact/email-pat
+  action: /contact-governor-cooper
   steps:
-    - visit: "http://governor.nc.gov/contact/email-governor"
+    - visit: "http://governor.nc.gov/contact-governor-cooper"
     - fill_in:
         - name: "submitted[first_name]"
           selector: "#edit-submitted-first-name"
