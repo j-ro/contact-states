@@ -29,6 +29,10 @@ contact_form:
           selector: "#RequestedByEmail"
           value: $EMAIL
           required: true
+        - name: RequestedByPhone
+          selector: "#RequestedByPhone"
+          value: $PHONE
+          required: true
         - name: MessageSubject
           selector: "#MessageSubject"
           value: $SUBJECT
