@@ -3,14 +3,14 @@ contact_form:
   method: post
   action: /contact-us/opinion
   steps:
-    - visit: "http://governor.vermont.gov/contact-us/opinion"
+    - visit: "http://governor.vermont.gov/contact-us/message"
     - fill_in:
         - name: "submitted[FIRST]"
-          selector: "#edit-submitted-FIRST"
+          selector: "#edit-submitted-first"
           value: $NAME_FIRST
           required: true
         - name: "submitted[LAST]"
-          selector: "#edit-submitted-LAST"
+          selector: "#edit-submitted-last"
           value: $NAME_LAST
           required: true
         - name: "submitted[EMAIL]"
@@ -18,24 +18,28 @@ contact_form:
           value: $EMAIL
           required: true
         - name: "submitted[ADDR1]"
-          selector: "#edit-submitted-ADDR1"
+          selector: "#edit-submitted-addr1"
           value: $ADDRESS_STREET
           required: true
         - name: "submitted[CITY]"
-          selector: "#edit-submitted-CITY"
+          selector: "#edit-submitted-city"
           value: $ADDRESS_CITY
           required: true
         - name: "submitted[PHONE]"
-          selector: "#edit-submitted-PHONE"
+          selector: "#edit-submitted-phone"
           value: $PHONE_PARENTHESES
           required: true
         - name: "submitted[MSG]"
-          selector: "#edit-submitted-MSG"
+          selector: "#edit-submitted-msg"
           value: $MESSAGE
           required: true
     - select:
+        - name: "submitted[STATE]"
+          selector: "#edit-submitted-state"
+          value: $ADDRESS_STATE_POSTAL_ABBREV
+          required: true
         - name: "submitted[ISSUE]"
-          selector: "#edit-submitted-ISSUE"
+          selector: "#edit-submitted-issue"
           value: $TOPIC
           required: true
           options:
@@ -84,4 +88,4 @@ contact_form:
     headers:
       status: 200
     body:
-      contains: Your submission has been received by Governor Peter Shumlin.
+      contains: Your submission has been received by Governor Phil Scott.
