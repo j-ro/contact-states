@@ -36,7 +36,7 @@ contact_form:
     - select:
         - name: "submitted[STATE]"
           selector: "#edit-submitted-state"
-          value: $ADDRESS_STATE_POSTAL_ABBREV
+          value: "VT"
           required: true
         - name: "submitted[ISSUE]"
           selector: "#edit-submitted-issue"
