@@ -14,7 +14,7 @@ contact_form:
           value: $NAME_LAST
           required: true
         - name: "submitted[EMAIL]"
-          selector: "#edit-submitted-EMAIL"
+          selector: "#edit-submitted-email"
           value: $EMAIL
           required: true
         - name: "submitted[ADDR1]"
