@@ -39,6 +39,8 @@ contact_form:
           required: true
           options:
             max_length: 800
+    - javascript:
+        - value: document.querySelector("#comments").value = document.querySelector("#comments").value.replace(/\^|\{|\}|\[|\]|\\|\~|\`|\|/g, '');
     - click_on:
         - value: Send Comments
           selector: "#Submit1"
