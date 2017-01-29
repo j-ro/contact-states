@@ -30,9 +30,26 @@ contact_form:
           value: $MESSAGE
           required: true
     - select:
+        - name: "dnf_class_values[communication][primary_constituent][0][prefix]"
+          selector: "#dnf_class_values_communication__primary_constituent__0__prefix_"
+          value: $NAME_PREFIX
+          required: true
+          options:
+            Miss: Miss
+            Mr.: Mr.
+            Mrs.: Mrs.
+            Ms.: Ms.
+            Mr. and Mrs.: Mr. and Mrs.
+            Reverend: Reverend
+            Father: Father
+            Dr.: Dr.
+            Atty: Atty
+            Prof: Prof
+            Coach: Coach
+            Ofc: Ofc
         - name: dnf_class_values[communication][topic]
           selector: "#dnf_class_values_communication__topic_"
-          value: $NAME_PREFIX
+          value: $TOPIC
           required: true
           options:
             Agriculture: 0040480
@@ -81,9 +98,6 @@ contact_form:
     - click_on:
         - value: submit
           selector: "input[name='dnf_opt_submit']"
-    - find:
-        - selector: "p"
-          value: "Thank you for contacting the Office of Governor Mark Dayton and the Lt. Governor, Tina Smith. We appreciate your feedback and suggestions about how we, together, can build a better Minnesota. A member of our staff will read your message promptly."
   success:
     headers:
       status: 200
