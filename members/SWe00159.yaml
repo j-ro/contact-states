@@ -23,7 +23,7 @@ contact_form:
           required: true
     - click_on:
         - value: Submit
-          selector: "#edit-submit"
+          selector: ".webform-submit"
   success:
     headers:
       status: 200
