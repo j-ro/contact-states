@@ -1,39 +1,30 @@
 bioguide: SWe00053
 contact_form:
   method: post
-  action: "/contact-gov-scott/email-the-governor/#wpcf7-f9753-p238-o1"
+  action: "/contact-gov-scott/email-the-governor/#formBuilderCSSIDEmail_the_Governor?PHPSESSID=9p08p76cmbad46854ohfbi3jv5"
   steps:
     - visit: "http://www.flgov.com/contact-gov-scott/email-the-governor/"
     - fill_in:
-        - name: name
-          selector: "form.wpcf7-form input[name='name']"
+        - name: "formBuilderForm[Name]"
+          selector: "fieldformBuilderFieldName"
           value: $NAME_FULL
           required: true
-        - name: email
-          selector: "form.wpcf7-form input[name='email']"
+        - name: "formBuilderForm[Email]"
+          selector: "fieldformBuilderFieldEmail"
           value: $EMAIL
           required: true
-        - name: zip
-          selector: "form.wpcf7-form input[name='zip']"
+        - name: "formBuilderForm[Zip_Code]"
+          selector: "fieldformBuilderFieldZip_Code"
           value: $ADDRESS_ZIP5
           required: true
-        - name: subject
-          selector: "form.wpcf7-form input[name='subject']"
-          value: $SUBJECT
-          required: true
-        - name: message
-          selector: "form.wpcf7-form textarea[name='message']"
+        - name: "formBuilderForm[Message]"
+          selector: "fieldformBuilderFieldMessage"
           value: $MESSAGE
           required: true
     - click_on:
-        - value: Send
-          selector: "input.wpcf7-form-control.wpcf7-submit"
-    - wait:
-        - value: 1
-    - find:
-        - selector: ".ajax-loader"
+        - selector: "input[name=Submit]"
   success:
     headers:
       status: 200
     body:
-      contains: Your message was sent successfully. Thanks.
+      contains: Thank you. Your message has been sent.
