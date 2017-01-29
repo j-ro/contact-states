@@ -21,10 +21,6 @@ contact_form:
           selector: "#edit-submitted-email-address"
           value: $EMAIL
           required: true
-        - name: "submitted[topic]"
-          selector: "#edit-submitted-topic"
-          value: $SUBJECT
-          required: true
         - name: "submitted[comments]"
           selector: "#edit-submitted-comments"
           value: $MESSAGE
