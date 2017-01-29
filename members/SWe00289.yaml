@@ -1,80 +1,144 @@
 bioguide: SWe00289
 contact_form:
   method: post
-  action: /es/governor/
+  action: "EForm.aspx?__cid=FSL_WA_GOV&__fid=100021"
   steps:
-    - visit: "https://fortress.wa.gov/es/governor/"
+    - visit: "http://iqconnect.lmhostediq.com/iqextranet/EForm.aspx?__cid=FSL_WA_GOV&__fid=100021"
     - fill_in:
-        - name: First
-          selector: "#First"
+        - name: q_2_first_name
+          selector: "#q_2_first_name"
           value: $NAME_FIRST
           required: true
-        - name: Last
-          selector: "#Last"
+        - name: q_2_last_name
+          selector: "#q_2_last_name"
           value: $NAME_LAST
           required: true
-        - name: Addr1
-          selector: "#Addr1"
+        - name: q_2_addr_1
+          selector: "#q_2_addr_1"
           value: $ADDRESS_STREET
           required: true
-        - name: City
-          selector: "#City"
+        - name: q_2_city
+          selector: "#q_2_city"
           value: $ADDRESS_CITY
           required: true
-        - name: Zip
-          selector: "#Zip"
+        - name: q_2_zip
+          selector: "#q_2_zip"
           value: $ADDRESS_ZIP5
           required: true
-        - name: Email
-          selector: "#Email"
+        - name: q_2_email
+          selector: "#q_2_email"
           value: $EMAIL
           required: true
+        - name: q_6
+          selector: "#q_6"
+          value: $MESSAGE
+          required: true
     - select:
-        - name: Subject
-          selector: "#SelectedSubject"
+        - name: q_2_state
+          selector: "#q_2_state"
+          value: $ADDRESS_STATE_POSTAL_ABBREV
+          required: true
+          options:
+	        Alabama: AL
+	        Alaska: AK
+	        America Samoa: AS
+	        Arizona: AZ
+	        Arkansas: AR
+	        California: CA
+	        Colorado: CO
+	        Connecticut: CT
+	        D.C.: DC
+	        D.C.: D.C.
+	        Delaware: DE
+	        Federated States of Micronesia: FM
+	        Florida: FL
+	        Foreign Correspondence: FC
+	        Georgia: GA
+	        Guam: GU
+	        Hawaii: HI
+	        Idaho: ID
+	        Illinois: IL
+	        Indiana: IN
+	        Iowa: IA
+	        Kansas: KS
+	        Kentucky: KY
+	        Louisiana: LA
+	        Maine: ME
+	        Marshall Islands: MH
+	        Maryland: MD
+	        Massachusetts: MA
+	        Michigan: MI
+	        Minnesota: MN
+	        Mississippi: MS
+	        Missouri: MO
+	        Montana: MT
+	        Nebraska: NE
+	        Nevada: NV
+	        New Hampshire: NH
+	        New Jersey: NJ
+	        New Mexico: NM
+	        New York: NY
+	        North Carolina: NC
+	        North Dakota: ND
+	        Northern Mariana Islands: MP
+	        Ohio: OH
+	        Oklahoma: OK
+	        Oregon: OR
+	        Palau: PW
+	        Pennsylvania: PA
+	        Puerto Rico: PR
+	        Rhode Island: RI
+	        South Carolina: SC
+	        South Dakota: SD
+	        Tennessee: TN
+	        Texas: TX
+	        Trust Territory: TT
+	        Utah: UT
+	        Vermont: VT
+	        Virgin Islands: VI
+	        Virginia: VA
+	        Washington: WA
+	        West Virginia: WV
+	        Wisconsin: WI
+	        Wyoming: WY
+        - name: q_5
+          selector: "#q_5"
           value: $TOPIC
           required: true
           options:
-            Agriculture: 1b440443-d263-e411-8d8b-005056ba7b6d
-            Animals: 1373e4b0-8eb7-e411-87cd-005056ba1e27
-            Budget: 2b73e4b0-8eb7-e411-87cd-005056ba1e27
-            Commerce/Business/Economic Development: 3973e4b0-8eb7-e411-87cd-005056ba1e27
-            Education/Schools: 7373e4b0-8eb7-e411-87cd-005056ba1e27
-            Emergency Preparedness: 7973e4b0-8eb7-e411-87cd-005056ba1e27
-            Energy: 27440443-d263-e411-8d8b-005056ba7b6d
-            Environment: 29440443-d263-e411-8d8b-005056ba7b6d
-            Gun Control: 4d440443-d263-e411-8d8b-005056ba7b6d
-            Health Care: 2b440443-d263-e411-8d8b-005056ba7b6d
-            Housing: 2d440443-d263-e411-8d8b-005056ba7b6d
-            Immigration: e773e4b0-8eb7-e411-87cd-005056ba1e27
-            Labor and Industries: cb440443-d263-e411-8d8b-005056ba7b6d
-            Legal/Crime/Law Enforcement: fb73e4b0-8eb7-e411-87cd-005056ba1e27
-            Legislative Bills and Comments: fd73e4b0-8eb7-e411-87cd-005056ba1e27
-            Licensing: ff73e4b0-8eb7-e411-87cd-005056ba1e27
-            Mortgage/Loans/Banking/Foreclosure: 39440443-d263-e411-8d8b-005056ba7b6d
-            Natural Resources: 3b440443-d263-e411-8d8b-005056ba7b6d
-            Other: 4f440443-d263-e411-8d8b-005056ba7b6d
-            Parks and Recreation: 3d440443-d263-e411-8d8b-005056ba7b6d
-            Social Services: 3f440443-d263-e411-8d8b-005056ba7b6d
-            Taxes: 41440443-d263-e411-8d8b-005056ba7b6d
-            Transportation: 43440443-d263-e411-8d8b-005056ba7b6d
-            Tribal: 45440443-d263-e411-8d8b-005056ba7b6d
-            Unemployment Assistance: 47440443-d263-e411-8d8b-005056ba7b6d
-            Utilities: 49440443-d263-e411-8d8b-005056ba7b6d
-            Veterans: 67440443-d263-e411-8d8b-005056ba7b6d
-            Workers' Compensation: 31440443-d263-e411-8d8b-005056ba7b6d
-    - javascript:
-        - value: "CKEDITOR.instances.Msg.destroy()"
-    - fill_in:
-        - name: Msg
-          selector: "#Msg"
-          value: $MESSAGE
-          required: true
+	        Agriculture: Agriculture
+	        Animal: Animal
+	        Budget: Budget
+	        "Commerce/Business/Economic Development": "Commerce/Business/Economic Development"
+	        Education/Schools: Education/Schools
+	        Emergency Preparedness: Emergency Preparedness
+	        Energy: Energy
+	        Environment: Environment
+	        Gun Control: Gun Control
+	        Health Care: Health Care
+	        Housing: Housing
+	        Immigration: Immigration
+	        Labor and Industries: Labor and Industries
+	        "Legal/Crime/Law Enforcement": "Legal/Crime/Law Enforcement"
+	        "Legislative Bills and Comments": "Legislative Bills and Comments"
+	        Licensing: Licensing
+	        "Mortgage/Loans/Banking/Foreclosure": "Mortgage/Loans/Banking/Foreclosure"
+	        Natural Resources: Natural Resources
+	        Other: Other
+	        Parks and Recreation: Parks and Recreation
+	        Social Services: Social Services
+	        Taxes: Taxes
+	        Transportation: Transportation
+	        Tribal: Tribal
+	        Unemployment Assistance: Unemployment Assistance
+	        Utilities: Utilities
+	        Veterans: Veterans
+	        "Workers' Compensation": "Workers' Compensation"
     - click_on:
         - value: Submit
-          selector: "#oneColumn form input[type='submit'][value='Submit']"
+          selector: "#btn_submit"
   success:
     headers:
       status: 200
     body:
-      contains: Your message was sent
+      contains: "Thank you for contacting the Governor's Office."
