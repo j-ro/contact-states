@@ -38,15 +38,6 @@ contact_form:
           value: $MESSAGE
           required: true
     - select:
-        - name: Prefix
-          selector: "#prefix"
-          value: $NAME_PREFIX
-          required: true
-          options:
-            - Mrs
-            - Ms
-            - Mr
-            - Dr
         - name: state
           selector: "#state"
           value: $ADDRESS_STATE_POSTAL_ABBREV
