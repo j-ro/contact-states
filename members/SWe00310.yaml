@@ -1,58 +1,110 @@
 bioguide: SWe00310
 contact_form:
   method: post
-  action: "/contact-us/#wpcf7-f11382-p221-o1"
+  action: "https://www.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8"
   steps:
-    - visit: "http://governor.wyo.gov/contact-us/"
+    - visit: "http://ast5vhemfgamu8vvol8fje1oa7idffq9-a-sites-opensocial.googleusercontent.com/gadgets/ifr?url=https://sites.google.com/a/wyo.gov/governor/form-files/ConstituentWebtoCase.xml?attredirects%3D0%26d%3D1&container=enterprise&view=default&lang=en&country=ALL&sanitize=0&v=43cee38f59ddb6a&libs=core:dynamic-height&mid=193&parent=http://governor.wyo.gov/contact-us/#st=e%3DAIHE3cClQvng5DolDj0c93n1R9iraI4Ywpigkc98jTudpABszMSxKZI%252BhAbX%252Ft3qt2XYVfDS1CcobhTuPTufuXZOCI%252BHetdAzgc1VYcrj9gik%252FS%252B2VU0cAOAFiKtSzyQaO643MD5fl0B%26c%3Denterprise&rpctoken=-5502150988583312111"
     - fill_in:
-        - name: FirstName
-          selector: "form.wpcf7-form input[name='FirstName']"
+        - name: "00N6100000DKYmP"
+          selector: "#00N6100000DKYmP"
           value: $NAME_FIRST
           required: true
-        - name: LastName
-          selector: "form.wpcf7-form input[name='LastName']"
+        - name: "00N61000008Yii9"
+          selector: "#00N61000008Yii9"
           value: $NAME_LAST
           required: true
-        - name: Address
-          selector: "form.wpcf7-form input[name='Address']"
+        - name: "00N61000007jcVs"
+          selector: "#00N61000007jcVs"
           value: $ADDRESS_STREET
           required: true
-        - name: City
-          selector: "form.wpcf7-form input[name='City']"
+        - name: "00N61000007jcW2"
+          selector: "#00N61000007jcW2"
           value: $ADDRESS_CITY
           required: true
-        - name: State
-          selector: "form.wpcf7-form input[name='State']"
-          value: $ADDRESS_STATE_POSTAL_ABBREV
-          required: true
-        - name: Zip
-          selector: "form.wpcf7-form input[name='Zip']"
+        
+        - name: "00N61000007jcXA"
+          selector: "#00N61000007jcXA"
           value: $ADDRESS_ZIP5
           required: true
-        - name: Email
-          selector: "form.wpcf7-form input[name='Email']"
+        - name: "00N61000007jccB"
+          selector: "#00N61000007jccB"
           value: $EMAIL
           required: true
-        - name: Phone
-          selector: "form.wpcf7-form input[name='Phone']"
+        - name: "00N61000007jcbw"
+          selector: "#00N61000007jcbw"
           value: $PHONE
           required: true
-        - name: Subject
-          selector: "form.wpcf7-form input[name='Subject']"
+        - name: "subject"
+          selector: "#subject"
           value: $SUBJECT
           required: true
-        - name: Message
-          selector: "form.wpcf7-form textarea[name='Message']"
+        - name: description
+          selector: "textarea[name='description']"
           value: $MESSAGE
           required: true
+    - select:
+        - name: "00N61000007jcW7"
+          selector: "#00N61000007jcW7"
+          value: $ADDRESS_STATE_FULL
+          required: true
+          options:
+            - Alabama
+            - Alaska
+            - Arizona
+            - Arkansas
+            - California
+            - Colorado
+            - Connecticut
+            - Delaware
+            - District of Columbia
+            - Florida
+            - Georgia
+            - Hawaii
+            - Idaho
+            - Illinois
+            - Indiana
+            - Iowa
+            - Kansas
+            - Kentucky
+            - Louisiana
+            - Maine
+            - Maryland
+            - Massachusetts
+            - Michigan
+            - Minnesota
+            - Mississippi
+            - Missouri
+            - Montana
+            - Nebraska
+            - Nevada
+            - New Hampshire
+            - New Jersey
+            - New Mexico
+            - New York
+            - North Carolina
+            - North Dakota
+            - Ohio
+            - Oklahoma
+            - Oregon
+            - Pennsylvania
+            - Rhode Island
+            - South Carolina
+            - South Dakota
+            - Tennessee
+            - Texas
+            - Utah
+            - Vermont
+            - Virginia
+            - Washington
+            - West Virginia
+            - Wisconsin
+            - Wyoming
     - click_on:
-        - value: Submit
-          selector: input.wpcf7-form-control.wpcf7-submit.btn-send
+        - value: selector: "input[name=submit]"
     - find:
-        - selector: "div.wpcf7-response-output"
-          value: "Your message was sent successfully. Thanks."
+        - selector: "font"
   success:
     headers:
       status: 200
     body:
-      contains: Your message was sent successfully. Thanks.
+      contains: Your Submission has been received.  Thank you.
