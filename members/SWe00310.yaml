@@ -98,6 +98,8 @@ contact_form:
             - West Virginia
             - Wisconsin
             - Wyoming
+    - javascript:
+        - value: "document.querySelector('[name*=N61000007jcW7]').value = 'Nebraska'"
     - click_on:
         - selector: "input[name=submit]"
     - find:
