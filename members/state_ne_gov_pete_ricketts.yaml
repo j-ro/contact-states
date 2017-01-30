@@ -6,31 +6,31 @@ contact_form:
     - visit: "https://governor.nebraska.gov/contact-form"
     - fill_in:
         - name: "01 First Name *fn*"
-          selector: "#01_fname"
+          selector: "[name~=First]"
           value: $NAME_FIRST
           required: true
         - name: "02 Last Name *ln*"
-          selector: "#02_lname"
+          selector: "[name~=Last]"
           value: $NAME_LAST
           required: true
         - name: "03 Email *rt*"
-          selector: "#03_email"
+          selector: "[name~=Email]"
           value: $EMAIL
           required: true
         - name: "05 City"
-          selector: "#05_city"
+          selector: "[name~=City]"
           value: $ADDRESS_CITY
           required: true
         - name: "07 Zipcode"
-          selector: "#07_zipcode"
+          selector: "[name~=Zipcode]"
           value: $ADDRESS_ZIP5
           required: true
         - name: "08 Phone Number"
-          selector: "#08_phone"
+          selector: "[name~=Phone]"
           value: $PHONE
           required: true
         - name: "10 Comments or Suggestions"
-          selector: "#10_comments"
+          selector: "[name~=Comments]"
           value: $MESSAGE
           required: true
     - recaptcha:
