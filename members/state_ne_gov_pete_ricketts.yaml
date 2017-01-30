@@ -1,109 +1,47 @@
 bioguide: state_ne_gov_pete_ricketts
 contact_form:
   method: post
-  action: contact.php
+  action: "https://www.nebraska.gov/simpleMail/advanced.cgi"
   steps:
-    - visit: "http://www.governor.nebraska.gov/contact/contact.php"
+    - visit: "https://governor.nebraska.gov/contact-form"
     - fill_in:
-        - name: name
-          selector: "#name"
-          value: $NAME_FULL
+        - name: "01 First Name *fn*"
+          selector: "#01_fname"
+          value: $NAME_FIRST
           required: true
-        - name: email
-          selector: "#email"
+        - name: "02 Last Name *ln*"
+          selector: "#02_lname"
+          value: $NAME_LAST
+          required: true
+        - name: "03 Email *rt*"
+          selector: "#03_email"
           value: $EMAIL
           required: true
-        - name: address
-          selector: "#address"
-          value: $ADDRESS_STREET
-          required: true
-        - name: city
-          selector: "#city"
+        - name: "05 City"
+          selector: "#05_city"
           value: $ADDRESS_CITY
           required: true
-        - name: zipcode
-          selector: "#zipcode"
+        - name: "07 Zipcode"
+          selector: "#07_zipcode"
           value: $ADDRESS_ZIP5
           required: true
-        - name: phone
-          selector: "#phone"
+        - name: "08 Phone Number"
+          selector: "#08_phone"
           value: $PHONE
           required: true
-        - name: comments
-          selector: "#comments"
+        - name: "10 Comments or Suggestions"
+          selector: "#10_comments"
           value: $MESSAGE
           required: true
-    - select:
-        - name: state
-          selector: "#state"
-          value: $ADDRESS_STATE_POSTAL_ABBREV
-          required: true
-          options:
-            "Alabama ": AL
-            "Alaska ": AK
-            "Arizona ": AZ
-            "Arkansas ": AR
-            "California ": CA
-            "Colorado ": CO
-            "Connecticut ": CT
-            "Delaware ": DE
-            "Florida ": FL
-            "Georgia ": GA
-            "Hawaii ": HI
-            "Idaho ": ID
-            "Illinois ": IL
-            "Indiana ": IN
-            "Iowa ": IA
-            "Kansas ": KS
-            "Kentucky ": KY
-            "Louisiana ": LA
-            "Maine ": ME
-            "Maryland ": MD
-            "Massachusetts ": MA
-            "Michigan ": MI
-            "Minnesota ": MN
-            "Mississippi ": MS
-            "Missouri ": MO
-            "Montana ": MT
-            "Nebraska ": NE
-            "Nevada ": NV
-            "New Hampshire ": NH
-            "New Jersey ": NJ
-            "New Mexico ": NM
-            "New York ": NY
-            "North Carolina ": NC
-            "North Dakota ": ND
-            "Ohio ": OH
-            "Oklahoma ": OK
-            "Oregon ": OR
-            "Pennsylvania ": PA
-            "Rhode Island ": RI
-            "South Carolina ": SC
-            "South Dakota ": SD
-            "Tennessee ": TN
-            "Texas ": TX
-            "Utah ": UT
-            "Vermont ": VT
-            "Virginia ": VA
-            "Washington ": WA
-            "West Virginia ": WV
-            "Wisconsin ": WI
-            "Wyoming ": WY
-        - name: subject_query
-          selector: "#subject_query"
-          value: $TOPIC
-          required: true
-          options:
-            "Elections": Elections
-            "Notary": Notary
+    - recaptcha:
+        - value: true
     - click_on:
-        - value: Submit
-          selector: "button[type='submit']"
+        - selector: "#mySubmitButton"
     - find:
-        - selector: "h2"
-          value: "Thank You!"
+        - selector: "h1"
+          value: "Thank You"
   success:
     headers:
       status: 200
     body:
-      contains: Thank you for contacting the Governor.
+      contains: Thank you, your request was successfully submitted.
