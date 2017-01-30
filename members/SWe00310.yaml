@@ -6,31 +6,31 @@ contact_form:
     - visit: "http://ast5vhemfgamu8vvol8fje1oa7idffq9-a-sites-opensocial.googleusercontent.com/gadgets/ifr?url=https://sites.google.com/a/wyo.gov/governor/form-files/ConstituentWebtoCase.xml?attredirects%3D0%26d%3D1&container=enterprise&view=default&lang=en&country=ALL&sanitize=0&v=43cee38f59ddb6a&libs=core:dynamic-height&mid=193&parent=http://governor.wyo.gov/contact-us/#st=e%3DAIHE3cClQvng5DolDj0c93n1R9iraI4Ywpigkc98jTudpABszMSxKZI%252BhAbX%252Ft3qt2XYVfDS1CcobhTuPTufuXZOCI%252BHetdAzgc1VYcrj9gik%252FS%252B2VU0cAOAFiKtSzyQaO643MD5fl0B%26c%3Denterprise&rpctoken=-5502150988583312111"
     - fill_in:
         - name: "00N6100000DKYmP"
-          selector: "#00N6100000DKYmP"
+          selector: "[name*=N6100000DKYmP]"
           value: $NAME_FIRST
           required: true
         - name: "00N61000008Yii9"
-          selector: "#00N61000008Yii9"
+          selector: "[name*=N61000008Yii9]"
           value: $NAME_LAST
           required: true
         - name: "00N61000007jcVs"
-          selector: "#00N61000007jcVs"
+          selector: "[name*=N61000007jcVs]"
           value: $ADDRESS_STREET
           required: true
         - name: "00N61000007jcW2"
-          selector: "#00N61000007jcW2"
+          selector: "[name*=N61000007jcW2]"
           value: $ADDRESS_CITY
           required: true
         - name: "00N61000007jcXA"
-          selector: "#00N61000007jcXA"
+          selector: "[name*=N61000007jcXA]"
           value: $ADDRESS_ZIP5
           required: true
         - name: "00N61000007jccB"
-          selector: "#00N61000007jccB"
+          selector: "[name*=N61000007jccB]"
           value: $EMAIL
           required: true
         - name: "00N61000007jcbw"
-          selector: "#00N61000007jcbw"
+          selector: "[name*=N61000007jcbw]"
           value: $PHONE
           required: true
         - name: "subject"
@@ -43,7 +43,7 @@ contact_form:
           required: true
     - select:
         - name: "00N61000007jcW7"
-          selector: "#00N61000007jcW7"
+          selector: "[name*=N61000007jcW7]"
           value: $ADDRESS_STATE_FULL
           required: true
           options:
