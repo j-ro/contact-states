@@ -21,7 +21,6 @@ contact_form:
           selector: "#00N61000007jcW2"
           value: $ADDRESS_CITY
           required: true
-        
         - name: "00N61000007jcXA"
           selector: "#00N61000007jcXA"
           value: $ADDRESS_ZIP5
@@ -100,7 +99,7 @@ contact_form:
             - Wisconsin
             - Wyoming
     - click_on:
-        - value: selector: "input[name=submit]"
+        - selector: "input[name=submit]"
     - find:
         - selector: "font"
   success:
