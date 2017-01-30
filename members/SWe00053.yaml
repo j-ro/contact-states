@@ -6,19 +6,19 @@ contact_form:
     - visit: "http://www.flgov.com/contact-gov-scott/email-the-governor/"
     - fill_in:
         - name: "formBuilderForm[Name]"
-          selector: "fieldformBuilderFieldName"
+          selector: "#fieldformBuilderFieldName"
           value: $NAME_FULL
           required: true
         - name: "formBuilderForm[Email]"
-          selector: "fieldformBuilderFieldEmail"
+          selector: "#fieldformBuilderFieldEmail"
           value: $EMAIL
           required: true
         - name: "formBuilderForm[Zip_Code]"
-          selector: "fieldformBuilderFieldZip_Code"
+          selector: "#fieldformBuilderFieldZip_Code"
           value: $ADDRESS_ZIP5
           required: true
         - name: "formBuilderForm[Message]"
-          selector: "fieldformBuilderFieldMessage"
+          selector: "#fieldformBuilderFieldMessage"
           value: $MESSAGE
           required: true
     - click_on:
