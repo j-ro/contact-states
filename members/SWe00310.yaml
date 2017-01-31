@@ -103,8 +103,8 @@ contact_form:
     - click_on:
         - selector: "input[name=submit]"
     - find:
-        - selector: "font"
-          value: "Your Submission has been received. Thank you."
+        - selector: "a"
+          value: "Return Home"
   success:
     headers:
       status: 200
