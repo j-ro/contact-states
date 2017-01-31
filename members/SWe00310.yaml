@@ -104,6 +104,7 @@ contact_form:
         - selector: "input[name=submit]"
     - find:
         - selector: "font"
+          value: "Your Submission has been received. Thank you."
   success:
     headers:
       status: 200
