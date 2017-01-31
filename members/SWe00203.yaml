@@ -47,54 +47,8 @@ contact_form:
             Prof: Prof
             Coach: Coach
             Ofc: Ofc
-        - name: dnf_class_values[communication][topic]
-          selector: "#dnf_class_values_communication__topic_"
-          value: $TOPIC
-          required: true
-          options:
-            Agriculture: 0040480
-            Arts: 0040840
-            Autograph: 0040460
-            "Boards/Commissions": 0040440
-            "Budget/Spending": 0040420
-            "Crime/Drugs": 0040380
-            Cultural Affairs: 0040860
-            Economic Development: 0040360
-            Education: 0040340
-            Elections: 0040940
-            Employment Security: 0040010
-            Energy: 0040320
-            Environment: 0040300
-            Federal Agencies: 0040740
-            Flag Status: 0040980
-            Health: 0040280
-            Housing: 0040260
-            Immigration: 0040920
-            Inmate: 0040660
-            Insurance: 0040760
-            Jobs: 0040240
-            Labor: 0040220
-            Legislation: 0040200
-            "Local Gov't": 0040960
-            Motor Vehicles: 0040180
-            Natural Resources: 0040160
-            Other: 0040500
-            Public Safety: 0040780
-            Public Utilities: 0040800
-            Recognition: 0040400
-            Regulatory Reform: 0040120
-            "Science/Technology": 0040100
-            Scouts: 0040620
-            Small Business: 0040080
-            Student Letter: 0040580
-            Taxation: 0040820
-            Thank you: 0040700
-            Transportation: 0040040
-            Unaccompanied Children: 0040030
-            Unemployment: 0040020
-            Veterans: 0040560
-            Welfare: 0040540
-            Wildlife: 0040520
+    - javascript:
+        - value: "document.querySelector('#dnf_class_values_communication__topic_').value = '0040500'"
     - click_on:
         - value: submit
           selector: "input[name='dnf_opt_submit']"
