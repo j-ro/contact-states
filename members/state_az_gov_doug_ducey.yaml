@@ -37,22 +37,9 @@ contact_form:
             Dr.: "Dr."
         - name: "submitted[subject]"
           selector: "#edit-submitted-subject"
-          value: $TOPIC
+          value: "Other"
           required: true
           options:
-            Budget: "Budget"
-            "Inmate & Corrections Dept": "Inmate &amp; Corrections Dept"
-            "DCS Dept of Child Safety (Formerly CPS)": "DCS Dept of Child Safety (Formerly CPS)"
-            "DES Dept of Economic Security": "DES Dept of Economic Security"
-            "Education": "Education"
-            "Health & Healthcare": "Health &amp; Healthcare "
-            "Immigration & Border": "Immigration &amp; Border"
-            "Legislation (Bills)": "Legislation (Bills)"
-            "Motor Vehicle": "Motor Vehicle"
-            "Recognition, Photo & Other Request": "Recognition, Photo &amp; Other Request"
-            "Senior Issues": "Senior Issues"
-            "Taxes": "Taxes"
-            "Veterans & Military": "Veterans &amp; Military"
             "Other": "Other"
     - recaptcha:
         - value: true
