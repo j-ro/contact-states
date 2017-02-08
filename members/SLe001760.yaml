@@ -54,7 +54,6 @@ contact_form:
           value: $TOPIC
           required: true
           options:
-            - "--Choose a topic--"
             - 2nd Amendment Issues
             - Agriculture
             - Budget
