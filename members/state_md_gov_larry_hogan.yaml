@@ -53,6 +53,8 @@ contact_form:
           selector: "#emailmessage"
           value: $MESSAGE
           required: true
+          options:
+            max_length: 2000
     - select:
         - name: pickSubject
           selector: "#pickSubject"
