@@ -1,0 +1,46 @@
+bioguide: state_il_sldu_47_state_sen_jil_tracy
+contact_form:
+  method: post
+  action: "http://senatorjiltracy.com/Contact"
+  steps:
+    - visit: "http://senatorjiltracy.com/Contact"
+    - fill_in:
+        - name: "dnn$ctr5691$Main$txtFirstName"
+          selector: "#dnn_ctr5691_Main_txtFirstName"
+          value: $NAME_FIRST
+          required: true
+        - name: "dnn$ctr5691$Main$txtLastName"
+          selector: "#dnn_ctr5691_Main_txtLastName"
+          value: $NAME_LAST
+          required: true
+        - name: "dnn$ctr5691$Main$txtAddress"
+          selector: "#dnn_ctr5691_Main_txtAddress"
+          value: $ADDRESS_STREET
+          required: true
+        - name: "dnn$ctr5691$Main$txtCityTown"
+          selector: "#dnn_ctr5691_Main_txtCityTown"
+          value: $ADDRESS_CITY
+          required: true
+        - name: "dnn$ctr5691$Main$txtZip"
+          selector: "#dnn_ctr5691_Main_txtZip"
+          value: $ADDRESS_ZIP5
+          required: true
+        - name: "dnn$ctr5691$Main$txtFrom"
+          selector: "#dnn_ctr5691_Main_txtFrom"
+          value: $EMAIL
+          required: true
+        - name: "dnn$ctr5691$Main$txtComments"
+          selector: "#dnn_ctr5691_Main_txtComments"
+          value: $MESSAGE
+          required: true
+        - recaptcha:
+          - value: true
+    - click_on:
+        - selector: "#dnn_ctr5691_Main_btnSubmit"
+    - find:
+        - selector: "#dnn_ctr5691_ctl00_lblMessage"
+  success:
+    headers:
+      status: 200
+    body:
+      contains: Thank you! Your message was submitted successfully.
