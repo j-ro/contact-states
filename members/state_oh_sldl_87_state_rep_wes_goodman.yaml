@@ -3,7 +3,7 @@ contact_form:
   method: post
   action: "../members/member-contact-submission?id=87"
   steps:
-    - visit: "http://www.ohiohouse.gov/wes-goodman/contact"
+    - visit: "http://www.ohiohouse.gov/wesley-a-goodman/contact"
     - fill_in:
         - name: tbxFirstName
           selector: "#tbxFirstName"
