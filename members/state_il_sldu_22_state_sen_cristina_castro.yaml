@@ -34,8 +34,8 @@ contact_form:
           value: $MESSAGE
           required: true
         - name: "form[captcha]"
-          selector: "#captchaTxt36"
-          captcha_selector: "#captcha36"
+          selector: "#captchaTxt23"
+          captcha_selector: "#captcha23"
           value: $CAPTCHA_SOLUTION
           required: true
     - select:

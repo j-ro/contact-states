@@ -1,9 +1,9 @@
 bioguide: SLe001756
 contact_form:
   method: post
-  action: "http://senatorhastings.com/index.php/contact-us"
+  action: "http://senatorhastings.com/contact-me"
   steps:
-    - visit: "http://senatorhastings.com/index.php/contact-us"
+    - visit: "http://senatorhastings.com/contact-me"
     - fill_in:
         - name: "form[firstName]"
           selector: "#firstName"
@@ -38,12 +38,8 @@ contact_form:
           value: $MESSAGE
           required: true
         - name: "form[hastings]"
-          selector: "#captchaTxt59"
-          value: $CAPTCHA_SOLUTION
-          required: true
-        - name: "form[hastings]"
-          selector: "#captchaTxt59"
-          captcha_selector: "#captcha59"
+          selector: "#captchaTxt36"
+          captcha_selector: "#captcha36"
           value: $CAPTCHA_SOLUTION
           required: true
     - select:

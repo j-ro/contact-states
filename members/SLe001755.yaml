@@ -38,10 +38,10 @@ contact_form:
           value: $MESSAGE
           required: true
         - name: "form[cunningham]"
-          selector: "#captchaTxt62"
+          selector: "#captchaTxt36"
           value: $CAPTCHA_SOLUTION
           required: true
-          captcha_selector: "#captcha62"
+          captcha_selector: "#captcha36"
     - select:
         - name: "form[issue][]"
           selector: "#issue"

@@ -38,8 +38,8 @@ contact_form:
           value: $MESSAGE
           required: true
         - name: "form[Van Pelt]"
-          selector: "#captchaTxt41"
-          captcha_selector: "#captcha41"
+          selector: "#captchaTxt36"
+          captcha_selector: "#captcha36"
           value: $CAPTCHA_SOLUTION
           required: true
     - select:
