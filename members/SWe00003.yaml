@@ -54,22 +54,34 @@ contact_form:
           captcha_selector: "#recaptcha_image img"
           value: "$CAPTCHA_SOLUTION"
           required: true
-    - click_on:
-       - selector: "#ctl00_ContentPlaceHolder1_PREFIX_chzn"
-    - wait:
-       - value: 1
-    - click_on:
-       - selector: "#ctl00_ContentPlaceHolder1_PREFIX_chzn .chzn-results li[data-option-array-index='1']"
-    - wait:
-       - value: 1
-    - click_on:
-       - selector: "#ctl00_ContentPlaceHolder1_EMAIL_ISSUE_chzn"
-    - wait:
-       - value: 1
-    - click_on:
-       - selector: "#ctl00_ContentPlaceHolder1_EMAIL_ISSUE_chzn .chzn-results li[data-option-array-index='22']"
-    - wait:
-       - value: 1
+    - select:
+        - name: "ctl00$ContentPlaceHolder1$EMAIL_ISSUE"
+          selector: "#ctl00_ContentPlaceHolder1_EMAIL_ISSUE"
+          value: $TOPIC
+          required: true
+          options:
+            Conservation: CONSERVATION
+            Department of Human Resources: DHR
+            Disaster Assistance: DISASTER
+            Driver License: ALEA-DRIVER LICENSE
+            Economy &amp; Budget: BUD
+            Education: EDU-GENERAL
+            Environment: ENVIRONMENT
+            Healthcare: HC-GENERAL
+            Immigration: ISSUE-IMMIGRATION
+            Insurance: INSURANCE-GENERAL
+            Labor: LABOR
+            Legislative Session 2017: LS
+            Military: MILITARY
+            NRA - Second Amendment: NRA
+            Pardons &amp; Paroles: PARDONS &amp;PAROLES
+            Request for Flag: FLAG
+            Request for Funding: REQUEST FOR FUNDING
+            Request for Greeting Letter: LETTERS - CEREMONIAL
+            Request Photo/Request for Item: REQUEST FOR ITEMS
+            Senior Assistance: SENIOR SERVICES-GEN
+            Transportation: DOT
+            Other Issue: MISCELLANEOUS
     - click_on:
         - value: Email This Form
           selector: "#ctl00_ContentPlaceHolder1_btnEmail"
