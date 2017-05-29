@@ -43,6 +43,8 @@ contact_form:
         - value: "document.getElementById('gwt-uid-164').click();"
     - click_on:
         - selector: 'form .primary'
+    - javascript:
+        - value: "document.querySelectorAll('form .primary')[0].click();"
     - find:
         - selector: "#gwt-uid-255"
     - javascript:
