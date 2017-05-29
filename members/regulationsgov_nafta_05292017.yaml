@@ -32,10 +32,12 @@ contact_form:
           required: true
     - javascript:
         - value: "document.querySelectorAll('.GIY1LSJJMC')[0].click();"
-    - find:
-        - selector: "#gwt-uid-255"
+    - javascript:
+        - value: "function triggerMouseEvent (node, eventType) { var clickEvent = document.createEvent ('MouseEvents'); clickEvent.initEvent (eventType, true, true); node.dispatchEvent (clickEvent); }; triggerMouseEvent (document.querySelectorAll('div.GIY1LSJBCB')[1], 'mouseover'); triggerMouseEvent (document.querySelectorAll('div.GIY1LSJBCB')[1], 'mousedown');"
     - wait:
         - value: 1
+    - find:
+        - selector: "#gwt-uid-255"
     - javascript:
         - value: "document.getElementById('gwt-uid-164').click();"
     - javascript:
