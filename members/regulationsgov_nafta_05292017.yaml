@@ -12,6 +12,24 @@ contact_form:
         - selector: "#x-auto-0-input"
           value: $MESSAGE
           required: true
+        - selector: "#x-auto-1-input"
+          value: $NAME_FIRST
+          required: true
+        - selector: "#x-auto-2-input"
+          value: $NAME_LAST
+          required: true
+        - selector: "#x-auto-3-input"
+          value: $ADDRESS_STREET
+          required: true
+        - selector: "#x-auto-5-input"
+          value: $ADDRESS_CITY
+          required: true
+        - selector: "#x-auto-8-input"
+          value: $ADDRESS_ZIP5
+          required: true
+        - selector: "#x-auto-11-input"
+          value: $PHONE
+          required: true
     - javascript:
         - value: "function triggerMouseEvent (node, eventType) { var clickEvent = document.createEvent ('MouseEvents'); clickEvent.initEvent (eventType, true, true); node.dispatchEvent (clickEvent); }; document.querySelector('span.GIY1LSJJMC').click(); triggerMouseEvent (document.querySelectorAll('div.GIY1LSJBCB')[1], 'mouseover'); triggerMouseEvent (document.querySelectorAll('div.GIY1LSJBCB')[1], 'mousedown');"
     - wait:
