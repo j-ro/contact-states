@@ -31,13 +31,9 @@ contact_form:
           value: $PHONE
           required: true
     - javascript:
-        - value: "document.querySelectorAll('.GIY1LSJJMC')[0].click();"
-    - wait:
-        - value: 1
+        - value: "document.querySelectorAll('#x-auto-6-input')[0].value = 'Alabama';"
     - javascript:
-        - value: "var clickEvent = document.createEvent('MouseEvents'); clickEvent.initEvent('mouseover', true, true); document.querySelectorAll('div.GIY1LSJBCB')[1].dispatchEvent(clickEvent);" 
-    - javascript:
-        - value: "var clickEvent = document.createEvent('MouseEvents'); clickEvent.initEvent('mousedown', true, true); document.querySelectorAll('div.GIY1LSJBCB')[1].dispatchEvent(clickEvent);" 
+        - value: "document.querySelectorAll('#x-auto-6-input')[0].focus();"
     - wait:
         - value: 1
     - find:
