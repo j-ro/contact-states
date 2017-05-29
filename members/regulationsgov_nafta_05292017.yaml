@@ -34,8 +34,8 @@ contact_form:
         - selector: "#x-auto-11-input"
           value: $PHONE
           required: true
-    - click_on:
-        - selector: "#gwt-uid-356"
+    - javascript:
+        - value: "document.getElementById('gwt-uid-164').click();"
     - click_on:
         - selector: "form .primary23432"
     - find:
