@@ -34,8 +34,10 @@ contact_form:
           value: $PHONE
           required: true
         - selector: "#x-auto-14-input"
-          value: $NAME_FULL
+          value: "NA"
           required: true
+    - click_on:
+        - selector: "#gwt-uid-164"
     - click_on:
         - selector: "#x-auto-6 span.GIY1LSJJMC"
     - click_on:
@@ -53,7 +55,7 @@ contact_form:
     - find:
         - selector: "#gwt-uid-255"
     - javascript:
-        - value: "function triggerMouseEvent (node, eventType) { var clickEvent = document.createEvent ('MouseEvents'); clickEvent.initEvent (eventType, true, true); triggerMouseEvent(document.querySelectorAll('#gwt-uid-255')[0], 'mouseover'); triggerMouseEvent(document.querySelectorAll('#gwt-uid-255')[0], 'mousedown'); triggerMouseEvent(document.querySelectorAll('#gwt-uid-255')[0], 'mouseup');"
+        - value: "function triggerMouseEvent (node, eventType) { var clickEvent = document.createEvent ('MouseEvents'); clickEvent.initEvent (eventType, true, true); node.dispatchEvent (clickEvent); }; triggerMouseEvent(document.querySelectorAll('#gwt-uid-255')[0], 'mouseover'); triggerMouseEvent(document.querySelectorAll('#gwt-uid-255')[0], 'mousedown'); triggerMouseEvent(document.querySelectorAll('#gwt-uid-255')[0], 'mouseup');"
     - wait:
         - value: 1
     - javascript:
