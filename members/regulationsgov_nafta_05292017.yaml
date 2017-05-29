@@ -36,15 +36,14 @@ contact_form:
           required: true
     - javascript:
         - value: "document.getElementById('gwt-uid-164').click();"
-    - click_on:
-        - selector: "form .primary"
+    - javascript:
+        - value: "document.querySelector('form .primary').click();"
     - find:
         - selector: "#gwt-uid-255"
-    - check:
-        - selector: "#gwt-uid-255"
-          value: "on"
-    - click_on:
-        - selector: "#gwt-uid-411"
+    - javascript:
+        - value: "document.getElementById('gwt-uid-255').click();"
+    - javascript:
+        - value: "document.getElementById('gwt-uid-411').click();"
     - find:
         - selector: ".GIY1LSJFTD.GIY1LSJGTD"
   success:
