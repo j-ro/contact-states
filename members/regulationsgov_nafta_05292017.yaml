@@ -54,6 +54,8 @@ contact_form:
         - selector: "#gwt-uid-255"
     - javascript:
         - value: "function triggerMouseEvent (node, eventType) { var clickEvent = document.createEvent ('MouseEvents'); clickEvent.initEvent (eventType, true, true); triggerMouseEvent(document.querySelectorAll('#gwt-uid-255')[0], 'mouseover'); triggerMouseEvent(document.querySelectorAll('#gwt-uid-255')[0], 'mousedown'); triggerMouseEvent(document.querySelectorAll('#gwt-uid-255')[0], 'mouseup');"
+    - wait:
+        - value: 1
     - javascript:
         - value: "document.getElementById('gwt-uid-411').click();"
     - find:
