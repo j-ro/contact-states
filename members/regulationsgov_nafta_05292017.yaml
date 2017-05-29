@@ -42,7 +42,7 @@ contact_form:
           value: $ADDRESS_STATE_FULL
           required: true
     - click_on:
-        - selector: ".GIY1LSJKJD.GIY1LSJMSC.optionalFieldSet label"
+        - selector: ".GIY1LSJKJD.GIY1LSJMSC.optionalFieldSet span label"
     - javascript:
         - value: "document.querySelectorAll('#gwt-uid-164')[0].focus();"
     - javascript:
