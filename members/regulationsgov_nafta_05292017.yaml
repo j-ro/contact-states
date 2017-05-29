@@ -38,8 +38,8 @@ contact_form:
         - value: 1
     - javascript:
         - value: "document.getElementById('gwt-uid-164').click();"
-    - javascript:
-        - value: "document.querySelector('form .primary').click();"
+    - click_on:
+        - selector: 'form .primary'
     - find:
         - selector: "#gwt-uid-255"
     - javascript:
