@@ -36,7 +36,7 @@ contact_form:
     - click_on:
         - selector: "#x-auto-6 span.GIY1LSJJMC"
     - click_on:
-        - selector: ".GIY1LSJJM > div > div > div:nth-child(1)"
+        - selector: ".GIY1LSJJM > div > div > div:nth-child(2)"
     - wait:
         - value: 1
     - javascript:
