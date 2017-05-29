@@ -1,0 +1,55 @@
+bioguide: regulationsgov_nafta_05292017
+contact_form:
+  method: POST
+  action: ""
+  steps:
+    - visit: "https://www.regulations.gov/comment?D=USTR_FRDOC_0001-0413"
+    - find:
+        - selector: "#x-auto-0-input"
+    - fill_in:
+        - selector: "#x-auto-0-input"
+          value: $MESSAGE
+          required: true
+        - selector: "#x-auto-1-input"
+          value: $NAME_FIRST
+          required: true
+        - selector: "#x-auto-2-input"
+          value: $NAME_LAST
+          required: true
+        - selector: "#x-auto-3-input"
+          value: $ADDRESS_STREET
+          required: true
+        - selector: "#x-auto-5-input"
+          value: $ADDRESS_CITY
+          required: true
+        - selector: "#x-auto-6-input"
+          value: $ADDRESS_STATE_FULL
+          required: true
+        - selector: "#x-auto-8-input"
+          value: $ADDRESS_ZIP5
+          required: true
+        - selector: "#x-auto-10-input"
+          value: $EMAIL
+          required: true
+        - selector: "#x-auto-11-input"
+          value: $PHONE
+          required: true
+    - uncheck:
+        - selector: "#gwt-uid-164"
+          value: "on"
+    - click_on:
+        - selector: "form .primary"
+    - find:
+        - selector: "#gwt-uid-255"
+    - check:
+        - selector: "#gwt-uid-255"
+          value: "on"
+    - click_on:
+        - selector: "#gwt-uid-411"
+    - find:
+        - selector: ".GIY1LSJFTD.GIY1LSJGTD"
+  success:
+    headers:
+      status: 200
+    body:
+      contains: Your Comment Tracking Number
