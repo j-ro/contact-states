@@ -27,6 +27,9 @@ contact_form:
         - selector: "#x-auto-8-input"
           value: $ADDRESS_ZIP5
           required: true
+        - selector: "#x-auto-10-input"
+          value: $EMAIL
+          required: true
         - selector: "#x-auto-11-input"
           value: $PHONE
           required: true
