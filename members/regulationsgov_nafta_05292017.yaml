@@ -33,6 +33,9 @@ contact_form:
         - selector: "#x-auto-11-input"
           value: $PHONE
           required: true
+        - selector: "#x-auto-14-input"
+          value: $NAME_FULL
+          required: true
     - click_on:
         - selector: "#x-auto-6 span.GIY1LSJJMC"
     - click_on:
@@ -43,10 +46,6 @@ contact_form:
           required: true
     - click_on:
         - selector: ".GIY1LSJKJD.GIY1LSJMSC.optionalFieldSet span label"
-    - javascript:
-        - value: "document.querySelectorAll('#gwt-uid-164')[0].focus();"
-    - javascript:
-        - value: "document.querySelectorAll('#gwt-uid-164')[0].blur();"
     - click_on:
         - selector: 'form .primary'
     - javascript:
