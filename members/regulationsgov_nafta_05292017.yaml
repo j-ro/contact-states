@@ -55,9 +55,11 @@ contact_form:
     - find:
         - selector: "#gwt-uid-255"
     - javascript:
-        - value: "function triggerMouseEvent (node, eventType) { var clickEvent = document.createEvent ('MouseEvents'); clickEvent.initEvent (eventType, true, true); node.dispatchEvent (clickEvent); }; triggerMouseEvent(document.querySelectorAll('#gwt-uid-255')[0], 'mouseover'); triggerMouseEvent(document.querySelectorAll('#gwt-uid-255')[0], 'mousedown'); triggerMouseEvent(document.querySelectorAll('#gwt-uid-255')[0], 'mouseup');"
+        - value: "document.querySelectorAll('#gwt-uid-255')[0].click()"
     - wait:
         - value: 1
+    - find:
+        - selector: "#sdrwsdfd"
     - javascript:
         - value: "document.getElementById('gwt-uid-411').click();"
     - find:
