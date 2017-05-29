@@ -31,7 +31,7 @@ contact_form:
           value: $PHONE
           required: true
     - javascript:
-        - value: "function triggerMouseEvent (node, eventType) { var clickEvent = document.createEvent ('MouseEvents'); clickEvent.initEvent (eventType, true, true); node.dispatchEvent (clickEvent); }; document.querySelector('span.GIY1LSJJMC').click(); triggerMouseEvent (document.querySelectorAll('div.GIY1LSJBCB')[1], 'mouseover');"
+        - value: "function triggerMouseEvent (node, eventType) { var clickEvent = document.createEvent ('MouseEvents'); clickEvent.initEvent (eventType, true, true); node.dispatchEvent (clickEvent); }; document.querySelector('span.GIY1LSJJMC').click();"
     - find:
         - selector: "#gwt-uid-255"
     - wait:
