@@ -41,8 +41,8 @@ contact_form:
         - selector: "#x-auto-6-input"
           value: $ADDRESS_STATE_FULL
           required: true
-    - click_on:
-        - selector: "#gwt-uid-356"
+    - javascript:
+        - value: "document.querySelectorAll('#gwt-uid-164')[0].click();"
     - click_on:
         - selector: 'form .primary'
     - javascript:
