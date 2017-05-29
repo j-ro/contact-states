@@ -33,10 +33,10 @@ contact_form:
         - selector: "#x-auto-11-input"
           value: $PHONE
           required: true
-    - javascript:
-        - value: "document.querySelectorAll('#x-auto-6-input')[0].value = 'Alabama';"
-    - javascript:
-        - value: "document.querySelectorAll('#x-auto-6-input')[0].focus();"
+    - click_on:
+        - selector: "#x-auto-6 span.GIY1LSJJMC"
+    - click_on:
+        - selector: ".GIY1LSJJM > div > div > div:nth-child(1)"
     - wait:
         - value: 1
     - javascript:
