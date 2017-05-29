@@ -30,6 +30,8 @@ contact_form:
         - selector: "#x-auto-11-input"
           value: $PHONE
           required: true
+    - find:
+        - selector: ".GIY1LSJJMC"
     - javascript:
         - value: "document.querySelector('.GIY1LSJJMC').click();"
     - find:
