@@ -41,7 +41,8 @@ contact_form:
         - selector: ".GIY1LSJJM > div > div > div:nth-child(2)"
     - fill_in:
         - selector: "#x-auto-6-input"
-          value: "NY"
+          value: $ADDRESS_STATE_FULL
+          required: true
     - wait:
         - value: 1
     - click_on:
