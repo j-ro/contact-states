@@ -56,8 +56,6 @@ contact_form:
         - value: "document.querySelectorAll('#gwt-uid-255')[0].click()"
     - wait:
         - value: 1
-    - find:
-        - selector: "#sdrwsdfd"
     - click_on:
         - selector: "#gwt-uid-411"
     - find:
