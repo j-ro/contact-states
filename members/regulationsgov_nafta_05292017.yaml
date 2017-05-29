@@ -58,6 +58,8 @@ contact_form:
         - value: 1
     - click_on:
         - selector: ".GIY1LSJERD .primary"
+    - wait:
+        - value: 3
     - find:
         - selector: ".GIY1LSJFTD.GIY1LSJGTD"
   success:
