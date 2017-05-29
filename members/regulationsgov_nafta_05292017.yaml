@@ -6,6 +6,8 @@ contact_form:
     - visit: "https://www.regulations.gov/comment?D=USTR_FRDOC_0001-0413"
     - find:
         - selector: "#x-auto-0-input"
+    - wait:
+        - value: 1
     - fill_in:
         - selector: "#x-auto-0-input"
           value: $MESSAGE
