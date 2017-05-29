@@ -39,6 +39,8 @@ contact_form:
         - selector: ".GIY1LSJJM > div > div > div:nth-child(2)"
     - wait:
         - value: 1
+    - click_on:
+        - selector: "#gwt-uid-164"
     - javascript:
         - value: "document.getElementById('gwt-uid-164').click();"
     - click_on:
