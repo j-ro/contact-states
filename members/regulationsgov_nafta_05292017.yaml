@@ -33,6 +33,8 @@ contact_form:
         - selector: "#x-auto-11-input"
           value: $PHONE
           required: true
+        - selector: "#x-auto-14-input"
+          value: "something"
     - click_on:
         - selector: "#x-auto-6 span.GIY1LSJJMC"
     - click_on:
