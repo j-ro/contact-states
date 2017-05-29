@@ -22,9 +22,6 @@ contact_form:
         - selector: "#x-auto-5-input"
           value: $ADDRESS_CITY
           required: true
-        - selector: "#x-auto-6-input"
-          value: $ADDRESS_STATE_FULL
-          required: true
         - selector: "#x-auto-8-input"
           value: $ADDRESS_ZIP5
           required: true
@@ -34,6 +31,8 @@ contact_form:
         - selector: "#x-auto-11-input"
           value: $PHONE
           required: true
+    - javascript:
+        - value: "document.querySelector('span.GIY1LSJJMC').click(); document.querySelector('.x-view-highlightrow').click();"
     - javascript:
         - value: "document.getElementById('gwt-uid-164').click();"
     - javascript:
