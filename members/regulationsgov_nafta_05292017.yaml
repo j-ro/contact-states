@@ -35,7 +35,7 @@ contact_form:
           value: $PHONE
           required: true
     - click_on:
-        - selector: "#gwt-uid-356 label"
+        - selector: "#gwt-uid-356"
     - click_on:
         - selector: "form .primary23432"
     - find:
