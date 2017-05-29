@@ -36,8 +36,6 @@ contact_form:
         - value: "document.querySelectorAll('#x-auto-6-input')[0].focus();"
     - wait:
         - value: 1
-    - find:
-        - selector: "#gwt-uid-255"
     - javascript:
         - value: "document.getElementById('gwt-uid-164').click();"
     - javascript:
