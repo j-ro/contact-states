@@ -6,8 +6,6 @@ contact_form:
     - visit: "https://www.regulations.gov/comment?D=USTR_FRDOC_0001-0413"
     - find:
         - selector: "#x-auto-0-input"
-    - wait:
-        - value: 1
     - fill_in:
         - selector: "#x-auto-0-input"
           value: $MESSAGE
@@ -33,8 +31,6 @@ contact_form:
         - selector: "#x-auto-11-input"
           value: $PHONE
           required: true
-        - selector: "#x-auto-14-input"
-          value: "something"
     - click_on:
         - selector: "#x-auto-6 span.GIY1LSJJMC"
     - click_on:
@@ -43,10 +39,8 @@ contact_form:
         - selector: "#x-auto-6-input"
           value: $ADDRESS_STATE_FULL
           required: true
-    - wait:
-        - value: 1
     - click_on:
-        - selector: "#gwt-uid-164"
+        - selector: "#gwt-uid-356"
     - click_on:
         - selector: 'form .primary'
     - javascript:
