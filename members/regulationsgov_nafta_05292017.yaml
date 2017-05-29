@@ -57,7 +57,7 @@ contact_form:
     - wait:
         - value: 1
     - click_on:
-        - selector: "#gwt-uid-411"
+        - selector: ".GIY1LSJERD .primary"
     - find:
         - selector: ".GIY1LSJFTD.GIY1LSJGTD"
   success:
