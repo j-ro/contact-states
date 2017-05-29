@@ -50,8 +50,6 @@ contact_form:
         - selector: ".GIY1LSJKJD.GIY1LSJMSC.optionalFieldSet span label"
     - click_on:
         - selector: 'form .primary'
-    - javascript:
-        - value: "document.querySelectorAll('form .primary')[0].click();"
     - find:
         - selector: "#gwt-uid-255"
     - javascript:
