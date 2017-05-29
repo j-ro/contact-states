@@ -33,11 +33,9 @@ contact_form:
     - javascript:
         - value: "document.querySelectorAll('.GIY1LSJJMC')[0].click();"
     - javascript:
-        - value: "function triggerMouseEvent (node, eventType) { var clickEvent = document.createEvent ('MouseEvents'); clickEvent.initEvent (eventType, true, true); node.dispatchEvent (clickEvent); };" 
+        - value: "var clickEvent = document.createEvent('MouseEvents'); clickEvent.initEvent('mouseover', true, true); document.querySelectorAll('div.GIY1LSJBCB')[1].dispatchEvent(clickEvent);" 
     - javascript:
-        - value: "triggerMouseEvent(document.querySelectorAll('div.GIY1LSJBCB')[1], 'mouseover');" 
-    - javascript:
-        - value: "triggerMouseEvent(document.querySelectorAll('div.GIY1LSJBCB')[1], 'mousedown');"
+        - value: "var clickEvent = document.createEvent('MouseEvents'); clickEvent.initEvent('mousedown', true, true); document.querySelectorAll('div.GIY1LSJBCB')[1].dispatchEvent(clickEvent);" 
     - wait:
         - value: 1
     - find:
