@@ -58,8 +58,8 @@ contact_form:
         - value: 1
     - find:
         - selector: "#sdrwsdfd"
-    - javascript:
-        - value: "document.getElementById('gwt-uid-411').click();"
+    - click_on:
+        - selector: "#gwt-uid-411"
     - find:
         - selector: ".GIY1LSJFTD.GIY1LSJGTD"
   success:
