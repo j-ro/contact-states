@@ -32,6 +32,8 @@ contact_form:
           required: true
     - javascript:
         - value: "document.querySelectorAll('.GIY1LSJJMC')[0].click();"
+    - wait:
+        - value: 1
     - javascript:
         - value: "var clickEvent = document.createEvent('MouseEvents'); clickEvent.initEvent('mouseover', true, true); document.querySelectorAll('div.GIY1LSJBCB')[1].dispatchEvent(clickEvent);" 
     - javascript:
