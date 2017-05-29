@@ -52,8 +52,8 @@ contact_form:
         - value: "document.querySelectorAll('form .primary')[0].click();"
     - find:
         - selector: "#gwt-uid-255"
-    - javascript:
-        - value: "document.getElementById('gwt-uid-255').click();"
+    - click_on:
+        - selector: "#gwt-uid-255"
     - javascript:
         - value: "document.getElementById('gwt-uid-411').click();"
     - find:
