@@ -7,7 +7,7 @@ contact_form:
     - find:
         - selector: "#x-auto-0-input"
     - wait:
-        - value: 1
+        - value: 5
     - fill_in:
         - selector: "#x-auto-0-input"
           value: $MESSAGE
