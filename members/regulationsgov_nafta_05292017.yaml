@@ -38,10 +38,16 @@ contact_form:
           required: true
     - click_on:
         - selector: "#gwt-uid-164"
+    - wait:
+        - value: 1
     - click_on:
         - selector: "#x-auto-6 span.GIY1LSJJMC"
+    - wait:
+        - value: 1
     - click_on:
         - selector: ".GIY1LSJJM > div > div > div:nth-child(2)"
+    - wait:
+        - value: 1
     - fill_in:
         - selector: "#x-auto-6-input"
           value: $ADDRESS_STATE_FULL
