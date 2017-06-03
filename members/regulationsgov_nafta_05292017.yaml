@@ -54,7 +54,7 @@ contact_form:
             - United States
     - wait:
         - value: 1
-    - javascript: 
+    - javascript:
         - value: "document.querySelector('.combo.public.input select').value = 'AL'"
     - select:
         - selector: "select[name='comment[us_state]']"
