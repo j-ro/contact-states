@@ -54,6 +54,8 @@ contact_form:
             - United States
     - wait:
         - value: 1
+    - javascript: 
+        - value: "document.querySelector('.combo.public.input select').value = 'AL'"
     - select:
         - selector: "select[name='comment[us_state]']"
           name: "comment[us_state]"
@@ -110,11 +112,9 @@ contact_form:
             Washington: WA
             West Virginia: WV
             Wisconsin: WI
-            Wyoming: WYs   
+            Wyoming: WY
     - click_on:
         - selector: "#comment_confirm_submission"
-    - javascript: 
-        - value: "if (document.querySelector('.combo.public.input select').value == '') { document.querySelector('.combo.public.input select').value = 'AL' }"
     - click_on:
         - selector: "input.create"
     - find:
