@@ -7,7 +7,7 @@ contact_form:
     - find:
         - selector: "#comment_general_comment"
     - fill_in:
-        - selector: "#comment_general_commentt"
+        - selector: "#comment_general_comment"
           name: "comment[general_comment]"
           value: $MESSAGE
           required: true
