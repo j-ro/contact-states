@@ -75,4 +75,4 @@ contact_form:
     headers:
       status: 200
     body:
-      contains: Thank You for Contacting the Office of the Governor
+      contains: Thank You for Contacting the the Governor's Office
