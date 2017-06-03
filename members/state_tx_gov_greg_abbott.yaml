@@ -75,4 +75,4 @@ contact_form:
     headers:
       status: 200
     body:
-      contains: Thank You for Contacting the the Governor's Office
+      contains: If you do not receive a confirmation
