@@ -1,54 +1,45 @@
 bioguide: state_tx_gov_greg_abbott
 contact_form:
   method: post
-  action: assistance.aspx
+  action: "./opinion.aspx"
   steps:
-    - visit: "https://gov.texas.gov/contact/contact.aspx"
-    - check:
-        - name: rblPath
-          selector: "#rblPath_0"
-          value: "1"
-    - click_on:
-        - value: Select
-          selector: "#Button1"
-    - find:
-        - selector: "#DropDownList1"
+    - visit: "https://gov.texas.gov/apps/contact/opinion.aspx"
     - fill_in:
-        - name: txtFirst
-          selector: "#txtFirst"
+        - name: ctl00$ContentPlaceHolder1$txtFirst
+          selector: "#ctl00_ContentPlaceHolder1_txtFirst"
           value: $NAME_FIRST
           required: true
-        - name: txtLast
-          selector: "#txtLast"
+        - name: ctl00$ContentPlaceHolder1$txtLast
+          selector: "#ctl00_ContentPlaceHolder1_txtLast"
           value: $NAME_LAST
           required: true
-        - name: txtAddress
-          selector: "#txtAddress"
+        - name: ctl00$ContentPlaceHolder1$txtAddress
+          selector: "#ctl00_ContentPlaceHolder1_txtAddress"
           value: $ADDRESS_STREET
           required: true
-        - name: txtCity
-          selector: "#txtCity"
+        - name: ctl00$ContentPlaceHolder1$txtCity
+          selector: "#ctl00_ContentPlaceHolder1_txtCity"
           value: $ADDRESS_CITY
           required: true
-        - name: txtZip
-          selector: "#txtZip"
+        - name: ctl00$ContentPlaceHolder1$txtZip
+          selector: "#ctl00_ContentPlaceHolder1_txtZip"
           value: $ADDRESS_ZIP5
           required: true
-        - name: txtEmail
-          selector: "#txtEmail"
+        - name: ctl00$ContentPlaceHolder1$txtEmail
+          selector: "#ctl00_ContentPlaceHolder1_txtEmail"
           value: $EMAIL
           required: true
-        - name: txtEmail2
-          selector: "#txtEmail2"
+        - name: ctl00$ContentPlaceHolder1$txtEmail2
+          selector: "#ctl00_ContentPlaceHolder1_txtEmail2"
           value: $EMAIL
           required: true
-        - name: txtMessage
-          selector: "#txtMessage"
+        - name: ctl00$ContentPlaceHolder1$txtMessage
+          selector: "#ctl00_ContentPlaceHolder1_txtMessage"
           value: $MESSAGE
           required: true
     - select:
-        - name: DropDownList1
-          selector: "#DropDownList1"
+        - name: ctl00$ContentPlaceHolder1$DropDownList1
+          selector: "#ctl00_ContentPlaceHolder1_DropDownList1"
           value: $NAME_PREFIX
           required: true
           options:
@@ -60,65 +51,8 @@ contact_form:
             Dr.: "5"
             The Honorable: "6"
             None: "13"
-        - name: Dropdownlist3
-          selector: "#Dropdownlist3"
-          value: $ADDRESS_STATE_POSTAL_ABBREV
-          required: true
-          options:
-            - AL
-            - AK
-            - AR
-            - AZ
-            - CA
-            - CO
-            - CT
-            - DC
-            - DE
-            - FL
-            - GA
-            - HI
-            - IA
-            - ID
-            - IL
-            - IN
-            - KS
-            - KY
-            - LA
-            - MA
-            - MD
-            - ME
-            - MI
-            - MN
-            - MO
-            - MS
-            - MT
-            - NC
-            - ND
-            - NE
-            - NH
-            - NJ
-            - NM
-            - NV
-            - NY
-            - OH
-            - OK
-            - OR
-            - PA
-            - RI
-            - SC
-            - SD
-            - TN
-            - TX
-            - UT
-            - VA
-            - VI
-            - VT
-            - WA
-            - WI
-            - WV
-            - WY
-        - name: DropDownList2
-          selector: "#DropDownList2"
+        - name: ctl00$ContentPlaceHolder1$DropDownList2
+          selector: "#ctl00_ContentPlaceHolder1_DropDownList2"
           value: $TOPIC
           required: true
           options:
@@ -131,12 +65,12 @@ contact_form:
             Water Issues: "156"
             Other: "160"
     - check:
-        - name: RadioButtonList1
-          selector: "#RadioButtonList1_0"
+        - name: ctl00$ContentPlaceHolder1$RadioButtonList1
+          selector: "#ctl00_ContentPlaceHolder1_RadioButtonList1_0"
           value: "1"
     - click_on:
         - value: Send Message
-          selector: "#Button1"
+          selector: "#ctl00_ContentPlaceHolder1_Button1"
   success:
     headers:
       status: 200
