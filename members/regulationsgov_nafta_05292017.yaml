@@ -27,10 +27,6 @@ contact_form:
           name: "comment[city]"
           value: $ADDRESS_CITY
           required: true
-        - selector: "#comment_us_state"
-          name: "comment[us_state]"
-          value: $ADDRESS_STATE_FULL
-          required: true
         - selector: "#comment_zip"
           name: "comment[zip]"
           value: $ADDRESS_ZIP5
