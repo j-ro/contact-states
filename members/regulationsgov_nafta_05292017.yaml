@@ -114,7 +114,7 @@ contact_form:
     - click_on:
         - selector: "#comment_confirm_submission"
     - javascript: 
-        - value: "if (document.querySelector(\"select[name='comment[us_state]']\").value == \"\") { document.querySelector(\"select[name='comment[us_state]']\").value = \"AL\" }"
+        - value: "if (document.querySelector('.combo.public.input select').value == '') { document.querySelector('.combo.public.input select').value = 'AL' }"
     - click_on:
         - selector: "input.create"
     - find:
