@@ -74,7 +74,7 @@ contact_form:
         - value: true
     - click_on:
         - value: Submit Feedback
-          selector: ".large_submit"
+          selector: "input[name='submit']"
   success:
     headers:
       status: 200
