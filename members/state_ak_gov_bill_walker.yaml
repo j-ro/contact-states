@@ -34,8 +34,8 @@ contact_form:
           value: $MESSAGE
           required: true
     - select:
-        - name: ctl00$ContentPlaceHolder1$DropDownList2
-          selector: "#ctl00_ContentPlaceHolder1_DropDownList2"
+        - name: Topic
+          selector: "#Topic"
           value: $TOPIC
           required: true
           options:
