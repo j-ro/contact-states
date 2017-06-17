@@ -5,6 +5,10 @@ contact_form:
   steps:
     - visit: "https://solutions.virginia.gov/communityrelations/form/email"
     - fill_in:
+        - name: RequestedByTitle
+          selector: "#RequestedByTitle"
+          value: $NAME_PREFIX
+          required: true
         - name: RequestedByFirstName
           selector: "#RequestedByFirstName"
           value: $NAME_FIRST
