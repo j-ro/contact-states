@@ -56,9 +56,8 @@ try{ element.parentNode.removeChild(element) } catch(err){} });"
         - value: 5
     - recaptcha:
         - value: true
-    - click_on:
-        - value: Submit
-          selector: "input[type='submit']"
+    - javascript:
+        - value: "document.querySelector('input[type=submit]').click();"
     - wait:
         - value: 5
     - find:
