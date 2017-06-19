@@ -54,8 +54,6 @@ try{ element.parentNode.removeChild(element) } catch(err){} });"
           value: "Yes"
     - wait:
         - value: 5
-    - recaptcha:
-        - value: true
     - click_on:
         - value: Submit
           selector: "input[type='submit']"
