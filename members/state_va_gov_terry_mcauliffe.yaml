@@ -56,6 +56,8 @@ contact_form:
     - click_on:
         - value: Submit
           selector: "input[type='submit']"
+    - wait:
+        - value: 5
     - find:
         - selector: "h2"
           value: "Thank You"
