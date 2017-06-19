@@ -49,6 +49,8 @@ contact_form:
         - name: ResponseRequired
           selector: "#ResponseRequired[value='Yes']"
           value: "Yes"
+    - wait:
+        - value: 5
     - recaptcha:
         - value: true
     - click_on:
