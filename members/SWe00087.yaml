@@ -107,6 +107,8 @@ contact_form:
     - click_on:
         - value: Submit
           selector: "#govcontact input[type='submit'][value='Submit']"
+    - wait:
+        - value: 5
   success:
     headers:
       status: 200
