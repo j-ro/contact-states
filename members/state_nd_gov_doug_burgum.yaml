@@ -4,6 +4,8 @@ contact_form:
   action: "/contact-us"
   steps:
     - visit: "https://www.governor.nd.gov/contact-us"
+    - wait:
+        - value: 3
     - fill_in:
         - name: "submitted[name]"
           selector: "#edit-submitted-name"
