@@ -9,14 +9,23 @@ contact_form:
           selector: "#edit-submitted-name"
           value: $NAME_FULL
           required: true
+    - wait:
+        - value: 3
+    - fill_in:
         - name: "submitted[subject]"
           selector: "#edit-submitted-subject"
           value: $SUBJECT
           required: true
+    - wait:
+        - value: 3
+    - fill_in:
         - name: "submitted[email_address]"
           selector: "#edit-submitted-email-address"
           value: $EMAIL
           required: true
+    - wait:
+        - value: 3
+    - fill_in:
         - name: "submitted[comments]"
           selector: "#edit-submitted-comments"
           value: $MESSAGE
