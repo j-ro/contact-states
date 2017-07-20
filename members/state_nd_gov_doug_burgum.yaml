@@ -21,6 +21,10 @@ contact_form:
           selector: "#edit-submitted-comments"
           value: $MESSAGE
           required: true
+        - name: "submitted[comments]"
+          selector: "#edit-submitted-comments"
+          value: $PHONE
+          required: true
     - click_on:
         - selector: ".webform-submit"
   success:
