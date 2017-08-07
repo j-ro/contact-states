@@ -121,18 +121,14 @@ contact_form:
             Energy: ENER
             Environment: ENVI
             Ethics: ETHI
-            Government Affairs: GOVE
             Guns: GUNS
             Healthcare: HEAL
-            Housing: HOUS
             Immigration: IMMI
-            Jobs: JOBS
             Judiciary: JUDI
             Taxes: TAX
             Technology: TECH
             Telecommunications: TELE
             Transportation: TRAN
-            Welfare: WELF
     - click_on:
         - value: Submit
           selector: "#btn_submit"
