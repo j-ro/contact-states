@@ -1,121 +1,109 @@
 bioguide: SWe00209
 contact_form:
   method: post
-  action: "http://www.cc.ny.gov/contactAction.cfm"
+  action: "/content/governor-contact-form"
   steps:
-    - visit: "https://apps.cio.ny.gov/apps/widgets/nys-connects/contactForm.cfm"
+    - visit: "https://www.governor.ny.gov/content/governor-contact-form"
     - fill_in:
-        - name: first_name
-          selector: "#first_name"
+        - name: "submitted[first_name]"
+          selector: "#edit-submitted-first-name"
           value: $NAME_FIRST
           required: true
-        - name: last_name
-          selector: "#last_name"
+        - name: "submitted[last_name]"
+          selector: "#edit-submitted-last-name"
           value: $NAME_LAST
           required: true
-        - name: primary_email
-          selector: "#email"
+        - name: "submitted[email]"
+          selector: "#edit-submitted-email"
           value: $EMAIL
           required: true
-        - name: primary_address_1
-          selector: "#primary_address_1"
+        - name: "submitted[address]"
+          selector: "#edit-submitted-address"
           value: $ADDRESS_STREET
           required: true
-        - name: primary_city
+        - name: "submitted[city]"
           selector: "#edit-submitted-city"
           value: $ADDRESS_CITY
           required: true
-        - name: primary_zip
-          selector: "#primary_zip"
+        - name: "submitted[zip_code_contact]"
+          selector: "#edit-submitted-zip-code-contact"
           value: $ADDRESS_ZIP5
           required: true
-        - name: subject
-          selector: "#subject"
+        - name: "submitted[subject]"
+          selector: "#edit-submitted-subject"
           value: $SUBJECT
           required: true
-        - name: govemail
-          selector: "#govemail"
+        - name: "submitted[message]"
+          selector: "#edit-submitted-message"
           value: $MESSAGE
           required: true
     - select:
-        - name: iaddress
-          selector: "#iaddress"
+        - name: "submitted[salutation]"
+          selector: "#edit-submitted-salutation"
           value: $NAME_PREFIX
           required: true
           options:
-            - Mr.
-            - Ms.
-            - Mrs.
-            - "Mr. & Mrs."
-        - name: primary_state
-          selector: "#primary_state"
-          value: $ADDRESS_STATE_POSTAL_ABBREV
+            Mr.: mr
+            Ms.: ms
+            Mrs.: mrs
+            Mr. &amp; Mrs.: mr_and_mrs
+            Mr. &amp; Mr.: mr_and_mr
+            Mrs. &amp; Mrs.: mrs_and_mrs
+            Blank: blank  
+        - name: submitted[contact_form_state]
+          selector: "#edit-submitted-contact-form-state"
+          value: $ADDRESS_STATE_FULL
           required: true
           options:
-            New York: NY
+            New York: New York
         - name: topic
           selector: "#topic"
           value: $TOPIC
           required: true
           options:
-            - Agriculture
-            - Albany/Upper Hudson Valley
-            - Amtrak
-            - Animals/Endangered Species
-            - Banking
-            - Binghamton/Southern Tier
-            - Bioterrorism
-            - Budget Suggestions
-            - Buffalo/Western New York
-            - Casework
-            - "Children's Issues"
-            - Civil Rights
-            - Cloning/Stem Cell Research
-            - Correctional Services
-            - Crime
-            - Disability Assistance
-            - The Economic Crisis
-            - Economy
-            - Economic Development
-            - Education
-            - Energy Issues
-            - Environmental Concerns
-            - Health Care
-            - Homeland Security
-            - Housing
-            - Immigration
-            - Insurance
-            - Labor
-            - Legislation
-            - Long Island
-            - Lower Hudson Valley
-            - Military
-            - MWBE
-            - New York City
-            - North Country
-            - Nuclear Power Plants
-            - Racing/Lottery/Liquor license
-            - Reproductive Choice
-            - Rochester/Finger Lakes
-            - Seniors
-            - Syracuse/Central New York
-            - Tax Reform
-            - Telecommunications
-            - Terrorism
-            - Transportation
-            - Unemployment Issues
-            - Upstate Economy
-            - Utica/Mohawk Valley
-            - "Veteran's Issues"
-            - Western Southern Tier
-            - "Women's Issues"
-            - World Trade Center
-            - Other
+            Agriculture: agriculture
+            Animals: animals
+            Banking/Insurance: banking_insurance
+            Broadband: broadband
+            Correctional Services: correctional_services
+            Criminal Justice: criminal_justice
+            Disabilities: disabilities
+            Economic Development: economic_development
+            Education: education
+            Emergency Preparedness: emergency_preparedness
+            Energy: energy
+            Environment: environment
+            Gaming: gaming
+            Health: health
+            Higher Education: higher_education
+            Homeland Security: homeland_security
+            Housing: housing
+            Human Rights: human_rights
+            Human Services: human_services
+            Immigration: immigration
+            Infrastructure: infrastructure
+            Jobs: jobs
+            Legislation: legislation
+            LGBT Rights: lgbt_rights
+            Military &amp; Naval Affairs: military_naval_affairs
+            MWBE: mwbe
+            Other: other
+            Parks and Recreation: parks_and_recreation
+            Public Safety: public_safety
+            Public Utilities: public_utilities
+            Regional Affairs: regional_affairs
+            Taxes: taxes
+            Tourism: tourism
+            Transportation: transportation
+            Unemployment: unemployment
+            Veterans Affairs: veterans_affairs
+            Women’s Issues: women_s_issues
+            Worker Exploitation: worker_exploitation
     - click_on:
         - value: Submit
-          selector: "#contact-submit"
+          selector: ".webform-submit"
   success:
     headers:
       status: 200
     body:
-      contains: Thank you for your e-mail
+      contains: Thank you for your submission
