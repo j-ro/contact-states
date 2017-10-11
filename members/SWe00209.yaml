@@ -50,14 +50,14 @@ contact_form:
             Mr. &amp; Mr.: mr_and_mr
             Mrs. &amp; Mrs.: mrs_and_mrs
             Blank: blank  
-        - name: submitted[contact_form_state]
+        - name: "submitted[contact_form_state]"
           selector: "#edit-submitted-contact-form-state"
           value: $ADDRESS_STATE_FULL
           required: true
           options:
             New York: New York
-        - name: topic
-          selector: "#topic"
+        - name: "submitted[topic]"
+          selector: "#edit-submitted-topic"
           value: $TOPIC
           required: true
           options:
