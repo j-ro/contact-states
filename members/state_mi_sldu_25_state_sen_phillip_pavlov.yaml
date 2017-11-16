@@ -1,51 +1,58 @@
 bioguide: state_mi_sldu_25_state_sen_phillip_pavlov
 contact_form:
   method: post
-  action: "ima_form_post.asp"
+  action: "./EForm.aspx?__cid=FSL_MID25&__fid=100005&iframe=Y"
   steps:
-    - visit: "http://www.senate.michigan.gov/ima_form.asp?name=comment25&form_path=e:/webforms/rep"
+    - visit: "https://iqconnect.lmhostediq.com/iqextranet/EForm.aspx?__cid=FSL_MID25&__fid=100005&iframe=Y"
     - fill_in:
-        - name: first_name
-          selector: "input[name='first_name']"
+        - name: q_1_first_name
+          selector: "#q_1_first_name"
           value: $NAME_FIRST
           required: true
-        - name: last_name
-          selector: "input[name='last_name']"
+        - name: q_1_last_name
+          selector: "#q_1_last_name"
           value: $NAME_LAST
           required: true
-        - name: street_address
-          selector: "input[name='street_address']"
+        - name: q_1_addr_1
+          selector: "#q_1_addr_1"
           value: $ADDRESS_STREET
           required: true
-        - name: city
-          selector: "input[name='city']"
+        - name: q_1_city
+          selector: "#q_1_city"
           value: $ADDRESS_CITY
           required: true
-        - name: zip_5
-          selector: "input[name='zip_5']"
+        - name: q_1_zip
+          selector: "#q_1_zip"
           value: $ADDRESS_ZIP5
           required: true
-        - name: phone
-          selector: "input[name='phone']"
-          value: $PHONE
-          required: true
-        - name: email
-          selector: "input[name='email']"
+        - name: q_1_email
+          selector: "#q_1_email"
           value: $EMAIL
           required: true
-        - name: subject
-          selector: "input[name='subject']"
+        - name: q_2
+          selector: "#q_2"
           value: $SUBJECT
           required: true
-        - name: message
-          selector: "textarea[name='message']"
+        - name: q_3
+          selector: "#q_3"
           value: $MESSAGE
           required: true
+    - select:
+        - selector: "#q_1_state"
+          name: q_1_state
+          value: "MI"
+          required: true
+          options:
+            Michigan: MI
     - click_on:
-        - value: Submit Form
-          selector: "input[value='Submit Form']"
+        - value: Submit
+          selector: "#btn_submit"
+    - wait:
+        - value: 1
+    - find:
+        - selector: "#q_1_first_name"
   success:
     headers:
       status: 200
     body:
-      contains: Your request has been sent
+      contains: First Name
