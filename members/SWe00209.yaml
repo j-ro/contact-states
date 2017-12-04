@@ -29,6 +29,10 @@ contact_form:
           selector: "#edit-submitted-zip-code-contact"
           value: $ADDRESS_ZIP5
           required: true
+        - name: "submitted[telephone_number]"
+          selector: "#edit-submitted-telephone-number"
+          value: $PHONE
+          required: true
         - name: "submitted[subject]"
           selector: "#edit-submitted-subject"
           value: $SUBJECT
