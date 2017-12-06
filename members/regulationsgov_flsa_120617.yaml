@@ -41,6 +41,10 @@ contact_form:
           name: "comment[email]"
           value: $EMAIL
           required: true
+        - selector: "#comment_email"
+          name: "comment[email]"
+          value: $PHONE
+          required: true
     - select:
         - selector: "#comment_country"
           name: "comment[country]"
