@@ -113,21 +113,14 @@ contact_form:
           value: $TOPIC
           required: true
           options:
-            Abortion: ABORTION
-            Agriculture: AGRI
-            Budget: BUDG
-            Economy: ECON
-            Education: EDUC
-            Energy: ENER
-            Ethics: ETHI
-            Guns: GUNS
-            Healthcare: HEAL
-            Immigration: IMMI
-            Judiciary: JUDI
-            Taxes: TAX
-            Technology: TECH
-            Telecommunications: TELE
-            Transportation: TRAN
+            Budget/Taxes: BUDGET_TAXES
+            Health: HEALTH
+            Energy/Environment: ENERGY_ENVIRONMENT
+            Legal: LEGAL
+            Infrastructure: INFRASTRUCTURE
+            Commerce/Economic Development: COMMERCE_ECONDEVELOP
+            Federal: FEDERAL
+            Education: EDUCATION
     - click_on:
         - value: Submit
           selector: "#btn_submit"
