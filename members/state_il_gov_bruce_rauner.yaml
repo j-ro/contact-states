@@ -1,45 +1,45 @@
 bioguide: state_il_gov_bruce_rauner
 contact_form:
   method: post
-  action: /gov/contactus/Pages/VoiceAnOpinion.aspx
+  action: /gov/contactus/pages/voiceanopinion.aspx
   steps:
-    - visit: "http://www.illinois.gov/gov/contactus/Pages/VoiceAnOpinion.aspx"
+    - visit: "https://www2.illinois.gov/gov/contactus/pages/voiceanopinion.aspx"
     - fill_in:
-        - name: ctl00$m$g_3a01d56e_b68a_485b_a7d3_43e25d8506d3$First_x0020_Name
-          selector: "#ctl00_m_g_3a01d56e_b68a_485b_a7d3_43e25d8506d3_First_x0020_Name"
+        - name: ctl00$ctl40$g_3a01d56e_b68a_485b_a7d3_43e25d8506d3$First_x0020_Name
+          selector: "#ctl00_ctl40_g_3a01d56e_b68a_485b_a7d3_43e25d8506d3_First_x0020_Name"
           value: $NAME_FIRST
           required: true
-        - name: ctl00$m$g_3a01d56e_b68a_485b_a7d3_43e25d8506d3$Last_x0020_Name
-          selector: "#ctl00_m_g_3a01d56e_b68a_485b_a7d3_43e25d8506d3_Last_x0020_Name"
+        - name: ctl00$ctl40$g_3a01d56e_b68a_485b_a7d3_43e25d8506d3$Last_x0020_Name
+          selector: "#ctl00_ctl40_g_3a01d56e_b68a_485b_a7d3_43e25d8506d3_Last_x0020_Name"
           value: $NAME_LAST
           required: true
-        - name: ctl00$m$g_3a01d56e_b68a_485b_a7d3_43e25d8506d3$Address
-          selector: "#ctl00_m_g_3a01d56e_b68a_485b_a7d3_43e25d8506d3_Address"
+        - name: ctl00$ctl40$g_3a01d56e_b68a_485b_a7d3_43e25d8506d3$Address
+          selector: "#ctl00_ctl40_g_3a01d56e_b68a_485b_a7d3_43e25d8506d3_Address"
           value: $ADDRESS_STREET
           required: true
-        - name: ctl00$m$g_3a01d56e_b68a_485b_a7d3_43e25d8506d3$City
-          selector: "#ctl00_m_g_3a01d56e_b68a_485b_a7d3_43e25d8506d3_City"
+        - name: ctl00$ctl40$g_3a01d56e_b68a_485b_a7d3_43e25d8506d3$City
+          selector: "#ctl00_ctl40_g_3a01d56e_b68a_485b_a7d3_43e25d8506d3_City"
           value: $ADDRESS_CITY
           required: true
-        - name: ctl00$m$g_3a01d56e_b68a_485b_a7d3_43e25d8506d3$Zip
-          selector: "#ctl00_m_g_3a01d56e_b68a_485b_a7d3_43e25d8506d3_Zip"
+        - name: ctl00$ctl40$g_3a01d56e_b68a_485b_a7d3_43e25d8506d3$Zip
+          selector: "#ctl00_ctl40_g_3a01d56e_b68a_485b_a7d3_43e25d8506d3_Zip"
           value: $ADDRESS_ZIP5
           required: true
-        - name: ctl00$m$g_3a01d56e_b68a_485b_a7d3_43e25d8506d3$Phone
-          selector: "#ctl00_m_g_3a01d56e_b68a_485b_a7d3_43e25d8506d3_Phone"
+        - name: ctl00$ctl40$g_3a01d56e_b68a_485b_a7d3_43e25d8506d3$Phone
+          selector: "#ctl00_ctl40_g_3a01d56e_b68a_485b_a7d3_43e25d8506d3_Phone"
           value: $PHONE
           required: true
-        - name: ctl00$m$g_3a01d56e_b68a_485b_a7d3_43e25d8506d3$Email
-          selector: "#ctl00_m_g_3a01d56e_b68a_485b_a7d3_43e25d8506d3_Email"
+        - name: ctl00$ctl40$g_3a01d56e_b68a_485b_a7d3_43e25d8506d3$Email
+          selector: "#ctl00_ctl40_g_3a01d56e_b68a_485b_a7d3_43e25d8506d3_Email"
           value: $EMAIL
           required: true
-        - name: ctl00$m$g_3a01d56e_b68a_485b_a7d3_43e25d8506d3$Comment
-          selector: "#ctl00_m_g_3a01d56e_b68a_485b_a7d3_43e25d8506d3_Comment"
+        - name: ctl00$ctl40$g_3a01d56e_b68a_485b_a7d3_43e25d8506d3$Comment
+          selector: "#ctl00_ctl40_g_3a01d56e_b68a_485b_a7d3_43e25d8506d3_Comment"
           value: $MESSAGE
           required: true
     - select:
-        - name: ctl00$m$g_3a01d56e_b68a_485b_a7d3_43e25d8506d3$Subject
-          selector: "#ctl00_m_g_3a01d56e_b68a_485b_a7d3_43e25d8506d3_Subject"
+        - name: ctl00$ctl40$g_3a01d56e_b68a_485b_a7d3_43e25d8506d3$Subject
+          selector: "#ctl00_ctl40_g_3a01d56e_b68a_485b_a7d3_43e25d8506d3_Subject"
           value: $TOPIC
           required: true
           options:
@@ -65,8 +65,8 @@ contact_form:
             Veterans &amp; Military Affairs: 20
             Voting: 21
             Other Issues: 22
-        - name: ctl00$m$g_3a01d56e_b68a_485b_a7d3_43e25d8506d3$Position
-          selector: "#ctl00_m_g_3a01d56e_b68a_485b_a7d3_43e25d8506d3_Position"
+        - name: ctl00$ctl40$g_3a01d56e_b68a_485b_a7d3_43e25d8506d3$Position
+          selector: "#ctl00_ctl40_g_3a01d56e_b68a_485b_a7d3_43e25d8506d3_Position"
           value: "None"
           required: true
           options:
@@ -75,7 +75,7 @@ contact_form:
             None: "None"
     - click_on:
         - value: Submit
-          selector: "#ctl00_m_g_3a01d56e_b68a_485b_a7d3_43e25d8506d3_SOIFeedbackSubmit"
+          selector: "#ctl00$ctl40$g_3a01d56e_b68a_485b_a7d3_43e25d8506d3$SOIFeedbackSubmit"
   success:
     headers:
       status: 200
