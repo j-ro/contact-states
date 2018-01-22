@@ -61,16 +61,16 @@ contact_form:
           value: $TOPIC
           required: true
           options:
-            Disabilities: "8"
-            Economic Development: "6"
-            Education Issues: "32"
-            Energy Issues: "13"
-            Environment Issues: "15"
-            Health Care Issues: "23"
-            Higher Education   : "24"
-            Public Safety Issues: "37"
-            Transportation Issues: "51"
-            Veterans Issues: "52"
+            Disabilities: Disabilities
+            Economic Development: Economic Development
+            Education Issues: Education Issues
+            Energy Issues: Energy Issues
+            Environment Issues: Environment Issues
+            Health Care Issues: Health Care Issues
+            Higher Education   : Higher Education   
+            Public Safety Issues: Public Safety Issues
+            Transportation Issues: Transportation Issues
+            Veterans Issues: Veterans Issues
     - click_on:
         - value: Submit
           selector: "#btnSbt"
