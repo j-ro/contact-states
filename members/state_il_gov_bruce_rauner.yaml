@@ -75,7 +75,7 @@ contact_form:
             None: "None"
     - click_on:
         - value: Submit
-          selector: "#ctl00$ctl40$g_3a01d56e_b68a_485b_a7d3_43e25d8506d3$SOIFeedbackSubmit"
+          selector: "#ctl00_ctl40_g_3a01d56e_b68a_485b_a7d3_43e25d8506d3_SOIFeedbackSubmit"
   success:
     headers:
       status: 200
