@@ -5,6 +5,10 @@ contact_form:
   steps:
     - visit: "https://governor.nebraska.gov/contact-form"
     - fill_in:
+        - name: "00 Prefix"
+          selector: "#00_prefix"
+          value: $NAME_PREFIX
+          required: true
         - name: "01 First Name *fn*"
           selector: "[name~=First]"
           value: $NAME_FIRST
@@ -16,6 +20,10 @@ contact_form:
         - name: "03 Email *rt*"
           selector: "[name~=Email]"
           value: $EMAIL
+          required: true
+        - name: "04 Address"
+          selector: "#04_address"
+          value: $ADDRESS_STREET
           required: true
         - name: "05 City"
           selector: "[name~=City]"
