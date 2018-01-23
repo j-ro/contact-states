@@ -1,0 +1,105 @@
+bioguide: state_ga_gov_nathan_deal
+contact_form:
+  method: POST
+  action: /webform/contact-governor
+  steps:
+    - visit: "https://gov.georgia.gov/webform/contact-governor"
+    - fill_in:
+        - name: "submitted[first_name]"
+          selector: "#edit-submitted-first-name"
+          value: $NAME_FIRST
+          required: true
+        - name: "submitted[last_name]"
+          selector: "#edit-submitted-last-name"
+          value: $NAME_LAST
+          required: true
+        - name: "submitted[street_address_1]"
+          selector: "#edit-submitted-street-address-1"
+          value: $ADDRESS_STREET
+          required: true
+        - name: "submitted[city]"
+          selector: "#edit-submitted-city"
+          value: $ADDRESS_CITY
+          required: true
+        - name: "submitted[email_address]"
+          selector: "#edit-submitted-email-address"
+          value: $EMAIL
+          required: true
+        - name: "submitted[please_write_your_message]"
+          selector: "#edit-submitted-please-write-your-message"
+          value: $MESSAGE
+          required: true
+    - select:
+        - name: "submitted[please_choose_a_category]"
+          selector: "#edit-submitted-please-choose-a-category"
+          value: $TOPIC
+          required: true
+          options:
+            Adult Protective Services: Adult Protective Services
+            Agriculture: Agriculture
+            Air, Water, Soil Issues: Air Water Soil Issues
+            Animal Issues: Animal Issues
+            Attorney General: Attorney General
+            Birth Certificates: Birth Certificates
+            Brain and Spinal Injury Trust Fund: Brain and Spinal Injury Trust Fund
+            Budget: Budget
+            Business: Business
+            Capital Punishment: Capital Punishment
+            Child Custody: Child Custody
+            Child Protective Services: Child Protective Services / DFACS
+            Child Support: Child Support
+            Clemency: Clemency
+            Developmental Disabilities: Developmental Disabilities
+            Drivers' Licenses: Drivers License
+            Education - Budget: Education Budget
+            Education - General Issues: Education General Issues
+            Food Stamps: Food Stamps
+            Foster Care: Foster Care
+            Gas Prices: Gas Prices
+            Gun Control / Crime: Gun Control / Crime
+            HOPE: HOPE
+            Insurance Issues - Auto: Insurance Issues Auto
+            Insurance Issues - Health: Insurance Issues Health
+            Immigration: Immigration
+            Labor / Employment: Labor/Employment
+            Legal: Legal
+            Legislation - Federal: Legislation Federal
+            Legislation - State: Legislation State
+            License Plates: License Plates
+            Local Issues: Local Issues
+            Lottery: Lottery
+            Medicaid: Medicaid
+            Mental Health: Mental Health
+            National Guard: National Guard
+            Pardon Request: Pardon Request
+            Parks: Parks
+            Parole Issues: Parole Issues
+            Passport Issues: Passport Issues
+            Peachcare for Kids: Peachcare for Kids
+            Prison Issues: Prison Issues
+            Public Utilities: Public Utilities
+            Request - Medical Assistance: Request - Medical Assistance
+            Resume Submission: Resume Submission
+            Retirement Issues for State Employees: Retirement Issues for State Employees
+            Self-Employed Health Coverage: Self-Employed Health Coverage
+            Social Services: Social Services
+            Social Security Disability Benefits: Social Security Disability Benefits
+            State Health Benefit Plan: State Health Benefit Plan
+            Student Correspondence: Student Correspondence
+            Taxes: Taxes
+            Transportation: Transportation
+            Veterans Affairs Disability Benefits: Veterans Affairs Disability Benefits
+            Veterans Issues: Veterans Issues
+            Waivers: Waivers
+            Welfare: Welfare
+            Workers: Workers
+    - recaptcha:
+        - value: true        
+    - click_on:
+        - value: Submit
+          selector: "#edit-submit"
+  success:
+    headers:
+      status: 200
+    body:
+      contains: Thank you for contacting us.

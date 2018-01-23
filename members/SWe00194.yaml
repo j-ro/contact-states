@@ -1,31 +1,43 @@
 bioguide: SWe00194
 contact_form:
   method: post
-  action: /cgi-bin/governor/govmail/govmail_1c_new.pl
+  action: /cgi-bin/governor/govmail/govmail-56_s1.pl
   steps:
-    - visit: "http://www.state.nj.us/governor/contact/"
+    - visit: "http://www.nj.gov/governor/contact/"
     - select:
         - name: selected
           selector: "select[name='selected']"
           value: $TOPIC
           required: true
           options:
-            Addiction Services: Addiction Services
+            Agriculture: Agriculture
             Arts and History: Arts and History
+            Banking: Banking
             Business: Business
-            "Child Support": "Child Support"
-            Civil Service Commission: Civil Service Commission
+            Children and Families: Children and Families
+            Child Support: Child Support
             Consumer Affairs: Consumer Affairs
+            Corrections: Corrections
             Developmental Disabilities: Developmental Disabilities
             Division on Elections: Division on Elections
-            "Disability / Unemployment": "Disability / Unemployment"
-            "Family Care/Medicaid": "Family Care/Medicaid"
+            Education: Education
+            Environment: Environment
+            Family Care/Medicaid: Family Care/Medicaid
+            Health: Health
+            Housing: Housing
+            Human Services: Human Services
+            Insurance: Insurance
             Labor: Labor
+            Law and Public Safety: Law and Public Safety
             Lottery: Lottery
             Mental Health Services: Mental Health Services
+            Military and Veterans Affairs: Military and Veterans Affairs
             Pensions and Retirements: Pensions and Retirements
+            Public Utilities: Public Utilities
+            Superstorm Sandy/CDBG: Superstorm Sandy/CDBG
+            Taxation: Taxation
             Temporary Disability: Temporary Disability
-            "Transportation / Motor Vehicles": "Transportation / Motor Vehicles"
+            Transportation / Motor Vehicles: Transportation / Motor Vehicles
             Unemployment: Unemployment
     - click_on:
         - value: Continue...
