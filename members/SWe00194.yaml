@@ -109,7 +109,7 @@ contact_form:
           value: $PHONE
           required: true
         - name: email
-          selector: ".text_Regular input[name='email']"
+          selector: "input[name='email']"
           value: $EMAIL
           required: true
         - name: subject
