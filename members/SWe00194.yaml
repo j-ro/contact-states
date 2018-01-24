@@ -41,7 +41,7 @@ contact_form:
             Unemployment: Unemployment
     - click_on:
         - value: Continue...
-          selector: "#govmail input[name='Submit']"
+          selector: ".gov-default-btn"
     - find:
         - selector: "input[name='submit']"  
     - select:
