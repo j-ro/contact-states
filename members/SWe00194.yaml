@@ -120,6 +120,8 @@ contact_form:
           selector: "textarea[name='message']"
           value: $MESSAGE
           required: true
+    - javascript:
+        - value: "document.querySelector('[name=SubTopics]').selectedIndex = 1;"
     - click_on:
         - value: Send Your Message
           selector: "input[name='submit']"
