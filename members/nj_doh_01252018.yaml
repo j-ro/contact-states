@@ -1,0 +1,57 @@
+bioguide: nj_doh_01252018
+contact_form:
+  method: POST
+  action: "http://www.nj.gov/cgi-bin/dhss/contact/dhssmail.pl"
+  steps:
+    - visit: "http://www.nj.gov/health/feedback.shtml"
+    - fill_in:
+        - name: "first"
+          selector: "#first"
+          value: $NAME_FIRST
+          required: true
+        - name: "last"
+          selector: "#last"
+          value: $NAME_LAST
+          required: true
+        - name: "email_1"
+          selector: "[name=email_1]"
+          value: $EMAIL
+          required: true
+        - name: "email_2"
+          selector: "[name=email_2]"
+          value: $EMAIL
+          required: true
+        - name: address
+          selector: "[name=address]"
+          value: $ADDRESS_STREET
+          required: true
+        - name: city
+          selector: "#city"
+          value: $ADDRESS_CITY
+          required: true
+        - name: zip
+          selector: "#zip2"
+          value: $ADDRESS_ZIP5
+          required: true
+        - name: subject
+          selector: "[name=subject]"
+          value: $SUBJECT
+          required: true
+        - name: message
+          selector: "[name=message]"
+          value: $MESSAGE
+          required: true
+    - select:
+        - name: recipient
+          selector: "[name=recipient]"
+          value: "General Feedback"
+          required: true
+          options:
+            - General Feedback
+    - click_on:
+        - selector: "[name=submit]"
+  success:
+    headers:
+      status: 200
+    body:
+      contains: Thank you for writing
