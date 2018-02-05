@@ -1,0 +1,120 @@
+bioguide: blm_fuel_breaks_02012018
+contact_form:
+  method: POST
+  action: "/epl-front-office/eplanning/comments/commentSubmission.do;jsessionid=2ECEE6CD85335204F68835AF147C5BF0?commentPeriodId=57799"
+  steps:
+    - visit: "https://eplanning.blm.gov/epl-front-office/eplanning/comments/commentSubmission.do?commentPeriodId=57799"
+    - fill_in:
+        - selector: "#commentSubComment.commentTitle"
+          name: "commentSubComment.commentTitle"
+          value: $SUBJECT
+          required: true
+        - selector: "#fckEditor"
+          name: "commentSubForm.commentSubComment.fckText"
+          value: $MESSAGE
+          required: true
+          options:
+            max_length: 10000
+    - click_on:
+        - selector: "input.epl_dialog_action_button[value=Submit]"
+    - find:
+        - selector: "#commentSubNameAddress.firstName"
+    - fill_in:
+        - selector: "#commentSubNameAddress.firstName"
+          name: "commentSubNameAddress.firstName"
+          value: $NAME_FIRST
+          required: true
+        - selector: "#commentSubNameAddress.lastName"
+          name: "commentSubNameAddress.lastName"
+          value: $NAME_LAST
+          required: true
+        - selector: "#commentSubNameAddress.address1"
+          name: "commentSubNameAddress.address1"
+          value: $ADDRESS_STREET
+          required: true
+        - selector: "#commentSubNameAddress.city"
+          name: "commentSubNameAddress.city"
+          value: $ADDRESS_CITY
+          required: true
+        - selector: "#commentSubNameAddress.zip"
+          name: "commentSubNameAddress.zip"
+          value: $ADDRESS_ZIP5
+          required: true
+        - selector: "#commentSubNameAddress.emailAddress"
+          name: "commentSubNameAddress.emailAddress"
+          value: $EMAIL
+          required: true
+    - select:
+        - selector: "#commentSubNameAddress.selectedState"
+          name: "commentSubNameAddress.selectedState"
+          value: $ADDRESS_STATE_FULL
+          required: true
+          options:            
+            - Alabama
+            - Alaska
+            - Arizona
+            - Arkansas
+            - California
+            - Colorado
+            - Connecticut
+            - Delaware
+            - District of Columbia
+            - Florida
+            - Georgia
+            - Hawaii
+            - Idaho
+            - Illinois
+            - Indiana
+            - Iowa
+            - Kansas
+            - Kentucky
+            - Louisiana
+            - Maine
+            - Maryland
+            - Massachusetts
+            - Michigan
+            - Minnesota
+            - Mississippi
+            - Missouri
+            - Montana
+            - Nebraska
+            - Nevada
+            - New Hampshire
+            - New Jersey
+            - New Mexico
+            - New York
+            - North Carolina
+            - North Dakota
+            - Ohio
+            - Oklahoma
+            - Oregon
+            - Pennsylvania
+            - Rhode Island
+            - South Carolina
+            - South Dakota
+            - Tennessee
+            - Texas
+            - Utah
+            - Vermont
+            - Virginia
+            - Washington
+            - West Virginia
+            - Wisconsin
+            - Wyoming
+    - click_on:
+        - selector: "input#commentSubNameAddress.representsOrg2"
+    - click_on:
+        - selector: "input.epl_dialog_action_button[value=Submit]"
+    - find:
+        - selector: "input.epl_bo_comments_form_radio[name=agreement_43784][value=Y]"
+    - click_on:
+        - selector: "input.epl_bo_comments_form_radio[name=agreement_43784][value=Y]"
+    - click_on:
+        - selector: "input.epl_bo_comments_form_radio[name=agreement_43785][value=Y]"
+    - click_on:
+        - selector: "input.epl_dialog_action_button[value=Submit]"
+  success:
+    headers:
+      status: 200
+    body:
+      contains: Submission Successful
