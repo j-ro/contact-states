@@ -24,7 +24,10 @@ contact_form:
     - javascript:
         - value: "document.querySelector('input.epl_dialog_action_button[value=Next]').click()"
     - find:
-        - selector: "[name='commentSubNameAddress.firstName1']"
+        - selector: "[name='commentSubNameAddress.firstName']"
+    - javascript:
+        - value: "Array.prototype.forEach.call(document.querySelectorAll('style,[rel=\"stylesheet\"],[type=\"text/css\"]'), function(element){ 
+try{ element.parentNode.removeChild(element) } catch(err){} });"
     - javascript:
         - value: "document.querySelector('.epl_dialog_action_button_panel').style.position = \"relative\";"
     - fill_in:
