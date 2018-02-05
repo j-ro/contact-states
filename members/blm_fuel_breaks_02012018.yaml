@@ -22,7 +22,7 @@ contact_form:
     - javascript:
         - value: "document.querySelector('input.epl_dialog_action_button[value=Next]').click()"
     - find:
-        - selector: "[name='commentSubNameAddress.firstName']"
+        - selector: "[name='commentSubNameAddress.firstName2']"
     - fill_in:
         - selector: "[name='commentSubNameAddress.firstName']"
           name: "commentSubNameAddress.firstName"
