@@ -5,7 +5,7 @@ contact_form:
   steps:
     - visit: "https://eplanning.blm.gov/epl-front-office/eplanning/comments/commentSubmission.do?commentPeriodId=57799"
     - fill_in:
-        - selector: "#commentSubComment.commentTitle"
+        - selector: "[name='commentSubComment.commentTitle']"
           name: "commentSubComment.commentTitle"
           value: $SUBJECT
           required: true
@@ -18,34 +18,34 @@ contact_form:
     - click_on:
         - selector: "input.epl_dialog_action_button[value=Submit]"
     - find:
-        - selector: "#commentSubNameAddress.firstName"
+        - selector: "[name='commentSubNameAddress.firstName']"
     - fill_in:
-        - selector: "#commentSubNameAddress.firstName"
+        - selector: "[name='commentSubNameAddress.firstName']"
           name: "commentSubNameAddress.firstName"
           value: $NAME_FIRST
           required: true
-        - selector: "#commentSubNameAddress.lastName"
+        - selector: "[name='commentSubNameAddress.lastName']"
           name: "commentSubNameAddress.lastName"
           value: $NAME_LAST
           required: true
-        - selector: "#commentSubNameAddress.address1"
+        - selector: "[name='commentSubNameAddress.address1']"
           name: "commentSubNameAddress.address1"
           value: $ADDRESS_STREET
           required: true
-        - selector: "#commentSubNameAddress.city"
+        - selector: "[name='commentSubNameAddress.city']"
           name: "commentSubNameAddress.city"
           value: $ADDRESS_CITY
           required: true
-        - selector: "#commentSubNameAddress.zip"
+        - selector: "[name='commentSubNameAddress.zip']"
           name: "commentSubNameAddress.zip"
           value: $ADDRESS_ZIP5
           required: true
-        - selector: "#commentSubNameAddress.emailAddress"
+        - selector: "[name='commentSubNameAddress.emailAddress']"
           name: "commentSubNameAddress.emailAddress"
           value: $EMAIL
           required: true
     - select:
-        - selector: "#commentSubNameAddress.selectedState"
+        - selector: "[name='commentSubNameAddress.selectedState']"
           name: "commentSubNameAddress.selectedState"
           value: $ADDRESS_STATE_FULL
           required: true
@@ -102,7 +102,7 @@ contact_form:
             - Wisconsin
             - Wyoming
     - click_on:
-        - selector: "input#commentSubNameAddress.representsOrg2"
+        - selector: "[name='commentSubNameAddress.representsOrg'][value='N']"
     - click_on:
         - selector: "input.epl_dialog_action_button[value=Submit]"
     - find:
