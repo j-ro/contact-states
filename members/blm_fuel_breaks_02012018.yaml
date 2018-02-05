@@ -31,7 +31,7 @@ try{ element.parentNode.removeChild(element) } catch(err){} });"
     - javascript:
         - value: "document.querySelector('.epl_dialog_action_button_panel').style.position = \"relative\";"
     - fill_in:
-        - selector: "[name='commentSubNameAddress.firstName2']"
+        - selector: "[name='commentSubNameAddress.firstName']"
           name: "commentSubNameAddress.firstName"
           value: $NAME_FIRST
           required: true
