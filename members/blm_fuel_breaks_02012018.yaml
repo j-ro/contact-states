@@ -8,6 +8,8 @@ contact_form:
         - value: "document.querySelector('[name=\"commentSubForm.commentSubComment.fckText\"]').style.display = \"block\";"
     - javascript:
         - value: "document.querySelector('[name=\"commentSubForm.commentSubComment.fckText\"]').style.visibility = \"initial\";"
+    - javascript:
+        - value: "document.querySelector('.epl_dialog_action_button_panel').style.position = \"relative\";"
     - fill_in:
         - selector: "[name='commentSubComment.commentTitle']"
           name: "commentSubComment.commentTitle"
@@ -22,7 +24,9 @@ contact_form:
     - javascript:
         - value: "document.querySelector('input.epl_dialog_action_button[value=Next]').click()"
     - find:
-        - selector: "[name='commentSubNameAddress.firstName2']"
+        - selector: "[name='commentSubNameAddress.firstName']"
+    - javascript:
+        - value: "document.querySelector('.epl_dialog_action_button_panel').style.position = \"relative\";"
     - fill_in:
         - selector: "[name='commentSubNameAddress.firstName']"
           name: "commentSubNameAddress.firstName"
@@ -109,6 +113,8 @@ contact_form:
         - selector: "[name='commentSubNameAddress.representsOrg'][value='N']"
     - javascript:
         - value: "document.querySelector('input.epl_dialog_action_button[value=Next]').click()"
+    - javascript:
+        - value: "document.querySelector('.epl_dialog_action_button_panel').style.position = \"relative\";"
     - find:
         - selector: "input.epl_bo_comments_form_radio[name=agreement_43784][value=Y]"
     - click_on:
