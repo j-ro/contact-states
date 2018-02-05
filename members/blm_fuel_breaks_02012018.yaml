@@ -20,10 +20,7 @@ contact_form:
           options:
             max_length: 10000
     - javascript:
-        - value: "Array.prototype.forEach.call(document.querySelectorAll('style,[rel=\"stylesheet\"],[type=\"text/css\"]'), function(element){ 
-try{ element.parentNode.removeChild(element) } catch(err){} });"
-    - click_on:
-        - selector: "input.epl_dialog_action_button[value=Next]"
+        - value: "document.querySelector('input.epl_dialog_action_button[value=Next]').click()"
     - find:
         - selector: "[name='commentSubNameAddress.firstName']"
     - fill_in:
@@ -111,10 +108,7 @@ try{ element.parentNode.removeChild(element) } catch(err){} });"
     - click_on:
         - selector: "[name='commentSubNameAddress.representsOrg'][value='N']"
     - javascript:
-        - value: "Array.prototype.forEach.call(document.querySelectorAll('style,[rel=\"stylesheet\"],[type=\"text/css\"]'), function(element){ 
-try{ element.parentNode.removeChild(element) } catch(err){} });"
-    - click_on:
-        - selector: "input.epl_dialog_action_button[value=Next]"
+        - value: "document.querySelector('input.epl_dialog_action_button[value=Next]').click()"
     - find:
         - selector: "input.epl_bo_comments_form_radio[name=agreement_43784][value=Y]"
     - click_on:
@@ -122,10 +116,7 @@ try{ element.parentNode.removeChild(element) } catch(err){} });"
     - click_on:
         - selector: "input.epl_bo_comments_form_radio[name=agreement_43785][value=Y]"
     - javascript:
-        - value: "Array.prototype.forEach.call(document.querySelectorAll('style,[rel=\"stylesheet\"],[type=\"text/css\"]'), function(element){ 
-try{ element.parentNode.removeChild(element) } catch(err){} });"
-    - click_on:
-        - selector: "input.epl_dialog_action_button[value=Submit]"
+        - value: "document.querySelector('input.epl_dialog_action_button[value=Submit]').click()"
   success:
     headers:
       status: 200
