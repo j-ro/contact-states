@@ -20,7 +20,7 @@ contact_form:
           options:
             max_length: 10000
     - click_on:
-        - selector: "input.epl_dialog_action_button[value=Submit]"
+        - selector: "input.epl_dialog_action_button[value=Next]"
     - find:
         - selector: "[name='commentSubNameAddress.firstName']"
     - fill_in:
@@ -108,7 +108,7 @@ contact_form:
     - click_on:
         - selector: "[name='commentSubNameAddress.representsOrg'][value='N']"
     - click_on:
-        - selector: "input.epl_dialog_action_button[value=Submit]"
+        - selector: "input.epl_dialog_action_button[value=Next]"
     - find:
         - selector: "input.epl_bo_comments_form_radio[name=agreement_43784][value=Y]"
     - click_on:
