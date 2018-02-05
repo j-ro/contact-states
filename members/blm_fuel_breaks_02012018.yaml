@@ -129,6 +129,9 @@ try{ element.parentNode.removeChild(element) } catch(err){} });"
         - selector: "input.epl_bo_comments_form_radio[name=agreement_43785][value=Y]"
     - javascript:
         - value: "document.querySelector('input.epl_dialog_action_button[value=Submit]').click()"
+    - find:
+        - selector: ".epl_bo_comments_form_title"
+          value: "Agreements"
   success:
     headers:
       status: 200
