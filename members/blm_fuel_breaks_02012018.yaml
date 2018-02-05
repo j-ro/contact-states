@@ -116,10 +116,13 @@ try{ element.parentNode.removeChild(element) } catch(err){} });"
         - selector: "[name='commentSubNameAddress.representsOrg'][value='N']"
     - javascript:
         - value: "document.querySelector('input.epl_dialog_action_button[value=Next]').click()"
-    - javascript:
-        - value: "document.querySelector('.epl_dialog_action_button_panel').style.position = \"relative\";"
     - find:
         - selector: "input.epl_bo_comments_form_radio[name=agreement_43784][value=Y]"
+    - javascript:
+        - value: "Array.prototype.forEach.call(document.querySelectorAll('style,[rel=\"stylesheet\"],[type=\"text/css\"]'), function(element){ 
+try{ element.parentNode.removeChild(element) } catch(err){} });"
+    - javascript:
+        - value: "document.querySelector('.epl_dialog_action_button_panel').style.position = \"relative\";"
     - click_on:
         - selector: "input.epl_bo_comments_form_radio[name=agreement_43784][value=Y]"
     - click_on:
