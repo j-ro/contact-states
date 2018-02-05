@@ -113,7 +113,7 @@ try{ element.parentNode.removeChild(element) } catch(err){} });"
             - Wisconsin
             - Wyoming
     - click_on:
-        - selector: "[name='commentSubNameAddress.representsOrg'][value='N']2"
+        - selector: "[name='commentSubNameAddress.representsOrg'][value='N']"
     - javascript:
         - value: "document.querySelector('input.epl_dialog_action_button[value=Next]').click()"
     - find:
