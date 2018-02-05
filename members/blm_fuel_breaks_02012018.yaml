@@ -9,7 +9,7 @@ contact_form:
           name: "commentSubComment.commentTitle"
           value: $SUBJECT
           required: true
-        - selector: "#fckEditor"
+        - selector: "[name='commentSubForm.commentSubComment.fckText']"
           name: "commentSubForm.commentSubComment.fckText"
           value: $MESSAGE
           required: true
