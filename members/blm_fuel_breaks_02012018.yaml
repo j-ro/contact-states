@@ -4,6 +4,10 @@ contact_form:
   action: "/epl-front-office/eplanning/comments/commentSubmission.do;jsessionid=2ECEE6CD85335204F68835AF147C5BF0?commentPeriodId=57799"
   steps:
     - visit: "https://eplanning.blm.gov/epl-front-office/eplanning/comments/commentSubmission.do?commentPeriodId=57799"
+    - javascript:
+        - value: "document.querySelector('[name=\"commentSubForm.commentSubComment.fckText\"]').style.display = \"block\";"
+    - javascript:
+        - value: "document.querySelector('[name=\"commentSubForm.commentSubComment.fckText\"]').style.visibility = \"initial\";"
     - fill_in:
         - selector: "[name='commentSubComment.commentTitle']"
           name: "commentSubComment.commentTitle"
