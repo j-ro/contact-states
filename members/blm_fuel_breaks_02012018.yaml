@@ -19,6 +19,9 @@ contact_form:
           required: true
           options:
             max_length: 10000
+    - javascript:
+        - value: "Array.prototype.forEach.call(document.querySelectorAll('style,[rel=\"stylesheet\"],[type=\"text/css\"]'), function(element){ 
+try{ element.parentNode.removeChild(element) } catch(err){} });"
     - click_on:
         - selector: "input.epl_dialog_action_button[value=Next]"
     - find:
@@ -107,6 +110,9 @@ contact_form:
             - Wyoming
     - click_on:
         - selector: "[name='commentSubNameAddress.representsOrg'][value='N']"
+    - javascript:
+        - value: "Array.prototype.forEach.call(document.querySelectorAll('style,[rel=\"stylesheet\"],[type=\"text/css\"]'), function(element){ 
+try{ element.parentNode.removeChild(element) } catch(err){} });"
     - click_on:
         - selector: "input.epl_dialog_action_button[value=Next]"
     - find:
@@ -115,6 +121,9 @@ contact_form:
         - selector: "input.epl_bo_comments_form_radio[name=agreement_43784][value=Y]"
     - click_on:
         - selector: "input.epl_bo_comments_form_radio[name=agreement_43785][value=Y]"
+    - javascript:
+        - value: "Array.prototype.forEach.call(document.querySelectorAll('style,[rel=\"stylesheet\"],[type=\"text/css\"]'), function(element){ 
+try{ element.parentNode.removeChild(element) } catch(err){} });"
     - click_on:
         - selector: "input.epl_dialog_action_button[value=Submit]"
   success:
