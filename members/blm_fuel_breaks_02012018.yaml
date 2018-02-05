@@ -24,11 +24,11 @@ contact_form:
     - javascript:
         - value: "document.querySelector('input.epl_dialog_action_button[value=Next]').click()"
     - find:
-        - selector: "[name='commentSubNameAddress.firstName2']"
+        - selector: "[name='commentSubNameAddress.firstName']"
     - javascript:
         - value: "document.querySelector('.epl_dialog_action_button_panel').style.position = \"relative\";"
     - fill_in:
-        - selector: "[name='commentSubNameAddress.firstName']"
+        - selector: "[name='commentSubNameAddress.firstName2']"
           name: "commentSubNameAddress.firstName"
           value: $NAME_FIRST
           required: true
