@@ -30,6 +30,9 @@ contact_form:
         - selector: "input#x-auto-10-input"
           value: $EMAIL
           required: true
+        - selector: "input#x-auto-14-input"
+          value: "N/A"
+          required: true
     - javascript:
         - value: "document.querySelector('input#x-auto-6-input').value = 'Alaksa';"
     - javascript:
@@ -38,10 +41,6 @@ contact_form:
         - value: "document.querySelector('.x-view-highlightrow').click();"
     - click_on:
         - selector: ".x-view-highlightrow"
-    - click_on:
-        - selector: "input#gwt-uid-164"
-    - wait:
-        - value: 1
     - click_on:
         - selector: ".GIY1LSJPSC button.primary.button"
     - find:
