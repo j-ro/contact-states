@@ -34,7 +34,7 @@ contact_form:
           value: "N/A"
           required: true
     - javascript:
-        - value: "document.querySelector('input#x-auto-6-input').value = 'Alaksa';"
+        - value: "document.querySelector('input#x-auto-6-input').value = 'Alaska';"
     - javascript:
         - value: "document.querySelector('span.floatLeft.GIY1LSJJMC').click();"
     - javascript:
