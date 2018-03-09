@@ -39,8 +39,8 @@ contact_form:
         - value: "document.querySelector('span.floatLeft.GIY1LSJJMC').click();"
     - javascript:
         - value: "document.querySelector('.x-view-highlightrow').click();"
-    - click_on:
-        - selector: ".GIY1LSJPSC button.primary.button"
+    - javascript:
+        - value: "document.querySelector('.GIY1LSJPSC button.primary.button').click();"
     - find:
         - selector: "button#gwt-uid-397"
     - click_on:
