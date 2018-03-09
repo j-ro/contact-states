@@ -37,8 +37,6 @@ contact_form:
         - value: "document.querySelector('input#x-auto-6-input').value = 'Alaska';"
     - javascript:
         - value: "document.querySelector('span.floatLeft.GIY1LSJJMC').click();"
-    - javascript:
-        - value: "document.querySelector('.x-view-highlightrow').click();"
     - click_on:
         - selector: ".x-view-highlightrow"
     - click_on:
