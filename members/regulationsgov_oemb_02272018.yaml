@@ -37,6 +37,8 @@ contact_form:
     - javascript:
         - value: "document.querySelector('.x-view-highlightrow').click();"
     - click_on:
+        - selector: ".x-view-highlightrow"
+    - click_on:
         - selector: "input#gwt-uid-164"
     - wait:
         - value: 1
