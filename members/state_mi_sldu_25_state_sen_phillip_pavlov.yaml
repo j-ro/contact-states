@@ -50,9 +50,9 @@ contact_form:
     - wait:
         - value: 1
     - find:
-        - selector: "#q_1_first_name"
+        - selector: ".col-sm-12"
   success:
     headers:
       status: 200
     body:
-      contains: First Name
+      contains: Welcome to
