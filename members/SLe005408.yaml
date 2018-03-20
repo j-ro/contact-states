@@ -44,8 +44,6 @@ contact_form:
     - uncheck:
         - selector: "#page-ContactForm-EmailAlertCHECK"
           value: "2"
-    - recaptcha:
-        - value: true
     - click_on:
         - selector: "#pageContactForm-submit"
     - wait:
