@@ -43,11 +43,6 @@ contact_form:
           selector: "#rt-mainbody #essay1"
           value: $MESSAGE
           required: true
-        - name: "form[tcullerton]"
-          selector: "#captchaTxt36"
-          captcha_selector: "#captcha36"
-          value: $CAPTCHA_SOLUTION
-          required: true
     - select:
         - name: "form[issue][]"
           selector: "#rt-mainbody #issue"
@@ -78,6 +73,8 @@ contact_form:
             - Taxes
             - Transportation
             - Veterans
+    - recaptcha:
+        - value: true
     - click_on:
         - value: Send
           selector: "#rt-mainbody #Send"
