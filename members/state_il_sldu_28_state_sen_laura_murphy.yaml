@@ -33,11 +33,6 @@ contact_form:
           selector: "#rt-mainbody #essay1"
           value: $MESSAGE
           required: true
-        - name: "form[murphy]"
-          selector: "#rt-mainbody #captchaTxt36"
-          captcha_selector: "#rt-mainbody #captcha36"
-          value: $CAPTCHA_SOLUTION
-          required: true
     - select:
         - name: "form[issue][]"
           selector: "#rt-mainbody #issue"

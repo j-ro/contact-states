@@ -5,42 +5,140 @@ contact_form:
   steps:
     - visit: "http://senatorjiltracy.com/Contact"
     - fill_in:
-        - name: "dnn$ctr5691$Main$txtFirstName"
-          selector: "#dnn_ctr5691_Main_txtFirstName"
+        - name: "ctl00$Content$ctl00$txtFirstName"
+          selector: "#Content_ctl00_txtFirstName"
           value: $NAME_FIRST
           required: true
-        - name: "dnn$ctr5691$Main$txtLastName"
-          selector: "#dnn_ctr5691_Main_txtLastName"
+        - name: "ctl00$Content$ctl00$txtLastName"
+          selector: "#Content_ctl00_txtLastName"
           value: $NAME_LAST
           required: true
-        - name: "dnn$ctr5691$Main$txtAddress"
-          selector: "#dnn_ctr5691_Main_txtAddress"
+        - name: "ctl00$Content$ctl00$txtAddr1"
+          selector: "#Content_ctl00_txtAddr1"
           value: $ADDRESS_STREET
           required: true
-        - name: "dnn$ctr5691$Main$txtCityTown"
-          selector: "#dnn_ctr5691_Main_txtCityTown"
+        - name: "ctl00$Content$ctl00$txtCity"
+          selector: "#Content_ctl00_txtCity"
           value: $ADDRESS_CITY
           required: true
-        - name: "dnn$ctr5691$Main$txtZip"
-          selector: "#dnn_ctr5691_Main_txtZip"
+        - name: "ctl00$Content$ctl00$txtZip"
+          selector: "#Content_ctl00_txtZip"
           value: $ADDRESS_ZIP5
           required: true
-        - name: "dnn$ctr5691$Main$txtFrom"
-          selector: "#dnn_ctr5691_Main_txtFrom"
+        - name: "ctl00$Content$ctl00$txtEmail"
+          selector: "#Content_ctl00_txtEmail"
           value: $EMAIL
           required: true
-        - name: "dnn$ctr5691$Main$txtComments"
-          selector: "#dnn_ctr5691_Main_txtComments"
+        - name: "ctl00$Content$ctl00$txtComment"
+          selector: "#Content_ctl00_txtComment"
           value: $MESSAGE
           required: true
+    - select:
+        - name: "ctl00$Content$ctl00$ddlState"
+          selector: "#Content_ctl00_lblState"
+          value: $ADDRESS_STATE_FULL
+          required: true
+          options:
+            - Alabama
+            - Alaska
+            - Arizona
+            - Arkansas
+            - California
+            - Colorado
+            - Connecticut
+            - Delaware
+            - District of Columbia
+            - Florida
+            - Georgia
+            - Hawaii
+            - Idaho
+            - Illinois
+            - Indiana
+            - Iowa
+            - Kansas
+            - Kentucky
+            - Louisiana
+            - Maine
+            - Montana
+            - Nebraska
+            - Nevada
+            - New Hampshire
+            - New Jersey
+            - New Mexico
+            - New York
+            - North Carolina
+            - North Dakota
+            - Ohio
+            - Oklahoma
+            - Oregon
+            - Maryland
+            - Massachusetts
+            - Michigan
+            - Minnesota
+            - Mississippi
+            - Missouri
+            - Pennsylvania
+            - Rhode Island
+            - South Carolina
+            - South Dakota
+            - Tennessee
+            - Texas
+            - Utah
+            - Vermont
+            - Virginia
+            - Washington
+            - West Virginia
+            - Wisconsin
+            - Wyoming
+        - name: "ctl00$Content$ctl00$ddlSubject"
+          selector: "#Content_ctl00_ddlSubject"
+          value: $TOPIC
+          required: true
+          options:
+            - Agriculture
+            - Animal Welfare
+            - Arts &amp; Humanities
+            - Budget
+            - Business &amp; Economy
+            - Children’s Health &amp; Welfare
+            - Disability Services
+            - Education
+            - Energy &amp; Environment
+            - Government Reform &amp; Oversight
+            - Health &amp; Healthcare
+            - Human Rights
+            - Immigration
+            - Labor &amp; Employment
+            - Public Safety
+            - Social Services
+            - Senior Services
+            - Taxes
+            - Transportation &amp; Infrastructure
+            - Veterans &amp; Military Affairs
+            - Voting
+            - Other Issues
+        - name: "ctl00$Content$ctl00$ddlPrefix"
+          selector: "#Content_ctl00_ddlPrefix"
+          value: $PREFIX
+          required: true
+          options:
+            - Mr
+            - Mrs.
+            - Ms.
+        - name: "ctl00$Content$ctl00$ddlPosition"
+          selector: "#Content_ctl00_ddlPosition"
+          value: "None"
+          required: true
+          options:
+            - None
     - recaptcha:
         - value: true
     - click_on:
-        - selector: "#dnn_ctr5691_Main_btnSubmit"
+        - selector: ".btn-primary"
     - find:
-        - selector: "#dnn_ctr5691_ctl00_lblMessage"
+        - selector: "#Content_ctl00_Alerts_rptAdminAlerts_pnlAlert_0"
   success:
     headers:
       status: 200
     body:
-      contains: Thank you! Your message was submitted successfully.
+      contains: Thank you! Your message has been submitted.
