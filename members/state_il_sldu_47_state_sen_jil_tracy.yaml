@@ -35,7 +35,7 @@ contact_form:
           required: true
     - select:
         - name: "ctl00$Content$ctl00$ddlState"
-          selector: "#Content_ctl00_lblState"
+          selector: "#Content_ctl00_ddlState"
           value: $ADDRESS_STATE_FULL
           required: true
           options:
