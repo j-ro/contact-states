@@ -49,8 +49,6 @@ contact_form:
           selector: "#btn_submit"
     - wait:
         - value: 1
-    - find:
-        - selector: ".col-sm-12"
   success:
     headers:
       status: 200
