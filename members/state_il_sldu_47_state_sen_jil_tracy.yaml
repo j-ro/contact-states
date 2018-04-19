@@ -122,7 +122,7 @@ contact_form:
           value: $PREFIX
           required: true
           options:
-            - Mr
+            - Mr.
             - Mrs.
             - Ms.
         - name: "ctl00$Content$ctl00$ddlPosition"
