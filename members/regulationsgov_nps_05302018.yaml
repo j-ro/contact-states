@@ -1,9 +1,9 @@
-bioguide: regulationsgov_oemb_02272018
+bioguide: regulationsgov_nps_05302018
 contact_form:
   method: POST
   action: ""
   steps:
-    - visit: "https://www.federalregister.gov/documents/2018/01/08/2018-00083/notice-of-availability-of-the-2019-2024-draft-proposed-outer-continental-shelf-oil-and-gas-leasing#open-comment"
+    - visit: "https://www.federalregister.gov/documents/2018/05/22/2018-10735/alaska-hunting-and-trapping-in-national-preserves#open-comment"
     - find:
         - selector: "#comment_general_comment"
     - fill_in:
@@ -36,10 +36,6 @@ contact_form:
         - selector: "#comment_email"
           name: "comment[email]"
           value: $EMAIL
-          required: true
-        - selector: "#comment_organization"
-          name: "comment[organization]"
-          value: "N/A"
           required: true
     - select:
         - selector: "#comment_country"
