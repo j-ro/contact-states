@@ -5,45 +5,41 @@ contact_form:
   steps:
     - visit: "https://iqconnect.lmhostediq.com/iqextranet/EForm.aspx?__cid=FSL_SC_GOV&__fid=100001"
     - fill_in:
-        - name: q_3_prefix
-          selector: "#q_3_prefix"
-          value: $NAME_PREFIX
-          required: true
-        - name: q_3_first_name
-          selector: "#q_3_first_name"
+        - name: qi_3_first_name
+          selector: "#qi_3_first_name"
           value: $NAME_FIRST
           required: true
-        - name: q_3_last_name
-          selector: "#q_3_last_name"
+        - name: qi_3_last_name
+          selector: "#qi_3_last_name"
           value: $NAME_LAST
           required: true
-        - name: q_3_addr_1
-          selector: "#q_3_addr_1"
+        - name: qi_3_addr_1
+          selector: "#qi_3_addr_1"
           value: $ADDRESS_STREET
           required: true
-        - name: q_3_city
-          selector: "#q_3_city"
+        - name: qi_3_city
+          selector: "#qi_3_city"
           value: $ADDRESS_CITY
           required: true
-        - name: q_3_zip
-          selector: "#q_3_zip"
+        - name: qi_3_zip
+          selector: "#qi_3_zip"
           value: $ADDRESS_ZIP5
           required: false
-        - name: q_3_email
-          selector: "#q_3_email"
+        - name: qi_3_email
+          selector: "#qi_3_email"
           value: $EMAIL
           required: true
-        - name: q_6
-          selector: "#q_6"
+        - name: qi_6
+          selector: "#qi_6"
           value: $SUBJECT
           required: true
-        - name: q_8
-          selector: "#q_8"
+        - name: qi_8
+          selector: "#qi_8"
           value: $MESSAGE
           required: true
     - select:
-        - name: q_3_state
-          selector: "#q_3_state"
+        - name: qi_3_state
+          selector: "#qi_3_state"
           value: $ADDRESS_STATE_POSTAL_ABBREV
           required: true
           options:
@@ -108,8 +104,8 @@ contact_form:
             West Virginia: WV
             Wisconsin: WI
             Wyoming: WY
-        - name: q_5
-          selector: "#q_5"
+        - name: qi_5
+          selector: "#qi_5"
           value: $TOPIC
           required: true
           options:

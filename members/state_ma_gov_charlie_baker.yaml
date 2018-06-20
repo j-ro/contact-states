@@ -48,6 +48,9 @@ contact_form:
     - click_on:
         - value: Submit
           selector: "#fsSubmitButton1744869"
+    - find:
+        - selector: "p"
+          value: "The form was submitted successfully."
   success:
     headers:
       status: 200
