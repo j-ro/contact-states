@@ -4,6 +4,9 @@ contact_form:
   action: "https://massgov.formstack.com/forms/index.php"
   steps:
     - visit: "https://www.mass.gov/forms/email-the-governors-office"
+    - javascript:
+        - value: "Array.prototype.forEach.call(document.querySelectorAll('style,[rel=\"stylesheet\"],[type=\"text/css\"]'), function(element){ 
+try{ element.parentNode.removeChild(element) } catch(err){} });"
     - fill_in:
         - name: field49751862
           selector: "#field49751862"
