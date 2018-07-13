@@ -35,7 +35,7 @@ contact_form:
           required: true
         - selector: "#comment_organization"
           name: "comment[organization]"
-          value: "N/A"
+          value: "Not Applicable"
           required: true
     - select:
         - selector: "#comment_country"
