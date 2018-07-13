@@ -21,10 +21,6 @@ contact_form:
           name: "comment[last_name]"
           value: $NAME_LAST
           required: true
-        - selector: "#comment_address1"
-          name: "comment[address1]"
-          value: $ADDRESS_STREET
-          required: true
         - selector: "#comment_city"
           name: "comment[city]"
           value: $ADDRESS_CITY
