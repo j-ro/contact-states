@@ -33,8 +33,12 @@ contact_form:
         - selector: "input#x-auto-14-input"
           value: "N/A"
           required: true
+    - wait:
+        - value: 1
     - click_on:
         - selector: ".GIY1LSJPSC button.primary.button"
+    - wait:
+        - value: 10
     - find:
         - selector: "button#gwt-uid-397"
     - click_on:
