@@ -31,7 +31,7 @@ contact_form:
           value: $ADDRESS_STATE_FULL
           required: true
     - click_on:
-        - selector: "input#gwt-uid-345"
+        - selector: "input#gwt-uid-164"
     - wait:
         - value: 1
     - click_on:
