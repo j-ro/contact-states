@@ -46,7 +46,7 @@ contact_form:
     - click_on:
         - selector: ".GIY1LSJPSC button.primary.button"
     - wait:
-        - value: 10
+        - value: 1
     - find:
         - selector: "button#gwt-uid-391"
     - click_on:
