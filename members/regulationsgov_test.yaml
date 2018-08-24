@@ -48,11 +48,11 @@ contact_form:
     - wait:
         - value: 10
     - find:
-        - selector: "button#gwt-uid-397"
+        - selector: "button#gwt-uid-391"
     - click_on:
         - selector: "input#gwt-uid-250"
     - click_on:
-        - selector: "button#gwt-uid-397"
+        - selector: "button#gwt-uid-391"
     - find:
         - selector: ".successInfo"
   success:
