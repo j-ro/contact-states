@@ -36,7 +36,7 @@ contact_form:
     - wait:
         - value: 1
     - javascript:
-        - value: "document.querySelector("input#x-auto-6-input").value = 'New York';"
+        - value: "document.querySelector('input#x-auto-6-input').value = 'New York';"
     - click_on:
         - selector: "input#x-auto-6-input"
     - click_on:
