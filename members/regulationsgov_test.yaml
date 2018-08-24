@@ -35,6 +35,14 @@ contact_form:
           required: true
     - wait:
         - value: 1
+    - javascript:
+        - value: "document.querySelector("input#x-auto-6-input").value = 'New York';"
+    - click_on:
+        - selector: "input#x-auto-6-input"
+    - click_on:
+        - selector: "input#x-auto-10-input"
+    - wait:
+        - value: 1
     - click_on:
         - selector: ".GIY1LSJPSC button.primary.button"
     - wait:
