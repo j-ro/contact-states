@@ -5,41 +5,41 @@ contact_form:
   steps:
     - visit: "https://iqconnect.lmhostediq.com/iqextranet/EForm.aspx?__cid=FSL_MID25&__fid=100005&iframe=Y"
     - fill_in:
-        - name: q_1_first_name
-          selector: "#q_1_first_name"
+        - name: qi_1_first_name
+          selector: "#qi_1_first_name"
           value: $NAME_FIRST
           required: true
-        - name: q_1_last_name
-          selector: "#q_1_last_name"
+        - name: qi_1_last_name
+          selector: "#qi_1_last_name"
           value: $NAME_LAST
           required: true
-        - name: q_1_addr_1
-          selector: "#q_1_addr_1"
+        - name: qi_1_addr_1
+          selector: "#qi_1_addr_1"
           value: $ADDRESS_STREET
           required: true
-        - name: q_1_city
-          selector: "#q_1_city"
+        - name: qi_1_city
+          selector: "#qi_1_city"
           value: $ADDRESS_CITY
           required: true
-        - name: q_1_zip
-          selector: "#q_1_zip"
+        - name: qi_1_zip
+          selector: "#qi_1_zip"
           value: $ADDRESS_ZIP5
           required: true
-        - name: q_1_email
-          selector: "#q_1_email"
+        - name: qi_1_email
+          selector: "#qi_1_email"
           value: $EMAIL
           required: true
-        - name: q_2
-          selector: "#q_2"
+        - name: qi_2
+          selector: "#qi_2"
           value: $SUBJECT
           required: true
-        - name: q_3
-          selector: "#q_3"
+        - name: qi_3
+          selector: "#qi_3"
           value: $MESSAGE
           required: true
     - select:
-        - selector: "#q_1_state"
-          name: q_1_state
+        - selector: "#qi_1_state"
+          name: qi_1_state
           value: "MI"
           required: true
           options:
