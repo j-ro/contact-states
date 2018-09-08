@@ -4,124 +4,118 @@ contact_form:
   action: ""
   steps:
     - visit: "https://www.governor.pa.gov/contact/"
-    - javascript:
-        - value: "Array.prototype.forEach.call(document.querySelectorAll('style,[rel=\"stylesheet\"],[type=\"text/css\"]'), function(element){ 
-try{ element.parentNode.removeChild(element) } catch(err){} });"
     - fill_in:
-        - name: FirstName
-          selector: "#name_first"
+        - name: nf-field-1351
+          selector: "#nf-field-1351"
           value: $NAME_FIRST
           required: true
-        - name: LastName
-          selector: "#name_last"
+        - name: nf-field-1361
+          selector: "#nf-field-1361"
           value: $NAME_LAST
           required: true
-        - name: AddressStreet1
-          selector: "#address"
+        - name: nf-field-1371
+          selector: "#nf-field-1371"
           value: $ADDRESS_STREET
           required: true
-        - name: City
-          selector: "#city"
+        - name: nf-field-1381
+          selector: "#nf-field-1381"
           value: $ADDRESS_CITY
           required: true
-        - name: Zip
-          selector: "#zip"
+        - name: zip
+          selector: "#nf-field-1411"
           value: $ADDRESS_ZIP5
           required: true
         - name: email
-          selector: "#email"
+          selector: "#nf-field-1421"
           value: $EMAIL
           required: true
-        - name: MobileNumber
-          selector: "#number_mobile"
+        - name: phone
+          selector: "#nf-field-1431"
           value: $PHONE
           required: true
-        - name: msg_content
-          selector: "#msg_content"
+        - name: nf-field-1461
+          selector: "#nf-field-1461"
           value: $MESSAGE
           required: true
     - select:
-        - name: county
-          selector: "#county"
+        - name: nf-field-1401
+          selector: "#nf-field-1401"
           value: $ADDRESS_COUNTY
           required: true
           options:
-            Adams: e81e8498-2311-e111-a99f-005056a50206
-            Allegheny: ea1e8498-2311-e111-a99f-005056a50206
-            Armstrong: ec1e8498-2311-e111-a99f-005056a50206
-            Beaver: ee1e8498-2311-e111-a99f-005056a50206
-            Bedford: f01e8498-2311-e111-a99f-005056a50206
-            Berks: f21e8498-2311-e111-a99f-005056a50206
-            Blair: f41e8498-2311-e111-a99f-005056a50206
-            Bradford: f61e8498-2311-e111-a99f-005056a50206
-            Bucks: f81e8498-2311-e111-a99f-005056a50206
-            Butler: fa1e8498-2311-e111-a99f-005056a50206
-            Cambria: fc1e8498-2311-e111-a99f-005056a50206
-            Cameron: fe1e8498-2311-e111-a99f-005056a50206
-            Carbon: 001f8498-2311-e111-a99f-005056a50206
-            Centre: 021f8498-2311-e111-a99f-005056a50206
-            Chester: 041f8498-2311-e111-a99f-005056a50206
-            Clarion: 061f8498-2311-e111-a99f-005056a50206
-            Clearfield: 081f8498-2311-e111-a99f-005056a50206
-            Clinton: 0a1f8498-2311-e111-a99f-005056a50206
-            Columbia: 0c1f8498-2311-e111-a99f-005056a50206
-            Crawford: 0e1f8498-2311-e111-a99f-005056a50206
-            Cumberland: 101f8498-2311-e111-a99f-005056a50206
-            Dauphin: 141f8498-2311-e111-a99f-005056a50206
-            Delaware: 161f8498-2311-e111-a99f-005056a50206
-            Elk: 181f8498-2311-e111-a99f-005056a50206
-            Erie: 1a1f8498-2311-e111-a99f-005056a50206
-            Fayette: 1c1f8498-2311-e111-a99f-005056a50206
-            Forest: 1e1f8498-2311-e111-a99f-005056a50206
-            Franklin: 201f8498-2311-e111-a99f-005056a50206
-            Fulton: 221f8498-2311-e111-a99f-005056a50206
-            Greene: 241f8498-2311-e111-a99f-005056a50206
-            Huntingdon: 261f8498-2311-e111-a99f-005056a50206
-            Indiana: 281f8498-2311-e111-a99f-005056a50206
-            Jefferson: 2a1f8498-2311-e111-a99f-005056a50206
-            Juniata: 2c1f8498-2311-e111-a99f-005056a50206
-            Lackawanna: 2e1f8498-2311-e111-a99f-005056a50206
-            Lancaster: 301f8498-2311-e111-a99f-005056a50206
-            Lawrence: 321f8498-2311-e111-a99f-005056a50206
-            Lebanon: 341f8498-2311-e111-a99f-005056a50206
-            Lehigh: 361f8498-2311-e111-a99f-005056a50206
-            Luzerne: 381f8498-2311-e111-a99f-005056a50206
-            Lycoming: 3a1f8498-2311-e111-a99f-005056a50206
-            McKean: 3c1f8498-2311-e111-a99f-005056a50206
-            Mercer: 3e1f8498-2311-e111-a99f-005056a50206
-            Mifflin: 401f8498-2311-e111-a99f-005056a50206
-            Monroe: 421f8498-2311-e111-a99f-005056a50206
-            Montgomery: 441f8498-2311-e111-a99f-005056a50206
-            Montour: 461f8498-2311-e111-a99f-005056a50206
-            Northampton: 481f8498-2311-e111-a99f-005056a50206
-            Northumberland: 4a1f8498-2311-e111-a99f-005056a50206
-            Perry: 4c1f8498-2311-e111-a99f-005056a50206
-            Philadelphia: 4e1f8498-2311-e111-a99f-005056a50206
-            Pike: 501f8498-2311-e111-a99f-005056a50206
-            Potter: 521f8498-2311-e111-a99f-005056a50206
-            Schuylkill: 541f8498-2311-e111-a99f-005056a50206
-            Snyder: 561f8498-2311-e111-a99f-005056a50206
-            Somerset: 581f8498-2311-e111-a99f-005056a50206
-            Sullivan: 5a1f8498-2311-e111-a99f-005056a50206
-            Susquehanna: 5c1f8498-2311-e111-a99f-005056a50206
-            Tioga: 5e1f8498-2311-e111-a99f-005056a50206
-            Union: 601f8498-2311-e111-a99f-005056a50206
-            Venango: 621f8498-2311-e111-a99f-005056a50206
-            Warren: 641f8498-2311-e111-a99f-005056a50206
-            Washington: 661f8498-2311-e111-a99f-005056a50206
-            Wayne: 681f8498-2311-e111-a99f-005056a50206
-            Westmoreland: 6a1f8498-2311-e111-a99f-005056a50206
-            Wyoming: 6c1f8498-2311-e111-a99f-005056a50206
-            York: 6e1f8498-2311-e111-a99f-005056a50206
-            Out of State: 50480a51-1420-e511-9c63-005056a500f9
-    - javascript:
-        - value: "document.querySelectorAll('[type=email]')[1].value = document.querySelectorAll('[type=email]')[0].value"
-    - recaptcha:
-        - value: true
+            Adams: adams
+            Allegheny: allegheny
+            Armstrong: armstrong
+            Beaver: beaver
+            Bedford: bedford
+            Berks: berks
+            Blair: blair
+            Bradford: bradford
+            Bucks: bucks
+            Butler: butler
+            Cambria: cambria
+            Cameron: cameron
+            Carbon: carbon
+            Centre: centre
+            Chester: chester
+            Clarion: clarion
+            Clearfield: clearfield
+            Clinton: clinton
+            Columbia: columbia
+            Crawford: crawford
+            Cumberland: cumberland
+            Dauphin: dauphin
+            Delaware: delaware
+            Elk: elk
+            Erie: erie
+            Fayette: fayette
+            Forest: forest
+            Franklin: franklin
+            Fulton: fulton
+            Greene: greene
+            Huntingdon: huntingdon
+            Indiana: indiana
+            Jefferson: jefferson
+            Juniata: juniata
+            Lackawanna: lackawanna
+            Lancaster: lancaster
+            Lawrence: lawrence
+            Lebanon: lebanon
+            Lehigh: lehigh
+            Luzerne: luzerne
+            Lycoming: lycoming
+            McKean: mckean
+            Mercer: mercer
+            Mifflin: mifflin
+            Monroe: monroe
+            Montgomery: montgomery
+            Montour: montour
+            Northampton: northampton
+            Northumberland: northumberland
+            Perry: perry
+            Philadelphia: philadelphia
+            Pike: pike
+            Potter: potter
+            Schuylkill: schuylkill
+            Snyder: snyder
+            Somerset: somerset
+            Sullivan: sullivan
+            Susquehanna: susquehanna
+            Tioga: tioga
+            Union: union
+            Venango: venango
+            Warren: warren
+            Washington: washington
+            Wayne: wayne
+            Westmoreland: westmoreland
+            Wyoming: wyoming
+            York: york
     - click_on:
-        - selector: "#submit"
+        - selector: "#nf-field-1471"
+    - find:
+        - selector: ".nf-response-msg"
   success:
     headers:
       status: 200
     body:
-      contains: Your submission has been received by the Office of Governor Tom Wolf.
+      contains: Your form has been successfully submitted.
