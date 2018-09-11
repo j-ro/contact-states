@@ -114,6 +114,8 @@ contact_form:
             York: york
     - javascript:
         - value: "document.querySelector('#nf-field-1471').click();"
+    - wait:
+        - value: 10
     - find:
         - selector: ".nf-response-msg"
   success:
