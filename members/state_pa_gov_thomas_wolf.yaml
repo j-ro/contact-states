@@ -5,7 +5,7 @@ contact_form:
   steps:
     - visit: "https://www.governor.pa.gov/contact/"
     - javascript: 
-        - value: "document.querySelector('div.reveal-overlay').style.display = 'none';"
+        - value: "Array.prototype.forEach.call(document.querySelectorAll('div.reveal-overlay'), function(element){ try{ element.parentNode.removeChild(element) } catch(err){} });"
     - fill_in:
         - name: nf-field-1351
           selector: "#nf-field-1351"
