@@ -112,8 +112,8 @@ contact_form:
             Westmoreland: westmoreland
             Wyoming: wyoming
             York: york
-    - click_on:
-        - selector: "#nf-field-1471"
+    - javascript:
+        - value: "document.querySelector('#nf-field-1471').click();"
     - find:
         - selector: ".nf-response-msg"
   success:
