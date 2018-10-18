@@ -3,82 +3,99 @@ contact_form:
   method: post
   action: ""
   steps:
-    - visit: "http://governor.maryland.gov/mail/default.asp"
+    - visit: "https://governor.maryland.gov/contact-the-governor/"
     - fill_in:
-        - name: firstname
-          selector: "#firstname"
+        - name: "first-name"
+          selector: "#first-name"
           value: $NAME_FIRST
           required: true
-        - name: lastname
-          selector: "#lastname"
+        - name: "last-name"
+          selector: "#last-name"
           value: $NAME_LAST
           required: true
-        - name: street
-          selector: "#street"
+        - name: "addr-1"
+          selector: "#addr-1"
           value: $ADDRESS_STREET
           required: true
         - name: city
           selector: "#city"
           value: $ADDRESS_CITY
           required: true
-        - name: state
-          selector: "#state"
-          value: $ADDRESS_STATE_POSTAL_ABBREV
-          required: true
-        - name: zipcode
-          selector: "#zipcode"
+        - name: zip
+          selector: "#zip"
           value: $ADDRESS_ZIP5
           required: true
-        - name: areacode
-          selector: "#AreaCode"
-          value: $PHONE
-          required: true
-        - name: phoneprefix
-          selector: "input[name='phoneprefix']"
-          value: $PHONE
-          required: true
-        - name: extension
-          selector: "input[name='extension']"
-          value: $PHONE
-          required: true
-        - name: emailaddress
-          selector: "#emailaddress"
+        - name: email
+          selector: "#email"
           value: $EMAIL
           required: true
-        - name: subjectline
-          selector: "input[name='subjectline']"
-          value: $SUBJECT
-          required: true
-        - name: emailmessage
-          selector: "#emailmessage"
+        - name: "textarea-your-message"
+          selector: "#your-message"
           value: $MESSAGE
           required: true
           options:
             max_length: 2000
     - select:
-        - name: pickSubject
-          selector: "#pickSubject"
+        - name: state
+          selector: "#state"
+          value: $ADDRESS_STATE_POSTAL_ABBREV
+          required: true
+          options:
+            - Maryland
+        - name: "menu-612"
+          selector: "select[name='menu-612']"
           value: $TOPIC
           required: true
           options:
-            Disabilities: Disabilities
-            Economic Development: Economic Development
-            Education Issues: Education Issues
-            Energy Issues: Energy Issues
-            Environment Issues: Environment Issues
-            Health Care Issues: Health Care Issues
-            Higher Education   : Higher Education   
-            Public Safety Issues: Public Safety Issues
-            Transportation Issues: Transportation Issues
-            Veterans Issues: Veterans Issues
+            - Agriculture
+            - Animal Welfare
+            - Banking
+            - Broadband
+            - Child Custody
+            - Correctional Services
+            - Criminal Justice
+            - Developmental Disabilities Administration
+            - Disabilities
+            - Economic Development
+            - Education
+            - Emergency Preparedness
+            - Energy
+            - Energy Assistance
+            - Environment
+            - Funding Request
+            - Gaming
+            - Grant Request
+            - Health
+            - Higher Education
+            - Homeland Security
+            - Housing
+            - Human Rights
+            - Human Services
+            - Immigration
+            - Infrastructure
+            - Insurance
+            - Jobs
+            - Juvenile Services
+            - Legislation
+            - LGBT Rights
+            - Military/Naval Affairs
+            - Other
+            - Parks and Recreation
+            - Public Safety
+            - Public Utilities
+            - Taxes
+            - Tourism
+            - Transportation
+            - Unemployment
+            - Veterans Affairs
+            - Women's Issues          
     - click_on:
         - value: Submit
-          selector: "#btnSbt"
+          selector: ".wpcf7-submit"
     - find:
-        - selector: h1
-          value: "Thank you for Writing..."
+        - selector: "#post-3972"
   success:
     headers:
       status: 200
     body:
-      contains: "Thank you for Writing..."
+      contains: "Thank You for Contacting"
