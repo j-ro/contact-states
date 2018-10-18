@@ -92,10 +92,8 @@ contact_form:
     - click_on:
         - value: Submit
           selector: ".wpcf7-submit"
-    - find:
-        - selector: "#post-3972"
   success:
     headers:
       status: 200
     body:
-      contains: "Thank You for Contacting"
+      contains: "Thank you for your"
