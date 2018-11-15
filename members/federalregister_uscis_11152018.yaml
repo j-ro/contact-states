@@ -25,7 +25,7 @@ contact_form:
     - click_on:
         - selector: "input#gwt-uid-250"
     - click_on:
-        - selector: "button#gwt-uid-393"
+        - selector: "button#gwt-uid-373"
     - find:
         - selector: ".successInfo"
   success:
