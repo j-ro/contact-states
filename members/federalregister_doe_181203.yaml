@@ -36,7 +36,7 @@ contact_form:
           required: true
           options:
             - United States
-        - selector: "comment_comment_category"
+        - selector: "#comment_comment_category"
           name: "comment[comment_category]"
           value: "Individual"
           required: true
