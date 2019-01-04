@@ -8,43 +8,51 @@ contact_form:
         - name: "Contact.FirstName"
           selector: "#Contact.FirstName"
           value: $NAME_FIRST
-          max_length: 40
           required: true
+          options:
+            max_length: 40
         - name: "Contact.LastName"
           selector: "#Contact.LastName"
           value: $NAME_LAST
-          max_length: 80
           required: true
+          options:
+            max_length: 80
         - name: "Contact.MailingStreet
           selector: "#Contact.MailingStreet"
           value: $ADDRESS_STREET
-          max_length: 255
           required: true
+          options:
+            max_length: 255
         - name: "Contact.MailingCity"
           selector: "#Contact.MailingCity"
           value: $ADDRESS_CITY
-          max_length: 40
           required: true
+          options:
+            max_length: 40
         - name: "Contact.MailingPostalCode"
           selector: "#Contact.MailingPostalCode"
           value: $ADDRESS_ZIP5
-          max_length: 20
           required: true
+          options:
+            max_length: 20
         - name: "Contact.Email
           selector: "#Contact.Email"
           value: $EMAIL
-          max_length: 80
           required: true
+          options:
+            max_length: 80
         - name: "Contact.HomePhone"
           selector: "#Contact.HomePhone"
           value: $PHONE
-          max_length: 40
           required: true
+          options:
+            max_length: 40
         - name: "Contact.Case.Description"
           selector: "#Contact.Case.Description"
           value: $MESSAGE
-          max_length: 2000
           required: true
+          options:
+            max_length: 2000
     - select:
         - name: "Contact.Case.Who_are_you_trying_to_contact__c"
           selector: "#Contact.Case.Who_are_you_trying_to_contact__c"
@@ -53,7 +61,8 @@ contact_form:
           options:
             - Contact the President
         - name: Contact.Salutation
-          selector: Contact.Salutation
+          selector: "#Contact.Salutation"
+          value: $NAME_PREFIX
           options:
             - Mr.
             - Ms.
@@ -133,7 +142,7 @@ contact_form:
           value: "on"
     - click_on:
         - value: Send
-          selector: "btnsubmit"
+          selector: "#btnsubmit"
   success:
     headers:
       status: 200
