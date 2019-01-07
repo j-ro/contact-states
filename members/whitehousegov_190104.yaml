@@ -35,7 +35,7 @@ contact_form:
           required: true
           options:
             max_length: 20
-        - name: "Contact.Email
+        - name: "Contact.Email"
           selector: "#Contact\.Email"
           value: $EMAIL
           required: true
