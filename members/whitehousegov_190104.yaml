@@ -6,62 +6,62 @@ contact_form:
     - visit: "https://www.whitehouse.gov/contact/"
     - fill_in:
         - name: "Contact.FirstName"
-          selector: "#Contact.FirstName"
+          selector: "#Contact\.FirstName"
           value: $NAME_FIRST
           required: true
           options:
             max_length: 40
         - name: "Contact.LastName"
-          selector: "#Contact.LastName"
+          selector: "#Contact\.LastName"
           value: $NAME_LAST
           required: true
           options:
             max_length: 80
         - name: "Contact.MailingStreet
-          selector: "#Contact.MailingStreet"
+          selector: "#Contact\.MailingStreet"
           value: $ADDRESS_STREET
           required: true
           options:
             max_length: 255
         - name: "Contact.MailingCity"
-          selector: "#Contact.MailingCity"
+          selector: "#Contact\.MailingCity"
           value: $ADDRESS_CITY
           required: true
           options:
             max_length: 40
         - name: "Contact.MailingPostalCode"
-          selector: "#Contact.MailingPostalCode"
+          selector: "#Contact\.MailingPostalCode"
           value: $ADDRESS_ZIP5
           required: true
           options:
             max_length: 20
         - name: "Contact.Email
-          selector: "#Contact.Email"
+          selector: "#Contact\.Email"
           value: $EMAIL
           required: true
           options:
             max_length: 80
         - name: "Contact.HomePhone"
-          selector: "#Contact.HomePhone"
+          selector: "#Contact\.HomePhone"
           value: $PHONE
           required: true
           options:
             max_length: 40
         - name: "Contact.Case.Description"
-          selector: "#Contact.Case.Description"
+          selector: "#Contact\.Case\.Description"
           value: $MESSAGE
           required: true
           options:
             max_length: 2000
     - select:
-        - name: "Contact.Case.Who_are_you_trying_to_contact__c"
-          selector: "#Contact.Case.Who_are_you_trying_to_contact__c"
+        - name: "Contact\.Case\.Who_are_you_trying_to_contact__c"
+          selector: "#Contact\.Case\.Who_are_you_trying_to_contact__c"
           value: "Contact the President"
           required: true
           options:
             - Contact the President
         - name: Contact.Salutation
-          selector: "#Contact.Salutation"
+          selector: "#Contact\.Salutation"
           value: $NAME_PREFIX
           options:
             - Mr.
@@ -69,7 +69,7 @@ contact_form:
             - Mrs.
             - Dr.
         - name: "Contact.MailingState"
-          selector: "#Contact.MailingState"
+          selector: "#Contact\.MailingState"
           value: $ADDRESS_STATE_FULL
           required: true
           options:
@@ -137,8 +137,8 @@ contact_form:
             - Wisconsin
             - Wyoming
     - uncheck:
-        - name: "Contact.Contact_Us_Email_Opt_In__c"
-          selector: "#Contact.Contact_Us_Email_Opt_In__c"
+        - name: "Contact\.Contact_Us_Email_Opt_In__c"
+          selector: "#Contact\.Contact_Us_Email_Opt_In__c"
           value: "on"
     - click_on:
         - value: Send
