@@ -18,7 +18,7 @@ contact_form:
           options:
             max_length: 80
         - name: "Contact.MailingStreet"
-          selector: "input[name='Contact.MailingStreet']"
+          selector: "textarea[name='Contact.MailingStreet']"
           value: $ADDRESS_STREET
           required: true
           options:
@@ -48,20 +48,20 @@ contact_form:
           options:
             max_length: 40
         - name: "Contact.Case.Description"
-          selector: "input[name='Contact.Case.Description']"
+          selector: "textarea[name='Contact.Case.Description']"
           value: $MESSAGE
           required: true
           options:
             max_length: 2000
     - select:
         - name: "Contact.Case.Who_are_you_trying_to_contact__c"
-          selector: "input[name='Contact.Case.Who_are_you_trying_to_contact__c']"
+          selector: "select[name='Contact.Case.Who_are_you_trying_to_contact__c']"
           value: "Contact the President"
           required: true
           options:
             - Contact the President
         - name: Contact.Salutation
-          selector: "input[name='Contact.Salutation']"
+          selector: "select[name='Contact.Salutation']"
           value: $NAME_PREFIX
           options:
             - Mr.
@@ -69,7 +69,7 @@ contact_form:
             - Mrs.
             - Dr.
         - name: "Contact.MailingState"
-          selector: "input[name='Contact.MailingState']"
+          selector: "select[name='Contact.MailingState']"
           value: $ADDRESS_STATE_FULL
           required: true
           options:
