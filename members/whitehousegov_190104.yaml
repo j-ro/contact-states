@@ -63,6 +63,7 @@ contact_form:
         - name: Contact.Salutation
           selector: "select[name='Contact.Salutation']"
           value: $NAME_PREFIX
+          required: true
           options:
             - Mr.
             - Ms.
