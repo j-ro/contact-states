@@ -3,7 +3,7 @@ contact_form:
   method: post
   action: webmail.php
   steps:
-    - visit: "https://govnews.gov.ca.gov/gov39mail/mail.php"
+    - visit: "https://govapps.gov.ca.gov/gov40mail/"
     - fill_in:
         - name: fname
           selector: "#fname"
