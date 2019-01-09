@@ -1,0 +1,35 @@
+bioguide: state_me_gov_janet_mills
+contact_form:
+  method: post
+  action: "https://www.maine.gov/governor/mills/contact"
+  steps:
+    - visit: "https://www.maine.gov/governor/mills/contact"
+    - fill_in:
+        - name: "name"
+          selector: "#name"
+          value: $NAME_FIRST
+          required: true
+        - name: "lname"
+          selector: "#lname"
+          value: $NAME_LAST
+          required: true
+        - name: "email"
+          selector: "#email"
+          value: $EMAIL
+          required: true
+        - name: "comments"
+          selector: "#comments"
+          value: $MESSAGE
+          required: true
+    - recaptcha:
+        - value: true
+    - click_on:
+        - value: Submit
+          selector: "#Submit"
+    - find:
+        - selector: ".post-3590 .entry-content"
+  success:
+    headers:
+      status: 200
+    body:
+      contains: Thank you
