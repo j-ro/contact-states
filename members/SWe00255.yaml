@@ -41,6 +41,8 @@ contact_form:
           selector: "#txtMessage"
           value: $MESSAGE
           required: true
+    - recaptcha:
+        - value: true
     - click_on:
         - value: Submit
           selector: "#btnEmail"

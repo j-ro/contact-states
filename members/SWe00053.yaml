@@ -3,7 +3,7 @@ contact_form:
   method: post
   action: "/contact-gov-scott/email-the-governor/#formBuilderCSSIDEmail_the_Governor?PHPSESSID=9p08p76cmbad46854ohfbi3jv5"
   steps:
-    - visit: "http://www.flgov.com/contact-gov-scott/email-the-governor/"
+    - visit: "https://www.flgov.com/email-the-governor/"
     - fill_in:
         - name: "formBuilderForm[Name]"
           selector: "#fieldformBuilderFieldName"
