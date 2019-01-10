@@ -77,7 +77,7 @@ contact_form:
             - Yes, please contact me
             - No, I wanted to voice my opinion
     - javascript:
-        - value: "document.querySelector('.et_pb_contact_captcha').value = parseInt(document.querySelector('.et_pb_contact_captcha_question').innerText[0]) + parseInt(document.querySelector('.et_pb_contact_captcha_question').innerText.slice(-1));"
+        - value: "document.querySelector('.et_pb_contact_captcha').value = parseInt(document.querySelector('.et_pb_contact_captcha_question').innerText.split(' ')[0]) + parseInt(document.querySelector('.et_pb_contact_captcha_question').innerText.split(' ')[2]);"
     - click_on:
         - selector: ".et_pb_contact_submit"
     - find:
