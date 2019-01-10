@@ -6,7 +6,7 @@ contact_form:
     - visit: "https://www.tn.gov/governor/contact-us.html"
     - click_on:
         - value: Email Us
-          selector: "a[href='#collapseec6fcb3c912e40c28a13e2407fd21d42-1']"
+          selector: "#accordion-ec6fcb3c912e40c28a13e2407fd21d42 div.panel:first-child a"
     - fill_in:
         - name: "qi_1_first_name"
           selector: "#qi_1_first_name"
