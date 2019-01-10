@@ -26,8 +26,6 @@ contact_form:
     - click_on:
         - value: Submit
           selector: "#Submit"
-    - find:
-        - selector: ".post-3590 .entry-content"
   success:
     headers:
       status: 200
