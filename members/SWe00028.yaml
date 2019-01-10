@@ -91,4 +91,4 @@ contact_form:
     headers:
       status: 200
     body:
-      contains: EMAIL COMPLETE
+      contains: MESSAGE COMPLETE
