@@ -51,6 +51,11 @@ contact_form:
           required: true
           options:
             max_length: 2000
+        - name: ctl00$Content$RadCaptcha1$CaptchaTextBox
+          selector: "#Content_RadCaptcha1_CaptchaTextBox"
+          captcha_selector: "#Content_RadCaptcha1_CaptchaImageUP"
+          value: $CAPTCHA_SOLUTION
+          required: true
     - select:
         - name: "ctl00$Content$OpinionIssue"
           selector: "#Content_OpinionIssue"
