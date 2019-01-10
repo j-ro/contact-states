@@ -1,12 +1,9 @@
 bioguide: state_tn_gov_bill_lee
 contact_form:
   method: post
-  action: "https://www.tn.gov/governor/contact-us.html"
+  action: "https://iqconnect.lmhostediq.com/iqextranet/EForm.aspx?__cid=FSL_TN_DFA&__fid=100000"
   steps:
-    - visit: "https://www.tn.gov/governor/contact-us.html"
-    - click_on:
-        - value: Email Us
-          selector: "#accordion-ec6fcb3c912e40c28a13e2407fd21d42 div.panel:first-child a"
+    - visit: "https://iqconnect.lmhostediq.com/iqextranet/EForm.aspx?__cid=FSL_TN_DFA&__fid=100000"
     - fill_in:
         - name: "qi_1_first_name"
           selector: "#qi_1_first_name"
