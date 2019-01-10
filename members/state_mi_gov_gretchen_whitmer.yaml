@@ -86,10 +86,8 @@ contact_form:
             "Roads and Infrastructure": c56ea783-2b49-e111-bd20-00219b8d8c66
     - check:
         - name: "ctl00$Content$chkBxReply"
-        - selector: "#Content_chkBxReply"
-        - value: Content_chkBxReply
-    - recaptcha:
-        - value: true
+          selector: "#Content_chkBxReply"
+          value: Content_chkBxReply
     - click_on:
         - value: Submit
           selector: "#Content_btnSubmit"
