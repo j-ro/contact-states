@@ -3,47 +3,50 @@ contact_form:
   method: post
   action: contactgovernor.aspx
   steps:
-    - visit: "http://apps.das.ohio.gov/governorcommunications/contactgovernor.aspx"
+    - visit: "https://governor.ohio.gov/wps/portal/gov/governor/contact"
     - fill_in:
-        - name: txtFirstName_text
-          selector: "#txtFirstName_text"
+        - name: first-name
+          selector: "#first-name"
           value: $NAME_FIRST
           required: true
-        - name: txtLastName_text
-          selector: "#txtLastName_text"
+        - name: last-name
+          selector: "#last-name"
           value: $NAME_LAST
           required: true
-        - name: txtStreet_text
-          selector: "#txtStreet_text"
+        - name: street
+          selector: "#street"
           value: $ADDRESS_STREET
           required: true
-        - name: txtCity_text
-          selector: "#txtCity_text"
+        - name: city
+          selector: "#city"
           value: $ADDRESS_CITY
           required: true
-        - name: txtZIPCode_text
-          selector: "#txtZIPCode_text"
+        - name: zip-code
+          selector: "#zip-code"
           value: $ADDRESS_ZIP5
           required: true
-        - name: txtEmail_text
-          selector: "#txtEmail_text"
+        - name: txt-email
+          selector: "#txt-email"
           value: $EMAIL
           required: true
-        - name: txtSubject_text
-          selector: "#txtSubject_text"
+        - name: phone-number
+          selector: "#phone-number"
+          value: $PHONE
+          required: true
+        - name: subject
+          selector: "#subject"
           value: $SUBJECT
           required: true
-        - name: txtMessage_text
-          selector: "#txtMessage_text"
+        - name: txt-message
+          selector: "#txt-message"
           value: $MESSAGE
           required: true
-    - javascript:
-        - value: "Telerik.Web.UI.RadComboBox.ComboBoxes[0].get_items()._array[1].select()"
     - click_on:
-        - value: Submit
-          selector: "#btnSubmit"
+        - selector: ".oda-contact-form .odx-full-banner__button"
+    - find:
+        - selector: ".alert-success"
   success:
     headers:
       status: 200
     body:
-      contains: "Your Request has been successfully submitted!"
+      contains: "Message successfully sent"
