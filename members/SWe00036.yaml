@@ -101,6 +101,8 @@ contact_form:
             Washington: tfa_203
             Weld: tfa_204
             Yuma: tfa_205
+    - recaptcha:
+        - value: true
     - click_on:
         - value: Submit
           selector: ".primaryAction"
