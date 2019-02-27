@@ -1,0 +1,51 @@
+bioguide: state_pa_sldu_28_state_sen_kristin_lee_phillips_hill
+contact_form:
+  method: POST
+  action: confirm.asp
+  steps:
+    - visit: "http://wpcontact.pasenategop.com/contact.aspx?websiteid=28"
+    - fill_in:
+        - name: txtFirstname
+          selector: "#form1 input[name='txtFirstname']"
+          value: $NAME_FIRST
+          required: true
+        - name: txtLastname
+          selector: "#form1 input[name='txtLastname']"
+          value: $NAME_LAST
+          required: true
+        - name: txtAddress1
+          selector: "#form1 input[name='txtAddress1']"
+          value: $ADDRESS_STREET
+          required: true
+        - name: txtCity
+          selector: "#form1 input[name='txtCity']"
+          value: $ADDRESS_CITY
+          required: true
+        - name: txtZip
+          selector: "#form1 input[name='txtZip']"
+          value: $ADDRESS_ZIP5
+          required: true
+        - name: txtEmail
+          selector: "#form1 input[name='txtEmail']"
+          value: $EMAIL
+          required: true
+        - name: txtComments
+          selector: "#txtComments"
+          value: $MESSAGE
+          required: true
+    - click_on:
+       - selector: "#ddlIssue_Input"
+    - wait:
+       - value: 1
+    - click_on:
+       - selector: ".rcbList li:last-child"
+    - wait:
+       - value: 1
+    - click_on:
+        - value: Submit
+          selector: "#bSubmit_input"
+  success:
+    headers:
+      status: 200
+    body:
+      contains: Thank you for contacting us
