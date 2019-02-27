@@ -103,6 +103,8 @@ contact_form:
             Yuma: tfa_205
     - recaptcha:
         - value: true
+    - javascript:
+        - value: "document.querySelector('.primaryAction').disabled = false"
     - click_on:
         - value: Submit
           selector: ".primaryAction"
