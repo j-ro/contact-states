@@ -4,8 +4,6 @@ contact_form:
   action: ""
   steps:
     - visit: "https://www.federalregister.gov/documents/2018/11/29/2018-25314/nondiscrimination-on-the-basis-of-sex-in-education-programs-or-activities-receiving-federal#open-comment"
-    - click_on:
-        - selector: ".icon-fr2.icon-fr2-badge_x"
     - find:
         - selector: "#comment_general_comment"
     - fill_in:
