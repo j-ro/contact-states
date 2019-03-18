@@ -25,6 +25,11 @@ contact_form:
           selector: "#description"
           value: $MESSAGE
           required: true
+        - name: CaptchaInput
+          selector: "#CaptchaInput"
+          captcha_selector: "#divCaptcha"
+          value: $CAPTCHA_SOLUTION
+          required: true
     - javascript:
         - value: "document.querySelector('#CaptchaInput').value = document.querySelector('#CaptchaDiv').textContent"
     - click_on:
