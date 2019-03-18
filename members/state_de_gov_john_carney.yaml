@@ -30,6 +30,8 @@ contact_form:
           captcha_selector: "#CaptchaDiv"
           value: $CAPTCHA_SOLUTION
           required: true
+    - wait:
+        - value: 3
     - click_on:
         - selector: "#govContactSubmit"
   success:
