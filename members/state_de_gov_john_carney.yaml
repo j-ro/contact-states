@@ -30,8 +30,6 @@ contact_form:
           captcha_selector: "#CaptchaDiv"
           value: $CAPTCHA_SOLUTION
           required: true
-    - javascript:
-        - value: "document.querySelector('#CaptchaInput').value = document.querySelector('#CaptchaDiv').textContent"
     - click_on:
         - selector: "#govContactSubmit"
   success:
