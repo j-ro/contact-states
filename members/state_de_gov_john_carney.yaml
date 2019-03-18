@@ -4,6 +4,8 @@ contact_form:
   action: "/wp-content/forms/govContact.php"
   steps:
     - visit: "http://governor.delaware.gov/email-governor-carney/"
+    - wait:
+        - value: 2
     - fill_in:
         - name: name
           selector: "#name"
