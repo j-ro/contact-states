@@ -5,7 +5,7 @@ contact_form:
   steps:
     - visit: "http://governor.delaware.gov/email-governor-carney/"
     - wait:
-        - value: 2
+        - value: 1
     - fill_in:
         - name: name
           selector: "#name"
@@ -33,7 +33,7 @@ contact_form:
           value: $CAPTCHA_SOLUTION
           required: true
     - wait:
-        - value: 3
+        - value: 1
     - click_on:
         - selector: "#divCaptcha.capbox.form-group"
   success:
