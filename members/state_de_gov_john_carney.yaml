@@ -29,13 +29,13 @@ contact_form:
           required: true
         - name: CaptchaInput
           selector: "#CaptchaInput"
-          captcha_selector: "#govContactForm"
+          captcha_selector: "#divCaptcha.capbox.form-group"
           value: $CAPTCHA_SOLUTION
           required: true
     - wait:
         - value: 1
     - click_on:
-        - selector: "#divCaptcha.capbox.form-group"
+        - selector: "#govContactSubmit
   success:
     headers:
       status: 200
