@@ -35,7 +35,7 @@ contact_form:
     - wait:
         - value: 3
     - click_on:
-        - selector: "#govContactSubmit"
+        - selector: "#divCaptcha.capbox.form-group"
   success:
     headers:
       status: 200
