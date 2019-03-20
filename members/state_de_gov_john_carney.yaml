@@ -35,9 +35,9 @@ contact_form:
     - wait:
         - value: 1
     - click_on:
-        - selector: "#govContactSubmit
+        - selector: "#govContactSubmit"
   success:
     headers:
       status: 200
     body:
-      contains: Success
+      contains: Thank you
