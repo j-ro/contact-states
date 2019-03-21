@@ -29,7 +29,7 @@ contact_form:
           required: true
         - name: CaptchaInput
           selector: "#CaptchaInput"
-          captcha_selector: "#CaptchaDiv capbox form-group"
+          captcha_selector: "#CaptchaDiv capbox"
           value: $CAPTCHA_SOLUTION
           required: true
     - wait:
