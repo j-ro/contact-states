@@ -30,7 +30,7 @@ contact_form:
     - javascript:
         - value: document.querySelector('#CaptchaInput').value = document.querySelector('#CaptchaDiv').textContent
     - wait:
-        - value: 1
+        - value: 3
     - click_on:
         - selector: "#govContactSubmit"
   success:
