@@ -48,7 +48,7 @@ contact_form:
     - recaptcha:
         - value: true
     - click_on:
-        - selector: "btn-form-submit"
+        - selector: "btn.btn-form-submit"
   success:
     headers:
       status: 200
