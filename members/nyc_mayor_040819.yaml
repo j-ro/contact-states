@@ -49,7 +49,7 @@ contact_form:
         - value: true
     - click_on:
         - value: Submit
-        - selector: "btn.btn-form-submit"
+        - selector: btn.btn-form-submit
     - find:
         - selector: ".header-footer-text"
   success:
