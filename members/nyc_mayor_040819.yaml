@@ -1,0 +1,56 @@
+bioguide: nyc_mayor_040819
+contact_form:
+  method: post
+  action: /?p=contact
+  steps:
+    - visit: "https://www1.nyc.gov/office-of-the-mayor/mayor-contact.page"
+    - fill_in:
+        - name: First Name
+          selector: "input[name='First Name']"
+          value: $NAME_FIRST
+          required: true
+        - name: Last Name
+          selector: "input[name='Last Name']"
+          value: $NAME_LAST
+          required: true
+        - name: Postal Code
+          selector: "input[name='Postal Code']"
+          value: $ADDRESS_ZIP5
+          required: true
+        - name: Email Address
+          selector: "input[name='Email Address']"
+          value: $EMAIL
+          required: true
+        - name: Message
+          selector: "textarea[name='Message']"
+          value: $MESSAGE
+          required: true
+    - select:
+        - name: Topic
+          selector: "select[name='Topic']"
+          value: $TOPIC
+          required: true
+          options:
+            Budget: BUD
+            Education: ED
+            Environmental Concerns: ENVIRONMENT
+            General Views: VIEWS
+            Homelessness: HOMELESS
+            Housing: HOUSING
+            Ideas or Suggestions: IDEAS
+            Public Safety: PUBLICSAFETY
+            Quality of Life: QOL
+            Request for Assitance: CASE
+            Scheduling Requests: SCHED
+            Traffc Safety: TRANSPORT
+            Transportation: TRANSPORT
+            Other: OTHER
+    - recaptcha:
+        - value: true
+    - click_on:
+        - selector: "btn-form-submit"
+  success:
+    headers:
+      status: 200
+    body:
+      contains: Thank You
