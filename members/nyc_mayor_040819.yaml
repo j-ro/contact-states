@@ -50,7 +50,6 @@ contact_form:
     - recaptcha:
         - value: true
     - click_on:
-        - value: Submit
         - selector: "btn.btn-form-submit"
   success:
     headers:
