@@ -1,7 +1,7 @@
 bioguide: nyc_mayor_040819
 contact_form:
   method: post
-  action: /?p=contact
+  action: "https://www1.nyc.gov/office-of-the-mayor/mayor-contact.page"
   steps:
     - visit: "https://www1.nyc.gov/office-of-the-mayor/mayor-contact.page"
     - fill_in:
@@ -45,11 +45,13 @@ contact_form:
             Traffc Safety: TRANSPORT
             Transportation: TRANSPORT
             Other: OTHER
+    - wait:
+        - value: 5
     - recaptcha:
         - value: true
     - click_on:
         - value: Submit
-        - selector: btn.btn-form-submit
+        - selector: "btn.btn-form-submit"
   success:
     headers:
       status: 200
