@@ -46,11 +46,11 @@ contact_form:
     - click_on:
         - selector: ".GIY1LSJPSC  button.primary.button"
     - find:
-        - selector: "button#gwt-uid-390"
+        - selector: "button#gwt-uid-389"
     - click_on:
         - selector: "input#gwt-uid-250"
     - click_on:
-        - selector: "button#gwt-uid-390"
+        - selector: "button#gwt-uid-389"
     - find:
         - selector: ".successInfo"
   success:
