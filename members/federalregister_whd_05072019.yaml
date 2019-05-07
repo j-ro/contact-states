@@ -33,8 +33,6 @@ contact_form:
         - selector: "input#x-auto-6-input"
           value: $ADDRESS_STATE_FULL
           required: true
-    - click_on:
-        - selector: "input#gwt-uid-164"
     - wait:
         - value: 1
     - click_on:
