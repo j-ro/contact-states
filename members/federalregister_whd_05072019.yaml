@@ -38,11 +38,11 @@ contact_form:
     - click_on:
         - selector: ".GIY1LSJPSC  button.primary.button"
     - find:
-        - selector: "button#gwt-uid-397"
+        - selector: "button#gwt-uid-390"
     - click_on:
         - selector: "input#gwt-uid-250"
     - click_on:
-        - selector: "button#gwt-uid-397"
+        - selector: "button#gwt-uid-390"
     - find:
         - selector: ".successInfo"
   success:
