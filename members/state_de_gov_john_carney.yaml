@@ -4,6 +4,8 @@ contact_form:
   action: "/wp-content/forms/govContact.php"
   steps:
     - visit: "http://governor.delaware.gov/email-governor-carney/"
+    - wait:
+        - value: 1
     - fill_in:
         - name: name
           selector: "#name"
@@ -26,11 +28,15 @@ contact_form:
           value: $MESSAGE
           required: true
     - javascript:
-        - value: "document.querySelector('#CaptchaInput').value = document.querySelector('#CaptchaDiv').textContent"
+        - value: document.querySelector('#CaptchaInput').value = document.querySelector('#CaptchaDiv').textContent
+    - wait:
+        - value: 3
+    - find:
+        - selector: "#govContactSubmit"
     - click_on:
         - selector: "#govContactSubmit"
   success:
     headers:
       status: 200
     body:
-      contains: Success
+      contains: Thank you

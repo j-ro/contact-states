@@ -1,0 +1,118 @@
+bioguide: federalregister_fws_031919
+contact_form:
+  method: POST
+  action: ""
+  steps:
+    - visit: "https://www.federalregister.gov/documents/2019/03/15/2019-04420/endangered-and-threatened-wildlife-and-plants-removing-the-gray-wolf-canis-lupus#open-comment"
+    - find:
+        - selector: "#comment_general_comment"
+    - fill_in:
+        - selector: "#comment_general_comment"
+          name: "comment[general_comment]"
+          value: $MESSAGE
+          required: true
+          options:
+            max_length: 2000
+        - selector: "#comment_first_name"
+          name: "comment[first_name]"
+          value: $NAME_FIRST
+          required: true
+        - selector: "#comment_last_name"
+          name: "comment[last_name]"
+          value: $NAME_LAST
+          required: true
+        - selector: "#comment_address1"
+          name: "comment[address1]"
+          value: $ADDRESS_STREET
+          required: true
+        - selector: "#comment_city"
+          name: "comment[city]"
+          value: $ADDRESS_CITY
+          required: true
+        - selector: "#comment_zip"
+          name: "comment[zip]"
+          value: $ADDRESS_ZIP5
+          required: true
+        - selector: "#comment_email"
+          name: "comment[email]"
+          value: $EMAIL
+          required: true
+    - select:
+        - selector: "#comment_country"
+          name: "comment[country]"
+          value: "United States"
+          required: true
+          options:
+            - United States
+    - wait:
+        - value: 1
+    - javascript:
+        - value: "document.querySelector('.combo.public.input select').value = 'AL'"
+    - select:
+        - selector: "select[name='comment[us_state]']"
+          name: "comment[us_state]"
+          value: $ADDRESS_STATE_POSTAL_ABBREV
+          required: true
+          options:
+            Alabama: AL
+            Alaska: AK
+            Arizona: AZ
+            Arkansas: AR
+            California: CA
+            Colorado: CO
+            Connecticut: CT
+            Delaware: DE
+            District of Columbia: DC
+            Florida: FL
+            Georgia: GA
+            Hawaii: HI
+            Idaho: ID
+            Illinois: IL
+            Indiana: IN
+            Iowa: IA
+            Kansas: KS
+            Kentucky: KY
+            Louisiana: LA
+            Maine: ME
+            Maryland: MD
+            Massachusetts: MA
+            Michigan: MI
+            Minnesota: MN
+            Mississippi: MS
+            Missouri: MO
+            Montana: MT
+            Nebraska: NE
+            Nevada: NV
+            New Hampshire: NH
+            New Jersey: NJ
+            New Mexico: NM
+            New York: NY
+            North Carolina: NC
+            North Dakota: ND
+            Ohio: OH
+            Oklahoma: OK
+            Oregon: OR
+            Pennsylvania: PA
+            Rhode Island: RI
+            South Carolina: SC
+            South Dakota: SD
+            Tennessee: TN
+            Texas: TX
+            Utah: UT
+            Vermont: VT
+            Virginia: VA
+            Washington: WA
+            West Virginia: WV
+            Wisconsin: WI
+            Wyoming: WY
+    - click_on:
+        - selector: "#comment_confirm_submission"
+    - click_on:
+        - selector: "input.create"
+    - find:
+        - selector: ".notice.message .info"
+  success:
+    headers:
+      status: 200
+    body:
+      contains: Thank you! Your comment has been submitted

@@ -92,4 +92,4 @@ contact_form:
     headers:
       status: 200
     body:
-      contains: Thank you for contacting me.
+      contains: As Governor, I welcome input
