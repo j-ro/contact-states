@@ -1,0 +1,60 @@
+bioguide: federalregister_whd_05072019
+contact_form:
+  method: POST
+  action: ""
+  steps:
+    - visit: "https://www.regulations.gov/comment?D=WHD-2019-0003-0001"
+    - find:
+        - selector: "textarea#x-auto-0-input"
+    - fill_in:
+        - selector: "textarea#x-auto-0-input"
+          value: $MESSAGE
+          required: true
+          options:
+            max_length: 5000
+        - selector: "input#x-auto-1-input"
+          value: $NAME_FIRST
+          required: true
+        - selector: "input#x-auto-2-input"
+          value: $NAME_LAST
+          required: true
+        - selector: "input#x-auto-3-input"
+          value: $ADDRESS_STREET
+          required: true
+        - selector: "input#x-auto-5-input"
+          value: $ADDRESS_CITY
+          required: true
+        - selector: "input#x-auto-8-input"
+          value: $ADDRESS_ZIP5
+          required: true
+        - selector: "input#x-auto-10-input"
+          value: $EMAIL
+          required: true
+        - selector: "input#x-auto-6-input"
+          value: $ADDRESS_STATE_FULL
+          required: true
+    - wait:
+        - value: 1
+    - javascript:
+        - value: "document.querySelector('input#x-auto-6-input').value = 'New York';"
+    - click_on:
+        - selector: "input#x-auto-6-input"
+    - click_on:
+        - selector: "input#x-auto-10-input"
+    - wait:
+        - value: 1
+    - click_on:
+        - selector: ".GIY1LSJPSC  button.primary.button"
+    - find:
+        - selector: "button#gwt-uid-389"
+    - click_on:
+        - selector: "input#gwt-uid-250"
+    - click_on:
+        - selector: "button#gwt-uid-389"
+    - find:
+        - selector: ".successInfo"
+  success:
+    headers:
+      status: 200
+    body:
+      contains: Your comment may be viewable on Regulations.gov 

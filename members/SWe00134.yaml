@@ -34,7 +34,7 @@ contact_form:
           value: $PHONE
           required: true
         - name: email
-          selector: "#email"
+          selector: "#email.form-control"
           value: $EMAIL
           required: true
         - name: subject
