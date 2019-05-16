@@ -32,7 +32,7 @@ contact_form:
           value: $CAPTCHA_SOLUTION
           required: true
     - click_on:
-        - selector: "wpcf7-submit"
+        - selector: "wpcf7-submit wpcf7-form-control"
   success:
     headers:
       status: 200
