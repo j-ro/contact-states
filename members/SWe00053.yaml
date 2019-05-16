@@ -6,22 +6,22 @@ contact_form:
     - visit: "https://www.flgov.com/email-the-governor/"
     - fill_in:
         - name: "your-name"
-          selector: "your-name input"
+          selector: "input['your-name']"
           value: $NAME_FULL
           required: true
         - name: "your-email"
-          selector: "your-email input"
+          selector: "input['your-email']"
           value: $EMAIL
           required: true
         - name: "your-county"
-          selector: "your-county input"
+          selector: "input['your-county']"
           value: $ADDRESS_COUNTY
           required: true
         - name: "your-subject"
-          selector: "your-subject input"
+          selector: "input['your-subject']"
           value: $SUBJECT
         - name: "your-message"
-          selector: "your-message input"
+          selector: "input['your-message']"
           value: $MESSAGE
           required: true
         - name: captcha-778
