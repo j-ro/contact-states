@@ -21,7 +21,7 @@ contact_form:
           selector: "input[name='your-subject']"
           value: $SUBJECT
         - name: "your-message"
-          selector: "input[name='your-message']"
+          selector: "textarea[name='your-message']"
           value: $MESSAGE
           required: true
         - name: captcha-778
