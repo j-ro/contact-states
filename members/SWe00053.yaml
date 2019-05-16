@@ -5,21 +5,30 @@ contact_form:
   steps:
     - visit: "https://www.flgov.com/email-the-governor/"
     - fill_in:
-        - name: "formBuilderForm[Name]"
-          selector: "#fieldformBuilderFieldName"
+        - name: "your-name"
+          selector: "your-name"
           value: $NAME_FULL
           required: true
-        - name: "formBuilderForm[Email]"
-          selector: "#fieldformBuilderFieldEmail"
+        - name: "your-email"
+          selector: "your-email"
           value: $EMAIL
           required: true
-        - name: "formBuilderForm[Zip_Code]"
-          selector: "#fieldformBuilderFieldZip_Code"
-          value: $ADDRESS_ZIP5
+        - name: "your-county"
+          selector: "your-county"
+          value: $ADDRESS_COUNTY
           required: true
-        - name: "formBuilderForm[Message]"
-          selector: "#fieldformBuilderFieldMessage"
+        - name: "your-subject"
+          selector: "your-subject"
+          value: $SUBJECT
+          required: true
+        - name: "your-message"
+          selector: "your-message"
           value: $MESSAGE
+          required: true
+        - name: _wpcf7_captcha_challenge_captcha-778
+          selector: "_wpcf7_captcha_challenge_captcha-778
+          captcha_selector: "#captcha"
+          value: $CAPTCHA_SOLUTION
           required: true
     - click_on:
         - selector: "input[name=Submit]"
