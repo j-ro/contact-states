@@ -4,9 +4,6 @@ contact_form:
   action: "/contact-gov-scott/email-the-governor/#formBuilderCSSIDEmail_the_Governor?PHPSESSID=9p08p76cmbad46854ohfbi3jv5"
   steps:
     - visit: "https://www.flgov.com/email-the-governor/"
-    - javascript:
-        - value: "Array.prototype.forEach.call(document.querySelectorAll('style,[rel=\"stylesheet\"],[type=\"text/css\"]'), function(element){ 
-try{ element.parentNode.removeChild(element) } catch(err){} });"
     - wait:
         - value: 2
     - fill_in:
@@ -31,9 +28,9 @@ try{ element.parentNode.removeChild(element) } catch(err){} });"
           value: $CAPTCHA_SOLUTION
           required: true
     - javascript:
-        - value: "wpcf7.submit(jQuery('.wpcf7-form'));"
+        - value: "document.querySelector('.wpcf7-form').action = 'https://www.flgov.com/wp-json/contact-form-7/v1/contact-forms/87729/feedback'"
     - javascript:
-        - value: "document.body.style.backgroundColor = 'blue';"
+        - value: "document.querySelector('.wpcf7-form').submit()"
   success:
     headers:
       status: 200
