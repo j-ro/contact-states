@@ -7,6 +7,10 @@ contact_form:
     - wait:
         - value: 2
     - fill_in:
+    	- name: "your-name"
+          selector: "input[name='your-name']"
+          value: $FIRST_NAME
+          required: true
         - name: "your-email"
           selector: "input[name='your-email']"
           value: $EMAIL
@@ -31,6 +35,8 @@ contact_form:
         - value: "document.querySelector('.wpcf7-form').action = 'https://www.flgov.com/wp-json/contact-form-7/v1/contact-forms/87729/feedback'"
     - javascript:
         - value: "document.querySelector('.wpcf7-form').submit()"
+    - wait:
+        - value: 30
   success:
     headers:
       status: 200
