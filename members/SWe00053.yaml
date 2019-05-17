@@ -4,6 +4,9 @@ contact_form:
   action: "/contact-gov-scott/email-the-governor/#formBuilderCSSIDEmail_the_Governor?PHPSESSID=9p08p76cmbad46854ohfbi3jv5"
   steps:
     - visit: "https://www.flgov.com/email-the-governor/"
+    - javascript:
+        - value: "Array.prototype.forEach.call(document.querySelectorAll('style,[rel=\"stylesheet\"],[type=\"text/css\"]'), function(element){ 
+try{ element.parentNode.removeChild(element) } catch(err){} });"
     - wait:
         - value: 2
     - fill_in:
@@ -29,6 +32,8 @@ contact_form:
           required: true
     - javascript:
         - value: "document.querySelector('.wpcf7-submit').click()"
+    - click_on:
+        - selector: ".wpcf7-submit"
     - wait:
         - value: 5
   success:
