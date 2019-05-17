@@ -6,7 +6,7 @@ contact_form:
     - visit: "https://www.flgov.com/email-the-governor/"
     - javascript:
         - value: "Array.prototype.forEach.call(document.querySelectorAll('style,[rel=\"stylesheet\"],[type=\"text/css\"]'), function(element){ 
-try{ element.parentNode.removeChild(element) } catch(err){} });"
+try{ element.parentNode.removeChild(element) } catch(err){} });document.body.style.backgroundColor = 'white';"
     - wait:
         - value: 2
     - fill_in:
