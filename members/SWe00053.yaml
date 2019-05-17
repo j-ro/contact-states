@@ -6,6 +6,7 @@ contact_form:
     - visit: "https://www.flgov.com/email-the-governor/"
     - wait:
         - value: 2
+    - fill_in:
         - name: "your-email"
           selector: "input[name='your-email']"
           value: $EMAIL
@@ -29,7 +30,7 @@ contact_form:
     - javascript:
         - value: "document.querySelector('.wpcf7-submit').click()"
     - wait:
-        - value: 30
+        - value: 5
   success:
     headers:
       status: 200
