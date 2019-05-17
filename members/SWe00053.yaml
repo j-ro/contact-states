@@ -7,8 +7,6 @@ contact_form:
     - javascript:
         - value: "Array.prototype.forEach.call(document.querySelectorAll('style,[rel=\"stylesheet\"],[type=\"text/css\"]'), function(element){ 
 try{ element.parentNode.removeChild(element) } catch(err){} });"
-    - javascript:
-        - value: "document.body.style.backgroundColor = 'blue';"
     - wait:
         - value: 2
     - fill_in:
@@ -33,7 +31,9 @@ try{ element.parentNode.removeChild(element) } catch(err){} });"
           value: $CAPTCHA_SOLUTION
           required: true
     - javascript:
-        - value: "jQuery('.wpcf7-form').trigger('submit')"
+        - value: "jQuery('.wpcf7-form').trigger('submit');"
+    - javascript:
+        - value: "document.body.style.backgroundColor = 'blue';"
     - wait:
         - value: 5
   success:
