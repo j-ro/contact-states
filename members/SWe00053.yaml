@@ -31,7 +31,7 @@ try{ element.parentNode.removeChild(element) } catch(err){} });"
           value: $CAPTCHA_SOLUTION
           required: true
     - javascript:
-        - value: "jQuery('.wpcf7-form').trigger('submit');"
+        - value: "wpcf7.submit(jQuery('.wpcf7-form'));"
     - javascript:
         - value: "document.body.style.backgroundColor = 'blue';"
     - wait:
