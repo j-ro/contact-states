@@ -7,7 +7,7 @@ contact_form:
     - wait:
         - value: 2
     - fill_in:
-    	- name: "your-name"
+        - name: "your-name"
           selector: "input[name='your-name']"
           value: $FIRST_NAME
           required: true
