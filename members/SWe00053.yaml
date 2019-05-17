@@ -33,8 +33,12 @@ contact_form:
           required: true
     - click_on:
         - selector: "input.wpcf7-submit"
+    - wait:
+        - value: 5
+    - find:
+        - selector: "wpcf7-mail-sent-ok"
   success:
     headers:
       status: 200
     body:
-      contains: Thank you. Your message has been sent.
+      contains: Your form was successfully submitted.
