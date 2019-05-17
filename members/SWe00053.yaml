@@ -31,8 +31,8 @@ contact_form:
           captcha_selector: "img.wpcf7-captcha-captcha-778"
           value: $CAPTCHA_SOLUTION
           required: true
-    - click_on:
-        - selector: "input.wpcf7-submit"
+    - javascript:
+        - value: "document.querySelector(‘.wpcf7-submit’).click()"
     - wait:
         - value: 5
   success:
