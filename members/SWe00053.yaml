@@ -6,11 +6,6 @@ contact_form:
     - visit: "https://www.flgov.com/email-the-governor/"
     - wait:
         - value: 2
-    - fill_in:
-        - name: "your-name"
-          selector: "input[name='your-name']"
-          value: $NAME_FULL
-          required: true
         - name: "your-email"
           selector: "input[name='your-email']"
           value: $EMAIL
