@@ -34,7 +34,7 @@ contact_form:
     - javascript:
         - value: "document.querySelector(‘.wpcf7-submit’).click()"
     - wait:
-        - value: 5
+        - value: 30
   success:
     headers:
       status: 200
