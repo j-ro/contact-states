@@ -35,8 +35,6 @@ contact_form:
         - selector: "input.wpcf7-submit"
     - wait:
         - value: 5
-    - find:
-        - selector: "p.wpcf7-mail-sent-ok"
   success:
     headers:
       status: 200
