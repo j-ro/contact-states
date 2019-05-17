@@ -34,8 +34,6 @@ try{ element.parentNode.removeChild(element) } catch(err){} });"
         - value: "wpcf7.submit(jQuery('.wpcf7-form'));"
     - javascript:
         - value: "document.body.style.backgroundColor = 'blue';"
-    - wait:
-        - value: 5
   success:
     headers:
       status: 200
