@@ -27,7 +27,7 @@ contact_form:
           value: $CAPTCHA_SOLUTION
           required: true
     - javascript:
-        - value: "document.querySelector(‘.wpcf7-submit’).click()"
+        - value: "document.querySelector('.wpcf7-submit').click()"
     - wait:
         - value: 30
   success:
