@@ -3,35 +3,95 @@ contact_form:
   method: post
   action: ""
   steps:
-    - visit: "https://nevada-voice.symplicity.com//contact_form/dee804819c38673f2500f9f724ac487b"
+    - visit: "http://gov.nv.gov/Contact/Email_the_Governor_Form/"
     - fill_in:
-        - name: dnf_class_values[communication][primary_constituent][0][fname]
-          selector: "#dnf_class_values_communication__primary_constituent__0__fname_"
+        - name: fName
+          selector: "#fName"
           value: $NAME_FIRST
           required: true
-        - name: dnf_class_values[communication][primary_constituent][0][lname]
-          selector: "#dnf_class_values_communication__primary_constituent__0__lname_"
+        - name: lName
+          selector: "#lName"
           value: $NAME_LAST
           required: true
-        - name: dnf_class_values[communication][primary_constituent][0][address][0][zip]
-          selector: "#dnf_class_values_communication__primary_constituent__0__address__0__zip_"
+        - name: zipcode
+          selector: "#zipcode"
           value: $ADDRESS_ZIP5
           required: true
-        - name: dnf_class_values[communication][primary_constituent][0][email]
-          selector: "#dnf_class_values_communication__primary_constituent__0__email_"
+        - name: email
+          selector: "#email"
           value: $EMAIL
           required: true
-        - name: dnf_class_values[communication][title]
-          selector: "#dnf_class_values_communication__title_"
+        - name: Subject
+          selector: "#Subject"
           value: $SUBJECT
           required: true
-        - name: dnf_class_values[communication][content]
-          selector: "#dnf_class_values_communication__content_"
+        - name: message
+          selector: "#message"
+          value: $MESSAGE
+          required: true
+        - name: Phone
+          selector: "#Phone"
           value: $MESSAGE
           required: true
     - select:
-        - name: "dnf_class_values[communication][primary_constituent][0][prefix]"
-          selector: "#dnf_class_values_communication__primary_constituent__0__prefix_"
+        - name: "state"
+          selector: "#state"
+          value: $ADDRESS_STATE_FULL
+          required: true
+          options:
+            - Alabama
+            - Alaska
+            - Arizona
+            - Arkansas
+            - California
+            - Colorado
+            - Connecticut
+            - Delaware
+            - District of Columbia
+            - Florida
+            - Georgia
+            - Hawaii
+            - Idaho
+            - Illinois
+            - Indiana
+            - Iowa
+            - Kansas
+            - Kentucky
+            - Louisiana
+            - Maine
+            - Maryland
+            - Massachusetts
+            - Michigan
+            - Minnesota
+            - Mississippi
+            - Missouri
+            - Montana
+            - Nebraska
+            - Nevada
+            - New Hampshire
+            - New Jersey
+            - New Mexico
+            - New York
+            - North Carolina
+            - North Dakota
+            - Ohio
+            - Oklahoma
+            - Oregon
+            - Pennsylvania
+            - Rhode Island
+            - South Carolina
+            - South Dakota
+            - Tennessee
+            - Texas
+            - Utah
+            - Vermont
+            - Virginia
+            - Washington
+            - West Virginia
+            - Wisconsin
+            - Wyoming
+        - name: "Prefix"
+          selector: "#Prefix"
           value: $NAME_PREFIX
           required: true
           options:
@@ -47,13 +107,57 @@ contact_form:
             Prof: Prof
             Coach: Coach
             Ofc: Ofc
-    - javascript:
-        - value: "document.querySelector('#dnf_class_values_communication__topic_').value = '0040500'"
+        - name: Topic
+          selector: "#Topic"
+          value: $TOPIC
+          required: true
+          options:
+            - Agriculture  
+            - Arts
+            - Autograph
+            - Boards/Commissions
+            - Budget/Spending
+            - Crime/Drugs
+            - Cultural Affairs
+            - Economic Development
+            - Education
+            - Elections
+            - Employment Security
+            - Energy
+            - Environment
+            - Federal Agencies
+            - Flag Status
+            - Health
+            - Housing
+            - Immigration
+            - Inmate
+            - Insurance
+            - Jobs
+            - Labor
+            - Legislation
+            - Local Gov't
+            - Motor Vehicles
+            - Natural Resources
+            - Other
+            - Public Safety
+            - Recognition
+            - Regulatory Reform
+            - Science/Technology
+            - Scouts
+            - Small Business
+            - Student Letter
+            - Taxation
+            - Thank You
+            - Transportation
+            - Unaccompanied Children
+            - Unemployment
+            - Welfare
+            - Wildlife
     - click_on:
         - value: submit
-          selector: "input[name='dnf_opt_submit']"
+          selector: "input[value='Submit Form']"
   success:
     headers:
       status: 200
     body:
-      contains: Thank you! Your message has been sent.
+      contains: Thank you for taking the time to contact me.
