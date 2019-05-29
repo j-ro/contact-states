@@ -5,8 +5,12 @@ contact_form:
   steps:
     - visit: "https://www.flgov.com/email-the-governor/"
     - wait:
-        - value: 2
+        - value: 3
     - fill_in:
+        - name: "your-name"
+          selector: "input[name='your-name']"
+          value: $NAME_FULL
+          required: true
         - name: "your-email"
           selector: "input[name='your-email']"
           value: $EMAIL
@@ -28,9 +32,11 @@ contact_form:
           value: $CAPTCHA_SOLUTION
           required: true
     - javascript:
-        - value: "document.querySelector(‘.wpcf7-submit’).click()"
+        - value: "document.querySelector('.wpcf7-form').action = 'https://www.flgov.com/wp-json/contact-form-7/v1/contact-forms/87729/feedback'"
+    - javascript:
+        - value: "document.querySelector('.wpcf7-form').submit()"
     - wait:
-        - value: 5
+        - value: 30
   success:
     headers:
       status: 200
