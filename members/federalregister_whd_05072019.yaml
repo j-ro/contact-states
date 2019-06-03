@@ -23,7 +23,7 @@ contact_form:
     - find:
         - selector: "button#gwt-uid-371"
     - click_on:
-        - selector: "input#gwt-uid-251"
+        - selector: "input#gwt-uid-250"
     - click_on:
         - selector: "button#gwt-uid-371"
     - find:
