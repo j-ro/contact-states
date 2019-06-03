@@ -21,11 +21,11 @@ contact_form:
     - click_on:
         - selector: ".GIY1LSJPSC  button.primary.button"
     - find:
-        - selector: "button#gwt-uid-389"
+        - selector: "button#gwt-uid-371"
     - click_on:
-        - selector: "input#gwt-uid-250"
+        - selector: "input#gwt-uid-251"
     - click_on:
-        - selector: "button#gwt-uid-389"
+        - selector: "button#gwt-uid-371"
     - find:
         - selector: ".successInfo"
   success:
