@@ -3,7 +3,7 @@ contact_form:
   method: POST
   action: ""
   steps:
-    - visit: "https://www.federalregister.gov/documents/2019/03/15/2019-04420/endangered-and-threatened-wildlife-and-plants-removing-the-gray-wolf-canis-lupus#open-comment"
+    - visit: "j"
     - find:
         - selector: "#comment_general_comment"
     - fill_in:
@@ -108,7 +108,7 @@ contact_form:
     - click_on:
         - selector: "#comment_confirm_submission"
     - click_on:
-        - selector: "input.create"
+        - selector: "#comment_submit_action"
     - find:
         - selector: ".notice.message .info"
   success:
