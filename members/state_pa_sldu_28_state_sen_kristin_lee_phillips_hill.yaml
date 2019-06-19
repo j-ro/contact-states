@@ -34,7 +34,7 @@ contact_form:
           value: $MESSAGE
           required: true
         - name: txtPhone
-          selector: "input[name='txtPhone']"
+          selector: "#txtPhone_wrapper"
           value: $PHONE
           required: true
     - click_on:
