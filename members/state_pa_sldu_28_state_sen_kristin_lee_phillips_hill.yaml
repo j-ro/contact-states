@@ -46,7 +46,7 @@ contact_form:
     - wait:
        - value: 1
     - javascript:
-        - value: "document.querySelector(\"#form1 input[name='txtPhone']\").value = $PHONE"
+        - value: "document.querySelector(\"#form1 input[name='txtPhone']\").value = 1111111111"
     - click_on:
         - value: Submit
           selector: "#bSubmit_input"
