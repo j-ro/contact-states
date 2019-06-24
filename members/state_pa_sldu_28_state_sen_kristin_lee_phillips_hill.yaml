@@ -41,6 +41,8 @@ contact_form:
        - selector: ".rcbList li:last-child"
     - wait:
        - value: 1
+    - javascript:
+        - value: "document.querySelector(\"#form1 input[name='txtPhone']\").value = 1111111111"
     - click_on:
         - value: Submit
           selector: "#bSubmit_input"
