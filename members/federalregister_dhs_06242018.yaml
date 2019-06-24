@@ -21,7 +21,7 @@ contact_form:
     - click_on:
         - selector: ".GIY1LSJPSC button.primary.button"
     - find:
-        - selector: "button#gwt-uid-393"
+        - selector: "input#gwt-uid-393"
     - click_on:
         - selector: "input#gwt-uid-393"
     - click_on:
