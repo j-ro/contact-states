@@ -19,7 +19,7 @@ contact_form:
           value: $NAME_LAST
           required: true
     - click_on:
-        - selector: "button.primary.button"
+        - selector: ".GIY1LSJPSC button.primary.button"
     - find:
         - selector: "button#gwt-uid-393"
     - click_on:
