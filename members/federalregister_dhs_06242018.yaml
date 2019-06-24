@@ -25,7 +25,7 @@ contact_form:
     - click_on:
         - selector: ".GIY1LSJIRD input"
     - click_on:
-        - selector: ".GIY1LSJERD button"
+        - selector: ".GIY1LSJERD button.primary"
     - find:
         - selector: ".successInfo"
   success:
