@@ -32,7 +32,7 @@ contact_form:
     - click_on:
         - selector: "#comment_confirm_submission"
     - click_on:
-        - selector: "input.create"
+        - selector: "#comment_submit_action input"
     - find:
         - selector: ".notice.message .info"
   success:
