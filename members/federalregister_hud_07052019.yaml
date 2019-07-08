@@ -6,6 +6,8 @@ contact_form:
     - visit: "https://www.federalregister.gov/documents/2019/05/10/2019-09566/housing-and-community-development-act-of-1980-verification-of-eligible-status#open-comment"
     - find:
         - selector: "#comment_general_comment"
+    - click_od:
+        - selector: "#comment-start-over"
     - fill_in:
         - selector: "#comment_general_comment"
           name: "comment[general_comment]"
