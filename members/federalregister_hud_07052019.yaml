@@ -3,44 +3,33 @@ contact_form:
   method: POST
   action: ""
   steps:
-    - visit: "https://www.federalregister.gov/documents/2019/05/10/2019-09566/housing-and-community-development-act-of-1980-verification-of-eligible-status#open-comment"
+    - visit: "https://www.regulations.gov/comment?D=HUD-2019-0044-0001"
     - find:
-        - selector: "#comment_general_comment"
-    - click_on:
-        - selector: "#comment-start-over"
+        - selector: "textarea#x-auto-0-input"
     - fill_in:
-        - selector: "#comment_general_comment"
-          name: "comment[general_comment]"
+        - selector: "textarea#x-auto-0-input"
           value: $MESSAGE
           required: true
           options:
-            max_length: 2000
-        - selector: "#comment_first_name"
-          name: "comment[first_name]"
+            max_length: 5000
+        - selector: "input#x-auto-1-input"
           value: $NAME_FIRST
           required: true
-        - selector: "#comment_last_name"
-          name: "comment[last_name]"
+        - selector: "input#x-auto-2-input"
           value: $NAME_LAST
           required: true
-        - selector: "#comment_zip"
-          name: "comment[zip]"
-          value: $ADDRESS_ZIP5
-          required: true
-        - selector: "#comment_email"
-          name: "comment[email]"
-          value: $EMAIL
-          required: true
     - click_on:
-        - selector: "#comment_confirm_submission"
-    - click_on:
-        - selector: "#comment_submit_action input"
-    - click_on:
-        - selector: "#comment-start-over"
+        - selector: ".GIY1LSJPSC button.primary.button"
     - find:
-        - selector: ".notice.message .info"
+        - selector: ".GIY1LSJIRD input"
+    - click_on:
+        - selector: ".GIY1LSJIRD input"
+    - click_on:
+        - selector: ".GIY1LSJERD button.primary"
+    - find:
+        - selector: ".successInfo"
   success:
     headers:
       status: 200
     body:
-      contains: Thank you! Your comment has been submitted
+      contains: Your comment may be viewable on Regulations.gov 
