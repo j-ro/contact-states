@@ -34,6 +34,10 @@ contact_form:
     - click_on:
         - selector: "#comment_submit_action input"
     - find:
+        - selector: "#comment_submit_action input"
+    - click_on:
+        - selector: "#comment_submit_action input"
+    - find:
         - selector: ".notice.message .info"
   success:
     headers:
