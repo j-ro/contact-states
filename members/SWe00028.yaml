@@ -67,9 +67,6 @@ contact_form:
         - name: comment
           selector: "input[type='radio'][name='comment'][value='opinion']"
           value: opinion
-        - name: reply
-          selector: "#reply"
-          value: "1"
     - click_on:
         - value: Continue
           selector: "form.content input[name='Submit']"
