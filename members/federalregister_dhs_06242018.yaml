@@ -1,0 +1,35 @@
+bioguide: federalregister_dhs_06242018
+contact_form:
+  method: POST
+  action: ""
+  steps:
+    - visit: "https://www.regulations.gov/comment?D=HHS-OCR-2019-0007-0001"
+    - find:
+        - selector: "textarea#x-auto-0-input"
+    - fill_in:
+        - selector: "textarea#x-auto-0-input"
+          value: $MESSAGE
+          required: true
+          options:
+            max_length: 5000
+        - selector: "input#x-auto-1-input"
+          value: $NAME_FIRST
+          required: true
+        - selector: "input#x-auto-2-input"
+          value: $NAME_LAST
+          required: true
+    - click_on:
+        - selector: ".GIY1LSJPSC button.primary.button"
+    - find:
+        - selector: ".GIY1LSJIRD input"
+    - click_on:
+        - selector: ".GIY1LSJIRD input"
+    - click_on:
+        - selector: ".GIY1LSJERD button.primary"
+    - find:
+        - selector: ".successInfo"
+  success:
+    headers:
+      status: 200
+    body:
+      contains: Your comment may be viewable on Regulations.gov 
