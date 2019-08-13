@@ -94,6 +94,8 @@ contact_form:
         - name: "ctl00$Content$chkBxReply"
           selector: "#Content_chkBxReply"
           value: Content_chkBxReply
+    - recaptcha:
+        - value: true
     - click_on:
         - value: Submit
           selector: "#Content_btnSubmit"
