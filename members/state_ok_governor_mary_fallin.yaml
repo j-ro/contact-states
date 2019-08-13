@@ -43,8 +43,13 @@ contact_form:
     - click_on:
         - value: Please submit your comment or opinion
           selector: "#btn_submit"
+    - find:
+        - selector: "#btn_rev_submit"
+    - click_on:
+        - value: Please submit your comment or opinion
+          selector: "#btn_rev_submit"
   success:
     headers:
       status: 200
     body:
-      contains: Your message has been sent.
+      contains: Sign Up For Our
