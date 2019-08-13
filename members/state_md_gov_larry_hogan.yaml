@@ -88,10 +88,14 @@ contact_form:
             - Transportation
             - Unemployment
             - Veterans Affairs
-            - Women's Issues          
+            - Women's Issues
+    - recaptcha:
+        - value: true            
     - click_on:
         - value: Submit
           selector: ".wpcf7-submit"
+    - wait:
+        - value: 5
   success:
     headers:
       status: 200
