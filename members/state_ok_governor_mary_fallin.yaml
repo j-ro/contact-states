@@ -30,7 +30,7 @@ contact_form:
           value: $EMAIL
           required: true
         - name: qi_8
-          selector: "input[name='qi_8']"
+          selector: "textarea[name='qi_8']"
           value: $MESSAGE
           required: true
     - select:
