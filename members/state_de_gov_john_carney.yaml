@@ -30,7 +30,7 @@ contact_form:
     - find:
         - selector: "#govContactSubmit"
     - javascript:
-        - value: “document.querySelector(‘#govContactSubmit’).click();”
+        - value: "document.querySelector('#govContactSubmit').click();"
     - wait:
         - value: 3
   success:
