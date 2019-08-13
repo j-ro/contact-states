@@ -1,9 +1,9 @@
 bioguide: state_ok_governor_mary_fallin
 contact_form:
   method: post
-  action:
+  action: "https://iqconnect.lmhostediq.com/iqextranet/EForm.aspx?__cid=FSL_OKGOV&__fid=100002&iframe=Y"
   steps:
-    - visit: "https://www.governor.ok.gov/contact-us/leave-comment"
+    - visit: "https://iqconnect.lmhostediq.com/iqextranet/EForm.aspx?__cid=FSL_OKGOV&__fid=100002&iframe=Y"
     - fill_in:
         - name: qi_1_first_name
           selector: "input[name='qi_1_first_name']"
