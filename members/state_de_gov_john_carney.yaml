@@ -15,10 +15,6 @@ contact_form:
           selector: "#email"
           value: $EMAIL
           required: true
-        - name: phone
-          selector: "#phone"
-          value: $PHONE
-          required: true
         - name: subject
           selector: "#subject"
           value: $SUBJECT
