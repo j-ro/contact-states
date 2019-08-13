@@ -35,6 +35,8 @@ contact_form:
         - selector: "#govContactSubmit"
     - javascript:
         - value: “document.querySelector(‘#govContactSubmit’).click();”
+    - wait:
+        - value: 3
   success:
     headers:
       status: 200
