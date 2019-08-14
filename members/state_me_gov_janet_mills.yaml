@@ -1,9 +1,9 @@
 bioguide: state_me_gov_janet_mills
 contact_form:
   method: post
-  action: "https://www.maine.gov/governor/mills/contact/share-your-opinion"
+  action: "https://iqconnect.lmhostediq.com/iqextranet/EForm.aspx?__cid=FSL_MEGOV&__fid=100008"
   steps:
-    - visit: "https://www.maine.gov/governor/mills/contact/share-your-opinion"
+    - visit: "https://iqconnect.lmhostediq.com/iqextranet/EForm.aspx?__cid=FSL_MEGOV&__fid=100008"
     - fill_in:
         - name: "qi_1_first_name"
           selector: "#qi_1_first_name"
@@ -48,9 +48,11 @@ contact_form:
         - value: NRN
           selector: "#qi_3_1"
         - value: Submit
-          selector: "#Submit"
+          selector: "#btn_submit"
+    - find:
+        - selector: ".header_nav_search"
   success:
     headers:
       status: 200
     body:
-      contains: Thank you
+      contains: Latest News
