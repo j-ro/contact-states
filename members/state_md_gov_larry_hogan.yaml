@@ -47,6 +47,7 @@ contact_form:
           value: $TOPIC
           required: true
           options:
+            - Agriculture
             - Animal Welfare
             - Banking
             - Broadband
@@ -89,7 +90,7 @@ contact_form:
             - Veterans Affairs
             - Women's Issues
     - javascript:
-        - value: "document.querySelector('input[name=\"g-recaptcha-response\"]').remove(); document.querySelector('[name=\"_wpcf7_container_post\"]').insertAdjacentHTML('beforebegin', '<textarea name=\"g-recaptcha-response\"></textarea>');"
+        - value: "document.querySelector('input[name=g-recaptcha-response]').remove(); document.querySelector('[name=_wpcf7_container_post]').insertAdjacentHTML('beforebegin', '<textarea name=g-recaptcha-response></textarea>');"
     - recaptcha:
         - value: true
     - click_on:
