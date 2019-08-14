@@ -39,8 +39,8 @@ contact_form:
           required: true
 
     - select:
-        - name: "edit-submitted-please-select-which-agency-your-request-relates-to"
-          selector: "#edit-submitted-please-select-which-agency-your-request-relates-to"
+        - name: "submitted[please_provide_a_brief_description_about_your_request___concern]"
+          selector: "#edit-submitted-please-provide-a-brief-description-about-your-request-concern"
           value: $TOPIC
           required: true
           options:
