@@ -89,7 +89,7 @@ contact_form:
             - Unemployment
             - Veterans Affairs
             - Women's Issues
-  - javascript:
+    - javascript:
         - value: "document.querySelector('input[name=\"g-recaptcha-response\"]').remove(); document.querySelector('[name=\"_wpcf7_container_post\"]').insertAdjacentHTML('beforebegin', '<textarea name=\"g-recaptcha-response\"></textarea>');"
     - recaptcha:
         - value: true
