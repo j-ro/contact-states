@@ -90,7 +90,7 @@ contact_form:
             - Veterans Affairs
             - Women's Issues
     - javascript:
-        - value: "document.querySelector('input[name=g-recaptcha-response]').remove(); document.querySelector('[name=_wpcf7_container_post]').insertAdjacentHTML('beforebegin', '<textarea name=g-recaptcha-response></textarea>');document.querySelector('.wpcf7-form > div').style.display = 'block';"
+        - value: "document.querySelector('body').style.color = 'red';"
     - recaptcha:
         - value: true
     - click_on:
