@@ -33,14 +33,14 @@ contact_form:
           selector: "#edit-submitted-email"
           value: $EMAIL
           required: true
-        - name: "submitted[please_provide_a_brief_description_about_your_request___concern]
+        - name: "submitted[please_provide_a_brief_description_about_your_request___concern]"
           selector: "#edit-submitted-please-provide-a-brief-description-about-your-request-concern"
           value: $MESSAGE
           required: true
 
     - select:
-        - name: "submitted[please_provide_a_brief_description_about_your_request___concern]"
-          selector: "#edit-submitted-please-provide-a-brief-description-about-your-request-concern"
+        - name: "submitted[please_select_which_agency_your_request_relates_to]"
+          selector: "#edit-submitted-please-select-which-agency-your-request-relates-to"
           value: $TOPIC
           required: true
           options:
