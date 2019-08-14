@@ -21,8 +21,8 @@ contact_form:
           selector: "#edit-submitted-city"
           value: $ADDRESS_CITY
           required: true
-        - name: "submitted[email_address]"
-          selector: "#edit-submitted-email-address"
+        - name: "submitted[email]"
+          selector: "#edit-submitted-email"
           value: $EMAIL
           required: true
         - name: "submitted[please_provide_a_brief_description_about_your_request___concern]
