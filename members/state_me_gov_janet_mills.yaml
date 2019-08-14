@@ -46,7 +46,7 @@ contact_form:
             Maine: ME
     - click_on:
         - value: NRN
-          selector: "input[name='qi_3']"
+          selector: label.radiocheck[for="qi_3_0"]
         - value: Submit
           selector: "#btn_submit"
     - find:
