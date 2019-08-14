@@ -47,7 +47,6 @@ contact_form:
           value: $TOPIC
           required: true
           options:
-            - Agriculture
             - Animal Welfare
             - Banking
             - Broadband
