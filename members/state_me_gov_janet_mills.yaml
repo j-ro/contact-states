@@ -46,7 +46,7 @@ contact_form:
             Maine: ME
     - click_on:
         - value: NRN
-          selector: "#qi_3_1"
+          selector: "input[name='qi_3']"
         - value: Submit
           selector: "#btn_submit"
     - find:
