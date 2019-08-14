@@ -93,7 +93,7 @@ contact_form:
     - check:
         - name: "ctl00$Content$chkBxReply"
           selector: "#Content_chkBxReply"
-          value: Content_chkBxReply
+          value: ctl00$Content$chkBxReply
     - recaptcha:
         - value: true
     - click_on:
