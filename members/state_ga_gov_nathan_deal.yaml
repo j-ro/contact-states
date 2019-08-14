@@ -21,6 +21,14 @@ contact_form:
           selector: "#edit-submitted-city"
           value: $ADDRESS_CITY
           required: true
+        - name: "submitted[zip_code]"
+          selector: "#edit-submitted-zip-code"
+          value: $ADDRESS_ZIP5
+          required: true
+        - name: "submitted[phone_number]"
+          selector: "#edit-submitted-phone-number"
+          value: $PHONE
+          required: true
         - name: "submitted[email]"
           selector: "#edit-submitted-email"
           value: $EMAIL
@@ -29,10 +37,7 @@ contact_form:
           selector: "#edit-submitted-please-provide-a-brief-description-about-your-request-concern"
           value: $MESSAGE
           required: true
-        - name: "submitted[phone_number]"
-          selector: "#edit-submitted-phone-number"
-          value: $PHONE
-          required: true
+
     - select:
         - name: "edit-submitted-please-select-which-agency-your-request-relates-to"
           selector: "#edit-submitted-please-select-which-agency-your-request-relates-to"
