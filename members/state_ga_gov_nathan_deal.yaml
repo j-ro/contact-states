@@ -13,8 +13,8 @@ contact_form:
           selector: "#edit-submitted-last-name"
           value: $NAME_LAST
           required: true
-        - name: "submitted[street_address_1]"
-          selector: "#edit-submitted-street-address-1"
+        - name: "submitted[address_line_1]"
+          selector: "#edit-submitted-address-line-1"
           value: $ADDRESS_STREET
           required: true
         - name: "submitted[city]"
