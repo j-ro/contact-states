@@ -1,7 +1,7 @@
 bioguide: SWe00194
 contact_form:
   method: post
-  action: https://www-njlib.state.nj.us/GOV_TRANS_APPLICANTS/BTCustomServlet
+  action: "https://www-njlib.state.nj.us/GOV_TRANS_APPLICANTS/BTCustomServlet"
   steps:
     - visit: "https://www-njlib.state.nj.us/GOV_TRANS_APPLICANTS/BTCustomServlet"
     - select:
