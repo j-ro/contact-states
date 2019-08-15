@@ -4,6 +4,8 @@ contact_form:
   action: "https://somgovweb.state.mi.us/GovRelations/ShareOpinion.aspx"
   steps:
     - visit: "https://somgovweb.state.mi.us/GovRelations/ShareOpinion.aspx"
+    - wait:
+        - value: 5
     - fill_in:
         - name: "ctl00$Content$OpinionPrefix"
           selector: "#Content_OpinionPrefix"
@@ -87,6 +89,8 @@ contact_form:
         - name: "ctl00$Content$chkBxReply"
           selector: "#Content_chkBxReply"
           value: ctl00$Content$chkBxReply
+    - recaptcha:
+        - value: true
     - click_on:
         - value: Submit
           selector: "#Content_btnSubmit"
