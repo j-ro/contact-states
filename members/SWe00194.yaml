@@ -1,9 +1,9 @@
 bioguide: SWe00194
 contact_form:
   method: post
-  action: /cgi-bin/governor/govmail/govmail-56_s1.pl
+  action: https://nj.gov/governor/contact/all/
   steps:
-    - visit: "https://www16.state.nj.us/GOV_TRANS_APPLICANTS/BTCustomServlet"
+    - visit: "https://nj.gov/governor/contact/all/"
     - select:
         - name: ISSUE
           selector: "#ISSUE"
