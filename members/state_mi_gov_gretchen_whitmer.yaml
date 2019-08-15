@@ -89,6 +89,10 @@ contact_form:
         - name: "ctl00$Content$chkBxReply"
           selector: "#Content_chkBxReply"
           value: ctl00$Content$chkBxReply
+    - javascript:
+        - value: "document.querySelector('textarea[name=g-recaptcha-response]').remove();"
+    - javascript:
+        - value: "document.querySelector('#recaptcha').insertAdjacentHTML('beforebegin', '<textarea name=g-recaptcha-response></textarea>');"      
     - recaptcha:
         - value: true
     - click_on:
