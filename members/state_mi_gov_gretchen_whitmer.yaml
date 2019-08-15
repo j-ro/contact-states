@@ -63,8 +63,6 @@ contact_form:
           value: $TOPIC
           required: true
           options:
-            "* Flint Resident": 1492754f-49c5-e511-99db-00219b8d8c68
-            "* Flint Water": 0174d47a-85d4-e411-8e74-00219b8d8c68
             "* 2019 State Budget Proposal": 406a7fcf-2d5b-e211-9168-00219b8d8c68
             "* Department of Talent and Economic Development": 70b2f5e4-ebcb-e411-9e5c-00219b8d8c68
             "* Detroit Public Schools": 3ba41b59-a3d7-e411-8e74-00219b8d8c68
@@ -89,8 +87,6 @@ contact_form:
         - name: "ctl00$Content$chkBxReply"
           selector: "#Content_chkBxReply"
           value: ctl00$Content$chkBxReply
-    - recaptcha:
-        - value: true
     - click_on:
         - value: Submit
           selector: "#Content_btnSubmit"
