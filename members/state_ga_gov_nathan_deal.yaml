@@ -70,7 +70,7 @@ contact_form:
         - value: true
     - click_on:
         - value: Submit
-          selector: "input[name="op"]"
+          selector: "input[name='op']"
   success:
     headers:
       status: 200
