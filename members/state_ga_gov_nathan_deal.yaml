@@ -71,7 +71,7 @@ contact_form:
         - value: true
     - click_on:
         - value: Submit
-          selector: "#edit-submit"
+          selector: "input[name="op"]"
   success:
     headers:
       status: 200
