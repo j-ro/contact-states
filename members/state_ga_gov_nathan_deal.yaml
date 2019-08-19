@@ -39,8 +39,8 @@ contact_form:
           required: true
 
     - select:
-        - name: "submitted[please_select_which_agency_your_request_relates_to]"
-          selector: "#edit-submitted-please-select-which-agency-your-request-relates-to"
+        - name: "please_select_which_agency_your_request_relates_to"
+          selector: "#edit-please-select-which-agency-your-request-relates-to"
           value: $TOPIC
           required: true
           options:
