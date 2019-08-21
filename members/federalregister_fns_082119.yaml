@@ -40,7 +40,7 @@ contact_form:
     - click_on:
         - selector: "#comment_confirm_submission"
     - click_on:
-        - selector: "input.create"
+        - selector: ".commit input"
     - find:
         - selector: ".notice.message .info"
   success:
