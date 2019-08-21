@@ -41,6 +41,8 @@ contact_form:
           required: true
     - click_on:
         - selector: "#comment_confirm_submission"
+    - wait:
+        - value: 5
     - javascript:
         - selector: "document.querySelector('.commit input').click();"
     - wait:
