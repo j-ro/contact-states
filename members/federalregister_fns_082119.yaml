@@ -44,7 +44,7 @@ contact_form:
     - click_on:
         - selector: "#comment_confirm_submission"
     - javascript:
-        - selector: "document.querySelector('.commit input').click();"
+        - value: "document.querySelector('.commit input').click();"
     - wait:
         - value: 5
     - find:
