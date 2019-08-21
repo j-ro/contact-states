@@ -6,8 +6,6 @@ contact_form:
     - visit: "https://www.federalregister.gov/documents/2019/07/24/2019-15670/revision-of-categorical-eligibility-in-the-supplemental-nutrition-assistance-program-snap#open-comment"
     - find:
         - selector: "#comment_general_comment"
-    - click_on:
-        - selector: "#comment-start-over"
     - javascript:
         - value: "$('#comment-start-over').trigger('click');"
     - wait:
