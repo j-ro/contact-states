@@ -44,7 +44,7 @@ contact_form:
     - wait:
         - value: 5
     - javascript:
-        - value: "document.querySelector('.comment_preview').click();"
+        - value: "document.querySelector('.commit input').click();"
     - wait:
         - value: 5
   success:
