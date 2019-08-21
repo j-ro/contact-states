@@ -41,6 +41,8 @@ contact_form:
         - selector: "#comment_confirm_submission"
     - click_on:
         - selector: ".commit input"
+    - wait:
+        - value: 5
     - find:
         - selector: ".notice.message .info"
   success:
