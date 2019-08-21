@@ -7,6 +7,9 @@ contact_form:
     - find:
         - selector: "#comment_general_comment"
     - javascript:
+        - value: "Array.prototype.forEach.call(document.querySelectorAll('style,[rel=\"stylesheet\"],[type=\"text/css\"]'), function(element){ 
+try{ element.parentNode.removeChild(element) } catch(err){} });"
+    - javascript:
         - value: "$('#comment-start-over').trigger('click');"
     - wait:
         - value: 5
