@@ -9,7 +9,7 @@ contact_form:
     - click_on:
         - selector: "#comment-start-over"
     - javascript:
-        - value: "$('#comment-start-over').trigger('click')"
+        - value: "$('body').css('color', 'red');"
     - wait:
         - value: 5
     - find:
