@@ -8,6 +8,8 @@ contact_form:
         - selector: "#comment_general_comment"
     - javascript:
         - value: "document.querySelector('#comment-start-over').click();"
+    - find:
+        - selector: "#comment_general_comment"
   success:
     headers:
       status: 200
