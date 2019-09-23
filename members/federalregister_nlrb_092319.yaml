@@ -1,9 +1,9 @@
-bioguide: federalregister_fns_082119
+bioguide: federalregister_nlrb_092319
 contact_form:
   method: POST
   action: ""
   steps:
-    - visit: "https://www.federalregister.gov/documents/2019/07/24/2019-15670/revision-of-categorical-eligibility-in-the-supplemental-nutrition-assistance-program-snap#open-comment"
+    - visit: "https://www.federalregister.gov/documents/2019/09/23/2019-20510/jurisdiction-nonemployee-status-of-university-and-college-students-working-in-connection-with-their#open-comment"
     - find:
         - selector: "#comment_general_comment"
     - wait:
