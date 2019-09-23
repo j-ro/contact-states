@@ -1,0 +1,54 @@
+bioguide: federalregister_fns_082119
+contact_form:
+  method: POST
+  action: ""
+  steps:
+    - visit: "https://www.federalregister.gov/documents/2019/07/24/2019-15670/revision-of-categorical-eligibility-in-the-supplemental-nutrition-assistance-program-snap#open-comment"
+    - find:
+        - selector: "#comment_general_comment"
+    - wait:
+        - value: 5
+    - fill_in:
+        - selector: "#comment_general_comment"
+          name: "comment[general_comment]"
+          value: $MESSAGE
+          required: true
+          options:
+            max_length: 2000
+        - selector: "#comment_first_name"
+          name: "comment[first_name]"
+          value: $NAME_FIRST
+          required: true
+        - selector: "#comment_last_name"
+          name: "comment[last_name]"
+          value: $NAME_LAST
+          required: true
+        - selector: "#comment_address1"
+          name: "comment[address1]"
+          value: $ADDRESS_STREET
+          required: true
+        - selector: "#comment_city"
+          name: "comment[city]"
+          value: $ADDRESS_CITY
+          required: true
+        - selector: "#comment_zip"
+          name: "comment[zip]"
+          value: $ADDRESS_ZIP5
+          required: true
+        - selector: "#comment_email"
+          name: "comment[email]"
+          value: $EMAIL
+          required: true
+    - click_on:
+        - selector: "#comment_confirm_submission"
+    - wait:
+        - value: 5
+    - javascript:
+        - value: "document.querySelector('.commit input').click();"
+    - wait:
+        - value: 5
+  success:
+    headers:
+      status: 200
+    body:
+      contains: Thank you! Your comment has been submitted
