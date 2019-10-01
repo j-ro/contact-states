@@ -14,7 +14,7 @@ contact_form:
           value: $MESSAGE
           required: true
           options:
-            max_length: 2000
+            max_length: 5000
         - selector: "#comment_first_name"
           name: "comment[first_name]"
           value: $NAME_FIRST
