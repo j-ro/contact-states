@@ -54,6 +54,8 @@ try{ element.parentNode.removeChild(element) } catch(err){} });"
           value: "Yes"
     - wait:
         - value: 5
+    - javascript:
+      - value: document.querySelector("#g-recaptcha-response").style.display = "block";
     - recaptcha:
         - value: true
     - javascript:

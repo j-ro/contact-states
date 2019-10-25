@@ -65,7 +65,6 @@ contact_form:
           value: $TOPIC
           required: true
           options:
-            "* 2019 State Budget Proposal": 406a7fcf-2d5b-e211-9168-00219b8d8c68
             "* Department of Talent and Economic Development": 70b2f5e4-ebcb-e411-9e5c-00219b8d8c68
             "* Detroit Public Schools": 3ba41b59-a3d7-e411-8e74-00219b8d8c68
             "* Education": 6d712412-7131-e111-b4af-00219b8d8c66
@@ -92,7 +91,7 @@ contact_form:
     - javascript:
         - value: "document.querySelector('textarea[name=g-recaptcha-response]').remove();"
     - javascript:
-        - value: "document.querySelector('#recaptcha').insertAdjacentHTML('beforebegin', '<textarea name=g-recaptcha-response></textarea>');"      
+        - value: "document.querySelector('#recaptcha').insertAdjacentHTML('beforebegin', '<textarea name=g-recaptcha-response></textarea>');"
     - recaptcha:
         - value: true
     - click_on:
