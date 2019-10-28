@@ -40,7 +40,7 @@ contact_form:
     - select:
         - name: qi_1_state
           selector: "#qi_1_state"
-          value: $ADDRESS_STATE_POSTAL_ABBREV
+          value: $ADDRESS_STATE_FULL
           required: true
           options:
             Maine: "24_ME"
