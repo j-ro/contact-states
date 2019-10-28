@@ -162,7 +162,7 @@ contact_form:
             - Welfare
             - Wildlife
     - javascript:
-      - value: "document.querySelector('#g-recaptcha-response').style.cssText = 'display: block; margin-top: 5em;';" 
+        - value: "document.querySelector('#g-recaptcha-response').style.cssText = 'display: block; margin-top: 5em;';" 
     - recaptcha:
         - value: true
     - click_on:
