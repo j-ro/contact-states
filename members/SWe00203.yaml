@@ -162,12 +162,12 @@ contact_form:
             - Welfare
             - Wildlife
     - javascript:
-      - value: document.querySelector("#g-recaptcha-response").style.display = "block";            
+      - value: document.querySelector("#g-recaptcha-response").style.display = "block";
     - recaptcha:
         - value: true
     - click_on:
         - value: Submit
-          selector: "btnSubmit"
+          selector: "#btnSubmit"
   success:
     headers:
       status: 200
