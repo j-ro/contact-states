@@ -43,7 +43,7 @@ contact_form:
           value: $ADDRESS_STATE_POSTAL_ABBREV
           required: true
           options:
-            Maine: ME
+            Maine: 24_ME
     - click_on:
         - value: NRN
           selector: label.radiocheck[for="qi_3_0"]
