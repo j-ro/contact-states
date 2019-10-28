@@ -3,39 +3,47 @@ contact_form:
   method: post
   action: ""
   steps:
-    - visit: "http://gov.nv.gov/Contact/Email_the_Governor_Form/"
+    - visit: "http://gov.nv.gov/ContacttheGovernor.aspx"
     - fill_in:
-        - name: fName
-          selector: "#fName"
+        - name: tbfName
+          selector: "#tbfName"
           value: $NAME_FIRST
           required: true
-        - name: lName
-          selector: "#lName"
+        - name: tbLastName
+          selector: "#tbLastName"
           value: $NAME_LAST
           required: true
-        - name: zipcode
-          selector: "#zipcode"
+        - name: tbZip
+          selector: "#tbZip"
           value: $ADDRESS_ZIP5
           required: true
-        - name: email
-          selector: "#email"
+        - name: tbEmail
+          selector: "#tbEmail"
           value: $EMAIL
           required: true
-        - name: Subject
-          selector: "#Subject"
+        - name: tbSubject
+          selector: "#tbSubject"
           value: $SUBJECT
           required: true
-        - name: message
-          selector: "#message"
+        - name: taCustomerMessage
+          selector: "#taCustomerMessage"
           value: $MESSAGE
           required: true
-        - name: Phone
-          selector: "#Phone"
+        - name: tbPhone
+          selector: "#tbPhone"
           value: $PHONE
           required: true
+        - name: tbStreet
+          selector: "#tbStreet"
+          value: $ADDRESS_STREET
+          required: true
+        - name: tbCity
+          selector: "#tbCity"
+          value: $ADDRESS_CITY
+          required: true
     - select:
-        - name: "state"
-          selector: "#state"
+        - name: "SelectState"
+          selector: "#SelectState"
           value: $ADDRESS_STATE_FULL
           required: true
           options:
@@ -90,8 +98,8 @@ contact_form:
             - West Virginia
             - Wisconsin
             - Wyoming
-        - name: "Prefix"
-          selector: "#Prefix"
+        - name: "SelectPrefix"
+          selector: "#SelectPrefix"
           value: $NAME_PREFIX
           required: true
           options:
@@ -107,12 +115,12 @@ contact_form:
             Prof: Prof
             Coach: Coach
             Ofc: Ofc
-        - name: Topic
-          selector: "#Topic"
+        - name: SelectTopic
+          selector: "#SelectTopic"
           value: $TOPIC
           required: true
           options:
-            - Agriculture  
+            - Agriculture
             - Arts
             - Autograph
             - Boards/Commissions
@@ -153,11 +161,13 @@ contact_form:
             - Unemployment
             - Welfare
             - Wildlife
+    - recaptcha:
+        - value: true
     - click_on:
-        - value: submit
-          selector: "input[value='Submit Form']"
+        - value: Submit
+          selector: "btnSubmit"
   success:
     headers:
       status: 200
     body:
-      contains: Thank you for taking the time to contact me.
+      contains: Thank you!

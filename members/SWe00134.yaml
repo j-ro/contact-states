@@ -53,7 +53,7 @@ contact_form:
           value: $TOPIC
           required: true
           options:
-            - Agriculture                      
+            - Agriculture
             - Budget
             - Commerce and Banking
             - Education Higher
@@ -76,9 +76,11 @@ contact_form:
             - Taxes
             - Telecommunications
             - Transportation and Infrastructure
-            - Tribal Issues  
+            - Tribal Issues
             - Veterans Affairs
             - Others
+    - javascript:
+      - value: document.querySelector("#g-recaptcha-response").style.display = "block";
     - recaptcha:
         - value: true
     - click_on:
