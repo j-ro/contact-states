@@ -1,0 +1,30 @@
+bioguide: federalregister_hsd_121019
+contact_form:
+  method: POST
+  action: ""
+  steps:
+    - visit: "https://www.federalregister.gov/documents/2019/11/14/2019-24366/us-citizenship-and-immigration-services-fee-schedule-and-changes-to-certain-other-immigration#open-comment"
+    - find:
+        - selector: "#comment_general_comment"
+    - wait:
+        - value: 5
+    - fill_in:
+        - selector: "#comment_general_comment"
+          name: "comment[general_comment]"
+          value: $MESSAGE
+          required: true
+          options:
+            max_length: 2000
+    - click_on:
+        - selector: "#comment_confirm_submission"
+    - wait:
+        - value: 5
+    - javascript:
+        - value: "document.querySelector('.commit input').click();"
+    - wait:
+        - value: 5
+  success:
+    headers:
+      status: 200
+    body:
+      contains: Thank you! Your comment has been submitted
