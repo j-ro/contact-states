@@ -1,9 +1,9 @@
 bioguide: state_va_gov_terry_mcauliffe
 contact_form:
   method: post
-  action: /communityrelations/form/email
+  action: /communityrelations2018/form/email
   steps:
-    - visit: "https://solutions.virginia.gov/communityrelations/form/email"
+    - visit: "https://solutions.virginia.gov/communityrelations2018/form/email"
     - javascript:
         - value: "Array.prototype.forEach.call(document.querySelectorAll('style,[rel=\"stylesheet\"],[type=\"text/css\"]'), function(element){
 try{ element.parentNode.removeChild(element) } catch(err){} });"
