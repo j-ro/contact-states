@@ -79,7 +79,7 @@ contact_form:
           selector: "input[name='WFUD_Subject']"
           value: $SUBJECT
           required: true
-          max_length: 255
+          max_length: 100
         - name: WFNOTE
           selector: "#WFNOTE"
           value: $MESSAGE
