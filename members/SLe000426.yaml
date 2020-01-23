@@ -1,7 +1,7 @@
 bioguide: SLe000426
 contact_form:
   method: post
-  action: ContactPopupSubmit.php
+  action: "https://lcmspubcontact.lc.ca.gov/PublicLCMS/ContactPopup.php?district=AD01"
   steps:
     - visit: "https://lcmspubcontact.lc.ca.gov/PublicLCMS/ContactPopup.php?district=AD01"
     - fill_in:
