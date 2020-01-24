@@ -3,171 +3,152 @@ contact_form:
   method: post
   action: ""
   steps:
-    - visit: "http://gov.nv.gov/ContacttheGovernor.aspx"
+    - visit: "http://gov.nv.gov/Forms/Share/"
     - fill_in:
-        - name: tbfName
-          selector: "#tbfName"
+        - name: qi_2_prefix
+          selector: "#qi_2_prefix"
+          value: $NAME_PREFIX
+          required: true
+        - name: qi_2_first_name
+          selector: "#qi_2_first_name"
           value: $NAME_FIRST
           required: true
-        - name: tbLastName
-          selector: "#tbLastName"
+        - name: qi_2_last_name
+          selector: "#qi_2_last_name"
           value: $NAME_LAST
           required: true
-        - name: tbZip
-          selector: "#tbZip"
-          value: $ADDRESS_ZIP5
-          required: true
-        - name: tbEmail
-          selector: "#tbEmail"
-          value: $EMAIL
-          required: true
-        - name: tbSubject
-          selector: "#tbSubject"
-          value: $SUBJECT
-          required: true
-        - name: taCustomerMessage
-          selector: "#taCustomerMessage"
-          value: $MESSAGE
-          required: true
-        - name: tbPhone
-          selector: "#tbPhone"
-          value: $PHONE
-          required: true
-        - name: tbStreet
-          selector: "#tbStreet"
+        - name: qi_2_addr_1
+          selector: "#qi_2_addr_1"
           value: $ADDRESS_STREET
           required: true
-        - name: tbCity
-          selector: "#tbCity"
+        - name: qi_2_city
+          selector: "#qi_2_city"
           value: $ADDRESS_CITY
           required: true
+        - name: qi_2_zip
+          selector: "#qi_2_zip"
+          value: $ADDRESS_ZIP5
+          required: true
+        - name: qi_2_email
+          selector: "#qi_2_email"
+          value: $EMAIL
+          required: true
+        - name: qi_7
+          selector: "#qi_7"
+          value: $MESSAGE
+          required: true
     - select:
-        - name: "SelectState"
-          selector: "#SelectState"
+        - name: "qi_2_state"
+          selector: "#qi_2_state"
           value: $ADDRESS_STATE_FULL
           required: true
           options:
-            - Alabama
-            - Alaska
-            - Arizona
-            - Arkansas
-            - California
-            - Colorado
-            - Connecticut
-            - Delaware
-            - District of Columbia
-            - Florida
-            - Georgia
-            - Hawaii
-            - Idaho
-            - Illinois
-            - Indiana
-            - Iowa
-            - Kansas
-            - Kentucky
-            - Louisiana
-            - Maine
-            - Maryland
-            - Massachusetts
-            - Michigan
-            - Minnesota
-            - Mississippi
-            - Missouri
-            - Montana
-            - Nebraska
-            - Nevada
-            - New Hampshire
-            - New Jersey
-            - New Mexico
-            - New York
-            - North Carolina
-            - North Dakota
-            - Ohio
-            - Oklahoma
-            - Oregon
-            - Pennsylvania
-            - Rhode Island
-            - South Carolina
-            - South Dakota
-            - Tennessee
-            - Texas
-            - Utah
-            - Vermont
-            - Virginia
-            - Washington
-            - West Virginia
-            - Wisconsin
-            - Wyoming
-        - name: "SelectPrefix"
-          selector: "#SelectPrefix"
-          value: $NAME_PREFIX
-          required: true
-          options:
-            Miss: Miss
-            Mr.: Mr.
-            Mrs.: Mrs.
-            Ms.: Ms.
-            Mr. and Mrs.: Mr. and Mrs.
-            Reverend: Reverend
-            Father: Father
-            Dr.: Dr.
-            Atty: Atty
-            Prof: Prof
-            Coach: Coach
-            Ofc: Ofc
-        - name: SelectTopic
-          selector: "#SelectTopic"
+            Alabama: 0_AL
+            Alaska: 1_AK
+            America Samoa: 2_AS
+            Arizona: 3_AZ
+            Arkansas: 4_AR
+            California: 5_CA
+            Colorado: 6_CO
+            Connecticut: 7_CT
+            D.C.: 8_D.C.
+            Delaware: 10_DE
+            Federated States of Micronesia: 11_FM
+            Florida: 12_FL
+            Foreign Correspondence: 13_FC
+            Georgia: 14_GA
+            Guam: 15_GU
+            Hawaii: 16_HI
+            Idaho: 17_ID
+            Illinois: 18_IL
+            Indiana: 19_IN
+            Iowa: 20_IA
+            Kansas: 21_KS
+            Kentucky: 22_KY
+            Louisiana: 23_LA
+            Maine: 24_ME
+            Marshall Islands: 25_MH
+            Maryland: 26_MD
+            Massachusetts: 27_MA
+            Michigan: 28_MI
+            Minnesota: 29_MN
+            Mississippi: 30_MS
+            Missouri: 31_MO
+            Montana: 32_MT
+            Nebraska: 33_NE
+            Nevada: 34_NV
+            New Hampshire: 35_NH
+            New Jersey: 36_NJ
+            New Mexico: 37_NM
+            New York: 38_NY
+            North Carolina: 39_NC
+            North Dakota: 40_ND
+            Northern Mariana Islands: 41_MP
+            Ohio: 42_OH
+            Oklahoma: 43_OK
+            Oregon: 44_OR
+            Palau: 45_PW
+            Pennsylvania: 46_PA
+            Puerto Rico: 47_PR
+            Rhode Island: 48_RI
+            South Carolina: 49_SC
+            South Dakota: 50_SD
+            Tennessee: 51_TN
+            Texas: 42_TX
+            Trust Territory: 53_TT
+            Utah: 54_UT
+            Vermont: 55_VT
+            Virgin Islands: 56_VI
+            Virginia: 57_VA
+            Washington: 58_WA
+            West Virginia: 59_WV
+            Wisconsin: 60_WI
+            Wyoming: 61_WY
+        - name: qi_3
+          selector: "#qi_3"
           value: $TOPIC
           required: true
           options:
-            - Agriculture
-            - Arts
-            - Autograph
-            - Boards/Commissions
-            - Budget/Spending
-            - Crime/Drugs
-            - Cultural Affairs
-            - Economic Development
-            - Education
-            - Elections
-            - Employment Security
-            - Energy
-            - Environment
-            - Federal Agencies
-            - Flag Status
-            - Health
-            - Housing
-            - Immigration
-            - Inmate
-            - Insurance
-            - Jobs
-            - Labor
-            - Legislation
-            - Local Gov't
-            - Motor Vehicles
-            - Natural Resources
-            - Other
-            - Public Safety
-            - Recognition
-            - Regulatory Reform
-            - Science/Technology
-            - Scouts
-            - Small Business
-            - Student Letter
-            - Taxation
-            - Thank You
-            - Transportation
-            - Unaccompanied Children
-            - Unemployment
-            - Welfare
-            - Wildlife
+            Agriculture: 0_AGRICULTURE
+            Budget/Spending: 1_BUDGET/SPENDING
+            Cannabis: 2_CANNABIS
+            Climate Change: 3_CLIMATE CHANGE
+            Defense: 4_DEF
+            DMV: 5_DMV
+            Economic Development: 6_ECONOMIC DEVELOPMENT
+            Education and Labor: 7_EDU
+            Energy: 8_ENERGY
+            Environment: 9_ENVIRONMENT
+            Governmental Reform: 10_GOV
+            Guns: 11_GUNS
+            Higher Education: 12_HIGHER EDUCATION
+            Housing: 13_HOUSING
+            Immigration: 14_IMMIGRATION
+            International Relations: 15_INT
+            Judiciary: 16_JUD
+            K-12 Education: 17_K-12 EDUCATION
+            Labor: 18_LABOR
+            Mental Health: 19_MENTAL HEALTH
+            Public Safety: 20_PUBLIC SAFETY
+            Reproductive Rights: 21_REPRODUCTIVE RIGHTS
+            Social Issues: 22_SOC
+            Social Security: 23_SSEC
+            Taxes and Trade: 24_TAX
+            Taxation: 25_TAXATION
+            Telecommunications: 26_TEL
+            Transportation: 27_TRANSPORTATION
+            Unemployment: 28_UNEMPLOYMENT
+            Veterans Services: 29_VETERANS SERVICES
+            Welfare: 30_WELFARE
+            Health Care: 31_HEALTH CARE
+            Board and Commission: 32_BOARD AND COMMISSION
     - javascript:
-        - value: "document.querySelector('#g-recaptcha-response').style.cssText = 'display: block; margin-top: 5em;';" 
+        - value: "document.querySelector('#g-recaptcha-response').style.cssText = 'display: block; margin-top: 5em;';"
     - recaptcha:
         - value: true
     - click_on:
         - value: Submit
-          selector: "#btnSubmit"
+          selector: "#btn_submit"
   success:
     headers:
       status: 200

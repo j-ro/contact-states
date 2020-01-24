@@ -81,6 +81,8 @@ contact_form:
         - name: "submitted[AFFL][EMAIL.OPTIN]"
           selector: "#edit-submitted-affl-1"
           value: EMAIL.OPTIN
+    - recaptcha:
+        - value: true
     - click_on:
         - value: Submit
           selector: "#edit-submit"

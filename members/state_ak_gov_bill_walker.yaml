@@ -70,6 +70,8 @@ contact_form:
             - Sustainable Alaska Plan
             - Transportation
             - University of Alaska
+    - javascript:
+      - value: document.querySelector("#g-recaptcha-response").style.display = "block";
     - recaptcha:
         - value: true
     - click_on:
