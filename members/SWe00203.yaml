@@ -4,6 +4,8 @@ contact_form:
   action: ""
   steps:
     - visit: "http://gov.nv.gov/Forms/Share/"
+    - find:
+        - selector: "#qi_2_prefix"
     - fill_in:
         - name: qi_2_prefix
           selector: "#qi_2_prefix"

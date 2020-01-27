@@ -1,9 +1,9 @@
 bioguide: SWe00036
 contact_form:
   method: post
-  action: "https://www.tfaforms.com/responses/processor?hostURL=https://www.colorado.gov/governor/share-your-comments"
+  action: "https://cogov.tfaforms.net/3?faIframeUniqueId=49lktg43rg&hostURL=https%3A%2F%2Fwww.colorado.gov%2Fgovernor%2Fshare-comments"
   steps:
-    - visit: "https://www.tfaforms.com/4679739?hostURL=https%3A%2F%2Fwww.colorado.gov%2Fgovernor%2Fshare-your-comments"
+    - visit: "https://cogov.tfaforms.net/3?faIframeUniqueId=49lktg43rg&hostURL=https%3A%2F%2Fwww.colorado.gov%2Fgovernor%2Fshare-comments"
     - fill_in:
         - name: tfa_62
           selector: "#tfa_62"
@@ -102,7 +102,7 @@ contact_form:
             Weld: tfa_204
             Yuma: tfa_205
     - javascript:
-      - value: document.querySelector("#g-recaptcha-response").style.display = "block";            
+      - value: document.querySelector("#g-recaptcha-response").style.display = "block";
     - recaptcha:
         - value: true
     - javascript:
