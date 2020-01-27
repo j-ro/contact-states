@@ -39,7 +39,7 @@ contact_form:
           value: $ADDRESS_STATE_POSTAL_ABBREV
           required: true
           options:
-            Oklahoma: 43_OK
+            43_OK
     - click_on:
         - value: Please submit your comment or opinion
           selector: "#btn_submit"
@@ -52,4 +52,4 @@ contact_form:
     headers:
       status: 200
     body:
-      contains: Sign Up For Our 
+      contains: Sign Up For Our

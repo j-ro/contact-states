@@ -111,7 +111,7 @@ contact_form:
     - javascript:
         - value: "document.querySelector('#qi_6').value = new Date().toLocaleDateString('en-US', {day: '2-digit', month: '2-digit', year: 'numeric'});"
     - click_on:
-        - selector: "#btn_submit"
+        - selector: "#btn_submit" 
   success:
     headers:
       status: 200

@@ -66,10 +66,6 @@ contact_form:
             Legal: 20
             Legislature: 21
             Medicaid: 22
-    - javascript:
-      - value: document.querySelector("#g-recaptcha-response").style.display = "block";
-    - recaptcha:
-        - value: true
     - click_on:
         - value: Submit
           selector: "input[name='op']"

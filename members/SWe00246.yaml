@@ -119,7 +119,7 @@ contact_form:
             Education: EDUCATION
     - click_on:
         - value: Submit
-          selector: "#btn_submit"
+          selector: "#btn_submit" 
   success:
     headers:
       status: 200

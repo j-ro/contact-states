@@ -81,6 +81,8 @@ contact_form:
         - name: "submitted[AFFL][EMAIL.OPTIN]"
           selector: "#edit-submitted-affl-1"
           value: EMAIL.OPTIN
+    - javascript:
+      - value: document.querySelector("#g-recaptcha-response").style.display = "block";
     - recaptcha:
         - value: true
     - click_on:

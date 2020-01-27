@@ -32,7 +32,7 @@ contact_form:
         - name: PhoneNumber
           selector: "#PhoneNumber"
           value: $PHONE
-          required: false
+          required: true
         - name: EmailAddress
           selector: "#EmailAddress"
           value: $EMAIL
