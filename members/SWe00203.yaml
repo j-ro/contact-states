@@ -146,10 +146,6 @@ contact_form:
             Welfare: 30_WELFARE
             Health Care: 31_HEALTH CARE
             Board and Commission: 32_BOARD AND COMMISSION
-    - javascript:
-        - value: "document.querySelector('#g-recaptcha-response').style.cssText = 'display: block; margin-top: 5em;';"
-    - recaptcha:
-        - value: true
     - click_on:
         - value: Submit
           selector: "#btn_submit"
