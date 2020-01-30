@@ -7,35 +7,39 @@ contact_form:
     - wait:
         - value: 3
     - fill_in:
-        - name: "submitted[name]"
-          selector: "#edit-submitted-name"
-          value: $NAME_FULL
+        - name: "your_first_name"
+          selector: "#edit-your-first-name"
+          value: $NAME_FIRST
+          required: true
+        - name: "last_name"
+          selector: "#edit-last-name"
+          value: $NAME_LAST
           required: true
     - wait:
         - value: 3
     - fill_in:
-        - name: "submitted[subject]"
-          selector: "#edit-submitted-subject"
+        - name: "subject"
+          selector: "#edit-subject"
           value: $SUBJECT
           required: true
     - wait:
         - value: 3
     - fill_in:
-        - name: "submitted[email_address]"
-          selector: "#edit-submitted-email-address"
+        - name: "email_address"
+          selector: "#edit-email-address"
           value: $EMAIL
           required: true
     - wait:
         - value: 3
     - fill_in:
-        - name: "submitted[comments]"
-          selector: "#edit-submitted-comments"
+        - name: "comments"
+          selector: "#edit-comments"
           value: $MESSAGE
           required: true
     - wait:
         - value: 3
     - click_on:
-        - selector: ".webform-submit"
+        - selector: ".edit-submit"
   success:
     headers:
       status: 200

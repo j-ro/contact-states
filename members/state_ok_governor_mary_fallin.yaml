@@ -36,7 +36,7 @@ contact_form:
     - select:
         - name: qi_1_state
           selector: "#qi_1_state"
-          value: $ADDRESS_STATE_POSTAL_ABBREV
+          value: 43_OK
           required: true
           options:
             43_OK

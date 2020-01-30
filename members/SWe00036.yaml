@@ -17,10 +17,6 @@ contact_form:
           selector: "#tfa_64"
           value: $EMAIL
           required: true
-        - name: tfa_2748
-          selector: "#tfa_2748"
-          value: $SUBJECT
-          required: true
         - name: tfa_2725
           selector: "#tfa_2725"
           value: $MESSAGE
@@ -31,6 +27,47 @@ contact_form:
           value: "tfa_2746"
           required: true
     - select:
+        - name: tfa_2758
+          selector: "#tfa_2758"
+          value: tfa_2759
+          required: true
+          options:
+            Governor: tfa_2759
+        - name: tfa_2909
+          selector: "#tfa_2909"
+          value: $SUBJECT
+          required: true
+          options:
+            Human Services: tfa_2931
+            Higher Education: tfa_2970
+            Identity Based Issues: tfa_2976
+            Labor and Employment: tfa_2980
+            Local Affairs: tfa_2993
+            Military and Veterans Affairs: tfa_3008
+            Natural Resources: tfa_3015
+            Office of State Planning and Budget: tfa_3037
+            Personnel & Administration: tfa_3055
+            Private Sector: tfa_3064
+            Public Health & Environment: tfa_3067
+            Public Safety: tfa_3086
+            Secretary of State: tfa_3115
+            Regulatory Agencies: tfa_3119
+            Transportation: tfa_3137
+            Healthcare Policy & Financing: tfa_3156
+            Gun Control: tfa_3158
+            Governor's Office: tfa_3160
+            Federal: tfa_3177
+            Executive Clemency Office: tfa_3183
+            Energy: tfa_3185
+            Education: tfa_3197
+            Economic Development and International Trade: tfa_3219
+            Department of Revenue: tfa_3229
+            Cyber Security: tfa_3249
+            Corrections and Law Enforcement: tfa_3253
+            C.O.R.A.: tfa_3278
+            Colorado Commission of Indian Affairs: tfa_3283
+            Agriculture: tfa_3289
+            Aerospace: tfa_3317
         - name: tfa_71
           selector: "#tfa_71"
           value: $ADDRESS_COUNTY
@@ -101,8 +138,11 @@ contact_form:
             Washington: tfa_203
             Weld: tfa_204
             Yuma: tfa_205
+    - click_on:
+        - value: tfa_2745
+          selector: "#tfa_2745-L"
     - javascript:
-      - value: document.querySelector("#g-recaptcha-response").style.display = "block";
+        - value: document.querySelector("#g-recaptcha-response").style.display = "block";
     - recaptcha:
         - value: true
     - javascript:
