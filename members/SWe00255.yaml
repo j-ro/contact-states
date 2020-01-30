@@ -44,7 +44,7 @@ contact_form:
     - choose:
         - name: qi_1_state
           selector: "#qi_1_state"
-          value: $ADDRESS_STATE_POSTAL_ABBREV
+          value: 50_SD
           required: true
           options:
             South Dakota: 50_SD
