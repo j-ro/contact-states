@@ -49,14 +49,12 @@ contact_form:
           value: $TOPIC
           required: true
           options:
-            Budget/Taxes: BUDGET_TAXES
-            Health: HEALTH
-            Energy/Environment: ENERGY_ENVIRONMENT
-            Legal: LEGAL
-            Infrastructure: INFRASTRUCTURE
-            Commerce/Economic Development: COMMERCE_ECONDEVELOP
-            Federal: FEDERAL
-            Education: EDUCATION
+            Budget/Taxes: 0_BUDGET_TAXES
+            Health: 1_HEALTH
+            Energy/Environment: 2_ENERGY_ENVIRONMENT
+            Infrastructure: 3_INFRASTRUCTURE
+            Commerce/Economic Development: 4_COMMERCE_ECONDEVELOP
+            Federal: 5_FEDERAL
     - click_on:
         - value: Submit
           selector: "#btn_submit"
