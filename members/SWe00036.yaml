@@ -68,6 +68,11 @@ contact_form:
             Colorado Commission of Indian Affairs: tfa_3283
             Agriculture: tfa_3289
             Aerospace: tfa_3317
+        - name: tfa_2909
+          selector: "#tfa_2909"
+          value: $TOPIC
+          required: true
+          options:
         - name: tfa_71
           selector: "#tfa_71"
           value: $ADDRESS_COUNTY
@@ -141,6 +146,8 @@ contact_form:
     - click_on:
         - value: tfa_2745
           selector: "#tfa_2745-L"
+    - javascript:
+        - value: "document.getElementById('select').selectedIndex = 0"
     - javascript:
         - value: document.querySelector("#g-recaptcha-response").style.display = "block";
     - recaptcha:
