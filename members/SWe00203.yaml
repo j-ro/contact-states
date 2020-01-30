@@ -7,7 +7,7 @@ contact_form:
     - wait:
         - value: 5
     - find:
-        - selector: "#qi_2_prefix"
+        - selector: input[name="qi_2_first_name"]
     - fill_in:
         - name: qi_2_prefix
           selector: "#qi_2_prefix"
