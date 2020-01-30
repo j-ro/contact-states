@@ -1,9 +1,9 @@
 bioguide: SWe00203
 contact_form:
   method: post
-  action: ""
+  action: "https://iqconnect.lmhostediq.com/iqextranet/EForm.aspx?__cid=FSL_NV_GOV&__fid=100001&iframe=Y"
   steps:
-    - visit: "http://gov.nv.gov/Forms/Share/"
+    - visit: "https://iqconnect.lmhostediq.com/iqextranet/EForm.aspx?__cid=FSL_NV_GOV&__fid=100001&iframe=Y"
     - wait:
         - value: 5
     - find:
