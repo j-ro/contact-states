@@ -137,7 +137,7 @@ contact_form:
             WY
     - click_on:
         - value: Submit
-          selector: "input[name="submit"]"
+          selector: input[name="submit"]
   success:
     headers:
       status: 200

@@ -69,6 +69,8 @@ contact_form:
     - click_on:
         - value: Submit
           selector: "input[name='op']"
+    - wait:
+        - value: 5
   success:
     headers:
       status: 200
