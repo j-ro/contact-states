@@ -39,7 +39,7 @@ contact_form:
     - wait:
         - value: 3
     - click_on:
-        - selector: ".edit-submit"
+        - selector: "#.edit-submit"
   success:
     headers:
       status: 200
