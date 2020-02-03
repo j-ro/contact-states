@@ -1,9 +1,9 @@
 bioguide: state_ga_gov_nathan_deal
 contact_form:
   method: POST
-  action: "https://gov.georgia.gov/webform/constituent-services"
+  action: "https://gov.georgia.gov/contact-us/constituent-services"
   steps:
-    - visit: "https://gov.georgia.gov/webform/constituent-services"
+    - visit: "https://gov.georgia.gov/contact-us/constituent-services"
     - fill_in:
         - name: "first_name"
           selector: "#edit-first-name"
