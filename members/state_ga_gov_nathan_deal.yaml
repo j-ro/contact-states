@@ -66,7 +66,7 @@ contact_form:
             Legal: 20
             Legislature: 21
             Medicaid: 22
-    - javascript: "function alert(nope) { return; }"
+    - javascript: "jQuery('#webform-submission-webform-226-node-226-add-form').off('submit');"
     - click_on:
         - value: Submit
           selector: "input[name='op']"
