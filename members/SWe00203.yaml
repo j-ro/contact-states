@@ -1,13 +1,13 @@
 bioguide: SWe00203
 contact_form:
   method: post
-  action: ""
+  action: "https://iqconnect.lmhostediq.com/iqextranet/EForm.aspx?__cid=FSL_NV_GOV&__fid=100001&iframe=Y"
   steps:
-    - visit: "http://gov.nv.gov/Forms/Share/"
+    - visit: "https://iqconnect.lmhostediq.com/iqextranet/EForm.aspx?__cid=FSL_NV_GOV&__fid=100001&iframe=Y"
     - wait:
         - value: 5
     - find:
-        - selector: "#qi_2_prefix"
+        - selector: input[name="qi_2_first_name"]
     - fill_in:
         - name: qi_2_prefix
           selector: "#qi_2_prefix"
@@ -146,10 +146,6 @@ contact_form:
             Welfare: 30_WELFARE
             Health Care: 31_HEALTH CARE
             Board and Commission: 32_BOARD AND COMMISSION
-    - javascript:
-        - value: "document.querySelector('#g-recaptcha-response').style.cssText = 'display: block; margin-top: 5em;';"
-    - recaptcha:
-        - value: true
     - click_on:
         - value: Submit
           selector: "#btn_submit"
@@ -157,4 +153,4 @@ contact_form:
     headers:
       status: 200
     body:
-      contains: Thank you!
+      contains: PUTTING NEVADA'S

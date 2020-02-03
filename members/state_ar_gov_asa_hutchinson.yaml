@@ -43,98 +43,49 @@ contact_form:
           value: $TOPIC
           required: true
           options:
-            Agriculture
-            Arts / Museums / History
-            Business and Commerce
-            Courts / Criminal Justice
-            Education
-            Environment
-            OI Request
-            Governor's Special Projects
-            Grants
-            Health and Human Services
-            Highways / Transportation
-            Insurance
-            Jails - City / County
-            Law Enforcement / Police
-            Legislation
-            Licenses and Permits
-            Local Government / Community
-            Minority Affairs
-            Pardons
-            Policies
-            Prisons and Inmates
-            Public Safety and Services
-            Request Letter from Governor
-            Retirement Systems
-            Science and Technology
-            Tourism / Recreation
-            Workforce
-            General Comments / Concerns
+            - Agriculture
+            - Arts / Museums / History
+            - Business and Commerce
+            - Courts / Criminal Justice
+            - Education
+            - Environment
+            - OI Request
+            - Governor's Special Projects
+            - Grants
+            - Health and Human Services
+            - Highways / Transportation
+            - Insurance
+            - Jails - City / County
+            - Law Enforcement / Police
+            - Legislation
+            - Licenses and Permits
+            - Local Government / Community
+            - Minority Affairs
+            - Pardons
+            - Policies
+            - Prisons and Inmates
+            - Public Safety and Services
+            - Request Letter from Governor
+            - Retirement Systems
+            - Science and Technology
+            - Tourism / Recreation
+            - Workforce
+            - General Comments / Concerns
         - name: 00Nt0000000IPXM
           selector: "#00Nt0000000IPXM"
           value: $NAME_PREFIX
           required: true
           options:
-            Mr.
-            Ms.
-            Mrs.
-            Other
+            - Mr.
+            - Ms.
+            - Mrs.
+            - Other
         - name: 00Nt0000000IPXO
           selector: "#00Nt0000000IPXO"
           value: $ADDRESS_STATE_POSTAL_ABBREV
           required: true
           options:
-            AL
-            AK
-            AZ
-            AR
-            CA
-            CO
-            CT
-            DE
-            FL
-            GA
-            HI
-            ID
-            IL
-            IN
-            IA
-            KS
-            KY
-            LA
-            ME
-            MD
-            MA
-            MI
-            MN
-            MS
-            MO
-            MT
-            NE
-            NV
-            NH
-            NJ
-            NM
-            NY
-            NC
-            ND
-            OH
-            OK
-            OR
-            PA
-            RI
-            SC
-            SD
-            TN
-            TX
-            UT
-            VT
-            VA
-            WA
-            WV
-            WI
-            WY
+            - AR
     - click_on:
         - value: Submit
           selector: input[name="submit"]

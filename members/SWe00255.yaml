@@ -44,15 +44,13 @@ contact_form:
     - choose:
         - name: qi_1_state
           selector: "#qi_1_state"
-          value: $ADDRESS_STATE_POSTAL_ABBREV
+          value: 50_SD
           required: true
           options:
             South Dakota: 50_SD
-        - name: qi_5
-          selector: "qi_5_0"
-          required: true
-          options:
-            This e-mail provides comments and does not require a response.: 0_Response Not Required - Web Form ID#2100060
+    - click_on:
+        - value: 0_Response Not Required - Web Form ID#2100060
+        - selector: "qi_5_0"
     - recaptcha:
         - value: true
     - click_on:
