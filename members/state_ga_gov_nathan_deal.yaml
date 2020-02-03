@@ -37,7 +37,6 @@ contact_form:
           selector: "#edit-please-provide-a-brief-description-about-your-request-concern"
           value: $MESSAGE
           required: true
-
     - select:
         - name: "please_select_which_agency_your_request_relates_to"
           selector: "#edit-please-select-which-agency-your-request-relates-to"
