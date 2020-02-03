@@ -34,7 +34,9 @@ contact_form:
           options:
             Governor: tfa_2759
     - javascript:
-        - value: "document.getElementById('tfa_2909').selectedIndex = 1; var element = document.getElementById('tfa_2909'); var event = new Event('change'); element.dispatchEvent(event);"
+        - value: "document.getElementById('tfa_2909').selectedIndex = 1;"
+    - javascript:
+        - value: "document.getElementById('tfa_2909').dispatchEvent(new Event('change'));"
     - wait:
         - value: 1
     - javascript:
