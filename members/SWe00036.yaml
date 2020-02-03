@@ -68,8 +68,12 @@ contact_form:
             Colorado Commission of Indian Affairs: tfa_3283
             Agriculture: tfa_3289
             Aerospace: tfa_3317
+    - wait:
+        - value: 1
     - javascript:
         - value: "document.getElementById('tfa_2913').selectedIndex = 1"
+    - javascript:
+        - value: "document.getElementById('tfa_71').selectedIndex = 1"
     - javascript:
         - value: document.querySelector("#g-recaptcha-response").style.display = "block";
     - recaptcha:
