@@ -39,7 +39,7 @@ contact_form:
           required: true
     - select:
         - name: "please_select_which_agency_your_request_relates_to"
-          selector: "#edit-please-select-which-agency-your-request-relates-to1"
+          selector: "#edit-please-select-which-agency-your-request-relates-to"
           value: $TOPIC
           required: true
           options:
