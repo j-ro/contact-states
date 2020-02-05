@@ -39,7 +39,7 @@ contact_form:
           required: true
     - select:
         - name: 00Nt0000000IPWl
-          selector: select[name='00Nt0000000IPWl'
+          selector: select[name='00Nt0000000IPWl']
           value: $TOPIC
           required: true
           options:
