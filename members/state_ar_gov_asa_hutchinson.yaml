@@ -34,7 +34,7 @@ contact_form:
           value: $PHONE
           required: true
         - name: 00Nt0000000IPWo
-          selector: "#00Nt0000000IPWo"
+          selector: textarea[name='00Nt0000000IPWo']
           value: $MESSAGE
           required: true
     - select:
