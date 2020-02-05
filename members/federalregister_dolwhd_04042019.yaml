@@ -4,6 +4,8 @@ contact_form:
   action: ""
   steps:
     - visit: "https://www.federalregister.gov/documents/2019/03/22/2019-04514/defining-and-delimiting-the-exemptions-for-executive-administrative-professional-outside-sales-and#open-comment"
+    - wait:
+        - value: 5
     - find:
         - selector: "#comment_general_comment"
     - fill_in:

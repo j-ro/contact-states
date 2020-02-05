@@ -4,6 +4,8 @@ contact_form:
   action: ""
   steps:
     - visit: "https://www.federalregister.gov/documents/2018/09/14/2018-19930/the-standard-for-determining-joint-employer-status#open-comment"
+    - wait:
+        - value: 5
     - find:
         - selector: "#comment_general_comment"
     - fill_in:

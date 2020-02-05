@@ -4,6 +4,8 @@ contact_form:
   action: ""
   steps:
     - visit: "https://www.federalregister.gov/documents/2019/03/15/2019-04420/endangered-and-threatened-wildlife-and-plants-removing-the-gray-wolf-canis-lupus#open-comment"
+    - wait:
+        - value: 5
     - find:
         - selector: "#comment_general_comment"
     - fill_in:
