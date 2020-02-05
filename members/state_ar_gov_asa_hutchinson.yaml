@@ -81,7 +81,7 @@ contact_form:
             - Mrs.
             - Other
         - name: 00Nt0000000IPXO
-          selector: "#00Nt0000000IPXO"
+          selector: select[name='00Nt0000000IPXO']
           value: $ADDRESS_STATE_POSTAL_ABBREV
           required: true
           options:
