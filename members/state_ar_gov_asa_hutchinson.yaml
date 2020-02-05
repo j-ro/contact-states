@@ -9,10 +9,6 @@ contact_form:
           selector: "#name"
           value: $NAME_FULL
           required: true
-        - name: 00Nt0000000IPXP
-          selector: "#00Nt0000000IPXP"
-          value: $ADDRESS_STREET
-          required: true
         - name: 00Nt0000000IPWn
           selector: "#00Nt0000000IPWn"
           value: $ADDRESS_CITY
