@@ -14,11 +14,11 @@ contact_form:
           value: $ADDRESS_STREET
           required: true
         - name: 00Nt0000000IPWn
-          selector: "#00Nt0000000IPWn"
+          selector: input[name='00Nt0000000IPWn]
           value: $ADDRESS_CITY
           required: true
         - name: 00Nt0000000IPXU
-          selector: "#00Nt0000000IPXU"
+          selector: input[name='00Nt0000000IPXU]
           value: $ADDRESS_ZIP5
           required: true
         - name: email
@@ -30,11 +30,11 @@ contact_form:
           value: $PHONE
           required: true
         - name: 00Nt0000000IPWm
-          selector: "#00Nt0000000IPWm"
+          selector: input[name='00Nt0000000IPWm']
           value: $PHONE
           required: true
         - name: 00Nt0000000IPWo
-          selector: "#00Nt0000000IPWo"
+          selector: input[name='00Nt0000000IPWo']
           value: $MESSAGE
           required: true
     - select:
