@@ -10,89 +10,88 @@ contact_form:
         - value: 5
     - fill_in:
         - selector: "#comment_general_comment"
-          name: "comment_general_commen"
+          name: "comment_general_comment"
           id: "x-auto-0-input"
-          value: 
+          value: $MESSAGE
           required: true
           options:
             max_length: 2000
         - selector: "#comment_first_name"
           name: "comment_first_name"
           id: "x-auto-1-input"
-          value:
+          value: $NAME_FIRST
           required: false
         - selector: "#comment_last_name"
           name: "comment_last_name"
           id: "x-auto-2-input"
-          value:
-          required: fasle
-
+          value: $NAME_LAST
+          required: false
         - selector: "#comment_city_address"
           name: "comment_city_address"
           id: "x-auto-5-input"
-          value:
+          value: $ADDRESS_CITY
         - select:
             - selector: "#comment_state"
               name: "comment_state"
               id: "x-auto-6-input"
-              value: 
+              value: $ADDRESS_STATE_POSTAL_ABBREV
               required: false
               options:
-                - Alabama
-                - Alaska
-                - Arizona
-                - Arkansas
-                - California
-                - Colorado
-                - Connecticut
-                - Delaware
-                - District of Columbia
-                - Florida
-                - Georgia
-                - Hawaii
-                - Idaho
-                - Illinois
-                - Indiana
-                - Iowa
-                - Kansas
-                - Kentucky
-                - Louisiana
-                - Maine
-                - Maryland
-                - Massachusetts
-                - Michigan
-                - Minnesota
-                - Mississippi
-                - Missouri
-                - Montana
-                - Nebraska
-                - Nevada
-                - New Hampshire
-                - New Jersey
-                - New Mexico
-                - New York
-                - North Carolina
-                - North Dakota
-                - Ohio
-                - Oklahoma
-                - Oregon
-                - Pennsylvania
-                - Rhode Island
-                - South Carolina
-                - South Dakota
-                - Tennessee
-                - Texas
-                - Utah
-                - Vermont
-                - Virginia
-                - Washington
-                - West Virginia
-                - Wisconsin
-                - Wyoming
+                Alabama: AL
+                Alaska: AK
+                Arizona: AZ
+                Arkansas: AR
+                California: CA
+                Colorado: CO
+                Connecticut: CT
+                Delaware: DE
+                District of Columbia: DC
+                Florida: FL
+                Georgia: GA
+                Hawaii: HI
+                Idaho: ID
+                Illinois: IL
+                Indiana: IN
+                Iowa: IA
+                Kansas: KS
+                Kentucky: KY
+                Louisiana: LA
+                Maine: ME
+                Maryland: MD
+                Massachusetts: MA
+                Michigan: MI
+                Minnesota: MN
+                Mississippi: MS
+                Missouri: MO
+                Montana: MT
+                Nebraska: NE
+                Nevada: NV
+                New Hampshire: NH
+                New Jersey: NJ
+                New Mexico: NM
+                New York: NY
+                North Carolina: NC
+                North Dakota: ND
+                Ohio: OH
+                Oklahoma: OK
+                Oregon: OR
+                Pennsylvania: PA
+                Rhode Island: RI
+                South Carolina: SC
+                South Dakota: SD
+                Tennessee: TN
+                Texas: TX
+                Utah: UT
+                Vermont: VT
+                Virginia: VA
+                Washington: WA
+                West Virginia: WV
+                Wisconsin: WI
+                Wyoming: WY
         - selector: "#comment_zip"
           name: "comment_zip"
           id: "x-auto-8-input"
-          value:
+          value: $ADDRESS_ZIP5
           required: false
         - selector: "#country"
           name: "country"
@@ -101,286 +100,6 @@ contact_form:
           required: false
           options:
            United States: "United States"
-           United Kingdom: "United Kingdom"
-           Canada: "Canada"
-           Anguilla: "Anguilla"
-           Afganistan: "Afghanistan"
-           Albania: "Albania"
-           Algeria: "Algeria"
-           American Samoa: "American Samoa"
-           Andorra: "Andorra"
-           Angola: "Angola"
-           Antigua & Barbuda: "Antigua & Barbuda"
-           Argentina: "Argentina"
-           Armenia: "Armenia"
-           Aruba: "Aruba"
-           Australia: "Australia"
-           Austria: "Austria"
-           Azerbaijan: "Azerbaijan"
-           Bahamas: "Bahamas"
-           Bahrain: "Bahrain"
-           Bangladesh: "Bangladesh"
-           Barbados: "Barbados"
-           Belarus: "Belarus"
-           Belgium: "Belgium"
-           Belize: "Belize"
-           Benin: "Benin"
-           Bermuda: "Bermuda"
-           Bhutan: "Bhutan"
-           Bolivia: "Bolivia"
-           Bonaire: "Bonaire"
-           Bosnia & Herzegovina: "Bosnia & Herzegovina"
-           Botswana: "Botswana"
-           Brazil: "Brazil"
-           British Indian Ocean Ter: "British Indian Ocean Ter"
-           Brunei: "Brunei"
-           Bulgaria: "Bulgaria"
-           Burkina Faso: "Burkina Faso"
-           Burundi: "Burundi"
-           Cambodia: "Cambodia"
-           Cameroon: "Cameroon"
-           Canary Islands: "Canary Islands"
-           Cape Verde: "Cape Verde"
-           Cayman Islands: "Cayman Islands"
-           Central African Republic: "Central African Republic"
-           Chad: "Chad"
-           Channel Islands: "Channel Islands"
-           Chile: "Chile"
-           China: "China"
-           Christmas Island: "Christmas Island"
-           Cocos Island: "Cocos Island"
-           Colombia: "Colombia"
-           Comoros: "Comoros"
-           Congo: "Congo"
-           Cook Islands: "Cook Islands"
-           Costa Rica: "Costa Rica"
-           Cote DIvoire: "Cote DIvoire"
-           Croatia: "Croatia"
-           Cuba: "Cuba"
-           Curaco: "Curacao"
-           Cyprus: "Cyprus"
-           Czech Republic: "Czech Republic"
-           Denmark: "Denmark"
-           Djibouti: "Djibouti"
-           Dominica: "Dominica"
-           Dominican Republic: "Dominican Republic"
-           East Timor: "East Timor"
-           Ecuador: "Ecuador"
-           Egypt: "Egypt"
-           El Salvador: "El Salvador"
-           Equatorial Guinea: "Equatorial Guinea"
-           Eritrea: "Eritrea"
-           Estonia: "Estonia"
-           Ethiopia: "Ethiopia"
-           Falkland Islands: "Falkland Islands"
-           Faroe Islands: "Faroe Islands"
-           Fiji: "Fiji"
-           Finland: "Finland"
-           France: "France"
-           French Guiana: "French Guiana"
-           French Polynesia: "French Polynesia"
-           French Southern Ter: "French Southern Ter"
-           Gabon: "Gabon"
-           Gambia: "Gambia"
-           Georgia: "Georgia"
-           Germany: "Germany"
-           Ghana: "Ghana"
-           Gibraltar: "Gibraltar"
-           Great Britain: "Great Britain"
-           Greece: "Greece"
-           Greenland: "Greenland"
-           Grenada: "Grenada"
-           Guadeloupe: "Guadeloupe"
-           Guam: "Guam"
-           Guatemala: "Guatemala"
-           Guinea: "Guinea"
-           Guyana: "Guyana"
-           Haiti: "Haiti"
-           Hawaii: "Hawaii"
-           Honduras: "Honduras"
-           Hong Kong: "Hong Kong"
-           Hungary: "Hungary"
-           Iceland: "Iceland"
-           Indonesia: "Indonesia"
-           India: "India"
-           Iran: "Iran"
-           Iraq: "Iraq"
-           Ireland: "Ireland"
-           Isle of Man: "Isle of Man"
-           Israel: "Israel"
-           Italy: "Italy"
-           Jamaica: "Jamaica"
-           Japan: "Japan"
-           Jordan: "Jordan"
-           Kazakhstan: "Kazakhstan"
-           Kenya: "Kenya"
-           Kiribati: "Kiribati"
-           Korea North: "Korea North"
-           Korea Sout: "Korea South"
-           Kuwait: "Kuwait"
-           Kyrgyzstan: "Kyrgyzstan"
-           Laos: "Laos"
-           Latvia: "Latvia"
-           Lebanon: "Lebanon"
-           Lesotho: "Lesotho"
-           Liberia: "Liberia"
-           Libya: "Libya"
-           Liechtenstein: "Liechtenstein"
-           Lithuania: "Lithuania"
-           Luxembourg: "Luxembourg"
-           Macau: "Macau"
-           Macedonia: "Macedonia"
-           Madagascar: "Madagascar"
-           Malaysia: "Malaysia"
-           Malawi: "Malawi"
-           Maldives: "Maldives"
-           Mali: "Mali"
-           Malta: "Malta"
-           Marshall Islands: "Marshall Islands"
-           Martinique: "Martinique"
-           Mauritania: "Mauritania"
-           Mauritius: "Mauritius"
-           Mayotte: "Mayotte"
-           Mexico: "Mexico"
-           Midway Islands: "Midway Islands"
-           Moldova: "Moldova"
-           Monaco: "Monaco"
-           Mongolia: "Mongolia"
-           Montserrat: "Montserrat"
-           Morocco: "Morocco"
-           Mozambique: "Mozambique"
-           Myanmar: "Myanmar"
-           Nambia: "Nambia"
-           Nauru: "Nauru"
-           Nepal: "Nepal"
-           Netherland Antilles: "Netherland Antilles"
-           Netherlands: "Netherlands (Holland, Europe)"
-           Nevis: "Nevis"
-           New Caledonia: "New Caledonia"
-           New Zealand: "New Zealand"
-           Nicaragua: "Nicaragua"
-           Niger: "Niger"
-           Nigeria: "Nigeria"
-           Niue: "Niue"
-           Norfolk Island: "Norfolk Island"
-           Norway: "Norway"
-           Oman: "Oman"
-           Pakistan: "Pakistan"
-           Palau Island: "Palau Island"
-           Palestine: "Palestine"
-           Panama: "Panama"
-           Papua New Guinea: "Papua New Guinea"
-           Paraguay: "Paraguay"
-           Peru: "Peru"
-           Phillipines: "Philippines"
-           Pitcairn Island: "Pitcairn Island"
-           Poland: "Poland"
-           Portugal: "Portugal"
-           Puerto Rico: "Puerto Rico"
-           Qatar: "Qatar"
-           Republic of Montenegro: "Republic of Montenegro"
-           Republic of Serbia: "Republic of Serbia"
-           Reunion: "Reunion"
-           Romania: "Romania"
-           Russia: "Russia"
-           Rwanda: "Rwanda"
-           St Barthelemy: "St Barthelemy"
-           St Eustatius: "St Eustatius"
-           St Helena: "St Helena"
-           St Kitts-Nevis: "St Kitts-Nevis"
-           St Lucia: "St Lucia"
-           St Maarten: "St Maarten"
-           St Pierre & Miquelon: "St Pierre & Miquelon"
-           St Vincent & Grenadines: "St Vincent & Grenadines"
-           Saipan: "Saipan"
-           Samoa: "Samoa"
-           Samoa American: "Samoa American"
-           San Marino: "San Marino"
-           Sao Tome & Principe: "Sao Tome & Principe"
-           Saudi Arabia: "Saudi Arabia"
-           Senegal: "Senegal"
-           Seychelles: "Seychelles"
-           Sierra Leone: "Sierra Leone"
-           Singapore: "Singapore"
-           Slovakia: "Slovakia"
-           Slovenia: "Slovenia"
-           Solomon Islands: "Solomon Islands"
-           Somalia: "Somalia"
-           South Africa: "South Africa"
-           Spain: "Spain"
-           Sri Lanka: "Sri Lanka"
-           Sudan: "Sudan"
-           Suriname: "Suriname"
-           Swaziland: "Swaziland"
-           Sweden: "Sweden"
-           Switzerland: "Switzerland"
-           Syria: "Syria"
-           Tahiti: "Tahiti"
-           Taiwan: "Taiwan"
-           Tajikistan: "Tajikistan"
-           Tanzania: "Tanzania"
-           Thailand: "Thailand"
-           Togo: "Togo"
-           Tokelau: "Tokelau"
-           Tonga: "Tonga"
-           Trinidad & Tobago: "Trinidad & Tobago"
-           Tunisia: "Tunisia"
-           Turkey: "Turkey"
-           Turkmenistan: "Turkmenistan"
-           Turks & Caicos Is: "Turks & Caicos Is"
-           Tuvalu: "Tuvalu"
-           Uganda: "Uganda"
-           Ukraine: "Ukraine"
-           United Arab Erimates: "United Arab Emirates"
-           Uraguay: "Uruguay"
-           Uzbekistan: "Uzbekistan"
-           Vanuatu: "Vanuatu"
-           Vatican City State: "Vatican City State"
-           Venezuela: "Venezuela"
-           Vietnam: "Vietnam"
-           Virgin Islands (Brit): "Virgin Islands (Brit)"
-           Virgin Islands (USA): "Virgin Islands (USA)"
-           Wake Island: "Wake Island"
-           Wallis & Futana Is: "Wallis & Futana Is"
-           Yemen: "Yemen"
-           Zambia: "Zambia"
-           Zimbabwe: "Zimbabwe"
-
-        - selector: "#comment_email"
-          name: "comment_email"
-          id: "x-auto-10-input"
-          value:
-          required: false
-          
-        - selector: "#comment_ph_num"
-          name: "comment_ph_num"
-          id: "x-auto-11-input"
-          value:
-          required: false
-        - selector: "#comment_org"
-          name: "comment_org"
-          id: "x-auto-14-input"
-          value:
-          required: false
-        - selector: "#gove_type"
-          name: "gove_type"
-          id: "x-auto-17-input"
-          value:
-          required: false
-          options:
-            - federal
-            - state
-            - local
-            - Tribal
-            - Regional
-            - Foreign
-            - U.S. House of Representatives
-            - U.S. Senate
-        - selector: "#gove_agency"
-          name: "gove_agency"
-          id: "x-auto-18-input"
-          value:
-          required: false
     - click_on:
         - selector: "#comment_confirm_submission"
     - wait:
