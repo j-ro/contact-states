@@ -14,11 +14,11 @@ contact_form:
           value: $ADDRESS_STREET
           required: true
         - name: 00Nt0000000IPWn
-          selector: input[name='00Nt0000000IPWn]
+          selector: input[name='00Nt0000000IPWn']
           value: $ADDRESS_CITY
           required: true
         - name: 00Nt0000000IPXU
-          selector: input[name='00Nt0000000IPXU]
+          selector: input[name='00Nt0000000IPXU']
           value: $ADDRESS_ZIP5
           required: true
         - name: email
