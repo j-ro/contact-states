@@ -4,6 +4,8 @@ contact_form:
   action: ""
   steps:
     - visit: "https://www.regulations.gov/comment?D=HHS-OCR-2019-0007-0001"
+    - wait:
+        - value: 5
     - find:
         - selector: "textarea#x-auto-0-input"
     - fill_in:
@@ -32,4 +34,4 @@ contact_form:
     headers:
       status: 200
     body:
-      contains: Your comment may be viewable on Regulations.gov 
+      contains: Your comment may be viewable on Regulations.gov

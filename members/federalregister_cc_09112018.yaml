@@ -4,6 +4,8 @@ contact_form:
   action: ""
   steps:
     - visit: "https://www.federalregister.gov/documents/2018/09/05/2018-19169/reforming-the-community-reinvestment-act-regulatory-framework#open-comment"
+    - wait:
+        - value: 5
     - find:
         - selector: "#comment_general_comment"
     - fill_in:
