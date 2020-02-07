@@ -5,33 +5,33 @@ contact_form:
   steps:
     - visit: "https://www.regulations.gov/comment?D=CEQ-2019-0003-0001&p=1"
     - find:
-        - selector: "#comment_general_comment"
+        - selector: "#x-auto-0-input"
     - wait:
         - value: 5
     - fill_in:
-        - selector: "#comment_general_comment"
+        - selector: "#x-auto-0-input"
           name: "comment_general_comment"
           id: "x-auto-0-input"
           value: $MESSAGE
           required: true
           options:
             max_length: 2000
-        - selector: "#comment_first_name"
+        - selector: "#x-auto-1-input"
           name: "comment_first_name"
           id: "x-auto-1-input"
           value: $NAME_FIRST
           required: false
-        - selector: "#comment_last_name"
+        - selector: "#x-auto-2-input"
           name: "comment_last_name"
           id: "x-auto-2-input"
           value: $NAME_LAST
           required: false
-        - selector: "#comment_city_address"
+        - selector: "#x-auto-5-input"
           name: "comment_city_address"
           id: "x-auto-5-input"
           value: $ADDRESS_CITY
         - select:
-            - selector: "#comment_state"
+            - selector: "#x-auto-6-input"
               name: "comment_state"
               id: "x-auto-6-input"
               value: $ADDRESS_STATE_POSTAL_ABBREV
@@ -88,12 +88,12 @@ contact_form:
                 West Virginia: WV
                 Wisconsin: WI
                 Wyoming: WY
-        - selector: "#comment_zip"
+        - selector: "#x-auto-8-input"
           name: "comment_zip"
           id: "x-auto-8-input"
           value: $ADDRESS_ZIP5
           required: false
-        - selector: "#country"
+        - selector: "#x-auto-9-input"
           name: "country"
           id: "x-auto-9-input"
           value: "United States"
@@ -101,7 +101,7 @@ contact_form:
           options:
            United States: "United States"
     - click_on:
-        - selector: "#comment_confirm_submission"
+        - selector: ".GIY1LSJPSC button.primary.button"
     - wait:
         - value: 5
     - javascript:
