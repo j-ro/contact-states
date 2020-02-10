@@ -1,9 +1,9 @@
 bioguide: state_ga_gov_nathan_deal
 contact_form:
   method: POST
-  action: "https://gov.georgia.gov/webform/constituent-services"
+  action: "https://gov.georgia.gov/contact-us/constituent-services"
   steps:
-    - visit: "https://gov.georgia.gov/webform/constituent-services"
+    - visit: "https://gov.georgia.gov/contact-us/constituent-services"
     - fill_in:
         - name: "first_name"
           selector: "#edit-first-name"
@@ -37,7 +37,6 @@ contact_form:
           selector: "#edit-please-provide-a-brief-description-about-your-request-concern"
           value: $MESSAGE
           required: true
-
     - select:
         - name: "please_select_which_agency_your_request_relates_to"
           selector: "#edit-please-select-which-agency-your-request-relates-to"
@@ -66,13 +65,13 @@ contact_form:
             Legal: 20
             Legislature: 21
             Medicaid: 22
+    - javascript:
+        - value: "jQuery('#webform-submission-webform-226-node-226-add-form').off('submit');"
     - click_on:
         - value: Submit
           selector: "input[name='op']"
-    - wait:
-        - value: 5
   success:
     headers:
       status: 200
     body:
-      contains: Thank you for contacting us.
+      contains: Constituent Services
