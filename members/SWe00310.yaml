@@ -101,7 +101,7 @@ contact_form:
     - javascript:
         - value: "document.querySelector('[name*=N61000007jcW7]').value = 'Nebraska'"
     - click_on:
-        - selector: "input[name=submit]"
+        - selector: "#input[name=submit]"
     - find:
         - selector: "a"
           value: "Return Home"
