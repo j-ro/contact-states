@@ -1,95 +1,105 @@
 bioguide: state_il_sldu_47_state_sen_jil_tracy
 contact_form:
   method: post
-  action: "http://senatorjiltracy.com/Contact"
+  action: "https://iqconnect.lmhostediq.com/iqextranet/EForm.aspx?__cid=FSL_IL_SS_D47&__fid=100001"
   steps:
-    - visit: "http://senatorjiltracy.com/Contact"
+    - visit: "https://iqconnect.lmhostediq.com/iqextranet/EForm.aspx?__cid=FSL_IL_SS_D47&__fid=100001"
     - fill_in:
-        - name: "ctl00$Content$ctl00$txtFirstName"
-          selector: "#Content_ctl00_txtFirstName"
+        - name: "qi_2_first_name"
+          selector: "#qi_2_first_name"
           value: $NAME_FIRST
           required: true
-        - name: "ctl00$Content$ctl00$txtLastName"
-          selector: "#Content_ctl00_txtLastName"
+        - name: "qi_2_last_name"
+          selector: "#qi_2_last_name"
           value: $NAME_LAST
           required: true
-        - name: "ctl00$Content$ctl00$txtAddr1"
-          selector: "#Content_ctl00_txtAddr1"
+        - name: "qi_2_addr_1"
+          selector: "#qi_2_addr_1"
           value: $ADDRESS_STREET
           required: true
-        - name: "ctl00$Content$ctl00$txtCity"
-          selector: "#Content_ctl00_txtCity"
+        - name: "qi_2_city"
+          selector: "#qi_2_city"
           value: $ADDRESS_CITY
           required: true
-        - name: "ctl00$Content$ctl00$txtZip"
-          selector: "#Content_ctl00_txtZip"
+        - name: "qi_2_zip"
+          selector: "#qi_2_zip"
           value: $ADDRESS_ZIP5
           required: true
-        - name: "ctl00$Content$ctl00$txtEmail"
-          selector: "#Content_ctl00_txtEmail"
+        - name: "qi_2_email"
+          selector: "#qi_2_email"
           value: $EMAIL
           required: true
-        - name: "ctl00$Content$ctl00$txtComment"
-          selector: "#Content_ctl00_txtComment"
+        - name: "qi_6"
+          selector: "#qi_6"
           value: $MESSAGE
           required: true
     - select:
-        - name: "ctl00$Content$ctl00$ddlState"
-          selector: "#Content_ctl00_ddlState"
+        - name: "qi_2_state"
+          selector: "#qi_2_state"
           value: $ADDRESS_STATE_FULL
           required: true
           options:
-            - Alabama
-            - Alaska
-            - Arizona
-            - Arkansas
-            - California
-            - Colorado
-            - Connecticut
-            - Delaware
-            - District of Columbia
-            - Florida
-            - Georgia
-            - Hawaii
-            - Idaho
-            - Illinois
-            - Indiana
-            - Iowa
-            - Kansas
-            - Kentucky
-            - Louisiana
-            - Maine
-            - Montana
-            - Nebraska
-            - Nevada
-            - New Hampshire
-            - New Jersey
-            - New Mexico
-            - New York
-            - North Carolina
-            - North Dakota
-            - Ohio
-            - Oklahoma
-            - Oregon
-            - Maryland
-            - Massachusetts
-            - Michigan
-            - Minnesota
-            - Mississippi
-            - Missouri
-            - Pennsylvania
-            - Rhode Island
-            - South Carolina
-            - South Dakota
-            - Tennessee
-            - Texas
-            - Utah
-            - Vermont
-            - Virginia
-            - Washington
-            - West Virginia
-            - Wisconsin
-            - Wyoming
+            Alabama: 0_AL
+            Alaska: 1_AK
+            America Samoa: 2_AS
+            Arizona: 3_AZ
+            Arkansas: 4_AR
+            California: 5_CA
+            Colorado: 6_CO
+            Connecticut: 7_CT
+            D.C.: 8_D.C.
+            Delaware: 10_DE
+            Federated States of Micronesia: 11_FM
+            Florida: 12_FL
+            Foreign Correspondence: 13_FC
+            Georgia: 14_GA
+            Guam: 15_GU
+            Hawaii: 16_HI
+            Idaho: 17_ID
+            Illinois: 18_IL
+            Indiana: 19_IN
+            Iowa: 20_IA
+            Kansas: 21_KS
+            Kentucky: 22_KY
+            Louisiana: 23_LA
+            Maine: 24_ME
+            Marshall Islands: 25_MH
+            Maryland: 26_MD
+            Massachusetts: 27_MA
+            Michigan: 28_MI
+            Minnesota: 29_MN
+            Mississippi: 30_MS
+            Missouri: 31_MO
+            Montana: 32_MT
+            Nebraska: 33_NE
+            Nevada: 34_NV
+            New Hampshire: 35_NH
+            New Jersey: 36_NJ
+            New Mexico: 37_NM
+            New York: 38_NY
+            North Carolina: 39_NC
+            North Dakota: 40_ND
+            Northern Mariana Islands: 41_MP
+            Ohio: 42_OH
+            Oklahoma: 43_OK
+            Oregon: 44_OR
+            Palau: 45_PW
+            Pennsylvania: 46_PA
+            Puerto Rico: 47_PR
+            Rhode Island: 48_RI
+            South Carolina: 49_SC
+            South Dakota: 50_SD
+            Tennessee: 51_TN
+            Texas: 42_TX
+            Trust Territory: 53_TT
+            Utah: 54_UT
+            Vermont: 55_VT
+            Virgin Islands: 56_VI
+            Virginia: 57_VA
+            Washington: 58_WA
+            West Virginia: 59_WV
+            Wisconsin: 60_WI
+            Wyoming: 61_WY
         - name: "ctl00$Content$ctl00$ddlSubject"
           selector: "#Content_ctl00_ddlSubject"
           value: $TOPIC
@@ -117,26 +127,14 @@ contact_form:
             - Veterans &amp; Military Affairs
             - Voting
             - Other Issues
-        - name: "ctl00$Content$ctl00$ddlPrefix"
-          selector: "#Content_ctl00_ddlPrefix"
-          value: $PREFIX
+        - name: "qi_4"
+          selector: "#qi_4"
+          value: "0_No Position"
           required: true
-          options:
-            - Mr.
-            - Mrs.
-            - Ms.
-        - name: "ctl00$Content$ctl00$ddlPosition"
-          selector: "#Content_ctl00_ddlPosition"
-          value: "None"
-          required: true
-          options:
-            - None
     - recaptcha:
         - value: true
     - click_on:
-        - selector: ".btn-primary"
-    - find:
-        - selector: "#Content_ctl00_Alerts_rptAdminAlerts_pnlAlert_0"
+        - selector: "#btn_submit"
   success:
     headers:
       status: 200
