@@ -47,7 +47,7 @@ contact_form:
         - selector: "#qi_5"
     - choose:
         - name: qi_5
-          selector: "#qi_5"
+          selector: "#qi_5_0"
           required: true
     - javascript:
       - value: document.querySelector("#g-recaptcha-response").style.display = "block";
