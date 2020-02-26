@@ -41,14 +41,14 @@ contact_form:
           selector: "#qi_3"
           value: $MESSAGE
           required: true
-    - find:
+    - select:
         - selector: "#qi_1_state"
-    - find:
-        - selector: "#qi_5"
-    - choose:
-        - name: qi_5
-          selector: "#qi_5_0"
-          required: true
+          value: "50_SD"
+          name: "qi_1_state"
+          options:
+            "South Dakota": 50_SD
+    - click_on:
+        - selector: "#qi_5_0"
     - javascript:
       - value: document.querySelector("#g-recaptcha-response").style.display = "block";
     - recaptcha:
