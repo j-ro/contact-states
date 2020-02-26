@@ -50,7 +50,7 @@ contact_form:
             South Dakota: 50_SD
     - click_on:
         - value: 0_Response Not Required - Web Form ID#2100060
-          selector: "qi_5_0"
+          selector: "#qi_5_0"
     - javascript:
       - value: document.querySelector("#g-recaptcha-response").style.display = "block";
     - recaptcha:
