@@ -44,10 +44,10 @@ contact_form:
     - find:
         - selector: "#qi_1_state"
     - find:
-        - selector: "#qi_5_0"
+        - selector: "#qi_5"
     - choose:
         - name: qi_5
-          selector: "#qi_5_0"
+          selector: "#qi_5"
           required: true
     - javascript:
       - value: document.querySelector("#g-recaptcha-response").style.display = "block";
