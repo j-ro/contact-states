@@ -43,7 +43,7 @@ contact_form:
           required: true
     - choose:
         - name: qi_1_state
-          selector: "#qi_1_state"
+          selector: select[type="qi_1_state"]
           value: $ADDRESS_STATE_FULL
           required: true
           options:
