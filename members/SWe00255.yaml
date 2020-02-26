@@ -46,8 +46,6 @@ contact_form:
           selector: "#qi_1_state"
           value: 50_SD
           required: true
-          options:
-            South Dakota: 50_SD
     - find:
         - selector: "#qi_5_0"
           value: "0_Response Not Required - Web Form ID#2100060"
