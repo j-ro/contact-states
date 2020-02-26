@@ -45,11 +45,9 @@ contact_form:
         - selector: "#qi_1_state"
     - find:
         - selector: "#qi_5_0"
-          value: "0_Response Not Required - Web Form ID#2100060"
     - choose:
         - name: qi_5
           selector: "#qi_5_0"
-          value: 0_Response Not Required - Web Form ID#2100060
           required: true
     - javascript:
       - value: document.querySelector("#g-recaptcha-response").style.display = "block";
