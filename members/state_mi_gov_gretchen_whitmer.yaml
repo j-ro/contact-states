@@ -80,10 +80,6 @@ contact_form:
             "* Taxation": e32c1bd1-7431-e111-b4af-00219b8d8c66
             "Repeal the Pension Tax": 816c675e-0912-e911-80d0-00155dd80f09
             "Roads and Infrastructure": c56ea783-2b49-e111-bd20-00219b8d8c66
-    - check:
-        - name: "ctl00$Content$chkBxReply"
-          selector: "#Content_chkBxReply"
-          value: ctl00$Content$chkBxReply
     - javascript:
         - value: "document.querySelector('textarea[name=g-recaptcha-response]').remove();"
     - javascript:
