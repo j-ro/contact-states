@@ -7,10 +7,6 @@ contact_form:
     - wait:
         - value: 5
     - fill_in:
-        - name: "ctl00$Content$OpinionPrefix"
-          selector: "#Content_OpinionPrefix"
-          value: $NAME_PREFIX
-          required: true
         - name: "ctl00$Content$OpinionFirstName"
           selector: "#Content_OpinionFirstName"
           value: $NAME_FIRST
