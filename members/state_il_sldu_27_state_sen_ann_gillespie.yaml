@@ -70,6 +70,11 @@ contact_form:
             - Veterans
     - javascript:
       - value: "document.querySelector('#g-recaptcha-response').style.display = 'block';"
+    - fill_in:
+        - name: "form[blah]"
+          selector: "#rt-mainbody #blah"
+          value: $BLAH
+          required: true
     - recaptcha:
         - value: true
     - click_on:
