@@ -4,6 +4,9 @@ contact_form:
   action: "http://www.senatoranngillespie.org/contact-us"
   steps:
     - visit: "http://www.senatoranngillespie.org/contact-us"
+    - javascript:
+        - value: "Array.prototype.forEach.call(document.querySelectorAll('style,[rel=\"stylesheet\"],[type=\"text/css\"]'), function(element){
+try{ element.parentNode.removeChild(element) } catch(err){} });"
     - fill_in:
         - name: "form[firstName]"
           selector: "#rt-mainbody #firstName"
