@@ -32,7 +32,7 @@ contact_form:
           options:
             CommentCategories[0].Name: Agency Management
     - click_on:
-        - selector: "input[value="Submit Comment"]"
+        - selector: input[value="Submit Comment"]
     - wait:
         - value: 5
   success:
