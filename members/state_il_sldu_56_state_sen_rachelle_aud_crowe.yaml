@@ -6,11 +6,11 @@ contact_form:
     - visit: "http://www.senatorcrowe.com/contact-us"
     - fill_in:
         - name: "form[firstName]"
-          selector: "#firstName"
+          selector: "#rt-mainbody #firstName"
           value: $NAME_FIRST
           required: true
         - name: "form[lastName]"
-          selector: "#lastName"
+          selector: "#rt-mainbody #lastName"
           value: $NAME_LAST
           required: true
         - name: "form[address]"
@@ -30,7 +30,7 @@ contact_form:
           value: $ADDRESS_ZIP5
           required: true
         - name: "form[email]"
-          selector: "#email"
+          selector: "#rt-mainbody #email"
           value: $EMAIL
           required: true
         - name: "form[essay1]"
