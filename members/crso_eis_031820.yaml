@@ -1,0 +1,42 @@
+bioguide: crso_eis_031820
+contact_form:
+  method: POST
+  action: ""
+  steps:
+    - visit: "https://comments.crso.info/"
+    - find:
+        - selector: "#CommentBody"
+    - wait:
+        - value: 5
+    - fill_in:
+        - selector: "#CommentBody"
+          name: "CommentBody"
+          value: $MESSAGE
+          required: true
+        - selector: "#CommenterName"
+          name: "CommenterName"
+          value: $NAME_FULL
+          required: true
+        - selector: "#CommenterCity"
+          name: "CommenterCity"
+          value: $ADDRESS_CITY
+          required: true
+        - selector: "#Email"
+          name: "Email"
+          value: $EMAIL
+          required: true
+    - select:
+        - selector: "#DisplayCategories"
+          value: $TOPIC
+          required: true
+          options:
+            CommentCategories[0].Name: Agency Management
+    - click_on:
+        - selector: "input[value="Submit Comment"]"
+    - wait:
+        - value: 5
+  success:
+    headers:
+      status: 200
+    body:
+      contains: Your confirmation number is
