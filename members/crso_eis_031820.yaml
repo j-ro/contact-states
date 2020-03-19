@@ -25,38 +25,8 @@ contact_form:
           name: "Email"
           value: $EMAIL
           required: true
-    - select:
-        - selector: "#DisplayCategories"
-          value: $TOPIC
-          required: true
-          options:
-            - Agency Management
-            - Air Quality
-            - Alternatives
-            Climate Change: CommentCategories[3].Name
-            Commitment of Resources: CommentCategories[4].Name
-            Cost: CommentCategories[5].Name
-            Cultural Resources: CommentCategories[6].Name
-            Cummulative Effects: CommentCategories[7].Name
-            Dams: CommentCategories[8].Name
-            EIS/NEPA: CommentCategories[9].Name
-            Environmental Justice: CommentCategories[10].Name
-            Fish: CommentCategories[11].Name
-            Flooding: CommentCategories[12].Name
-            Invertebrates (insects, mussels): CommentCategories[13].Name
-            Navigation: CommentCategories[14].Name
-            Noise: CommentCategories[15].Name
-            Other: CommentCategories[16].Name
-            Recreation: CommentCategories[17].Name
-            Sediment Transport: CommentCategories[18].Name
-            Vegetation (shorelines, aquatic): CommentCategories[19].Name
-            Visual: CommentCategories[20].Name
-            Water Flow and Timing: CommentCategories[21].Name
-            Water Management: CommentCategories[22].Name
-            Water Quality: CommentCategories[23].Name
-            Water Supply: CommentCategories[24].Name
-            Wetlands: CommentCategories[25].Name
-            Wildlife: CommentCategories[26].Name
+    - click_on:
+        - selector: "#CommentCategories_26__Selected"
     - click_on:
         - selector: input[value="Submit Comment"]
     - wait:
