@@ -30,9 +30,9 @@ contact_form:
           value: $TOPIC
           required: true
           options:
-            Agency Management: CommentCategories_0__Name
-            Air Quality: CommentCategories_1__Name
-            Alternatives: CommentCategories_2__Name
+            - Agency Management
+            - Air Quality
+            - Alternatives
             Climate Change: CommentCategories[3].Name
             Commitment of Resources: CommentCategories[4].Name
             Cost: CommentCategories[5].Name
