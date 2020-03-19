@@ -26,8 +26,7 @@ contact_form:
           value: $EMAIL
           required: true
     - click_on:
-        - selector: input[value="Wildlife (birds, whales, sea lions)"]
-    - click_on:
+        - selector: "#CommentCategories_26__Name"
         - selector: input[value="Submit Comment"]
     - wait:
         - value: 5
