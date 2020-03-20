@@ -29,8 +29,8 @@ contact_form:
         - value:  "document.getElementById('CommentCategories_26__Selected').click();"
     - wait:
         - value: 5
-    - click_on:
-        - value: "input[form='commentForm']"
+    - javascript:
+        - value: "document.getElementById('input[value=\'Submit Comment\']').click();"
   success:
     headers:
       status: 200
