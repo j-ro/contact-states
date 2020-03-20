@@ -25,7 +25,7 @@ contact_form:
           name: "Email"
           value: $EMAIL
           required: true
-    - javascript
+    - javascript:
         - value:  "document.getElementById('CommentCategories_26__Selected').click();"
     - wait:
         - value: 5
