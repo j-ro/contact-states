@@ -30,8 +30,6 @@ try{ element.parentNode.removeChild(element) } catch(err){} });"
         - value: true
     - wait:
         - value: 5
-    - click_on:
-        - selector: "input[value='Submit Comment']"
   success:
     headers:
       status: 200
