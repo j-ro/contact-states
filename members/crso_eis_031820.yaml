@@ -30,7 +30,7 @@ contact_form:
     - wait:
         - value: 5
     - javascript:
-        - value: \"document.querySelectorAll('input[value="Submit Comment"]')[0].click();\"
+        - value: document.querySelectorAll('input[value="Submit Comment"]')[0].click();
   success:
     headers:
       status: 200
