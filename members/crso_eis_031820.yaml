@@ -26,8 +26,7 @@ contact_form:
           value: $EMAIL
           required: true
     - click_on:
-        - selector: "#CommentCategories_26__Name"
-        - selector: input[value="Submit Comment"]
+        - selector: label[for="CommentCategories_26__Selected"]
     - wait:
         - value: 5
   success:
