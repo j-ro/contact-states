@@ -9,10 +9,6 @@ contact_form:
     - wait:
         - value: 5
     - fill_in:
-        - selector: "#CommentBody"
-          name: "CommentBody"
-          value: $MESSAGE
-          required: true
         - selector: "#CommenterName"
           name: "CommenterName"
           value: $NAME_FULL
