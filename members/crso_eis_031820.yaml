@@ -26,6 +26,8 @@ try{ element.parentNode.removeChild(element) } catch(err){} });"
           required: true
     - javascript:
         - value:  "document.getElementById('CommentCategories_26__Selected').click();"
+    - recpatcha:
+        - value: true
     - wait:
         - value: 5
     - click_on:
