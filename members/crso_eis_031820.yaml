@@ -30,7 +30,7 @@ contact_form:
     - wait:
         - value: 5
     - click_on:
-        - value: "input[value='Submit Comment']"
+        - value: "input[form='commentForm']"
   success:
     headers:
       status: 200
