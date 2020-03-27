@@ -5,6 +5,10 @@ contact_form:
   steps:
     - visit: "https://iqconnect.lmhostediq.com/iqextranet/EForm.aspx?__cid=FSL_MEGOV&__fid=100008"
     - fill_in:
+        - name: "qi_1_prefix"
+          selector: "#qi_1_prefix"
+          value: $NAME_PREFIX
+          required: true
         - name: "qi_1_first_name"
           selector: "#qi_1_first_name"
           value: $NAME_FIRST
