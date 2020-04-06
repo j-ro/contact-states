@@ -103,6 +103,8 @@ contact_form:
             Veterans: 59_VET
             Welfare/Food Stamps: 61_WEL
             Worker's Compensation: 62_WORKC
+    - javascript:
+      - value: document.querySelector("#g-recaptcha-response").style.display = "block";
     - recaptcha:
         - value: true
     - click_on:
