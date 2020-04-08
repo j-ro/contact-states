@@ -4,39 +4,6 @@ contact_form:
   action: "https://gov.georgia.gov/contact-us/constituent-services"
   steps:
     - visit: "https://gov.georgia.gov/contact-us/constituent-services"
-    - fill_in:
-        - name: "first_name"
-          selector: "#edit-first-name"
-          value: $NAME_FIRST
-          required: true
-        - name: "last_name"
-          selector: "#edit-last-name"
-          value: $NAME_LAST
-          required: true
-        - name: "address_line_1"
-          selector: "#edit-address-line-1"
-          value: $ADDRESS_STREET
-          required: true
-        - name: "city"
-          selector: "#edit-city"
-          value: $ADDRESS_CITY
-          required: true
-        - name: "zip_code"
-          selector: "#edit-zip-code"
-          value: $ADDRESS_ZIP5
-          required: true
-        - name: "phone_number"
-          selector: "#edit-phone-number"
-          value: $PHONE
-          required: true
-        - name: "email"
-          selector: "#edit-email"
-          value: $EMAIL
-          required: true
-        - name: "please_provide_a_brief_description_about_your_request___concern"
-          selector: "#edit-please-provide-a-brief-description-about-your-request-concern"
-          value: $MESSAGE
-          required: true
     - select:
         - name: "please_select_which_agency_your_request_relates_to"
           selector: "#edit-please-select-which-agency-your-request-relates-to"
@@ -65,13 +32,48 @@ contact_form:
             Legal: 20
             Legislature: 21
             Medicaid: 22
-    - javascript:
-        - value: "jQuery('#webform-submission-webform-226-node-226-add-form').off('submit');"
+    - fill_in:
+        - name: "please_provide_a_brief_description_about_your_request___concern"
+          selector: "#id="edit-please-provide-a-brief-description-about-your-request-concern""
+          value: $MESSAGE
+          required: true
     - click_on:
-        - value: Submit
-          selector: "input[name='op']"
+        - selector: "#edit-actions-wizard-next"
+    - fill_in:
+        - name: "first_name"
+          selector: "#edit-first-name"
+          value: $NAME_FIRST
+          required: true
+        - name: "last_name"
+          selector: "#edit-last-name"
+          value: $NAME_LAST
+          required: true
+        - name: "address_line_1"
+          selector: "#edit-address-line-1"
+          value: $ADDRESS_STREET
+          required: true
+        - name: "city"
+          selector: "#edit-city"
+          value: $ADDRESS_CITY
+          required: true
+        - name: "zip_code"
+          selector: "#edit-zip-code"
+          value: $ADDRESS_ZIP5
+          required: true
+        - name: "cell_phone"
+          selector: "#edit-cell-phone"
+          value: $PHONE
+          required: true
+        - name: "email"
+          selector: "#edit-email"
+          value: $EMAIL
+          required: true
+    - click_on:
+        - selector: "#edit-writing-on-behalf-who-radios-no"
+    - click_on:
+        - selector: "#edit-actions-01-submit"
   success:
     headers:
       status: 200
     body:
-      contains: Constituent Services
+      contains: Thank you
