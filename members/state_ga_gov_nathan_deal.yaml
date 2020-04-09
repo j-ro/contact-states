@@ -4,6 +4,8 @@ contact_form:
   action: "https://gov.georgia.gov/contact-us/constituent-services"
   steps:
     - visit: "https://gov.georgia.gov/contact-us/constituent-services"
+    - find:
+        - selector: "#edit-please-select-which-agency-your-request-relates-to"
     - select:
         - name: "please_select_which_agency_your_request_relates_to"
           selector: "#edit-please-select-which-agency-your-request-relates-to"
@@ -33,8 +35,8 @@ contact_form:
             Legislature: 21
             Medicaid: 22
     - fill_in:
-        - name: "please_provide_a_brief_description_about_your_request___concern"
-          selector: "#id="edit-please-provide-a-brief-description-about-your-request-concern""
+        - name: "please_select_which_agency_your_request_relates_to"
+          selector: "#edit-please-provide-a-brief-description-about-your-request-concern"
           value: $MESSAGE
           required: true
     - click_on:
