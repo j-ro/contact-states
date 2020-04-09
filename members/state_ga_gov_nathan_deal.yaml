@@ -71,7 +71,7 @@ contact_form:
           value: $EMAIL
           required: true
     - javascript:
-        - value: "document.getElementById("edit-writing-on-behalf-who-radios-no").click();"
+        - value: "document.getElementById('edit-writing-on-behalf-who-radios-no').click();"
     - click_on:
         - selector: "#edit-actions-01-submit"
   success:
