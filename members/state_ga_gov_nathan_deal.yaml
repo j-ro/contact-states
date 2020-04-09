@@ -71,7 +71,7 @@ contact_form:
           value: $EMAIL
           required: true
     - click_on:
-        - selector: "#edit-writing-on-behalf-who-radios-no"
+        - selector: "input[value='no']"
     - click_on:
         - selector: "#edit-actions-01-submit"
   success:
