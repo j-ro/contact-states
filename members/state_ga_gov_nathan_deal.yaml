@@ -70,8 +70,8 @@ contact_form:
           selector: "#edit-email"
           value: $EMAIL
           required: true
-    - click_on:
-        - selector: "input[value='no']"
+    - javascript:
+        - value: "document.getElementById("edit-writing-on-behalf-who-radios-no").click();"
     - click_on:
         - selector: "#edit-actions-01-submit"
   success:
