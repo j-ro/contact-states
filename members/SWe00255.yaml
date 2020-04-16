@@ -56,4 +56,4 @@ contact_form:
     headers:
       status: 200
     body:
-      contains: "Thank you for contacting the Governor, your e-mail submission has been successful."
+      contains: "Recent News"
