@@ -49,10 +49,6 @@ contact_form:
             "South Dakota": 50_SD
     - click_on:
         - selector: "#qi_5 label.radiocheck[for=qi_5_0]"
-    - javascript:
-      - value: document.querySelector("#g-recaptcha-response").style.display = "block";
-    - recaptcha:
-        - value: true
     - click_on:
         - value: Submit
           selector: "#btn_submit"
