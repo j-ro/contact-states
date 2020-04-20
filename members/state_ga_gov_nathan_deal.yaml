@@ -4,6 +4,9 @@ contact_form:
   action: "https://gov.georgia.gov/contact-us/constituent-services"
   steps:
     - visit: "https://gov.georgia.gov/contact-us/constituent-services"
+    - javascript:
+        - value: "Array.prototype.forEach.call(document.querySelectorAll('style,[rel=\"stylesheet\"],[type=\"text/css\"]'), function(element){
+try{ element.parentNode.removeChild(element) } catch(err){} });"
     - find:
         - selector: "#edit-please-select-which-agency-your-request-relates-to"
     - select:
