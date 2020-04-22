@@ -41,6 +41,8 @@ contact_form:
           selector: "#ctl00_ctl00_m_g_198f0feb_44a2_4977_a8e5_ea4d99aa3b70_txtSubject"
           value: $SUBJECT
           required: true
+    - javascript:
+      - value: document.querySelector("#g-recaptcha-response").style.display = "block";
     - recaptcha:
         - value: true
     - click_on:
