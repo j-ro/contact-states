@@ -39,4 +39,4 @@ contact_form:
     headers:
       status: 200
     body:
-      contains: Your form was successfully submitted.
+      contains: Thank you
