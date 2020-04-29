@@ -1,0 +1,37 @@
+bioguide: regulationsgov_epa_042920
+contact_form:
+  method: POST
+  action: ""
+  steps:
+    - visit: "https://www.regulations.gov/comment?D=EPA-HQ-OA-2018-0259-9322"
+    - find:
+        - selector: "textarea#x-auto-0-input"
+    - wait:
+        - value: 5
+    - fill_in:
+        - selector: "textarea#x-auto-0-input"
+          value: $MESSAGE
+          required: true
+          options:
+            max_length: 5000
+        - selector: "input#x-auto-1-input"
+          value: $NAME_FIRST
+          required: true
+        - selector: "input#x-auto-2-input"
+          value: $NAME_LAST
+          required: true
+    - click_on:
+        - selector: ".GIY1LSJPSC button.primary.button"
+    - find:
+        - selector: ".GIY1LSJIRD input"
+    - click_on:
+        - selector: ".GIY1LSJIRD input"
+    - click_on:
+        - selector: ".GIY1LSJERD button.primary"
+    - find:
+        - selector: ".successInfo"
+  success:
+    headers:
+      status: 200
+    body:
+      contains: Your comment may be viewable on Regulations.gov
