@@ -14,12 +14,6 @@ contact_form:
           required: true
           options:
             max_length: 5000
-        - selector: "input#x-auto-1-input"
-          value: $NAME_FIRST
-          required: true
-        - selector: "input#x-auto-2-input"
-          value: $NAME_LAST
-          required: true
     - click_on:
         - selector: ".GIY1LSJPSC button.primary.button"
     - find:
