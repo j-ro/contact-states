@@ -44,10 +44,8 @@ contact_form:
           required: true
     - click_on:
          - selector: "#edit-minister-contact-treasurer"
-    - click_on:
-        - selector: "#edit-submit"
-    - wait:
-        - value: 6
+    - javascript:
+        - value: "document.getElementById('edit-submit').click();"
   success:
     headers:
       status: 200
