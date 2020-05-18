@@ -1,0 +1,55 @@
+bioguide: au_treasury_051820
+contact_form:
+  method: POST
+  action: ""
+  steps:
+    - visit: "https://treasury.gov.au/the-department/contact-us/ministerial-correspondence"
+    - fill_in:
+        - name: "first_name"
+          selector: "#edit-first-name"
+          value: $NAME_FIRST
+          required: true
+        - name: "last_name"
+          selector: "#edit-last-name"
+          value: $NAME_LAST
+          required: true
+        - name: "email"
+          selector: "#edit-email"
+          value: $EMAIL
+          required: true
+        - name: "address[address]"
+          selector: "#edit-address-address"
+          value: $ADDRESS_STREET
+          required: true
+        - name: "address[city]"
+          selector: "#edit-address-city"
+          value: $ADDRESS_CITY
+          required: true
+        - name: "address[state_province]"
+          selector: "#edit-address-state-province"
+          value: $ADDRESS_STATE_FULL
+          required: true
+        - name: "address[postal_code]"
+          selector: "#edit-address-postal-code"
+          value: $ADDRESS_ZIP5
+          required: true
+        - name: "minister_message"
+          selector: "#edit-minister-message"
+          value: $MESSAGE
+          required: true
+    - select:
+        - name: "address[country]"
+          selector: "#edit-address-country"
+          value: Australia
+          required: true
+        - name: "minister_contact"
+          selector: "#edit-minister-contact-treasurer"
+          value: Treasurer
+          required: true
+    - click_on:
+        - selector: "#edit-submit"
+  success:
+    headers:
+      status: 200
+    body:
+      contains: Your correspondence has been submitted.
