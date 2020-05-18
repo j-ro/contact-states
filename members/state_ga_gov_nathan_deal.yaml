@@ -15,28 +15,28 @@ try{ element.parentNode.removeChild(element) } catch(err){} });"
           value: $TOPIC
           required: true
           options:
-            Child Protective Services: 1
-            Child Support: 2
-            Consumer Protection: 3
-            Corrections (Prison System): 4
-            Dept. of Agriculture: 5
-            Dept. of Community Affairs/Housing: 6
-            Dept. of Community Health: 7
-            Dept. of Driver Services: 8
-            Dept. of Natural Resources: 9
-            Dept. of Labor: 10
-            Dept. of Revnue: 11
-            Dept. of Public Safety: 12
-            Dept. of Veterans Services: 13
-            Education: 14
-            Environment: 15
-            Federal: 16
-            Food Stamps: 17
-            Foster Care: 18
-            Healthcare: 19
-            Legal: 20
-            Legislature: 21
-            Medicaid: 22
+            Child Protective Services: CPS
+            Child Support: CHILD SUPPORT
+            Consumer Protection: CONSUMER PROTECTION
+            Corrections (Prison System): DEPT OF CORRECTIONS
+            Dept. of Agriculture: AGRICULTURE
+            Dept. of Community Affairs/Housing: DEPT COMMUNITY AFFAI
+            Dept. of Community Health: DCH
+            Dept. of Driver Services: DRICERSLICENSE
+            Dept. of Natural Resources: DNR
+            Dept. of Labor: DEPT OF LABOR
+            Dept. of Revnue: DEPT OF REVENUE
+            Dept. of Public Safety: DEPT PUBLIC SAFETY
+            Dept. of Veterans Services: VETERANS AFFAIRS
+            Education: EDUCATION GENERAL
+            Environment: EPD
+            Federal: FEDERAL ISSUE
+            Food Stamps: FOOD STAMPS
+            Foster Care: FOSTER CARE
+            Healthcare: HEALTHCARE
+            Legal: LEGAL MATTER
+            Legislature: LEGISLATION-STATE
+            Medicaid: MEDICAID
     - fill_in:
         - name: "please_select_which_agency_your_request_relates_to"
           selector: "#edit-please-provide-a-brief-description-about-your-request-concern"
