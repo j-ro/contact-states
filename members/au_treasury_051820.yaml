@@ -46,6 +46,10 @@ contact_form:
          - selector: "#edit-minister-contact-treasurer"
     - click_on:
         - selector: "#edit-submit"
+    - wait:
+        - value: 10
+    - click_on:
+        - selector: "#edit-submit"
   success:
     headers:
       status: 200
