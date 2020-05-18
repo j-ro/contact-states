@@ -42,10 +42,8 @@ contact_form:
           selector: "#edit-address-country"
           value: Australia
           required: true
-        - name: "minister_contact"
-          selector: "#edit-minister-contact-treasurer"
-          value: Treasurer
-          required: true
+    - click_on:
+         - selector: "#edit-minister-contact-treasurer"
     - click_on:
         - selector: "#edit-submit"
   success:
