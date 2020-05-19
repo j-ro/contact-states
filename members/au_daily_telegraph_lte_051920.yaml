@@ -26,7 +26,7 @@ contact_form:
           value: $PHONE
           required: true
         - name: "control15715717"
-          selector: "input[name='control15715717']"
+          selector: "#id123-control15715717"
           value: $MESSAGE
           required: true
     - select:
