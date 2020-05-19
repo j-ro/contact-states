@@ -31,6 +31,8 @@ contact_form:
           required: true
     - click_on:
          - selector: "#id123-button-send"
+    - wait:
+         - value: 3
   success:
     headers:
       status: 200
