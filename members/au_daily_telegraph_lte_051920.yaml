@@ -7,7 +7,7 @@ contact_form:
     - fill_in:
         - name: "control15715711"
           selector: "#id123-control15715711"
-          value: $FULL_NAME
+          value: $NAME_FULL
           required: true
         - name: "control15715712"
           selector: "#id123-control15715712"
