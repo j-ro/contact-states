@@ -14,7 +14,7 @@ contact_form:
           value: $EMAIL
           required: true
         - name: "control15715713"
-          selector: "input[name='control15715713']"
+          selector: "#id123-control15715713"
           value: $ADDRESS_STREET
           required: true
         - name: "control15715714"
