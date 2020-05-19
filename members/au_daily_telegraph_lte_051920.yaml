@@ -3,7 +3,7 @@ contact_form:
   method: POST
   action: ""
   steps:
-    - visit: "https://www.dailytelegraph.com.au/news/opinion/letter-to-the-editor"
+    - visit: "https://wpcomwidgets.com?width=100%25&height=1500&frameborder=0&style&class&scrolling=no&webkitallowfullscreen&mozallowfullscreen&allowfullscreen&resize=0&replace_attributes=1&name&fallback=%3Cp+class%3D%22protected-embed-fallback%22%3EThis+embed+is+invalid%3C%2Fp%3E&_data=PGlmcmFtZSBzcmM9Imh0dHBzOi8vd3d3LjEyM2NvbnRhY3Rmb3JtLmNvbS9mb3JtLTE2OTUzMzgvRGFpbHktVGVsZWdyYXBoLUxldHRlci1Uby1UaGUtRWRpdG9yIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxNTAwIiBmcmFtZWJvcmRlcj0iMCIgY2xhc3M9IiIgc2Nyb2xsaW5nPSJubyIgYWxsb3dmdWxsc2NyZWVuPSIiIHJlc2l6ZT0iMCIgcmVwbGFjZV9hdHRyaWJ1dGVzPSIxIiBuYW1lPSIiPjwvaWZyYW1lPg%3D%3D%2C441c22d8488cd13d18abc3b50d20e515d9e452d4&_tag=protected-iframe&_hash=c6544a153ed50d58f84fe183d89fa14c"
     - fill_in:
         - name: "control15715711"
           selector: "#id123-control15715711"
