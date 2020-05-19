@@ -29,20 +29,6 @@ contact_form:
           selector: "#id123-control15715717"
           value: $MESSAGE
           required: true
-    - select:
-        - name: "control15715715"
-          selector: "#id123-control15715715"
-          value: $ADDRESS_STATE_POSTAL_ABBREV
-          required: true
-          options:
-            - ACT
-            - NSW
-            - NT
-            - ALD
-            - SA
-            - TAS
-            - VIC
-            - WA
     - click_on:
          - selector: "#id123-button-send"
   success:
