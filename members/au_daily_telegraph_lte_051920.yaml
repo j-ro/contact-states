@@ -1,0 +1,52 @@
+bioguide: au_daily_telegraph_lte_051920
+contact_form:
+  method: POST
+  action: ""
+  steps:
+    - visit: "https://www.dailytelegraph.com.au/news/opinion/letter-to-the-editor"
+    - fill_in:
+        - name: "control15715711"
+          selector: "#id123-control15715711"
+          value: $FULL_NAME
+          required: true
+        - name: "control15715712"
+          selector: "#id123-control15715712"
+          value: $EMAIL
+          required: true
+        - name: "control15715713"
+          selector: "#id123-control15715713"
+          value: $ADDRESS_STREET
+          required: true
+        - name: "control15715714"
+          selector: "#id123-control15715714"
+          value: $ADDRESS_CITY
+          required: true
+        - name: "control15715716"
+          selector: "#id123-control15715716"
+          value: $PHONE
+          required: true
+        - name: "control15715717"
+          selector: "#id123-control15715717"
+          value: $MESSAGE
+          required: true
+    - select:
+        - name: "control15715715"
+          selector: "#id123-control15715715"
+          value: $ADDRESS_STATE_POSTAL_ABBREV
+          required: true
+          options:
+            - ACT
+            - NSW
+            - NT
+            - ALD
+            - SA
+            - TAS
+            - VIC
+            - WA
+    - click_on:
+         - selector: "#id123-button-send"
+  success:
+    headers:
+      status: 200
+    body:
+      contains: Your Letter was sent successfully and will be reviewed soon
