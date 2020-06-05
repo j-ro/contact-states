@@ -8,6 +8,8 @@ contact_form:
         - selector: "#comment_general_comment"
     - wait:
         - value: 5
+    - javascript:
+        - value: "document.getElementById('comment-start-over').click();"
     - fill_in:
         - selector: "#comment_general_comment"
           name: "comment[general_comment]"
