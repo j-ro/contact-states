@@ -10,6 +10,8 @@ contact_form:
         - value: 5
     - javascript:
         - value: "document.getElementById('comment-start-over').click();"
+    - wait: 
+        - value: 3
     - fill_in:
         - selector: "#comment_general_comment"
           name: "comment[general_comment]"
