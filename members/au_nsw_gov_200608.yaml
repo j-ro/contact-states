@@ -45,7 +45,7 @@ contact_form:
             - Dr
             - Prof.
         - selector: "#edit-state"
-          value:
+          value: "NSW"
           required: true
           options:
             New South Wales: NSW
