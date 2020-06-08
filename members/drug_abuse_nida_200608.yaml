@@ -1,0 +1,32 @@
+bioguide: drug_abuse_nida_200608
+contact_form:
+  method: POST
+  action: ""
+  steps:
+    - visit: "https://www.drugabuse.gov/about-nida/contact-nida"
+    - fill_in:
+        - name: "submitted[full_name]"
+          selector: "#edit-submitted-full-name"
+          value: $NAME_FULL
+          required: true
+        - name: "submitted[email_address]"
+          selector: "#edit-submitted-email-address"
+          value: $EMAIL
+          required: true
+        - name: "submitted[subject]"
+          selector: "#edit-submitted-subject"
+          value: $SUBJECT
+          required: true
+        - name: "submitted[question_comment]"
+          selector: "#edit-submitted-question-comment"
+          value: $MESSAGE
+          required: true
+    - recaptcha:
+        - value: true
+    - click_on:
+        - selector: "input[value="Submit"]"
+  success:
+    headers:
+      status: 200
+    body:
+      contains: Thank you, your submission has been received.
