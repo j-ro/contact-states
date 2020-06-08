@@ -24,7 +24,7 @@ contact_form:
     - recaptcha:
         - value: true
     - click_on:
-        - selector: "input[value="Submit"]"
+        - selector: "input[value='Submit']"
   success:
     headers:
       status: 200
