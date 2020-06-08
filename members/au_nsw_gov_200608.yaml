@@ -1,0 +1,89 @@
+bioguide: au_nsw_gov_200608
+contact_form:
+  method: POST
+  action: ""
+  steps:
+    - visit: "https://www.nsw.gov.au/premier-of-nsw/contact-premier"
+    - fill_in:
+        - name: "first_name"
+          selector: "#edit-first-name"
+          value: $NAME_FIRST
+          required: true
+        - name: "last_name"
+          selector: "#edit-last-name"
+          value: $NAME_LAST
+          required: true
+        - name: "street_address_1"
+          selector: "#edit-street-address-1"
+          value: $ADDRESS_STREET
+          required: true
+        - name: "suburb_town"
+          selector: "#edit-suburb-town"
+          value: $ADDRESS_CITY
+          required: true
+        - name: "postcode"
+          selector: "#edit-postcode"
+          value: $ADDRESS_ZIP5
+          required: true
+        - name: "phone"
+          selector: "#edit-phone"
+          value: $PHONE
+          required: true
+        - name: "email"
+          selector: "#edit-email"
+          value: $EMAIL
+          required: true
+    - select:
+        - selector: "#edit-title"
+          value: $NAME_PREFIX
+          required: true
+          options: 
+            - Ms
+            - Miss
+            - Mrs
+            - Mr
+            - Dr
+            - Prof.
+        - selector: "#edit-state"
+          value: $ADDRESS_STATE_POSTAL_ABBREV
+          required: true
+          options:
+            New South Wales: NSW
+            Australian Capital Territory: ACT
+            Northern Territory: NT
+            Queensland: QLD
+            South Australia: SA
+            Tasmania: TAS
+            Victoria: VIC
+            Western Australia: WA
+            N/A - outside of Australia: na
+        - name: "country"
+          selector: "#edit-country"
+          value: "Australia"
+          required: true
+          options: 
+            - Australia
+        - name: "type_of_enquiry"
+          selector: "#edit-type-of-enquiry"
+          value: "message"
+          required: true
+          options:
+            Leave a message: message
+    - fill_in:
+         - name: "subject"
+           selector: "#edit-subject"
+           value: $SUBJECT
+           required: true
+         - name: "message"
+           selector: "#edit-message"
+           value: $MESSAGE
+           required: true  
+    - click_on:
+         - selector: "#edit-submit"
+    - wait:
+         - value: 3
+  success:
+    headers:
+      status: 200
+    body:
+      contains: New submission added to NSW Premier's Contact Form.
