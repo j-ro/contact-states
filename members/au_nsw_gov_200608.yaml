@@ -45,7 +45,7 @@ contact_form:
             - Dr
             - Prof.
         - selector: "#edit-state"
-          value: $ADDRESS_STATE_POSTAL_ABBREV
+          value:
           required: true
           options:
             New South Wales: NSW
