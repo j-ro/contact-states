@@ -1,0 +1,30 @@
+bioguide: federalregister_eeoc_200608
+contact_form:
+  method: POST
+  action: ""
+  steps:
+    - visit: "https://www.federalregister.gov/documents/2020/06/01/2020-11457/official-time-in-federal-sector-cases-before-the-commission#open-comment"
+    - find:
+        - selector: "#comment_general_comment"
+    - wait:
+        - value: 5
+    - fill_in:
+        - selector: "#comment_general_comment"
+          name: "comment[general_comment]"
+          value: $MESSAGE
+          required: true
+          options:
+            max_length: 2000
+    - click_on:
+        - selector: "#comment_confirm_submission"
+    - wait:
+        - value: 5
+    - javascript:
+        - value: "document.querySelector('.commit input').click();"
+    - wait:
+        - value: 5
+  success:
+    headers:
+      status: 200
+    body:
+      contains: Thank you! Your comment has been submitted
