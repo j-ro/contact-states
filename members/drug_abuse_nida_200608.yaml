@@ -5,20 +5,20 @@ contact_form:
   steps:
     - visit: "https://www.drugabuse.gov/about-nida/contact-nida"
     - fill_in:
-        - name: "submitted[full_name]"
-          selector: "#edit-submitted-full-name"
+        - name: "full_name"
+          selector: "#edit-full-name"
           value: $NAME_FULL
           required: true
-        - name: "submitted[email_address]"
-          selector: "#edit-submitted-email-address"
+        - name: "email_address"
+          selector: "#edit-email-address"
           value: $EMAIL
           required: true
-        - name: "submitted[subject]"
-          selector: "#edit-submitted-subject"
+        - name: "subject"
+          selector: "#edit-subject"
           value: $SUBJECT
           required: true
-        - name: "submitted[question_comment]"
-          selector: "#edit-submitted-question-comment"
+        - name: "question_comment"
+          selector: "#edit-question-comment"
           value: $MESSAGE
           required: true
     - javascript:
