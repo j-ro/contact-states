@@ -4,6 +4,8 @@ contact_form:
   action: "http://mn.gov/gov-stat/cgi-bin/TFMail.cgi"
   steps:
     - visit: "https://mn.gov/governor/contact/"
+    - recpatcha:
+        - value: true
     - fill_in:
         - name: PREFIX
           selector: "#prefix"
