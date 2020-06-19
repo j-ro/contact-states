@@ -143,6 +143,8 @@ contact_form:
             Utilities (Gas-Water-Electric): 91_UTILITY
             Veterans Issues: 92_VETERANS
             Worker's Compensation: 93_WORKERSC
+    - javascript:
+        - value: document.querySelector("#g-recaptcha-response").style.display = "block";
     - recaptcha:
         - value: true
     - click_on:
