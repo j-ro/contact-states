@@ -30,7 +30,7 @@ contact_form:
           value: $SUBJECT
           required: true
         - name: Comments
-          selector: "#Comments"
+          selector: "#Comments[name='Comments']"
           value: $MESSAGE
           required: true
     - select:
