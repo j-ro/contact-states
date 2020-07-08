@@ -45,6 +45,8 @@ try{ element.parentNode.removeChild(element) } catch(err){} });"
           max_length: 400
     - click_on:
         - selector: "#edit-actions-wizard-next"
+    - wait:
+        - value: 2
     - javascript:
         - value: "Array.prototype.forEach.call(document.querySelectorAll('style,[rel=\"stylesheet\"],[type=\"text/css\"]'), function(element){
 try{ element.parentNode.removeChild(element) } catch(err){} });"   
