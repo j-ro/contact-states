@@ -46,7 +46,7 @@ try{ element.parentNode.removeChild(element) } catch(err){} });"
     - click_on:
         - selector: "#edit-actions-wizard-next"
     - wait:
-        - value: 4
+        - value: 7
     - javascript:
         - value: "Array.prototype.forEach.call(document.querySelectorAll('style,[rel=\"stylesheet\"],[type=\"text/css\"]'), function(element){
 try{ element.parentNode.removeChild(element) } catch(err){} });"   
