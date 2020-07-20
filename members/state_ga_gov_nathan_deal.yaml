@@ -46,6 +46,8 @@ try{ element.parentNode.removeChild(element) } catch(err){} });"
     - find:
         - selector: "#edit-actions-wizard-next"
     - javascript:
+        - value: document.querySelector('input[name=antibot_key]').value = "RAlFCB-5uK5PI1ZJ4Iip85yxrSFn4ok1Ove2rHCLQx8"
+    - javascript:
         - value: "document.getElementById('edit-actions-wizard-next').click();"          
     - wait:
         - value: 10
