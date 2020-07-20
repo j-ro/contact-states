@@ -47,6 +47,8 @@ try{ element.parentNode.removeChild(element) } catch(err){} });"
         - value: "document.getElementById('#edit-actions-wizard-next').click();"          
     - wait:
         - value: 10
+    - find:
+        - selector: "#edit-first-name"
     - javascript:
         - value: "Array.prototype.forEach.call(document.querySelectorAll('style,[rel=\"stylesheet\"],[type=\"text/css\"]'), function(element){
 try{ element.parentNode.removeChild(element) } catch(err){} });"   
