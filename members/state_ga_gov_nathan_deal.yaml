@@ -43,6 +43,8 @@ try{ element.parentNode.removeChild(element) } catch(err){} });"
           value: $MESSAGE
           required: true
           max_length: 400
+    - find:
+        - selector: "#edit-actions-wizard-next"
     - javascript:
         - value: "document.getElementById('#edit-actions-wizard-next').click();"          
     - wait:
