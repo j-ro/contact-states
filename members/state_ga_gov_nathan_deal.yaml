@@ -46,7 +46,7 @@ try{ element.parentNode.removeChild(element) } catch(err){} });"
     - find:
         - selector: "#edit-actions-wizard-next"
     - javascript:
-        - value: document.querySelector('input[name=antibot_key]').value = "RAlFCB-5uK5PI1ZJ4Iip85yxrSFn4ok1Ove2rHCLQx8"
+        - value: document.querySelector('input[name=antibot_key]').value = JSON.parse(document.querySelector('[data-drupal-selector=drupal-settings-json]').innerHTML).antibot.forms['webform-submission-constituent-services-v2-node-226-add-form'].key
     - javascript:
         - value: "document.getElementById('edit-actions-wizard-next').click();"          
     - wait:
