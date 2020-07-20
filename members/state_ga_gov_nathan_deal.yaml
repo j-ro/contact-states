@@ -46,7 +46,7 @@ try{ element.parentNode.removeChild(element) } catch(err){} });"
     - find:
         - selector: "#edit-actions-wizard-next"
     - javascript:
-        - value: "document.getElementById('#edit-actions-wizard-next').click();"          
+        - value: "document.getElementById('edit-actions-wizard-next').click();"          
     - wait:
         - value: 10
     - find:
