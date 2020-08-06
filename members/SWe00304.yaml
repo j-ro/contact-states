@@ -10,7 +10,7 @@ contact_form:
           value: $NAME_FULL
           required: true
         - name: 8df2d0be-7e05-4b2a-b659-9e43b748c78f
-          selector: "#8df2d0be-7e05-4b2a-b659-9e43b748c78f"
+          selector: input[name='8df2d0be-7e05-4b2a-b659-9e43b748c78f']
           value: $ADDRESS_STREET
           required: true
         - name: 4e17f197-0d00-4015-b1b5-93c33074cc5e
