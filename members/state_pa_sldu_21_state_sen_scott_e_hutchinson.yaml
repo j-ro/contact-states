@@ -33,6 +33,10 @@ contact_form:
           selector: "#txtComments"
           value: $MESSAGE
           required: true
+        - name: txtSubject
+          selector: "#txtSubject"
+          value: $SUBJECT
+          required: true  
     - click_on:
        - selector: "#ddlIssue_Input"
     - wait:
