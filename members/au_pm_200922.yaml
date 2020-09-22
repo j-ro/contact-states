@@ -1,0 +1,67 @@
+bioguide: au_pm_200922
+contact_form:
+  method: POST
+  action: ""
+  steps:
+    - visit: "https://www.pm.gov.au/contact-your-pm"
+    - fill_in:
+        - name: "submitted[title]"
+          selector: "#edit-submitted-title"
+          value: $NAME_PREFIX
+          required: true
+        - name: "submitted[first_name]"
+          selector: "#edit-submitted-first-name"
+          value: $NAME_FIRST
+          required: true
+        - name: "submitted[family_name]"
+          selector: "#edit-submitted-family-name"
+          value: $NAME_LAST
+          required: true
+        - name: "submitted[email_address]"
+          selector: "#edit-submitted-email-address"
+          value: $EMAIL
+          required: true
+        - name: "submitted[phone]"
+          selector: "#edit-submitted-phone"
+          value: $PHONE
+          required: true
+        - name: "submitted[address][thoroughfare]"
+          selector: "#edit-submitted-address-thoroughfare"
+          value: $ADDRESS_STREET
+          required: true
+        - name: "submitted[address][locality]"
+          selector: "#edit-submitted-address-locality"
+          value: $ADDRESS_CITY
+          required: true
+        - name: "submitted[address][postal_code]"
+          selector: "#edit-submitted-address-postal-code"
+          value: $ADDRESS_ZIP5
+          required: true
+        - name: "submitted[subject]"
+          selector: "#edit-submitted-subject"
+          value: $SUBJECT
+          required: true
+        - name: "submitted[comment]"
+          selector: "#edit-submitted-comment"
+          value: $MESSAGE
+          required: true
+    - selector: "#edit-submitted-address-administrative-area"
+      required: true
+      options:
+        Australian Capital Territory: ACT
+        New South Wales: NSW
+        Northern Territory: NT
+        Queensland: QLD
+        South Australia: SA
+        Tasmania: TAS
+        Victoria: VIC
+        Western Australia: WA    
+    - click_on:
+         - selector: .form-submit[value='Submit']
+    - wait:
+         - value: 3
+  success:
+    headers:
+      status: 200
+    body:
+      contains: Thank you
