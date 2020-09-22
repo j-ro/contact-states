@@ -47,6 +47,7 @@ contact_form:
           required: true
     - selector: "#edit-submitted-address-administrative-area"
       required: true
+      value: $ADDRESS_STATE_POSTAL_ABBREV
       options:
         Australian Capital Territory: ACT
         New South Wales: NSW
