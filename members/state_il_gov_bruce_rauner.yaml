@@ -4,6 +4,8 @@ contact_form:
   action: /gov/contactus/pages/voiceanopinion.aspx
   steps:
     - visit: "https://www2.illinois.gov/sites/gov/contactus/Pages/VoiceAnOpinion.aspx"
+    - javascript:
+        - value: "Array.prototype.forEach.call(document.querySelectorAll('style,[rel=\"stylesheet\"],[type=\"text/css\"]'), function(element){ try{ element.parentNode.removeChild(element) } catch(err){} });"
     - fill_in:
         - name: ctl00$ctl38$g_fdf3309f_ded6_4491_9e00_80be8fa571ca$First_x0020_Name
           selector: "#ctl00_ctl38_g_fdf3309f_ded6_4491_9e00_80be8fa571ca_First_x0020_Name"
