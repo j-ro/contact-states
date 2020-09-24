@@ -45,18 +45,19 @@ contact_form:
           selector: "#edit-submitted-comment"
           value: $MESSAGE
           required: true
-    - selector: "#edit-submitted-address-administrative-area"
-      required: true
-      value: ACT
-      options:
-        Australian Capital Territory: ACT
-        New South Wales: NSW
-        Northern Territory: NT
-        Queensland: QLD
-        South Australia: SA
-        Tasmania: TAS
-        Victoria: VIC
-        Western Australia: WA    
+    - select:
+        - selector: "#edit-submitted-address-administrative-area"
+          required: true
+          value: ACT
+          options:
+            Australian Capital Territory: ACT
+            New South Wales: NSW
+            Northern Territory: NT
+            Queensland: QLD
+            South Australia: SA
+            Tasmania: TAS
+            Victoria: VIC
+            Western Australia: WA    
     - click_on:
          - selector: .form-submit[value='Submit']
     - wait:
