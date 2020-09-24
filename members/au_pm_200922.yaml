@@ -61,7 +61,9 @@ contact_form:
     - click_on:
          - selector: .form-submit[value='Submit']
     - wait:
-         - value: 3
+         - value: 15
+    - click_on:
+         - selector: .form-submit[value='Submit']     
   success:
     headers:
       status: 200
