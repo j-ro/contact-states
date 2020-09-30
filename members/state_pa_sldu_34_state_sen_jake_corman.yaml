@@ -1,0 +1,51 @@
+bioguide: state_pa_sldu_34_state_sen_jake_corman
+contact_form:
+  method: POST
+  action: "https://contact1.pasenategop.com/contact/34"
+  steps:
+    - visit: "https://contact1.pasenategop.com/contact/34"
+    - fill_in:
+        - name: ContactForm.FirstName
+          selector: "#ContactForm_FirstName"
+          value: $NAME_FIRST
+          required: true
+        - name: ContactForm.LastName
+          selector: "#ContactForm_LastName"
+          value: $NAME_LAST
+          required: true
+        - name: ContactForm.Address1
+          selector: "#ContactForm_Address1"
+          value: $ADDRESS_STREET
+          required: true
+        - name: ContactForm.City
+          selector: "#ContactForm_City"
+          value: $ADDRESS_CITY
+          required: true
+        - name: ContactForm.ZipCode
+          selector: "#ContactForm_ZipCode"
+          value: $ADDRESS_ZIP5
+          required: true
+        - name: ContactForm.EmailAddress
+          selector: "#ContactForm_EmailAddress"
+          value: $EMAIL
+          required: true
+        - name: ContactForm.Comments
+          selector: "#ContactForm_Comments"
+          value: $MESSAGE
+          required: true  
+    - select:
+        - name: SelectedIssueID
+          selector: "#issueselect"
+          value: 83|False
+          required: true
+          options: 
+            Legislative Information/Opinions: 83|False
+    - click_on:
+        - selector: "#btnSubmit"
+    - wait:
+        - value: 2
+  success:
+    headers:
+      status: 200
+    body:
+      contains: Thank you
