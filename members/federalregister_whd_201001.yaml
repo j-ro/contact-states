@@ -1,0 +1,30 @@
+bioguide: federalregister_whd_201001
+contact_form:
+  method: POST
+  action: ""
+  steps:
+    - visit: "https://www.federalregister.gov/documents/2020/09/25/2020-21018/independent-contractor-status-under-the-fair-labor-standards-act#open-comment"
+    - find:
+        - selector: "#comment_general_comment"
+    - wait:
+        - value: 5
+    - fill_in:
+        - selector: "#comment_general_comment"
+          name: "comment[general_comment]"
+          value: $MESSAGE
+          required: true
+          options:
+            max_length: 2000
+    - click_on:
+        - selector: "#comment_confirm_submission"
+    - wait:
+        - value: 5
+    - javascript:
+        - value: "document.querySelector('.commit input').click();"
+    - wait:
+        - value: 10
+  success:
+    headers:
+      status: 200
+    body:
+      contains: Thank you! Your comment has been submitted
