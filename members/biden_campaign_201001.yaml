@@ -1,0 +1,37 @@
+bioguide: biden_campaign_201001
+contact_form:
+  method: POST
+  action: ""
+  steps:
+    - visit: "https://go.joebiden.com/page/s/contact-us"
+    - fill_in:
+        - name: "firstname"
+          selector: "#firstname"
+          value: $NAME_FIRST
+          required: false
+        - name: "lastname"
+          selector: "#lastname"
+          value: $NAME_LAST
+          required: false
+        - name: "email"
+          selector: "#edit-email"
+          value: $EMAIL
+          required: true
+          required: true
+        - name: "custom-1117"
+          selector: "#custom-1117"
+          value: $MESSAGE
+          required: true
+    - select:
+        - name: "custom-15644"
+          selector: "#custom-15644"
+          value: Policy/Strategy
+          required: true
+    - click_on:
+         - selector: "#submit_button"
+
+  success:
+    headers:
+      status: 200
+    body:
+      contains: Thank you for signing your name
