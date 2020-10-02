@@ -1,0 +1,34 @@
+bioguide: ace_nwd_contact_form_201002
+contact_form:
+  method: POST
+  action: ""
+  steps:
+    - visit: "https://www.nwd.usace.army.mil/Contact.aspx"
+    - fill_in:
+        - selector: "input.txtContactFormName"
+          value: $NAME_FULL
+          required: true
+        - selector: "input.txtContactFormEmail"
+          value: $EMAIL
+          required: true
+        - selector: "input.txtContactFormSubject"
+          value: $SUBJECT
+          required: true
+        - selector: "input.txtContactFormMessage"
+          value: $MESSAGE
+          required: true
+    - select:
+        - name: "dnn$ctr4435$View$ddlContactFormRecipient"
+          selector: "#dnn_ctr4435_View_ddlContactFormRecipient"
+          value: 261
+          required: true
+    - recaptcha:
+        - value: true
+    - click_on:
+         - selector: "input.btnContactFormSubmit"
+
+  success:
+    headers:
+      status: 200
+    body:
+      contains: Thank you for signing your name
