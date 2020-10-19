@@ -51,6 +51,8 @@ contact_form:
     - click_on:
         - value: Submit
           selector: "#ctl00_ctl38_g_fdf3309f_ded6_4491_9e00_80be8fa571ca_SOIFeedbackSubmit"
+    - wait:
+        - value: 3
   success:
     headers:
       status: 200
