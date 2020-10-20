@@ -33,9 +33,9 @@ contact_form:
           selector: "form.ajaxForm.feedback_form input[name='commit']"
     - find:
         - selector: "h2"
-          value: "Latest News"
+          value: "More Videos"
   success:
     headers:
       status: 200
     body:
-      contains: "Latest News"
+      contains: "More Videos"
