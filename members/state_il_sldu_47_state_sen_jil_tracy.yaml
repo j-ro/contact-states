@@ -100,33 +100,34 @@ contact_form:
             West Virginia: 59_WV
             Wisconsin: 60_WI
             Wyoming: 61_WY
-        - name: "ctl00$Content$ctl00$ddlSubject"
-          selector: "#Content_ctl00_ddlSubject"
+        - name: "qi_3"
+          selector: "#qi_3"
           value: $TOPIC
           required: true
           options:
-            - Agriculture
-            - Animal Welfare
-            - Arts &amp; Humanities
-            - Budget
-            - Business &amp; Economy
-            - Children’s Health &amp; Welfare
-            - Disability Services
-            - Education
-            - Energy &amp; Environment
-            - Government Reform &amp; Oversight
-            - Health &amp; Healthcare
-            - Human Rights
-            - Immigration
-            - Labor &amp; Employment
-            - Public Safety
-            - Social Services
-            - Senior Services
-            - Taxes
-            - Transportation &amp; Infrastructure
-            - Veterans &amp; Military Affairs
-            - Voting
-            - Other Issues
+            Agriculture: 0_Agriculture
+            Animal Welfare: 1_Animal Welfare
+            Arts &amp; Humanities: 2_Art and Humanities
+            Budget: 3_Budget
+            Business &amp; Economy: 4_Business and Economy
+            Children’s Health &amp; Welfare:  5_Childrens Health and Welfare
+            Disability Services: 6_Disability Services
+            Education: 7_Education
+            Energy &amp; Environment: 8_Energy and Environment
+            Government Reform: 9_Government Reform
+            Health &amp; Healthcare: 10_Health and Healthcare
+            Human Rights: 11_Human Rights
+            Immigration: 12_Immigration
+            Infrastructure: 13_Infrastructure
+            Labor &amp; Employment: 14_Labor and Employment
+            Public Safety: 15_Public Safety
+            Social Services: 17_Social Services
+            Senior Services: 16_Senior Services
+            Taxes: 18_Taxes
+            Transportation:  19_Transportation
+            Veterans &amp; Military Affairs: 20_Veterans and Military Affairs
+            Voting: 21_Voting
+            Other Issues: 22_Other Issues
         - name: "qi_4"
           selector: "#qi_4"
           value: "0_No Position"
