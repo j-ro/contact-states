@@ -31,11 +31,8 @@ contact_form:
     - click_on:
         - value: Send message
           selector: "form.ajaxForm.feedback_form input[name='commit']"
-    - find:
-        - selector: "h2"
-          value: "More Videos"
   success:
     headers:
       status: 200
     body:
-      contains: "More Videos"
+      contains: "Recent News"
