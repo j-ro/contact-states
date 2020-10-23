@@ -68,6 +68,10 @@ contact_form:
     - click_on:
         - value: Send
           selector: "#rt-mainbody #Send"
+    - wait:
+        - value: 12
+    - find:
+        - selector: "input[value='Continue']"
   success:
     headers:
       status: 200
