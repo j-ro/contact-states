@@ -134,6 +134,8 @@ contact_form:
           required: true
     - recaptcha:
         - value: true
+    - wait:
+        - value: 2
     - click_on:
         - selector: "#btn_submit"
   success:
