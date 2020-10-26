@@ -65,6 +65,11 @@ contact_form:
             Veterans: Veterans
     - recaptcha:
         - value: true
+    - fill_in:
+        - name: "break"
+          selector: "#break"
+          value: $NAME_FIRST
+          required: true
     - click_on:
         - value: Send
           selector: "#rt-mainbody #Send"
