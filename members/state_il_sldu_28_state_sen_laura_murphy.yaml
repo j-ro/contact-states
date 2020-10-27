@@ -5,6 +5,11 @@ contact_form:
   steps:
     - visit: "http://www.senatorlauramurphy.com/contact-us"
     - fill_in:
+        - name: "break"
+          selector: "#break"
+          value: $NAME_FIRST
+          required: true
+    - fill_in:
         - name: "form[firstName]"
           selector: "#rt-mainbody #firstName"
           value: $NAME_FIRST
@@ -63,11 +68,6 @@ contact_form:
             Taxes: Taxes
             Transportation: Transportation
             Veterans: Veterans
-    - fill_in:
-        - name: "break"
-          selector: "#break"
-          value: $NAME_FIRST
-          required: true
     - recaptcha:
         - value: true
     - click_on:
