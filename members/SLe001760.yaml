@@ -83,7 +83,7 @@ contact_form:
     - wait:
         - value: 10
     - find:
-        - selector: "input[name='continue']"
+        - selector: "#rsform_3_page_0 #Send"
   success:
     headers:
       status: 200

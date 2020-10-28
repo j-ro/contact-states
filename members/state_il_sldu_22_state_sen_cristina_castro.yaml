@@ -36,7 +36,7 @@ contact_form:
     - select:
         - name: "form[issue][]"
           selector: "#issue"
-          value: $TOPIC
+          value: Local Government
           required: true
           options:
             2nd Amendment Issues: 2nd Amendment Issues
