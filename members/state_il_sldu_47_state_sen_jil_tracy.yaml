@@ -132,6 +132,8 @@ contact_form:
           selector: "#qi_4"
           value: "0_No Position"
           required: true
+    - javascript:
+        - value: document.querySelector("#g-recaptcha-response").style.display = "block";
     - recaptcha:
         - value: true
     - wait:

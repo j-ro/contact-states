@@ -5,11 +5,6 @@ contact_form:
   steps:
     - visit: "http://www.senatorlauramurphy.com/contact-us"
     - fill_in:
-        - name: "break"
-          selector: "#break"
-          value: $NAME_FIRST
-          required: true
-    - fill_in:
         - name: "form[firstName]"
           selector: "#rt-mainbody #firstName"
           value: $NAME_FIRST
@@ -41,7 +36,7 @@ contact_form:
     - select:
         - name: "form[issue][]"
           selector: "#rt-mainbody #issue"
-          value: $TOPIC
+          value: Local Government
           required: true
           options:
             2nd Amendment Issues: 2nd Amendment Issues
