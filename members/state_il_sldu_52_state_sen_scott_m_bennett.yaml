@@ -25,6 +25,10 @@ contact_form:
           selector: "#zipCode"
           value: $ADDRESS_ZIP5
           required: true
+        - name: "form[phone]"
+          selector: "#phone"
+          value: $PHONE
+          required: true  
         - name: "form[email]"
           selector: "#rt-mainbody #email"
           value: $EMAIL
