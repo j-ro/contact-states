@@ -102,7 +102,7 @@ contact_form:
             Wyoming: 61_WY
         - name: "qi_3"
           selector: "#qi_3"
-          value: $TOPIC
+          value: 9_Government Reform
           required: true
           options:
             Agriculture: 0_Agriculture
