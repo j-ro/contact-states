@@ -7,82 +7,57 @@ contact_form:
     - wait:
         - value: 5
     - fill_in:
-        - name: "ctl00$Content$OpinionFirstName"
-          selector: "#Content_OpinionFirstName"
+        - name: "ctl00$Content$CitRequestFirstName"
+          selector: "#Content_CitRequestFirstName"
           value: $NAME_FIRST
           required: true
           options:
             max_length: 50
-        - name: "ctl00$Content$OpinionLastName"
-          selector: "#Content_OpinionLastName"
+        - name: "ctl00$Content$CitRequestLastName"
+          selector: "#Content_CitRequestLastName"
           value: $NAME_LAST
           required: true
           options:
             max_length: 50
-        - name: "ctl00$Content$OpinionAddress"
-          selector: "#Content_OpinionAddress"
+        - name: "ctl00$Content$CitRequestAddress"
+          selector: "#Content_CitRequestAddress"
           value: $ADDRESS_STREET
           required: true
           options:
             max_lenth: 50
-        - name: "ctl00$Content$OpinionCity"
-          selector: "#Content_OpinionCity"
+        - name: "ctl00$Content$CitRequestCity"
+          selector: "#Content_CitRequestCity"
           value: $ADDRESS_CITY
           required: true
           options:
             max_length: 50
-        - name: "ctl00$Content$OpinionZipCode"
-          selector: "#Content_OpinionZipCode"
+        - name: "ctl00$Content$CitRequestZipCode"
+          selector: "#Content_CitRequestZipCode"
           value: $ADDRESS_ZIP5
           required: true
           options:
               max_length: 50
-        - name: "ctl00$Content$OpinionEmail"
-          selector: "#Content_OpinionEmail"
+        - name: "ctl00$Content$CitRequestEmail"
+          selector: "#Content_CitRequestEmail"
           value: $EMAIL
           required: true
           options:
             max_length: 50
-        - name: "ctl00$Content$OpinionPhone"
-          selector: "#Content_OpinionPhone"
+        - name: "ctl00$Content$CitRequestPhone"
+          selector: "#Content_CitRequestPhone"
           value: $PHONE
           required: true
           options:
             max_length: 50
-        - name: "ctl00$Content$OpinionText"
-          selector: "#Content_OpinionText"
+        - name: "ctl00$Content$CitRequestText"
+          selector: "#Content_CitRequestText"
           value: $MESSAGE
           required: true
           options:
             max_length: 2000
-    - select:
-        - name: "ctl00$Content$OpinionIssue"
-          selector: "#Content_OpinionIssue"
-          value: $TOPIC
-          required: true
-          options:
-            "* 2021 Governor Budget Recommendation": b0b5faa2-e748-ea11-80e4-00155dd81022
-            "* Coronavirus": 6ef76dc9-d557-ea11-80e4-00155dd81022
-            "* Department of Health and Human Services": 32bbfcb4-c4e2-e411-8e74-00219b8d8c68
-            "* Department of Labor and Economic Opportunity": 70b2f5e4-ebcb-e411-9e5c-00219b8d8c68
-            "* Education": 6d712412-7131-e111-b4af-00219b8d8c66
-            "* Energy": c7aa5814-5a40-e511-95d6-00219b8d8c68
-            "* Environment": b88bd42c-5a40-e511-95d6-00219b8d8c68
-            "* Gas Prices": 20674245-3d39-e011-bfcb-00219b8d8c66
-            "* Great Lakes": 3fd97c62-6369-e211-8ed4-00219b8d8c68
-            "* Gun Legislation": 2a621f32-fd45-e211-8e57-00219b8d8c68
-            "* Immigration": 15cc884f-3d39-e011-bfcb-00219b8d8c66
-            "* Jobs & Economy": 90b3a092-285b-e211-9168-00219b8d8c68
-            "* Law & Public Safety": c238711a-285b-e211-9168-00219b8d8c68
-            "* No-Fault Auto Insurance": 6c48c7d2-9aeb-e011-aa08-00219b8d8c66
-            "* Other / Unknown": 1f2eb027-7631-e111-b4af-00219b8d8c66
-            "* Taxation": e32c1bd1-7431-e111-b4af-00219b8d8c66
-            "Health and Wellness": 909b6708-2e71-e911-80d7-00155dd81016
-            "Higher Education": c9e453eb-c77b-e911-80d7-00155dd81016
-            "Marijuana": 9951da2b-31d9-e411-8e74-00219b8d8c68
-            "Michigan Public Service Commission": 48c52ed4-c77b-e911-80d7-00155dd81016
-            "Repeal the Pension Tax": 816c675e-0912-e911-80d0-00155dd80f09
-            "Roads and Infrastructure": c56ea783-2b49-e111-bd20-00219b8d8c66
+    - click_on:
+        - value: Opinion
+          selector: "#optOpinion"
     - javascript:
         - value: "document.querySelector('textarea[name=g-recaptcha-response]').remove();"
     - javascript:
