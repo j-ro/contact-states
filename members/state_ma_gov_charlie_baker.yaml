@@ -1,7 +1,7 @@
 bioguide: state_ma_gov_charlie_baker
 contact_form:
   method: post
-  action: "https://massgov.formstack.com/forms/index.php"
+  action: "https://www.mass.gov/forms/email-the-governors-office"
   steps:
     - visit: "https://www.mass.gov/forms/email-the-governors-office"
     - javascript:
