@@ -6,36 +6,36 @@ contact_form:
     - visit: "https://www.senatoradrianejohnson.com/contact-us"
     - fill_in:
         - name: "form[firstName]"
-          selector: "#firstName"
+          selector: "#rt-mainbody #firstName"
           value: $NAME_FIRST
           required: true
         - name: "form[lastName]"
-          selector: "#lastName"
+          selector: "#rt-mainbody #lastName"
           value: $NAME_LAST
           required: true
         - name: "form[address]"
-          selector: "#address"
+          selector: "#rt-mainbody #address"
           value: $ADDRESS_STREET
           required: true
         - name: "form[city]"
-          selector: "#city"
+          selector: "#rt-mainbody #city"
           value: $ADDRESS_CITY
           required: true
         - name: "form[zipCode]"
-          selector: "#zipCode"
+          selector: "#rt-mainbody #zipCode"
           value: $ADDRESS_ZIP5
           required: true
         - name: "form[email]"
-          selector: "#email"
+          selector: "#rt-mainbody #email"
           value: $EMAIL
           required: true
         - name: "form[essay1]"
-          selector: "#essay1"
+          selector: "#rt-mainbody #essay1"
           value: $MESSAGE
           required: true
     - select:
         - name: "form[issue][]"
-          selector: "#issue"
+          selector: "#rt-mainbody #issue"
           value: $TOPIC
           required: true
           options:
@@ -64,11 +64,13 @@ contact_form:
             - Taxes
             - Transportation
             - Veterans
+    - javascript:
+      - value: document.querySelector("#g-recaptcha-response").style.display = "block";
     - recaptcha:
         - value: true
     - click_on:
         - value: Send
-          selector: "#Send"
+          selector: "#rt-mainbody #Send"
     - find:
         - selector: "input[name='continue']"
   success:
