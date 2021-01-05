@@ -1,0 +1,45 @@
+bioguide: state_ut_gov_spencer_cox
+contact_form:
+  method: post
+  action: ""
+  steps:
+    - visit: "https://servicecloudtrial-155c0807bf-158b6dc6793.force.com/governor/s/comments"
+    - click_on:
+        - value: No
+          selector: "#radio-1-9"
+    - wait:
+        - value: 2
+    - fill_in:
+        - name: "00N4100000LLPcT"
+          selector: "#input-13"
+          value: $NAME_FIRST
+          required: true
+        - name: "00N4100000LLPhJ"
+          selector: "#input-14"
+          value: $NAME_LAST
+          required: true
+        - name: 00N4100000LLPNY
+          selector: "#input-16"
+          value: $ADDRESS_ZIP5
+          required: true
+        - name: 00N2M00000esj9o
+          selector: "#input-15"
+          value: $EMAIL
+          required: true
+        - name: subject
+          selector: "#input-20"
+          value: $SUBJECT
+          required: true  
+        - name: "description"
+          selector: "#input-23"
+          value: $MESSAGE
+          required: true
+    - click_on:
+        - selector: "input[name='submit']"
+    - wait:
+        - value: 3
+  success:
+    headers:
+      status: 200
+    body:
+      contains: "Thank you"
