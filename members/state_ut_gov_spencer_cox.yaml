@@ -1,7 +1,7 @@
 bioguide: state_ut_gov_spencer_cox
 contact_form:
   method: post
-  action: ""
+  action: "https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8"
   steps:
     - visit: "https://servicecloudtrial-155c0807bf-158b6dc6793.force.com/governor/s/comments"
     - javascript:
