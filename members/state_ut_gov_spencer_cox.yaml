@@ -8,6 +8,9 @@ contact_form:
         - value: "Array.prototype.forEach.call(document.querySelectorAll('style,[rel=\"stylesheet\"],[type=\"text/css\"]'), function(element){ try{ element.parentNode.removeChild(element) } catch(err){} });"
     - wait:
         - value: 2
+    - find:
+        - selector: "#radio-1-9"
+          value: "No"
     - click_on:
         - value: No
           selector: "#radio-1-9"
