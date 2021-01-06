@@ -4,6 +4,8 @@ contact_form:
   action: ""
   steps:
     - visit: "https://servicecloudtrial-155c0807bf-158b6dc6793.force.com/governor/s/comments"
+    - wait:
+        - value: 2
     - click_on:
         - value: No
           selector: "#radio-1-9"
