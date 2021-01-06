@@ -4,6 +4,10 @@ contact_form:
   action: "https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8"
   steps:
     - visit: "https://servicecloudtrial-155c0807bf-158b6dc6793.force.com/governor/s/comments"
+    - javascript:
+        - value: "Array.prototype.forEach.call(document.querySelectorAll('style,[rel=\"stylesheet\"],[type=\"text/css\"]'), function(element){ try{ element.parentNode.removeChild(element) } catch(err){} });"
+    - javascript:
+      - value: "document.querySelector('body').style.color = 'red'"
     - wait:
         - value: 10
     - find:
