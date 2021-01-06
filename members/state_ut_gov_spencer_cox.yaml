@@ -4,6 +4,8 @@ contact_form:
   action: ""
   steps:
     - visit: "https://servicecloudtrial-155c0807bf-158b6dc6793.force.com/governor/s/comments"
+    - javascript:
+        - value: "Array.prototype.forEach.call(document.querySelectorAll('style,[rel=\"stylesheet\"],[type=\"text/css\"]'), function(element){ try{ element.parentNode.removeChild(element) } catch(err){} });"
     - wait:
         - value: 2
     - click_on:
