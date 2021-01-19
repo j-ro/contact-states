@@ -1,9 +1,9 @@
 bioguide: state_ga_gov_nathan_deal
 contact_form:
   method: POST
-  action: "https://gov.georgia.gov/contact-us/constituent-services"
+  action: "https://georgia.gov/message"
   steps:
-    - visit: "https://gov.georgia.gov/contact-us/constituent-services"
+    - visit: "https://georgia.gov/message"
     - javascript:
         - value: "Array.prototype.forEach.call(document.querySelectorAll('style,[rel=\"stylesheet\"],[type=\"text/css\"]'), function(element){
 try{ element.parentNode.removeChild(element) } catch(err){} });"
@@ -38,7 +38,7 @@ try{ element.parentNode.removeChild(element) } catch(err){} });"
             Legislature: LEGISLATION-STATE
             Medicaid: MEDICAID
     - fill_in:
-        - name: "please_select_which_agency_your_request_relates_to"
+        - name: "please_provide_a_brief_description_about_your_request___concern"
           selector: "#edit-please-provide-a-brief-description-about-your-request-concern"
           value: $MESSAGE
           required: true
@@ -83,8 +83,12 @@ try{ element.parentNode.removeChild(element) } catch(err){} });"
           selector: "#edit-cell-phone"
           value: $PHONE
           required: true
-        - name: "email"
-          selector: "#edit-email"
+        - name: "email[mail_1]"
+          selector: "#edit-email-mail-1"
+          value: $EMAIL
+          required: true
+        - name: "email[mail_2]"
+          selector: "#edit-email-mail-2"
           value: $EMAIL
           required: true
     - javascript:
