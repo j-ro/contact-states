@@ -49,7 +49,11 @@ contact_form:
           options:
             Tennessee: 51_TN
     - javascript:
+        - value: document.querySelector("#g-recaptcha-response").style.display = "block";
+    - javascript:
         - value: "document.querySelector('#qi_6').value = new Date().toLocaleDateString('en-US', {day: '2-digit', month: '2-digit', year: 'numeric'});"
+    - recaptcha:
+        - value: true
     - click_on:
         - selector: "#btn_submit"
   success:
