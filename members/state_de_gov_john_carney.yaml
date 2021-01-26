@@ -27,8 +27,8 @@ contact_form:
           selector: "#description"
           value: $MESSAGE
           required: true
-    - javascript:
-        - value: document.querySelector('#CaptchaInput').value = document.querySelector('#CaptchaDiv').textContent
+    - recaptcha:
+        - value: true
     - wait:
         - value: 3
     - find:
