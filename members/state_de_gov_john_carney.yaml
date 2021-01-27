@@ -27,6 +27,8 @@ contact_form:
           selector: "#description"
           value: $MESSAGE
           required: true
+    - javascript:
+        - value: document.querySelector("#g-recaptcha-response").style.display = "block";
     - recaptcha:
         - value: true
     - wait:
