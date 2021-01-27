@@ -94,7 +94,7 @@ try{ element.parentNode.removeChild(element) } catch(err){} });"
     - javascript:
         - value: "document.getElementById('edit-writing-on-behalf-who-radios-no').click();"
     - click_on:
-        - selector: "#edit-actions-01-submit"
+        - selector: "#edit-actions-01-submit" 
   success:
     headers:
       status: 200
