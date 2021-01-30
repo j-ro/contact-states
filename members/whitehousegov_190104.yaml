@@ -143,7 +143,7 @@ contact_form:
           value: "on"
     - click_on:
         - value: Send
-          selector: "#btnsubmit"
+          selector: "input[type='submit'][value='Send']"
   success:
     headers:
       status: 200
