@@ -1,9 +1,9 @@
 bioguide: SWe00036
 contact_form:
   method: post
-  action: "https://cogov.tfaforms.net/3?faIframeUniqueId=49lktg43rg&hostURL=https%3A%2F%2Fwww.colorado.gov%2Fgovernor%2Fshare-comments"
+  action: "https://cogov.tfaforms.net/25?faIframeUniqueId=o60cs8j58y&jsid=null&hostURL=https%3A%2F%2Fwww.colorado.gov%2Fgovernor%2Fshare-comments"
   steps:
-    - visit: "https://cogov.tfaforms.net/3?faIframeUniqueId=49lktg43rg&hostURL=https%3A%2F%2Fwww.colorado.gov%2Fgovernor%2Fshare-comments"
+    - visit: "https://cogov.tfaforms.net/25?faIframeUniqueId=o60cs8j58y&jsid=null&hostURL=https%3A%2F%2Fwww.colorado.gov%2Fgovernor%2Fshare-comments"
     - fill_in:
         - name: tfa_62
           selector: "#tfa_62"
@@ -33,6 +33,76 @@ contact_form:
           required: true
           options:
             Governor: tfa_2759
+        - name: tfa_71
+          selector: "#tfa_71"
+          value: $ADDRESS_COUNTY
+          required: true
+          options:
+            Out of State: tfa_212
+            Adams: tfa_142
+            Alamosa: tfa_143
+            Arapahoe: tfa_144
+            Archuleta: tfa_145
+            Baca: tfa_146
+            Bent: tfa_147
+            Boulder: tfa_148
+            Broomfield: tfa_149
+            Chaffee: tfa_150
+            Cheyenne: tfa_151
+            Clear Creek: tfa_152
+            Conejos: tfa_153
+            Costila: tfa_154
+            Crowley: tfa_155
+            Custer: tfa_156
+            Delta: tfa_157
+            Denver: tfa_158
+            Dolores: tfa_159
+            Douglas: tfa_160
+            Eagle: tfa_161
+            Elbert: tfa_162
+            El Paso: tfa_163
+            Fremont: tfa_164
+            Garfield: tfa_165
+            Gilpin: tfa_166
+            Grand: tfa_167
+            Gunnison: tfa_168
+            Hinsdale: tfa_169
+            Huerfano: tfa_170
+            Jackson: tfa_171
+            Jefferson: tfa_172
+            Kiowa: tfa_173
+            Kit Carson: tfa_174
+            Lake: tfa_175
+            La Plata: tfa_176
+            Larimer: tfa_177
+            Las Animas: tfa_178
+            Lincoln: tfa_179
+            Logan: tfa_180
+            Mesa: tfa_181
+            Mineral: tfa_182
+            Moffat: tfa_183
+            Montezuma: tfa_184
+            Montrose: tfa_185
+            Morgan: tfa_186
+            Otero: tfa_187
+            Ouray: tfa_188
+            Park: tfa_189
+            Phillips: tfa_190
+            Pitkin: tfa_191
+            Prowers: tfa_192
+            Pueblo: tfa_193
+            Rio Blanco: tfa_194
+            Rio Grande: tfa_195
+            Routt: tfa_196
+            Saguache: tfa_197
+            San Juan: tfa_198
+            San Miguel: tfa_199
+            Sedgwick: tfa_200
+            Summit: tfa_201
+            Teller: tfa_202
+            Washington: tfa_203
+            Weld: tfa_204
+            Yuma: tfa_205    
     - javascript:
         - value: "document.getElementById('tfa_2909').selectedIndex = 1;"
     - javascript:
