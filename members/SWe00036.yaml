@@ -4,6 +4,12 @@ contact_form:
   action: "https://cogov.tfaforms.net/25?faIframeUniqueId=o60cs8j58y&jsid=null&hostURL=https%3A%2F%2Fwww.colorado.gov%2Fgovernor%2Fshare-comments"
   steps:
     - visit: "https://cogov.tfaforms.net/25?faIframeUniqueId=o60cs8j58y&jsid=null&hostURL=https%3A%2F%2Fwww.colorado.gov%2Fgovernor%2Fshare-comments"
+    - javascript:
+        - value: "document.getElementById('tfa_2909').selectedIndex = 1;"
+    - javascript:
+        - value: "document.getElementById('tfa_2909').dispatchEvent(new Event('change'));"
+    - wait:
+        - value: 1
     - fill_in:
         - name: tfa_62
           selector: "#tfa_62"
@@ -103,12 +109,6 @@ contact_form:
             Washington: tfa_203
             Weld: tfa_204
             Yuma: tfa_205    
-    - javascript:
-        - value: "document.getElementById('tfa_2909').selectedIndex = 1;"
-    - javascript:
-        - value: "document.getElementById('tfa_2909').dispatchEvent(new Event('change'));"
-    - wait:
-        - value: 1
     - javascript:
         - value: "document.getElementById('tfa_2913').selectedIndex = 1"
     - javascript:
