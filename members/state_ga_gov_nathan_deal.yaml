@@ -15,28 +15,28 @@ try{ element.parentNode.removeChild(element) } catch(err){} });"
           value: $TOPIC
           required: true
           options:
-            "Child Protective Services": CPS
-            "Child Support": CHILD SUPPORT
-            "Consumer Protection": CONSUMER PROTECTION
-            "Corrections (Prison System)": DEPT OF CORRECTIONS
-            "Dept. of Agriculture": AGRICULTURE
-            "Dept. of Community Affairs/Housing": DEPT COMMUNITY AFFAI
-            "Dept. of Community Health": DCH
-            "Dept. of Driver Services": DRICERSLICENSE
-            "Dept. of Natural Resources": DNR
-            "Dept. of Labor": DEPT OF LABOR
-            "Dept. of Revnue": DEPT OF REVENUE
-            "Dept. of Public Safety": DEPT PUBLIC SAFETY
-            "Dept. of Veterans Services": VETERANS AFFAIRS
-            "Education": EDUCATION GENERAL
-            "Environment": EPD
-            "Federal": FEDERAL ISSUE
-            "Food Stamps": FOOD STAMPS
-            "Foster Care": FOSTER CARE
-            "Healthcare": HEALTHCARE
-            "Legal": LEGAL MATTER
-            "Legislature": LEGISLATION-STATE
-            "Medicaid": MEDICAID
+            "Child Protective Services": "CPS"
+            "Child Support": "CHILD SUPPORT"
+            "Consumer Protection": "CONSUMER PROTECTION"
+            "Corrections (Prison System)": "DEPT OF CORRECTIONS"
+            "Dept. of Agriculture": "AGRICULTURE"
+            "Dept. of Community Affairs/Housing": "DEPT COMMUNITY AFFAI"
+            "Dept. of Community Health": "DCH"
+            "Dept. of Driver Services": "DRICERSLICENSE"
+            "Dept. of Natural Resources": "DNR"
+            "Dept. of Labor": "DEPT OF LABOR"
+            "Dept. of Revnue": "DEPT OF REVENUE"
+            "Dept. of Public Safety": "DEPT PUBLIC SAFETY"
+            "Dept. of Veterans Services": "VETERANS AFFAIRS"
+            "Education": "EDUCATION GENERAL"
+            "Environment": "EPD"
+            "Federal": "FEDERAL ISSUE"
+            "Food Stamps": "FOOD STAMPS"
+            "Foster Care": "FOSTER CARE"
+            "Healthcare": "HEALTHCARE"
+            "Legal": "LEGAL MATTER"
+            "Legislature": "LEGISLATION-STATE"
+            "Medicaid": "MEDICAID"
     - fill_in:
         - name: "please_provide_a_brief_description_about_your_request___concern"
           selector: "#edit-please-provide-a-brief-description-about-your-request-concern"
