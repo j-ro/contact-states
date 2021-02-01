@@ -15,7 +15,7 @@ try{ element.parentNode.removeChild(element) } catch(err){} });"
           value: $TOPIC
           required: true
           options:
-            ""Child Protective Services": CPS
+            "Child Protective Services": CPS
             "Child Support": CHILD SUPPORT
             "Consumer Protection": CONSUMER PROTECTION
             "Corrections (Prison System)": DEPT OF CORRECTIONS
