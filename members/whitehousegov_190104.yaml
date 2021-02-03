@@ -1,7 +1,7 @@
 bioguide: whitehousegov_190104
 contact_form:
   method: post
-  action: "https://www.whitehouse.gov/contact/"
+  action: "https://forms.whitehouse.gov/ContactUs"
   steps:
     - visit: "https://www.whitehouse.gov/contact/"
     - fill_in:
