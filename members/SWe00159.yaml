@@ -21,8 +21,31 @@ contact_form:
           selector: "#edit-submitted-message"
           value: $MESSAGE
           required: true
-        - recaptcha:
-          - value: true
+    - select:
+        - name: "submitted[issue]"
+          selector: "#edit-submitted-issue-1"
+          value: $TOPIC
+          required: true
+          options:
+             Disaster Recovery: 1
+             Education: 2
+             Environment: 3
+             Healthcare: 4
+             Infrastructure: 5
+             Economy: 6
+             Military/Veterans: 7
+             Public Safety: 8
+             Transportation/Eminent Domain: 9
+             Workforce Development: 10
+             Other: 11
+        - name: ISSUE
+          selector: "#edit-submitted-stateSelectBoxItOptions"
+          value: $ADDRESS_STATE_POSTAL_ABBREV
+          required: true
+          options:
+             North Carolina: NC       
+    - recaptcha:
+        - value: true
     - click_on:
         - value: Submit
           selector: ".webform-submit"
