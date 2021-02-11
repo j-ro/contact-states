@@ -1,6 +1,6 @@
 bioguide: whitehousegov_190104
 contact_form:
-  method: post
+  method: POST
   action: "https://forms.whitehouse.gov/ContactUs"
   steps:
     - visit: "https://www.whitehouse.gov/contact/"
@@ -141,9 +141,8 @@ contact_form:
         - name: "Contact.Contact_Us_Email_Opt_In__c"
           selector: "input[name='Contact.Contact_Us_Email_Opt_In__c']"
           value: "on"
-    - click_on:
-        - value: Send
-          selector: "input[type='submit'][value='Send']"
+    - javascript:
+        - value: "document.querySelector('input[type=submit][value=Send]').click()"
   success:
     headers:
       status: 200
