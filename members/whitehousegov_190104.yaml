@@ -4,6 +4,13 @@ contact_form:
   action: "https://forms.whitehouse.gov/ContactUs"
   steps:
     - visit: "https://www.whitehouse.gov/contact/"
+    - wait:
+        - value: 5
+    - find:
+        - selector: "input[name='Contact.FirstName']"
+    - javascript:
+        - value: "Array.prototype.forEach.call(document.querySelectorAll('style,[rel=\"stylesheet\"],[type=\"text/css\"]'), function(element){ 
+try{ element.parentNode.removeChild(element) } catch(err){} });"
     - fill_in:
         - name: "Contact.FirstName"
           selector: "input[name='Contact.FirstName']"
@@ -143,6 +150,8 @@ contact_form:
           value: "on"
     - javascript:
         - value: "document.querySelector('input[type=submit][value=Send]').click()"
+    - wait:
+        - value: 5
   success:
     headers:
       status: 200
