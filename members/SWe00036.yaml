@@ -27,11 +27,6 @@ contact_form:
           selector: "#tfa_2725"
           value: $MESSAGE
           required: true
-    - check:
-        - name: "tfa_2744"
-          selector: "#tfa_2746"
-          value: "tfa_2746"
-          required: true
     - select:
         - name: tfa_2758
           selector: "#tfa_2758"
