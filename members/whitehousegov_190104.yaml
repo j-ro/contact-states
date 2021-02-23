@@ -147,6 +147,8 @@ contact_form:
           value: "on"
     - javascript:
         - value: "document.querySelector('input[type=submit][value=Send]').click()"
+    - wait:
+        - value: 5
   success:
     headers:
       status: 200
