@@ -33,8 +33,8 @@ contact_form:
           selector: "#MainContent_txtSubject"
           value: $SUBJECT
           required: true
-        - name: "ctl00$MainContent$txtMessage"
-          selector: "#txtMessage"
+        - name: txtMessage
+          selector: "#textarea[name='txtMessage']"
           value: $MESSAGE
           required: true
     - recaptcha:
