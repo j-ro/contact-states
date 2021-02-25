@@ -37,7 +37,7 @@ try{ element.parentNode.removeChild(element) } catch(err){} });"
           value: $SUBJECT
           required: true
         - name: txtMessage
-          selector: "textarea[name='txtMessage']"
+          selector: "#txtMessage"
           value: $MESSAGE
           required: true
     - click_on:
