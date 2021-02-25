@@ -3,46 +3,45 @@ contact_form:
   method: post
   action: Contact.aspx
   steps:
-    - visit: "http://www.senate.mo.gov/D31WebApps/Contact.aspx"
-    - javascript:
-        - value: "Array.prototype.forEach.call(document.querySelectorAll('style,[rel=\"stylesheet\"],[type=\"text/css\"]'), function(element){ 
-try{ element.parentNode.removeChild(element) } catch(err){} });"
+    - visit: "https://www.senate.mo.gov/DistrictWebApplication/Contact?DistrictNumber=31"
     - fill_in:
-        - name: txtName
-          selector: "#txtName"
+        - name: "ctl00$MainContent$txtName"
+          selector: "#MainContent_txtName"
           value: $NAME_FULL
           required: true
-        - name: txtAddress
-          selector: "#txtAddress"
+        - name: "ctl00$MainContent$txtAddress"
+          selector: "#MainContent_txtAddress"
           value: $ADDRESS_STREET
           required: true
-        - name: txtCity
-          selector: "#txtCity"
+        - name: "ctl00$MainContent$txtCity"
+          selector: "#MainContent_txtCity"
           value: $ADDRESS_CITY
           required: true
-        - name: txtZip
-          selector: "#txtZip"
+        - name: "ctl00$MainContent$txtZip"
+          selector: "#MainContent_txtZip"
           value: $ADDRESS_ZIP5
           required: true
-        - name: txtZip4
-          selector: "#txtZip4"
+        - name: "ctl00$MainContent$txtZip4"
+          selector: "#MainContent_txtZip4"
           value: $ADDRESS_ZIP4
           required: true
-        - name: txtEmail
-          selector: "#txtEmail"
+        - name: "ctl00$MainContent$txtEmail"
+          selector: "#MainContent_txtEmail"
           value: $EMAIL
           required: true
-        - name: txtSubject
-          selector: "#txtSubject"
+        - name: "ctl00$MainContent$txtSubject"
+          selector: "#MainContent_txtSubject"
           value: $SUBJECT
           required: true
-        - name: txtMessage
+        - name: "ctl00$MainContent$txtMessage"
           selector: "#txtMessage"
           value: $MESSAGE
           required: true
+    - recaptcha:
+      - value: true
     - click_on:
         - value: Send Message
-          selector: "#btnSend"
+          selector: "#MainContent_btnSend"
   success:
     headers:
       status: 200
