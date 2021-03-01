@@ -10,6 +10,8 @@ contact_form:
         - value: "document.getElementById('tfa_2909').dispatchEvent(new Event('change'));"
     - wait:
         - value: 1
+    - find:
+        - selector: "#tfa_62"
     - fill_in:
         - name: tfa_62
           selector: "#tfa_62"
