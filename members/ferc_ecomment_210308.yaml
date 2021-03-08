@@ -1,0 +1,104 @@
+bioguide: ferc_ecomment_210308
+contact_form:
+  method: POST
+  action: ""
+  steps:
+    - visit: "https://ferconline.ferc.gov/QuickComment.aspx"
+    - fill_in:
+        - name: "ctl00$Content1$txtName"
+          selector: "#ctl00_Content1_txtName"
+          value: $NAME_FULL
+          required: true
+        - name: "ctl00$Content1$txtAddress1"
+          selector: "#ctl00_Content1_txtAddress1"
+          value: $ADDRESS_STREET
+          required: true
+        - name: "ctl00$Content1$txtCity"
+          selector: "#ctl00_Content1_txtCity"
+          value: $ADDRESS_CITY
+          required: true
+        - name: "ctl00$Content1$txtZipcode"
+          selector: "#ctl00_Content1_txtZipcode"
+          value: $ADDRESS_ZIP5
+          required: true
+        - name: "ctl00$Content1$txtEmail"
+          selector: "#ctl00_Content1_txtEmail"
+          value: $EMAIL
+          required: true
+        - name: "ctl00$Content1$txtConfirmEmail"
+          selector: "#ctl00_Content1_txtConfirmEmail"
+          value: $EMAIL
+          required: true
+        - name: "ctl00$Content1$txtCaptcha"
+          selector: "#ctl00_Content1_txtCaptcha"
+          captcha_selector: "#quickcomment_ctl00_content1_captcha1_CaptchaImage"
+          value: $CAPTCHA_SOLUTION
+          required: true
+    - select:
+        - selector: "#ctl00_Content1_dropState"
+          value: $ADDRESS_STATE_POSTAL_ABBREV
+          required: true
+          options:
+            ALABAMA: AL
+            ALASKA: AK
+            AMERICAN SAMOA: AS
+            ARIZONA: AZ
+            ARKANSAS: AR
+            CALIFORNIA: CA
+            COLORADO: CO
+            CONNECTICUT: CT
+            DELAWARE: DE
+            DISTRICT OF COLUMBIA: DC
+            FLORIDA: FL
+            GEORGIA: GA
+            GUAM: GU
+            HAWAII: HI
+            IDAHO: ID
+            ILLINOIS: IL
+            INDIANA: IN
+            IOWA: IA
+            KANSAS: KS
+            KENTUCKY: KY
+            LOUISIANA: LOUISIANA
+            MAINE: ME
+            MARYLAND: MD
+            MASSACHUSETTS: MA
+            MICHIGAN: MI
+            MINNESOTA: MN
+            MISSISSIPPI: MS
+            MISSOURI: MO
+            MONTANA: MT
+            NEBRASKA: NE
+            NEVADA: NV
+            NEW HAMPSHIRE: NH
+            NEW JERSEY: NJ
+            NEW MEXICO: NM
+            NEW YORK: NY
+            NORTH CAROLINA: NC
+            NORTH DAKOTA: ND
+            NORTHERN MARINA ISLAND: CM
+            OHIO: OH
+            OKLAHOMA: OK
+            OREGON: OR
+            PENNSYLVANIA: PA
+            PUERTO RICO: PR
+            RHODE ISLAND: RI
+            SOUTH CAROLINA: SC
+            SOUTH DAKOTA: SD
+            TENNESSEE: TN
+            TEXAS: TX
+            UTAH: UT
+            VERMONT: VT
+            VIRGIN ISLANDS: VI
+            VIRGINIA: VA
+            WASHINGTON: WA
+            WEST VIRGINIA: WV
+            WISCONSIN: WI
+            WYOMING; WY
+    - click_on:
+         - selector: "#ctl00_Content1_btnValidate"
+  success:
+    headers:
+      status: 200
+    body:
+      contains: Thank you for your interest in submitting
