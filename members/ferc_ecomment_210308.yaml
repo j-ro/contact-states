@@ -94,7 +94,7 @@ contact_form:
             WASHINGTON: WA
             WEST VIRGINIA: WV
             WISCONSIN: WI
-            WYOMING; WY
+            WYOMING: WY
     - click_on:
          - selector: "#ctl00_Content1_btnValidate"
   success:
