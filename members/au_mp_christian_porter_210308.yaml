@@ -1,0 +1,42 @@
+bioguide: au_mp_christian_porter_210308
+contact_form:
+  method: POST
+  action: ""
+  steps:
+    - visit: "https://www.aph.gov.au/Senators_and_Members/Contact_Senator_or_Member?MPID=208884"
+    - fill_in:
+        - name: "main_0$content_0$txtFirstName"
+          selector: "#main_0_content_0_txtFirstName"
+          value: $NAME_FIRST
+          required: true
+        - name: "main_0$content_0$txtSurname"
+          selector: "#main_0_content_0_txtSurname"
+          value: $NAME_LAST
+          required: true
+        - name: "main_0$content_0$txtEmail"
+          selector: "#main_0_content_0_txtEmail"
+          value: $EMAIL
+          required: true
+        - name: "main_0$content_0$txtQuestion"
+          selector: "#main_0_content_0_txtQuestion"
+          value: $MESSAGE
+          required: true
+    - select:
+        - name: "main_0$content_0$ddTitle"
+          selector: "#main_0_content_0_ddTitle"
+          value: $NAME_PREFIX
+          required: true
+          options:
+             - Ms
+             - Miss
+             - Mrs
+             - Mr
+             - Dr
+             - Not disclosed
+    - click_on:
+        - selector: "#main_0_content_0_btnSubmit"
+  success:
+    headers:
+      status: 200
+    body:
+      contains: Thank you for your time
