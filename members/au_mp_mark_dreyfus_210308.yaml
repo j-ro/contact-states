@@ -33,6 +33,10 @@ contact_form:
              - Mr
              - Dr
              - Not disclosed
+    - javascript:
+        - value: document.querySelector("#g-recaptcha-response").style.display = "block";  
+    - recaptcha:
+        - value: true         
     - click_on:
         - selector: "#main_0_content_0_btnSubmit"
   success:
