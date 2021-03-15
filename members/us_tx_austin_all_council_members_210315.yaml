@@ -1,0 +1,32 @@
+bioguide: us_tx_austin_all_council_members_210315
+contact_form:
+  method: POST
+  action: ""
+  steps:
+    - visit: "https://www.austintexas.gov/email/all-council-members"
+    - fill_in:
+        - name: "fullname"
+          selector: "#edit-fullname"
+          value: $NAME_FULL
+          required: true
+        - name: "emailfrom"
+          selector: "#edit-emailfrom"
+          value: $EMAIL
+          required: true
+        - name: "subject"
+          selector: "#edit-subject"
+          value: $SUBJECT
+          required: true
+        - name: "message"
+          selector: "#edit-message"
+          value: $MESSAGE
+          required: true
+    - click_on:
+         - selector: "#edit-submit"
+    - wait:
+         - value: 10
+  success:
+    headers:
+      status: 200
+    body:
+      contains: Form Thank You Page
