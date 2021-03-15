@@ -25,6 +25,10 @@ contact_form:
          - selector: "#edit-submit"
     - wait:
          - value: 10
+    - click_on:
+         - selector: "#edit-submit"
+    - wait:
+         - value: 10             
   success:
     headers:
       status: 200
