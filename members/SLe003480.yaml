@@ -34,7 +34,7 @@ contact_form:
           value: $SUBJECT
           required: true
         - name: "ctl00$MainContent$txtMessage"
-          selector: "#txtMessage"
+          selector: "#MainContent_txtMessage"
           value: $MESSAGE
           required: true
     - recaptcha:

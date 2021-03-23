@@ -6,31 +6,31 @@ contact_form:
     - visit: "https://lcmspubcontact.lc.ca.gov/PublicLCMS/ContactPopup.php?district=AD25"
     - fill_in:
         - name: txtFirstName
-          selector: "#txtFirstName"
+          selector: "#form_name"
           value: $NAME_FIRST
           required: true
         - name: txtLastName
-          selector: "#txtLastName"
+          selector: "#form_lastname"
           value: $NAME_LAST
           required: true
         - name: txtAddress
-          selector: "#txtAddress"
+          selector: "#form_address"
           value: $ADDRESS_STREET
           required: true
         - name: txtCity
-          selector: "#txtCity"
+          selector: "#form_city"
           value: $ADDRESS_CITY
           required: true
         - name: txtZip
-          selector: "#txtZip"
+          selector: "#form_zip"
           value: $ADDRESS_ZIP5
           required: true
         - name: txtEmail
-          selector: "#txtEmail"
+          selector: "#form_email"
           value: $EMAIL
           required: true
         - name: jv_text
-          selector: "#ContactForm textarea[name='jv_text']"
+          selector: "#comments"
           value: $MESSAGE
           required: true
     - click_on:
@@ -40,4 +40,4 @@ contact_form:
     headers:
       status: 200
     body:
-      contains: My staff and I
+      contains: Your message has been
