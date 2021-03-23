@@ -5,53 +5,41 @@ contact_form:
   steps:
     - visit: "http://www.ohiohouse.gov/brigid-kelly/contact"
     - fill_in:
-        - name: tbxFirstName
-          selector: "#tbxFirstName"
+        - name: firstName
+          selector: "#first-name"
           value: $NAME_FIRST
           required: true
-        - name: tbxLastName
-          selector: "#tbxLastName"
+        - name: lastName
+          selector: "#last-name"
           value: $NAME_LAST
           required: true
-        - name: tbxEmail
-          selector: "#tbxEmail"
+        - name: email
+          selector: "#email"
           value: $EMAIL
           required: true
-        - name: tbxAddress
-          selector: "#tbxAddress"
+        - name: address.addressLine1
+          selector: "#address-line-1"
           value: $ADDRESS_STREET
           required: true
-        - name: tbxCity
-          selector: "#tbxCity"
+        - name: address.city
+          selector: "#city"
           value: $ADDRESS_CITY
           required: true
-        - name: tbxZipCode
-          selector: "#tbxZipCode"
+        - name: address.zip
+          selector: "#zip"
           value: $ADDRESS_ZIP5
           required: true
-        - name: tbxAreaCode
-          required: true
-          selector: "#tbxAreaCode"
-          value: "202"
-        - name: tbxPrefix
-          required: true
-          selector: "#tbxPrefix"
-          value: "202"
-        - name: tbxLineNumber
-          required: true
-          selector: "#tbxLineNumber"
-          value: "2020"
-        - name: tbxSubject
-          selector: "#tbxSubject"
+        - name: subject
+          selector: "#subject"
           value: $SUBJECT
           required: true
-        - name: tbxMessage
-          selector: "#tbxMessage"
+        - name: message
+          selector: "#message"
           value: $MESSAGE
           required: true
     - select:
-        - name: ddlState
-          selector: "#ddlState"
+        - name: address.state
+          selector: "#state"
           value: $ADDRESS_STATE_POSTAL_ABBREV
           required: true
           options:
@@ -107,7 +95,7 @@ contact_form:
             WI: "WI"
             WY: "WY"
     - click_on:
-        - selector: "#ibtSubmit"
+        - selector: "button[type='submit']"
   success:
     headers:
       status: 200

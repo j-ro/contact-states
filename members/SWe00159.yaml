@@ -27,17 +27,17 @@ contact_form:
           value: $TOPIC
           required: true
           options:
-             Disaster Recovery: 1
-             Education: 2
-             Environment: 3
-             Healthcare: 4
-             Infrastructure: 5
-             Economy: 6
-             Military/Veterans: 7
-             Public Safety: 8
-             Transportation/Eminent Domain: 9
-             Workforce Development: 10
-             Other: 11
+             Disaster Recovery: "1"
+             Education: "2"
+             Environment: "3"
+             Healthcare: "4"
+             Infrastructure: "5"
+             Economy: "6"
+             Military/Veterans: "7"
+             Public Safety: "8"
+             Transportation/Eminent Domain: "9"
+             Workforce Development: "10"
+             Other: "11"
         - name: ISSUE
           selector: "#edit-submitted-stateSelectBoxItOptions"
           value: $ADDRESS_STATE_POSTAL_ABBREV
