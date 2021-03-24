@@ -5,16 +5,18 @@ contact_form:
   steps:
     - visit: "https://www.federalregister.gov/documents/2021/01/04/2020-27581/rights-to-federally-funded-inventions-and-licensing-of-government-owned-inventions#open-comment"
     - find:
-        - selector: "#comment_general_comment"
+        - selector: "#comment_comment"
     - wait:
         - value: 5
     - fill_in:
-        - selector: "#comment_general_comment"
-          name: "comment[general_comment]"
+        - selector: "#comment_comment"
+          name: "comment[comment]"
           value: $MESSAGE
           required: true
           options:
             max_length: 2000
+    - click_on:
+        - selector: "#div[data-submitter-type='anonymous'] input[type='radio']"        
     - click_on:
         - selector: "#comment_confirm_submission"
     - wait:
