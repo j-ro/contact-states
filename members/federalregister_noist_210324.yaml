@@ -16,7 +16,7 @@ contact_form:
           options:
             max_length: 2000
     - click_on:
-        - selector: "#div[data-submitter-type='anonymous'] input[type='radio']"        
+        - selector: "div[data-submitter-type='anonymous'] input[type='radio']"        
     - click_on:
         - selector: "#comment_confirm_submission"
     - wait:
