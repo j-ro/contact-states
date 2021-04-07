@@ -16,7 +16,7 @@ contact_form:
             max_length: 5000
     # Not sure if lines 18-19 are the correct way to click and select the "Individual" identity:
     - click_on:
-        - selector: ".icon.icon-individual"
+        - selector: "#individual"
     - wait:
         - value: 3
     - fill_in:
