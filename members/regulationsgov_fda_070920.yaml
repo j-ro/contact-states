@@ -48,4 +48,4 @@ contact_form:
     headers:
       status: 200
     body:
-      contains: Your comment may be viewable on Regulations.gov
+      contains: Your comment has been sent for review.
