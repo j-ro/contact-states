@@ -3,35 +3,49 @@ contact_form:
   method: POST
   action: ""
   steps:
-    - visit: "https://www.regulations.gov/comment?D=FDA-2020-P-1478-0001"
+    - visit: "https://www.regulations.gov/commenton/FDA-2020-P-1478-0001"
     - find:
-        - selector: "textarea#x-auto-0-input"
+        - selector: "textarea#controlid-ember16"
     - wait:
         - value: 5
     - fill_in:
-        - selector: "textarea#x-auto-0-input"
+        - selector: "textarea#controlid-ember16"
           value: $MESSAGE
           required: true
           options:
             max_length: 5000
-        - selector: "input#x-auto-1-input"
+    # Not sure if lines 18-19 are the correct way to click and select the "Individual" identity:
+    - click_on:
+        - selector: "#individual"
+    - wait:
+        - value: 3
+    - fill_in:
+        - selector: "input#ember66"
           value: $NAME_FIRST
           required: true
-        - selector: "input#x-auto-2-input"
+        - selector: "input#ember68"
           value: $NAME_LAST
           required: true
+    # Got lines 30-33 from https://github.com/j-ro/contact-states/blob/master/members/state_va_gov_terry_mcauliffe.yaml (lines 57-60)
+    - javascript:
+        - value: document.querySelector("#g-recaptcha-response").style.display = "block";
+    - recaptcha:
+        - value: true
     - click_on:
-        - selector: ".GIY1LSJPSC button.primary.button"
-    - find:
-        - selector: ".GIY1LSJIRD input"
-    - click_on:
-        - selector: ".GIY1LSJIRD input"
-    - click_on:
-        - selector: ".GIY1LSJERD button.primary"
-    - find:
-        - selector: ".successInfo"
+        - selector: ".btn.btn-primary"
+    - wait:
+        - value: 5
+    #Suspect that lines 37-44 may not be needed anymore?
+    #- find:
+    #    - selector: ".GIY1LSJIRD input"
+    #- click_on:
+    #    - selector: ".GIY1LSJIRD input"
+    #- click_on:
+    #    - selector: ".GIY1LSJERD button.primary"
+    # - find:
+    #     - selector: ".successInfo"
   success:
     headers:
       status: 200
     body:
-      contains: Your comment may be viewable on Regulations.gov
+      contains: Your comment has been sent for review.
