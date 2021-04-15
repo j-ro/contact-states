@@ -24,28 +24,34 @@ contact_form:
           required: true
           options:
             "Animal Issues/Concerns": 6154
-            "Attorney General": 5511
-            "Caltrans": 5541
-            "Child Protective Services": 38184
-            "Child Support Services": 56644
+            "Budget Proposal 2021-2022": 58070
+            "Clemency - Commutation of Sentence": 54389
+            "Clemency - Pardon": 44283
             "Consumer Affairs Issues/Concerns": 22912
+            "COVID-19 - Join Healthcorps": 58027
+            "COVID-19 - Medical Supply Contributions": 58014
+            "COVID-19 - Submit Technology Solutions": 58028
+            "COVID-19 - Volunteer": 58026
+            "Criminal Justice": 57822
+            "Death Penalty ": 6386
             "DIR - Workers Compensation": 38182
             "DMV Issues/Concerns": 6286
             "Education Issues/Concerns": 6159
             "Employment Development Department": 5653
             "Energy Issues/Concerns": 40848
             "Fair Employment and Housing": 5680
+            "Fire - Prevention/Fighting": 38337
             "Food & Ag Issues/Concerns": 6298
             "Franchise Tax Board Issues/Concerns": 6287
             "Gun Control": 38193
             "Health & Human Services Agency": 5734
-            "High Speed Rail": 5743
+            "HHS - Child Protective Services": 38184
             "Immigration Issues/Concerns": 5997
-            "Inspector General": 29174
             "Insurance Issues/Concerns": 5773
             "Labor and Workforce Development Agency": 38192
             "Legislation Issues/Concerns": 6157
             "Medi-Cal Issues/Concerns": 5824
+            "OTHER": 1
             "Parole - Governors Review": 54336
             "Parole Issues/Concerns": 38196
             "Press Office": 34661
@@ -55,13 +61,12 @@ contact_form:
             "Request - Commemorative Message from the Governor": 38197
             "Request - Contribution/Donation": 5585
             "Request - General": 34805
-            "Small Business Issues/Concerns": 32380
-            "State Foreclosure Assistance": 49360
             "Student Correspondence": 5784
             "Teacher Credentialing Issues/Concerns": 6301
+            "Transportation - Caltrans": 5541
+            "Transportation - High Speed Rail": 5743
             "UC/CSU Issues/Concerns": 6096
             "Veteran Issues/Concerns": 38188
-            "Water - Conservation Suggestion": 54536
             "Water Issues/Concerns": 6127
     - check:
         - name: comment
