@@ -5,43 +5,39 @@ contact_form:
   steps:
     - visit: "https://lcmspubcontact.lc.ca.gov/PublicLCMS/ContactPopup.php?district=AD01"
     - fill_in:
-        - name: "ctl00$MainContent$txtName"
-          selector: "#MainContent_txtName"
-          value: $NAME_FULL
+        - name: "txtFirstName"
+          selector: "#form_name"
+          value: $NAME_FIRST
           required: true
-        - name: "ctl00$MainContent$txtAddress"
-          selector: "#MainContent_txtAddress"
+        - name: "txtLastName"
+          selector: "#form_lastname"
+          value: $NAME_LAST
+          required: true
+        - name: "txtAddress"
+          selector: "#form_address"
           value: $ADDRESS_STREET
           required: true
-        - name: "ctl00$MainContent$txtCity"
-          selector: "#MainContent_txtCity"
+        - name: "txtCity"
+          selector: "#form_city"
           value: $ADDRESS_CITY
           required: true
-        - name: "ctl00$MainContent$txtZip"
-          selector: "#MainContent_txtZip"
+        - name: "txtZip"
+          selector: "#form_zip"
           value: $ADDRESS_ZIP5
           required: true
-        - name: "ctl00$MainContent$txtZip4"
-          selector: "#MainContent_txtZip4"
-          value: $ADDRESS_ZIP4
-          required: true
-        - name: "ctl00$MainContent$txtEmail"
-          selector: "#MainContent_txtEmail"
+        - name: "txtEmail"
+          selector: "#form_email"
           value: $EMAIL
           required: true
-        - name: "ctl00$MainContent$txtSubject"
-          selector: "#MainContent_txtSubject"
-          value: $SUBJECT
-          required: true
-        - name: "ctl00$MainContent$txtMessage"
-          selector: "#MainContent_txtMessage"
+        - name: "jv_text"
+          selector: "#comments"
           value: $MESSAGE
           required: true
     - recaptcha:
       - value: true
     - click_on:
-        - value: Send Message
-          selector: "#MainContent_btnSend"
+        - value: Submit
+          selector: "#submitButton"
   success:
     headers:
       status: 200
