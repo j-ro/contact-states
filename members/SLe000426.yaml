@@ -33,8 +33,6 @@ contact_form:
           selector: "#comments"
           value: $MESSAGE
           required: true
-    - recaptcha:
-      - value: true
     - click_on:
         - value: Submit
           selector: "#submitButton"
