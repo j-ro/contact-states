@@ -5,63 +5,64 @@ contact_form:
   steps:
     - visit: "https://www.governor.ny.gov/content/governor-contact-form"
     - fill_in:
-        - name: "submitted[first_name]"
-          selector: "#edit-submitted-first-name"
+        - name: "first_name"
+          selector: "#edit-first-name"
           value: $NAME_FIRST
           required: true
-        - name: "submitted[last_name]"
-          selector: "#edit-submitted-last-name"
+        - name: "last_name"
+          selector: "#edit-last-name"
           value: $NAME_LAST
           required: true
-        - name: "submitted[email]"
-          selector: "#edit-submitted-email"
+        - name: "email"
+          selector: "#edit-email"
           value: $EMAIL
           required: true
-        - name: "submitted[address]"
-          selector: "#edit-submitted-address"
+        - name: "address"
+          selector: "#edit-address"
           value: $ADDRESS_STREET
           required: true
-        - name: "submitted[city]"
-          selector: "#edit-submitted-city"
+        - name: "city"
+          selector: "#edit-city"
           value: $ADDRESS_CITY
           required: true
-        - name: "submitted[zip_code_contact]"
-          selector: "#edit-submitted-zip-code-contact"
+        - name: "zip_code_contact"
+          selector: "#edit-zip-code-contact"
           value: $ADDRESS_ZIP5
           required: true
-        - name: "submitted[telephone_number]"
-          selector: "#edit-submitted-telephone-number"
+        - name: "telephone_number"
+          selector: "#edit-telephone-number"
           value: $PHONE
           required: true
-        - name: "submitted[subject]"
-          selector: "#edit-submitted-subject"
+        - name: "subject"
+          selector: "#edit-subject"
           value: $SUBJECT
           required: true
-        - name: "submitted[message]"
-          selector: "#edit-submitted-message"
+        - name: "message"
+          selector: "#edit-message"
           value: $MESSAGE
           required: true
     - select:
-        - name: "submitted[salutation]"
-          selector: "#edit-submitted-salutation"
+        - name: "salutation"
+          selector: "#edit-salutation"
           value: $NAME_PREFIX
           required: true
           options:
             Mr.: mr
             Ms.: ms
             Mrs.: mrs
+            Mx.: ms
             Mr. &amp; Mrs.: mr_and_mrs
             Mr. &amp; Mr.: mr_and_mr
             Mrs. &amp; Mrs.: mrs_and_mrs
             Blank: blank  
-        - name: "submitted[contact_form_state]"
-          selector: "#edit-submitted-contact-form-state"
+        - name: "contact_form_state"
+          selector: "#edit-contact-form-state"
           value: $ADDRESS_STATE_FULL
           required: true
           options:
             New York: New York
-        - name: "submitted[topic]"
-          selector: "#edit-submitted-topic"
+        - name: "topic"
+          selector: "#edit-topic"
           value: $TOPIC
           required: true
           options:
@@ -105,7 +106,7 @@ contact_form:
             Worker Exploitation: worker_exploitation
     - click_on:
         - value: Submit
-          selector: ".webform-submit"
+          selector: "#edit-actions-submit"
   success:
     headers:
       status: 200
