@@ -70,7 +70,9 @@ try{ element.parentNode.removeChild(element) } catch(err){} });"
     - wait:
         - value: 5
     - javascript:
-        - value: "document.querySelector('#g-recaptcha-response').style.display = 'block'; document.querySelector('#g-recaptcha-response').setAttribute('data-sitekey', document.querySelector('#g-recaptcha-36 iframe').src); document.querySelector('#g-recaptcha-response').value = document.querySelector('#g-recaptcha-36 iframe').src;"
+        - value: "document.querySelector('#g-recaptcha-response').style.display = 'block';"
+    - javascript:
+        - value: "document.querySelector('#g-recaptcha-response').style.display = 'block'; document.querySelector('#g-recaptcha-response').value = document.querySelector('#g-recaptcha-36 iframe').src;"
     - click_on:
         - value: break
           selector: "#breakthisform"
