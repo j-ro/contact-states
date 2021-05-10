@@ -67,6 +67,8 @@ try{ element.parentNode.removeChild(element) } catch(err){} });"
             - Taxes
             - Transportation
             - Veterans
+    - wait:
+        - value: 5
     - javascript:
         - value: "document.querySelector('#g-recaptcha-response').style.display = 'block';"
     - recaptcha:
