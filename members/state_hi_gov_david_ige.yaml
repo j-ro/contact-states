@@ -29,6 +29,7 @@ contact_form:
         - name: input_18
           selector: "#input_1_18"
           value: Oʻahu
+          required: true
         - name: input_10
           selector: "#input_1_10"
           value: $TOPIC
