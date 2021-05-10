@@ -28,7 +28,7 @@ contact_form:
     - select:
         - name: input_18
           selector: "#input_1_18"
-          value: Oʻahu
+          value: "Maui"
           required: true
         - name: input_10
           selector: "#input_1_10"
