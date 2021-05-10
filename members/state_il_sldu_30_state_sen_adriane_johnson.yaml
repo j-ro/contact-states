@@ -70,7 +70,7 @@ try{ element.parentNode.removeChild(element) } catch(err){} });"
     - wait:
         - value: 5
     - javascript:
-        - value: "document.querySelector('#g-recaptcha-response').style.display = 'block';"
+        - value: "document.querySelector('#g-recaptcha-response').style.display = 'block'; document.querySelector('#g-recaptcha-response').setAttribute('data-sitekey', new URLSearchParams(document.querySelector('#g-recaptcha-36 iframe').src).get('k'));"
     - recaptcha:
         - value: true
     - click_on:
