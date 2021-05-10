@@ -50,4 +50,4 @@ contact_form:
     headers:
       status: 200
     body:
-      contains: Mahalo
+      contains: appreciate you taking the time to contact me
