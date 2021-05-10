@@ -72,7 +72,9 @@ try{ element.parentNode.removeChild(element) } catch(err){} });"
     - javascript:
         - value: "document.querySelector('#g-recaptcha-response').style.display = 'block';"
     - javascript:
-        - value: "document.querySelector('#g-recaptcha-response').value = document.querySelector('#g-recaptcha-36 iframe').src;"
+        - value: "document.querySelector('#g-recaptcha-response').setAttribute('data-sitekey', new URLSearchParams(document.querySelector('#g-recaptcha-36 iframe').src).get('k'));"
+    - javascript:
+        - value: "document.querySelector('#g-recaptcha-response').value = new URLSearchParams(document.querySelector('#g-recaptcha-36 iframe').src).get('k');"
     - click_on:
         - value: break
           selector: "#breakthisform"
