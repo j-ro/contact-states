@@ -74,8 +74,8 @@ try{ element.parentNode.removeChild(element) } catch(err){} });"
     - recaptcha:
         - value: true
     - click_on:
-        - value: Send
-          selector: "#rt-mainbody #Send"
+        - value: break
+          selector: "#breakthisform"
     - wait:
         - value: 10
     - find:
