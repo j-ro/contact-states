@@ -1,0 +1,52 @@
+bioguide: state_hi_gov_david_ige
+contact_form:
+  method: post
+  action: "https://governor.hawaii.gov/contact-us/contact-the-governor/"
+  steps:
+    - visit: "https://governor.hawaii.gov/contact-us/contact-the-governor/"
+    - fill_in:
+        - name: input_4.3
+          selector: "#input_1_4_3"
+          value: $NAME_FIRST
+          required: true
+        - name: input_4.6
+          selector: "#input_1_4_6"
+          value: $NAME_LAST
+          required: true
+        - name: input_7
+          selector: "#input_1_7"
+          value: $PHONE
+          required: true
+        - name: input_8
+          selector: "#input_1_8"
+          value: $EMAIL
+          required: true
+        - name: input_11
+          selector: "#input_1_11"
+          value: $MESSAGE
+          required: true
+    - select:
+        - name: input_18
+          selector: "#input_1_18"
+          value: Oʻahu
+        - name: input_10
+          selector: "#input_1_10"
+          value: $TOPIC
+          required: true
+          options:
+            Comment/ Suggestion: Comment/ Suggestion
+            Complaint: Complaint
+            Question: Question
+            Other: Other
+    - javascript:
+      - value: document.querySelector("#g-recaptcha-response").style.display = "block";
+    - recaptcha:
+        - value: true
+    - click_on:
+        - value: Submit
+          selector: "#gform_submit_button_1"
+  success:
+    headers:
+      status: 200
+    body:
+      contains: Mahalo
