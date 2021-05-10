@@ -70,6 +70,8 @@ contact_form:
             - Veterans
     - javascript:
       - value: "document.querySelector('#g-recaptcha-response').style.display = 'block';"
+    - javascript:
+      - value: "document.querySelector('#g-recaptcha-response').setAttribute('data-sitekey', document.querySelector('#g-recaptcha-36 iframe').src.substring(52,92));"
     - recaptcha:
         - value: true
     - click_on:
