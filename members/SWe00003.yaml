@@ -34,7 +34,7 @@ contact_form:
           value: $ADDRESS_ZIP5
           required: true
         - name: ctl00$ContentPlaceHolder1$COMMENTS
-          selector: "ContentPlaceHolder1_COMMENTS"
+          selector: "#ContentPlaceHolder1_COMMENTS"
           value: $MESSAGE
           required: true
     - select:
