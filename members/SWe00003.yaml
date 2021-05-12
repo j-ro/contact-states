@@ -3,44 +3,87 @@ contact_form:
   method: post
   action: contact.aspx
   steps:
-    - visit: "http://governor.alabama.gov/contact"
+    - visit: "https://contact.governor.alabama.gov/contact.aspx"
     - fill_in:
-        - name: "name"
-          selector: "#freeform_name"
-          value: $NAME_FULL
+        - name: "ctl00$ContentPlaceHolder1$FIRSTNAME"
+          selector: "#ContentPlaceHolder1_FIRSTNAME"
+          value: $NAME_FIRST
           required: true
-        - name: email
-          selector: "#freeform_email"
+        - name: ctl00$ContentPlaceHolder1$LASTNAME
+          selector: "#ContentPlaceHolder1_LASTNAME"
+          value: $NAME_LAST
+          required: true
+        - name: ctl00$ContentPlaceHolder1$EMAILADDRESS
+          selector: "#ContentPlaceHolder1_EMAILADDRESS"
           value: $EMAIL
           required: true
-        - name: street_address
-          selector: "#freeform_street_address"
+        - name: ctl00$ContentPlaceHolder1$STREET_ADDRESS
+          selector: "#ContentPlaceHolder1_STREET_ADDRESS"
           value: $ADDRESS_STREET
           required: true
-        - name: city
-          selector: "#freeform_city"
+        - name: ctl00$ContentPlaceHolder1$CITY
+          selector: "#ContentPlaceHolder1_CITY"
           value: $ADDRESS_CITY
           required: true
-        - name: state
-          selector: "#freeform_state"
-          value: $ADDRESS_STATE_POSTAL_ABBREV
+        - name: ctl00$ContentPlaceHolder1$STATE
+          selector: "#ContentPlaceHolder1_STATE"
+          value: AL
           required: true
-        - name: zip_code
-          selector: "#freeform_zip_code"
+        - name: ctl00$ContentPlaceHolder1$ZIP_CODE
+          selector: "#ContentPlaceHolder1_ZIP_CODE"
           value: $ADDRESS_ZIP5
           required: true
-        - name: user_message
-          selector: "#freeform_user_message"
+        - name: ctl00$ContentPlaceHolder1$COMMENTS
+          selector: "ContentPlaceHolder1_COMMENTS"
           value: $MESSAGE
           required: true
-        - name: captcha
-          selector: "input[name=captcha]"
-          captcha_selector: "#contactForm img"
-          value: $CAPTCHA_SOLUTION
+    - select:
+        - name: ctl00$ContentPlaceHolder1$PREFIX
+          selector: "#ContentPlaceHolder1_PREFIX"
+          value: $NAME_PREFIX
           required: true
+          options:
+            - Mr.
+            - Ms.
+            - Mrs.
+            - Dr.
+        - name: ctl00$ContentPlaceHolder1$EMAIL_ISSUE
+          selector: "#ContentPlaceHolder1_EMAIL_ISSUE"
+          value: $TOPIC
+          required: true
+          options:
+            Conservation: CONSERVATION
+            Department of Human Resources: DHR
+            Disaster Assistance: DISASTER
+            Driver License: ALEA-DRIVER LICENSE
+            Economy & Budget: BUD
+            Education: EDU-GENERAL
+            Environment: ENVIRONMENT
+            Executions: DOC-EXECUTIONS
+            Healthcare: HC-GENERAL
+            Immigration: ISSUE-IMMIGRATION
+            Insurance: INSURANCE-GENERAL
+            Labor: LABOR
+            Legislative Session: LS
+            Military: MILITARY
+            NRA - Second Amendment: NRA
+            Pardons & Paroles: PARDONS &PAROLES
+            Request for Funding: REQUEST FOR FUNDING
+            Request for Greeting Letter: LETTERS - CEREMONIAL
+            Request Photo/Request for Item: REQUEST FOR ITEMS
+            Senior Assistance: SENIOR SERVICES-GEN
+            Transportation: DOT    
+    - javascript:
+        - value: document.getElementById("ContentPlaceHolder1_PHONE1").value = 123
+    - javascript:
+        - value: document.getElementById("ContentPlaceHolder1_PHONE2").value = 456
+    - javascript:
+        - value: document.getElementById("ContentPlaceHolder1_PHONE3").value = 7890      
+    - recaptcha:
+        - value: true
     - click_on:
-        - value: Submit
-          selector: "input[name=submit]"
+        - value: Email This Form
+          selector: "#ContentPlaceHolder1_btnEmail"
   success:
     headers:
       status: 200
