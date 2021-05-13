@@ -39,7 +39,7 @@ contact_form:
           required: true
     - select:
         - name: ctl00$ContentPlaceHolder1$PREFIX
-          selector: "#ContentPlaceHolder1_PREFIX"
+          selector: "select[name='ctl00$ContentPlaceHolder1$PREFIX']"
           value: $NAME_PREFIX
           required: true
           options:
