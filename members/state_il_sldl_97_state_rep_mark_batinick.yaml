@@ -32,7 +32,7 @@ contact_form:
         - value: Send message
           selector: "form.ajaxForm.feedback_form input[name='commit']"
     - wait:
-        - value: 5
+        - value: 7
   success:
     headers:
       status: 200
