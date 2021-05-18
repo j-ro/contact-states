@@ -54,6 +54,8 @@ try{ element.parentNode.removeChild(element) } catch(err){} });"
     - uncheck:
         - selector: "#page-ContactForm-EmailAlertCHECK"
           value: "2"
+    - javascript:
+        - value: document.querySelector("#g-recaptcha-response").style.display = "block";
     - recaptcha:
         - value: true
     - click_on:
