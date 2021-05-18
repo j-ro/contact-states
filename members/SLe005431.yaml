@@ -4,8 +4,13 @@ contact_form:
   action: confirm.asp
   steps:
     - visit: "http://www.pahouse.com/154/Contact/"
-    - find:
-        - selector: "#breakthisform"
+    - fill_in:
+        - name:
+          selector: "#zipcode"
+          value: $ADDRESS_ZIP5
+          required: true
+    - click_on:
+        - selector: "#gpsAllow"
     - fill_in:
         - name:
           selector: "#input-page-ContactForm-fName"
