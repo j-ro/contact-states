@@ -4,6 +4,8 @@ contact_form:
   action: confirm.asp
   steps:
     - visit: "http://www.pahouse.com/154/Contact/"
+    - find:
+        - selector: "#breakthisform"
     - fill_in:
         - name:
           selector: "#input-page-ContactForm-fName"
@@ -48,8 +50,6 @@ contact_form:
         - value: true
     - click_on:
         - selector: "#pageContactForm-submit"
-    - find:
-        - selector: "#breakthisform"
     - wait:
         - value: 2
     - find:
