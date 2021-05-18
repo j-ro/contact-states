@@ -61,7 +61,7 @@ try{ element.parentNode.removeChild(element) } catch(err){} });"
     - click_on:
         - selector: "#pageContactForm-submit"
     - wait:
-        - value: 2
+        - value: 8
     - find:
         - selector: "p"
           value: "Thank you. Your feedback has been sent."
