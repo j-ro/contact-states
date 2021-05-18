@@ -48,6 +48,8 @@ contact_form:
         - value: true
     - click_on:
         - selector: "#pageContactForm-submit"
+    - find:
+        - selector: "#breakthisform"
     - wait:
         - value: 2
     - find:
