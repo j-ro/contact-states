@@ -4,7 +4,13 @@ contact_form:
   action: "http://www.senatorlauramurphy.com/contact-us"
   steps:
     - visit: "http://www.senatorlauramurphy.com/contact-us"
+    - wait:
+        - value: 2
     - fill_in:
+        - name: "form[firstName]"
+          selector: "#breakthisform"
+          value: $NAME_FIRST
+          required: true
         - name: "form[firstName]"
           selector: "#rt-mainbody #firstName"
           value: $NAME_FIRST
