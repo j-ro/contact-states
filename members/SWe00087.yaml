@@ -113,4 +113,4 @@ contact_form:
     headers:
       status: 200
     body:
-      contains: Thank you for your questions and comments. We will reply to you as soon as possible.
+      contains: Thank you
