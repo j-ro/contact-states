@@ -1,0 +1,110 @@
+bioguide: blm_american_prairie_reserve_20210708
+contact_form:
+  method: POST
+  action: ""
+  steps:
+    - visit: "https://eplanning.blm.gov/eplanning-ui/project/103543/595/8002333/comment"
+    - find:
+        - selector: "#comment"
+    - fill_in:
+      selector: "#comment"
+          name: "comment"
+          value: $MESSAGE
+          required: true
+          options:
+            max_length: 5000
+      - selector: "#first-name"
+          name: "firstName"
+          value: $NAME_FIRST
+          required: true
+        - selector: "#last-name"
+          name: "lastName"
+          value: $NAME_LAST
+          required: false
+    - javascript:
+        - value: "document.querySelector('#additional-info').click()"
+    - fill_in:
+        - selector: "#line1"
+          name: "line1"
+          value: $ADDRESS_STREET
+          required: false
+        - selector: "#city"
+          name: "city"
+          value: $ADDRESS_CITY
+          required: false
+        - selector: "#zip"
+          name: "zip"
+          value: $ADDRESS_ZIP5
+          required: false
+        - selector: "#email"
+          name: "emailAddress"
+          value: $EMAIL
+          required: false
+    - select:
+        - selector: "#state"
+          name: "state"
+          value: $ADDRESS_STATE_FULL
+          required: false
+          options:
+            - Alabama
+            - Alaska
+            - Arizona
+            - Arkansas
+            - California
+            - Colorado
+            - Connecticut
+            - Delaware
+            - District of Columbia
+            - Florida
+            - Georgia
+            - Hawaii
+            - Idaho
+            - Illinois
+            - Indiana
+            - Iowa
+            - Kansas
+            - Kentucky
+            - Louisiana
+            - Maine
+            - Maryland
+            - Massachusetts
+            - Michigan
+            - Minnesota
+            - Mississippi
+            - Missouri
+            - Montana
+            - Nebraska
+            - Nevada
+            - New Hampshire
+            - New Jersey
+            - New Mexico
+            - New York
+            - North Carolina
+            - North Dakota
+            - Ohio
+            - Oklahoma
+            - Oregon
+            - Pennsylvania
+            - Rhode Island
+            - South Carolina
+            - South Dakota
+            - Tennessee
+            - Texas
+            - Utah
+            - Vermont
+            - Virginia
+            - Washington
+            - West Virginia
+            - Wisconsin
+            - Wyoming
+    - click_on:
+        - selector: "#comment-submission-page > form > div.text-right.standard-btns > button.btn.btn-primary"
+    - wait:
+        - value: 5
+    - click_on:
+        - selector: "#comment-view-page > div > div.text-right.standard-btns > button.btn.btn-primary.ng-star-inserted"
+  success:
+    headers:
+      status: 200
+    body:
+      contains: Your new comment has been successfully submitted!
