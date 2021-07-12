@@ -7,13 +7,13 @@ contact_form:
     - find:
         - selector: "#comment"
     - fill_in:
-      selector: "#comment"
+        - selector: "#comment"
           name: "comment"
           value: $MESSAGE
           required: true
           options:
             max_length: 5000
-      - selector: "#first-name"
+        - selector: "#first-name"
           name: "firstName"
           value: $NAME_FIRST
           required: true
