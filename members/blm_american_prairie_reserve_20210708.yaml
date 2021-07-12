@@ -4,8 +4,13 @@ contact_form:
   action: ""
   steps:
     - visit: "https://eplanning.blm.gov/eplanning-ui/project/103543/595/8002333/comment"
+    - wait:
+        - value: 5
     - find:
         - selector: "#comment"
+    - javascript:
+        - value: "Array.prototype.forEach.call(document.querySelectorAll('style,[rel=\"stylesheet\"],[type=\"text/css\"]'), function(element){
+try{ element.parentNode.removeChild(element) } catch(err){} });"
     - fill_in:
         - selector: "#comment"
           name: "comment"
@@ -21,6 +26,8 @@ contact_form:
           name: "lastName"
           value: $NAME_LAST
           required: false
+    - check:
+        - selector: "document.querySelector('#additional-info')"
     - javascript:
         - value: "document.querySelector('#additional-info').click()"
     - fill_in:
@@ -101,6 +108,9 @@ contact_form:
         - selector: "#comment-submission-page > form > div.text-right.standard-btns > button.btn.btn-primary"
     - wait:
         - value: 5
+    - javascript:
+        - value: "Array.prototype.forEach.call(document.querySelectorAll('style,[rel=\"stylesheet\"],[type=\"text/css\"]'), function(element){
+try{ element.parentNode.removeChild(element) } catch(err){} });"
     - click_on:
         - selector: "#comment-view-page > div > div.text-right.standard-btns > button.btn.btn-primary.ng-star-inserted"
   success:
