@@ -43,6 +43,8 @@ contact_form:
           required: true
     - click_on:
         - selector: ".oda-contact-form .odx-full-banner__button"
+    - javascript:
+        - value: 'value: document.querySelector(".alert-success").style.display = "block";'
     - find:
         - selector: ".alert-success"
   success:
