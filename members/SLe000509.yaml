@@ -5,43 +5,37 @@ contact_form:
   steps:
     - visit: "https://lcmspubcontact.lc.ca.gov/PublicLCMS/ContactPopup.php?district=SD04"
     - fill_in:
-        - name: "ctl00$MainContent$txtName"
-          selector: "#MainContent_txtName"
-          value: $NAME_FULL
-          required: true
-        - name: "ctl00$MainContent$txtAddress"
-          selector: "#MainContent_txtAddress"
-          value: $ADDRESS_STREET
-          required: true
-        - name: "ctl00$MainContent$txtCity"
-          selector: "#MainContent_txtCity"
-          value: $ADDRESS_CITY
-          required: true
-        - name: "ctl00$MainContent$txtZip"
-          selector: "#MainContent_txtZip"
-          value: $ADDRESS_ZIP5
-          required: true
-        - name: "ctl00$MainContent$txtZip4"
-          selector: "#MainContent_txtZip4"
-          value: $ADDRESS_ZIP4
-          required: true
-        - name: "ctl00$MainContent$txtEmail"
-          selector: "#MainContent_txtEmail"
-          value: $EMAIL
-          required: true
-        - name: "ctl00$MainContent$txtSubject"
-          selector: "#MainContent_txtSubject"
-          value: $SUBJECT
-          required: true
-        - name: "ctl00$MainContent$txtMessage"
-          selector: "#MainContent_txtMessage"
-          value: $MESSAGE
-          required: true
-    - recaptcha:
-      - value: true
-    - click_on:
-        - value: Send Message
-          selector: "#MainContent_btnSend"
+       - name: "txtFirstName"
+         selector: "#form_name"
+         value: $NAME_FIRST
+         required: true
+       - name: "txtLastName"
+         selector: "#form_lastname"
+         value: $NAME_LAST
+         required: true
+       - name: "txtAddress"
+         selector: "#form_address"
+         value: $ADDRESS_STREET
+         required: true
+       - name: "txtCity"
+         selector: "#form_city"
+         value: $ADDRESS_CITY
+         required: true
+       - name: "txtZip"
+         selector: "#form_zip"
+         value: $ADDRESS_ZIP5
+         required: true
+       - name: "txtEmail"
+         selector: "#form_email"
+         value: $EMAIL
+         required: true
+       - name: "jv_text"
+         selector: "#comments"
+         value: $MESSAGE
+         required: true
+   - click_on:
+       - value: Submit
+         selector: "#submitButton"
   success:
     headers:
       status: 200
