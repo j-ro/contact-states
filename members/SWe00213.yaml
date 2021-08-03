@@ -46,7 +46,7 @@ contact_form:
     - javascript:
         - value: 'document.querySelector(".alert-success").style.display = "block";'
     - find:
-        - selector: ".i-don't-exist"
+        - selector: ".i-dont-exist"
   success:
     headers:
       status: 200
