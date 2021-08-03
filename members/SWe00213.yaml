@@ -4,9 +4,6 @@ contact_form:
   action: contactgovernor.aspx
   steps:
     - visit: "https://governor.ohio.gov/wps/portal/gov/governor/contact"
-    - javascript:
-        - value: "Array.prototype.forEach.call(document.querySelectorAll('style,[rel=\"stylesheet\"],[type=\"text/css\"]'), function(element){
-try{ element.parentNode.removeChild(element) } catch(err){} });"
     - fill_in:
         - name: first-name
           selector: "#first-name"
@@ -47,10 +44,7 @@ try{ element.parentNode.removeChild(element) } catch(err){} });"
     - click_on:
         - selector: ".oda-contact-form .odx-full-banner__button"
     - javascript:
-        - value: "Array.prototype.forEach.call(document.querySelectorAll('style,[rel=\"stylesheet\"],[type=\"text/css\"]'), function(element){
-try{ element.parentNode.removeChild(element) } catch(err){} });"
-    - javascript:
-        - value: 'value: document.querySelector(".alert-success").style.display = "block";'
+        - value: 'document.querySelector(".alert-success").style.display = "block";'
     - find:
         - selector: ".alert-success"
   success:
