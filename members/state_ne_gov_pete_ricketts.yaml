@@ -21,7 +21,7 @@ contact_form:
           selector: "[name~=Email]"
           value: $EMAIL
           required: true
-        - name: "04 Address"
+        - name: "04_address"
           selector: "[name~=Address]"
           value: $ADDRESS_STREET
           required: true
