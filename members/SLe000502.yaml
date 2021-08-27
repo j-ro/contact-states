@@ -36,8 +36,8 @@ contact_form:
    - click_on:
        - value: Submit
          selector: "#submitButton"
-  success:
-    headers:
-      status: 200
+ success:
+   headers:
+     status: 200
     body:
       contains: My staff and I
