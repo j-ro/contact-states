@@ -1,0 +1,157 @@
+bioguide: us_vp_210831
+contact_form:
+  method: POST
+  action: "https://forms.whitehouse.gov/ContactUs"
+  steps:
+    - visit: "https://www.whitehouse.gov/contact/"
+    - wait:
+        - value: 5
+    - find:
+        - selector: "input[name='Contact.FirstName']"
+    - fill_in:
+        - name: "Contact.FirstName"
+          selector: "input[name='Contact.FirstName']"
+          value: $NAME_FIRST
+          required: true
+          options:
+            max_length: 40
+        - name: "Contact.LastName"
+          selector: "input[name='Contact.LastName']"
+          value: $NAME_LAST
+          required: true
+          options:
+            max_length: 80
+        - name: "Contact.MailingStreet"
+          selector: "textarea[name='Contact.MailingStreet']"
+          value: $ADDRESS_STREET
+          required: true
+          options:
+            max_length: 255
+        - name: "Contact.MailingCity"
+          selector: "input[name='Contact.MailingCity']"
+          value: $ADDRESS_CITY
+          required: true
+          options:
+            max_length: 40
+        - name: "Contact.MailingPostalCode"
+          selector: "input[name='Contact.MailingPostalCode']"
+          value: $ADDRESS_ZIP5
+          required: true
+          options:
+            max_length: 20
+        - name: "Contact.Email"
+          selector: "input[name='Contact.Email']"
+          value: $EMAIL
+          required: true
+          options:
+            max_length: 80
+        - name: "Contact.HomePhone"
+          selector: "input[name='Contact.HomePhone']"
+          value: $PHONE
+          required: true
+          options:
+            max_length: 40
+        - name: "Contact.Case.Description"
+          selector: "textarea[name='Contact.Case.Description']"
+          value: $MESSAGE
+          required: true
+          options:
+            max_length: 2000
+    - select:
+        - name: "Contact.Case.Who_are_you_trying_to_contact__c"
+          selector: "select[name='Contact.Case.Who_are_you_trying_to_contact__c']"
+          value: "Contact the Vice President"
+          required: true
+          options:
+            - Contact the Vice President
+        - name: Contact.Salutation
+          selector: "select[name='Contact.Salutation']"
+          value: $NAME_PREFIX
+          required: true
+          options:
+            - Mr.
+            - Ms.
+            - Mrs.
+            - Dr.
+            - Mx.
+        - name: "Contact.MailingState"
+          selector: "select[name='Contact.MailingState']"
+          value: $ADDRESS_STATE_FULL
+          required: true
+          options:
+            - Alabama
+            - Alaska
+            - American Samoa
+            - Arizona
+            - Arkansas
+            - Armed Forces Americas
+            - Armed Forces Europe
+            - Armed Forces Pacific
+            - California
+            - Colorado
+            - Connecticut
+            - Delaware
+            - District of Columbia
+            - Federated Micronesia
+            - Florida
+            - Georgia
+            - Guam
+            - Hawaii
+            - Idaho
+            - Illinois
+            - Indiana
+            - Iowa
+            - Kansas
+            - Kentucky
+            - Louisiana
+            - Maine
+            - Marshall Islands
+            - Maryland
+            - Massachusetts
+            - Michigan
+            - Minnesota
+            - Mississippi
+            - Missouri
+            - Montana
+            - Nebraska
+            - Nevada
+            - New Hampshire
+            - New Jersey
+            - New Mexico
+            - New York
+            - North Carolina
+            - North Dakota
+            - Northern Marina Islands
+            - Ohio
+            - Oklahoma
+            - Oregon
+            - Palau
+            - Pennsylvania
+            - Puerto Rico
+            - Rhode Island
+            - South Carolina
+            - South Dakota
+            - Tennessee
+            - Texas
+            - U.S. Virgin Islands
+            - United States Minor Outlying Islands
+            - Utah
+            - Vermont
+            - Virginia
+            - Washington
+            - West Virginia
+            - Wisconsin
+            - Wyoming
+    - uncheck:
+        - name: "Contact.Contact_Us_Email_Opt_In__c"
+          selector: "input[name='Contact.Contact_Us_Email_Opt_In__c']"
+          value: "on"
+    - javascript:
+        - value: "document.querySelector('input[type=submit][value=Send]').click()"
+    - wait:
+        - value: 5
+  success:
+    headers:
+      status: 200
+    body:
+      contains: Thank you for your submission
