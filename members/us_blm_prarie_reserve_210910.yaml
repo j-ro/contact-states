@@ -21,6 +21,8 @@ contact_form:
         - selector: ".standard-btns .btn-primary"
     - wait:
         - value: 2
+    - find:
+        - selector: ".ng-star-inserted"
     - click_on:
         - selector: ".text-right .btn-primary"
     - fill_in:
