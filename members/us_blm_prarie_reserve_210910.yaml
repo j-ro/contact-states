@@ -23,13 +23,8 @@ contact_form:
         - value: 2
     - find:
         - selector: ".text-right .btn-primary"
-    - click_on:
-        - selector: ".text-right .btn-primary"
-    - fill_in:
-        - name: "breakthisform"
-          selector: "#breakthisform"
-          value: $NAME_FIRST
-          required: true
+    - javascript:
+        - value: "document.querySelector('.text-right.btn-primary').click();"
   success:
     headers:
       status: 200
