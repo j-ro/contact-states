@@ -17,12 +17,13 @@ contact_form:
           selector: "#first-name"
           value: $NAME_FIRST
           required: true
+    - click_on:
+        - selector: ".standard-btns .btn-primary"
+    - fill_in:
         - name: "breakthisform"
           selector: "#breakthisform"
           value: $NAME_FIRST
           required: true
-    - click_on:
-        - selector: ".standard-btns .btn-primary"
     - wait:
         - value: 2
     - click_on:
