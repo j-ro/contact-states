@@ -1,0 +1,30 @@
+bioguide: us_blm_prarie_reserve_210910
+contact_form:
+  method: post
+  action: "https://eplanning.blm.gov/eplanning-ui/project/103543/8002333/comment"
+  steps:
+    - visit: "https://eplanning.blm.gov/eplanning-ui/project/103543/8002333/comment"
+    - fill_in:
+        - name: "comment"
+          selector: "#comment"
+          value: $MESSAGE
+          required: true
+        - name: "lastName"
+          selector: "#last-name"
+          value: $NAME_LAST
+          required: true
+        - name: "firstName"
+          selector: "#first-name"
+          value: $NAME_FIRST
+          required: true
+    - click_on:
+        - selector: .standard-btns .btn-primary
+    - wait:
+        - value: 2
+    - click_on:
+        - selector: .btn-primary
+  success:
+    headers:
+      status: 200
+    body:
+      contains: Your new comment has been successfully submitted
