@@ -22,7 +22,7 @@ contact_form:
     - wait:
         - value: 2
     - find:
-        - selector: ".ng-star-inserted"
+        - selector: ".text-right .btn-primary"
     - click_on:
         - selector: ".text-right .btn-primary"
     - fill_in:
