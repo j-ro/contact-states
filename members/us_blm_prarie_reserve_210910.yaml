@@ -20,7 +20,7 @@ contact_form:
     - click_on:
         - selector: ".standard-btns .btn-primary"
     - wait:
-        - value: 2
+        - value: 7
     - find:
         - selector: ".text-right .btn-primary"
     - javascript:
@@ -28,7 +28,7 @@ contact_form:
     - javascript:
         - value: "document.querySelector('.text-right.btn-primary').click();"
     - wait:
-        - value: 5
+        - value: 7
   success:
     headers:
       status: 200
