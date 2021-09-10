@@ -18,11 +18,11 @@ contact_form:
           value: $NAME_FIRST
           required: true
     - click_on:
-        - selector: .standard-btns .btn-primary
+        - selector: ".standard-btns .btn-primary"
     - wait:
         - value: 2
     - click_on:
-        - selector: .btn-primary
+        - selector: ".btn-primary"
   success:
     headers:
       status: 200
