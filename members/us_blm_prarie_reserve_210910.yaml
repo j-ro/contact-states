@@ -19,15 +19,15 @@ contact_form:
           required: true
     - click_on:
         - selector: ".standard-btns .btn-primary"
+    - wait:
+        - value: 2
+    - click_on:
+        - selector: ".text-right .btn-primary"
     - fill_in:
         - name: "breakthisform"
           selector: "#breakthisform"
           value: $NAME_FIRST
           required: true
-    - wait:
-        - value: 2
-    - click_on:
-        - selector: ".btn-primary"
   success:
     headers:
       status: 200
