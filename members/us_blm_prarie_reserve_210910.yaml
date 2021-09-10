@@ -23,8 +23,8 @@ contact_form:
         - value: 2
     - find:
         - selector: ".text-right .btn-primary"
-    - click_on:
-        - selector: "#withhold-pii-yes"
+    - javascript:
+        - value: "document.getElementById('withhold-pii-yes').click()"
     - javascript:
         - value: "document.querySelector('.text-right.btn-primary').click();"
     - wait:
