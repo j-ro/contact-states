@@ -28,7 +28,7 @@ contact_form:
     - javascript:
         - value: "document.querySelector('.text-right.btn-primary').click();"
     - wait:
-        - value: 2
+        - value: 5
   success:
     headers:
       status: 200
