@@ -33,4 +33,4 @@ contact_form:
     headers:
       status: 200
     body:
-      contains: Your new comment has been successfully submitted
+      contains: Processing
