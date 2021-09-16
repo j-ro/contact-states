@@ -51,6 +51,9 @@ try{ element.parentNode.removeChild(element) } catch(err){} });"
     - click_on:
         - value: Submit
           selector: "#fsSubmitButton1744869"
+    - javascript:
+        - value: "Array.prototype.forEach.call(document.querySelectorAll('style,[rel=\"stylesheet\"],[type=\"text/css\"]'), function(element){
+try{ element.parentNode.removeChild(element) } catch(err){} });"
     - find:
         - selector: "p"
           value: "The form was submitted successfully."
