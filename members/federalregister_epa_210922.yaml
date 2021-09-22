@@ -1,0 +1,32 @@
+bioguide: federalregister_epa_210922
+contact_form:
+  method: POST
+  action: ""
+  steps:
+    - visit: "https://www.federalregister.gov/documents/2021/08/10/2021-16582/revised-2023-and-later-model-year-light-duty-vehicle-greenhouse-gas-emissions-standards#open-comment"
+    - find:
+        - selector: "#comment_comment"
+    - wait:
+        - value: 5
+    - fill_in:
+        - selector: "#comment_comment"
+          name: "comment[comment]"
+          value: $MESSAGE
+          required: true
+          options:
+            max_length: 2000
+    - click_on:
+        - selector: "div[data-submitter-type='anonymous'] input[type='radio']"        
+    - click_on:
+        - selector: "#comment_confirm_submission"
+    - wait:
+        - value: 5
+    - javascript:
+        - value: "document.querySelector('.commit input').click();"
+    - wait:
+        - value: 5
+  success:
+    headers:
+      status: 200
+    body:
+      contains: Thank you! Your comment has been submitted
