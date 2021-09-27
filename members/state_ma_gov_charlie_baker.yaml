@@ -45,6 +45,13 @@ contact_form:
           selector: "#field49752026"
           value: $MESSAGE
           required: true
+    - select:
+        - name: field90831245
+          selector: "#field90831245"
+          value: Other
+          required: true
+          options:
+            - Other
     - click_on:
         - value: Submit
           selector: "#fsSubmitButton1744869"
