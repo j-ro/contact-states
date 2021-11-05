@@ -1,0 +1,113 @@
+
+bioguide: federalregister_noaa_20211029
+contact_form:
+  method: POST
+  action: ""
+  steps:
+    - visit: "https://www.federalregister.gov/documents/2021/10/29/2021-23590/request-for-information-on-noaa-actions-to-advance-the-goals-and-recommendations-in-the-report-on#open-comment"
+    - find:
+        - selector: "#comment_comment"
+    - wait:
+        - value: 5
+    - fill_in:
+        - selector: "#comment_comment"
+          name: "comment[comment]"
+          value: $MESSAGE
+          required: true
+          options:
+            max_length: 2000
+        - selector: "input#comment_email"
+          name: "comment[email]"
+          value: $EMAIL
+    - click_on:
+        - selector: "div[data-submitter-type='individual'] input[type='radio']"
+    - fill_in: 
+        - selector: "input#comment_firstName"
+          name: "comment[firstName]"
+          value: $NAME_FIRST
+          required: true
+        - selector: "input#comment_lastName"
+          name: "comment[lastName]"
+          value: $NAME_LAST
+          required: true
+        - selector: "input#comment_city"
+          name: "comment[city]"
+          value: $ADDRESS_CITY
+        - selector: "input#comment_zip"
+          name: "comment[zip]"
+          value: $ADDRESS_ZIP5
+        - selector: "input#comment_phone"
+          name: "comment[phone]"
+          value: $PHONE
+    - select:
+        - selector: "select#comment_stateProvinceRegion"
+          name: "comment[stateProvinceRegion]"
+          value: $ADDRESS_STATE
+          options: 
+            - Alaska: AK
+            - Alabama: AL
+            - Arkansas: AR
+            - American Samoa: AS
+            - Arizona: AZ
+            - California: CA
+            - Colorado: CO
+            - Connecticut: CT
+            - District of Columbia: DC
+            - Delaware: DE
+            - Florida: FL
+            - Georgia: GA
+            - Guam: GU
+            - Hawaii: HI
+            - Iowa: IA
+            - Idaho: ID
+            - Illinois: IL
+            - Indiana: IN
+            - Kansas: KS
+            - Kentucky: KY
+            - Louisiana: LA
+            - Massachusetts: MA
+            - Maryland: MD
+            - Maine: ME
+            - Michigan: MI
+            - Minnesota: MN
+            - Missouri: MO
+            - Mississippi: MS
+            - Montana: MT
+            - North Carolina: NC
+            - North Dakota: ND
+            - Nebraska: NE
+            - New Hampshire: NH
+            - New Jersey: NJ
+            - New Mexico: NM
+            - Nevada: NV
+            - New York: NY
+            - Ohio: OH
+            - Oklahoma: OK
+            - Oregon: OR
+            - Pennsylvania: PA
+            - Puerto Rico: PR
+            - Rhode Island: RI
+            - South Carolina: SC
+            - South Dakota: SD
+            - Tennessee: TN
+            - Texas: TX
+            - Utah: UT
+            - Virginia: VA
+            - Vermont: VT
+            - Washington: WA
+            - Wisconsin: WI
+            - West Virginia: WV
+            - Wyoming: WY            
+    - click_on:
+        - selector: "input#comment_confirm_submission"
+    - wait:
+        - value: 5
+    - javascript:
+        - value: "document.querySelector('.commit input').click();"
+    - wait:
+        - value: 5
+  success:
+    headers:
+      status: 200
+    body:
+      contains: Thank you! Your comment has been submitted
