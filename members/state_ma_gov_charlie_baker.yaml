@@ -50,6 +50,8 @@ contact_form:
     - click_on:
         - value: Submit
           selector: "#fsSubmitButton1744869"
+    - click_on:
+        - selector: "#field90831245_19"
     - wait:
         - value: 5
     - find:
