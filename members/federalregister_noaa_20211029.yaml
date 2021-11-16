@@ -14,8 +14,6 @@ contact_form:
           name: "comment[comment]"
           value: $MESSAGE
           required: true
-          options:
-            max_length: 2000
         - selector: "input#comment_email"
           name: "comment[email]"
           value: $EMAIL
@@ -42,7 +40,7 @@ contact_form:
     - select:
         - selector: "select#comment_stateProvinceRegion"
           name: "comment[stateProvinceRegion]"
-          value: $ADDRESS_STATE
+          value: $ADDRESS_STATE_POSTAL_ABBREV
           options: 
             - Alaska: AK
             - Alabama: AL
