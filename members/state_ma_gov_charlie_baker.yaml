@@ -48,7 +48,7 @@ contact_form:
     - select:
         - name: field90831234
           selector: "#field90831234_1"
-          value: Comment
+          value: "Comment"
           required: true
           options:
             - Comment
