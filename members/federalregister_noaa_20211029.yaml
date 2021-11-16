@@ -42,7 +42,7 @@ contact_form:
     - select:
         - selector: "select#comment_stateProvinceRegion"
           name: "comment[stateProvinceRegion]"
-          value: $ADDRESS_STATE
+          value: $ADDRESS_STATE_POSTAL_ABBREV
           options: 
             - Alaska: AK
             - Alabama: AL
