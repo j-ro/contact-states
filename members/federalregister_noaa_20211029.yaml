@@ -14,8 +14,6 @@ contact_form:
           name: "comment[comment]"
           value: $MESSAGE
           required: true
-          options:
-            max_length: 2000
         - selector: "input#comment_email"
           name: "comment[email]"
           value: $EMAIL
