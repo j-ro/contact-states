@@ -40,6 +40,8 @@ contact_form:
         - selector: "#chkAcceptTerms"
     - click_on:
         - selector: "#chkResident"
+    - javascript:
+        - value: document.querySelector("#g-recaptcha-response").style.display = "block";
     - recaptcha:
         - value: true
     - click_on:
