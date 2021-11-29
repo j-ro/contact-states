@@ -1,0 +1,54 @@
+bioguide: au_nsw_ge_211129
+contact_form:
+  method: post
+  action: "https://www.parliament.nsw.gov.au/la/pages/epetition-details.aspx?q=k76J8pa6ATDP+w4tzssiVQ=="
+  steps:
+    - visit: "https://www.parliament.nsw.gov.au/la/pages/epetition-details.aspx?q=k76J8pa6ATDP+w4tzssiVQ=="
+    - fill_in:
+        - name: ctl00$ctl39$g_f0acf637_bb01_45bc_a8fb_e3e78cf7e6ad$txtFName
+          selector: "#ctl00_ctl39_g_f0acf637_bb01_45bc_a8fb_e3e78cf7e6ad_txtFName"
+          value: $NAME_FIRST
+          required: true
+        - name: ctl00$ctl39$g_f0acf637_bb01_45bc_a8fb_e3e78cf7e6ad$txtFamilyName
+          selector: "#ctl00_ctl39_g_f0acf637_bb01_45bc_a8fb_e3e78cf7e6ad_txtFamilyName"
+          value: $NAME_LAST
+          required: true
+        - name: ctl00$ctl39$g_f0acf637_bb01_45bc_a8fb_e3e78cf7e6ad$txtEmail
+          selector: "#ctl00_ctl39_g_f0acf637_bb01_45bc_a8fb_e3e78cf7e6ad_txtEmail"
+          value: $EMAIL
+          required: true
+    - select:
+        - name: ctl00$ctl39$g_f0acf637_bb01_45bc_a8fb_e3e78cf7e6ad$ddlContactTitle
+          selector: "#ctl00_ctl39_g_f0acf637_bb01_45bc_a8fb_e3e78cf7e6ad_ddlContactTitle"
+          value: $NAME_PREFIX
+          required: true
+          options:
+            - Mr
+            - Mrs
+            - Ms
+            - Miss
+            - Mx
+            - Dr
+            - Cr
+            - Rev
+            - The Hon
+            - Father
+            - Professor
+    - click_on:
+        - selector: "#chkAcknowledgePrivStmnt"
+    - click_on:
+        - selector: "#chkAcceptTerms"
+    - click_on:
+        - selector: "#chkResident"
+    - recaptcha:
+        - value: true
+    - click_on:
+        - value: Sign
+          selector: "#btnSubmit"
+    - wait:
+        - value: 5
+  success:
+    headers:
+      status: 200
+    body:
+      contains: "Thank you for signing"
