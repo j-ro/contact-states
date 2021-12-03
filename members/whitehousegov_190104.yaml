@@ -59,7 +59,7 @@ contact_form:
             max_length: 2000
     - select:
         - name: "Contact.Who_are_you_trying_to_contact__c"
-          selector: "select[name='Contact.Who_are_you_trying_to_contact__c']"
+          selector: "select[name='Contact.Case.Who_are_you_trying_to_contact__c']"
           value: "Contact the President"
           required: true
           options:
