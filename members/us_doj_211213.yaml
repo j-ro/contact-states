@@ -1,0 +1,65 @@
+bioguide: us_doj_211213
+contact_form:
+  method: POST
+  action: ""
+  steps:
+    - visit: "https://www.justice.gov/doj/webform/your-message-department-justice"
+    - fill_in:
+        - name: "submitted[name]"
+          selector: "#edit-submitted-name"
+          value: $NAME_FULL
+          required: true
+        - name: "submitted[email]"
+          selector: "#edit-submitted-email"
+          value: $EMAIL
+          required: true
+        - name: "submitted[message]"
+          selector: "#edit-submitted-message"
+          value: $MESSAGE
+          required: true
+    - select:
+        - selector: "#edit-submitted-topic"
+          required: true
+          value: $TOPIC
+          options:
+            Antitrust:  Antitrust
+            Alcohol, Tobacco, Firearms & Explosives: Alcohol 
+            Bankruptcy: Bankruptcy
+            Civil Actions: CivilActions
+            Civil Rights: CivilRights
+            Community Policing (COPS): COPS
+            Criminal Law: Criminal
+            Drug Enforcement Administration (DEA): DEA 
+            Environmental: Environmental
+            Federal Bureau of Investigation (FBI): FBI
+            Immigration: Immigration 
+            Inspector General: IG
+            Justice Programs: JusticePrograms
+            Legislative Affairs (OLA): OLA
+            Management (JMD): JMD
+            Media Inquiries (OPA): Media
+            National Security: NationalSecurity
+            Office of Legal Counsel: LegalCounsel
+            Office of Legal Policy: LegalPolicy
+            Pardon Attorney: Pardon
+            Prisons (BOP): BOP
+            Professional Responsibility (PRAO): PRAO
+            Solicitor General: Solicitor
+            Tax: Tax
+            Tribal: Tribal
+            U.S. Attorneys: Attorneys
+            U. S. Marshals Service (USMS): USMS
+            U.S. Trustees: Trustees
+            Victims of Crime: VictimsCrime
+            Violence Against Women/Domestic Violence: Violence
+            Messages to the Attorney General: MessagesAG
+            Messages to the Deputy Attorney General: MessagesDAG
+            Messages to the Associate Attorney General: MessagesAAG
+            Other (please specify at the top of your message): Other
+    - click_on:
+         - selector: .webform-submit 
+  success:
+    headers:
+      status: 200
+    body:
+      contains: Thank you, your submission has been received.
