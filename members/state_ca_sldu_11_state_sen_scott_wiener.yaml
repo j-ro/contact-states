@@ -1,0 +1,43 @@
+bioguide: state_ca_sldu_11_state_sen_scott_wiener
+contact_form:
+  method: post
+  action: ContactPopupSubmit.php
+  steps:
+    - visit: "https://lcmspubcontact.lc.ca.gov/PublicLCMS/ContactPopup.php?district=SD11"
+    - fill_in:
+        - name: txtFirstName
+          selector: "#form_name"
+          value: $NAME_FIRST
+          required: true
+        - name: txtLastName
+          selector: "#form_lastname"
+          value: $NAME_LAST
+          required: true
+        - name: txtAddress
+          selector: "#form_address"
+          value: $ADDRESS_STREET
+          required: true
+        - name: txtCity
+          selector: "#form_city"
+          value: $ADDRESS_CITY
+          required: true
+        - name: txtZip
+          selector: "#form_zip"
+          value: $ADDRESS_ZIP5
+          required: true
+        - name: txtEmail
+          selector: "#form_email"
+          value: $EMAIL
+          required: true
+        - name: jv_text
+          selector: "#comments"
+          value: $MESSAGE
+          required: true
+    - click_on:
+        - value: Submit
+          selector: "#submitButton"
+  success:
+    headers:
+      status: 200
+    body:
+      contains: Your message has been

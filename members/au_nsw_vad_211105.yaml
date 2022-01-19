@@ -1,0 +1,38 @@
+bioguide: au_nsw_vad_211105
+contact_form:
+  method: POST
+  action: ""
+  steps:
+    - visit: "https://www.surveymonkey.com/r/XRQNHFZ"
+    - find:
+        - selector: '.page-subtitle [type="submit"]'
+    - click_on:
+        - selector: '.page-subtitle [type="submit"]'
+    - fill_in:
+        - selector: "#718781308_4727102355"
+          name: "718781308_4727102355"
+          value: $NAME_FULL
+          required: true
+        - selector: "#718781308_4727102356"
+          name: "718781308_4727102356"
+          value: $EMAIL
+          required: true  
+        - selector: "#718781308_4727102357"
+          name: "718781308_4727102357"
+          value: $ADDRESS_ZIP5
+          required: true  
+    - click_on:
+        - selector: "#718781308-ok"        
+    - click_on:
+        - selector: "#comment_confirm_submission"
+    - wait:
+        - value: 5
+    - javascript:
+        - value: "document.querySelector('.commit input').click();"
+    - wait:
+        - value: 5
+  success:
+    headers:
+      status: 200
+    body:
+      contains: Thank you! Your comment has been submitted
