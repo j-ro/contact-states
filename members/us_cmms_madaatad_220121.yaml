@@ -1,0 +1,112 @@
+bioguide: us_cmms_madaatad_220121
+contact_form:
+  method: POST
+  action: "https://www.cms.gov/medicare-coverage-database/view/national-submit-public-comment.aspx?DocID=305&commentDocType=nca&fromPage=comments&fromTracking=Y&="
+  steps:
+    - visit: "https://www.cms.gov/medicare-coverage-database/view/national-submit-public-comment.aspx?DocID=305&commentDocType=nca&fromPage=comments&fromTracking=Y&="
+    - click_on:
+        - '.log-click[data-target="#cmsPhiPostingPolicyModal"]'
+    - click_on:
+        - "#btnPostingPolicyOk"
+    - fill_in:
+        - name: "ctl00$ContentPlaceHolder1$tbxFirstName"
+          selector: "#tbxFirstName"
+          value: $NAME_FIRST
+          required: true
+        - name: "ctl00$ContentPlaceHolder1$tbxLastName"
+          selector: "#tbxLastName"
+          value: $NAME_LAST
+          required: true
+        - name: "ctl00$ContentPlaceHolder1$tbxEmail"
+          selector: "#tbxEmail"
+          value: $EMAIL
+          required: true
+        - name: "ctl00$ContentPlaceHolder1$tbxAddress1"
+          selector: "#tbxAddress1"
+          value: $ADDRESS_STREET
+          required: true
+        - name: "ctl00$ContentPlaceHolder1$tbxCity"
+          selector: "#tbxCity"
+          value: $ADDRESS_CITY
+          required: true
+        - name: "ctl00$ContentPlaceHolder1$tbxZip"
+          selector: "#tbxZip"
+          value: $ADDRESS_ZIP5
+          required: true
+        - name: "ctl00$ContentPlaceHolder1$tbxComment"
+          selector: "#tbxComment"
+          value: $MESSAGE
+          required: true
+    - select:
+        - name: ctl00$ContentPlaceHolder1$ddlState
+          selector: "#ddlState"
+          value: $ADDRESS_STATE_FULL
+          required: true
+          options:
+            Alabama: 2
+            Alaska: 1
+            American Samoa: 4
+            Arizona: 5
+            Arkansas: 3
+            California: 6
+            Colorado: 8
+            Connecticut: 9
+            Delaware: 11
+            District of Columbia: 10
+            Florida: 12
+            Georgia: 14
+            Guam: 15
+            Hawaii: 16
+            Idaho: 18
+            Illinois: 19
+            Indiana: 20
+            Iowa: 17
+            Kansas: 21
+            Kentucky: 22
+            Louisiana: 23
+            Maine: 26
+            Maryland: 25
+            Massachusetts: 24
+            Michigan: 27
+            Minnesota: 28
+            Mississippi: 31
+            Missouri: 29
+            Montana: 32
+            Nebraska: 36
+            Nevada: 40
+            New Hampshire: 37
+            New Jersey: 38
+            New Mexico: 39
+            New York: 41
+            North Carolina: 34
+            North Dakota: 35
+            Northern Marianas Islands: 60
+            Ohio: 42
+            Oklahoma: 43
+            Oregon: 44
+            Pennsylvania: 45
+            Puerto Rico: 46
+            Rhode Island: 47
+            South Carolina: 48
+            South Dakota: 49
+            Tennessee: 50
+            Texas: 51
+            Utah: 52
+            Vermont: 55
+            Virgin Islands: 54
+            Virginia: 53
+            Washington: 56
+            West Virginia: 58
+            Wisconsin: 57
+            Wyoming: 59
+    - click_on:
+        - selector: "#cbxCmsPolicy"
+    - recaptcha:
+        - value: true
+    - click_on:
+        - "#btnSubmit"
+  success:
+    headers:
+      status: 200
+    body:
+      contains: Your comment has been submitted successfully
