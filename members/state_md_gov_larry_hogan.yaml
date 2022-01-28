@@ -101,7 +101,7 @@ contact_form:
         - value: Submit
           selector: ".wpcf7-submit"
     - wait:
-        - value: 5
+        - value: 10
   success:
     headers:
       status: 200

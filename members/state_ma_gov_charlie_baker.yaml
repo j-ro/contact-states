@@ -48,7 +48,7 @@ contact_form:
     - click_on:
         - selector: "#field90831234_1"
     - click_on:
-        - selector: "#field90831245_19"
+        - selector: "#field90831245_7"
     - click_on:
         - value: Submit
           selector: "#fsSubmitButton1744869"

@@ -56,7 +56,7 @@ contact_form:
           options:
             max_length: 2000
     - click_on:
-        - selector: .labelRadio[for='optOpinion']
+        - selector: label[for="optOpinion"]
     - javascript:
         - value: "document.querySelector('textarea[name=g-recaptcha-response]').remove();"
     - javascript:
