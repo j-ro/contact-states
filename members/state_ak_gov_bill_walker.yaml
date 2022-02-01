@@ -75,6 +75,8 @@ contact_form:
     - recaptcha:
         - value: true
     - click_on:
+        - value: "#break-this-form"
+    - click_on:
         - value: Submit Feedback
           selector: "input[name='submit']"
   success:
