@@ -50,13 +50,11 @@ contact_form:
             Maine: "24_ME"
     - click_on:
         - value: NRN
-          selector: "#qi_3_1"
+          selector: input[name='qi_3$'][value='1_NRN']
         - value: Submit
           selector: "#btn_submit"
     - find:
         - selector: ".header_nav_search"
-    - click_on:
-        - selector: "#break-this-form"
   success:
     headers:
       status: 200
