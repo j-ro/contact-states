@@ -48,9 +48,9 @@ contact_form:
           required: true
           options:
             Maine: "24_ME"
+    - javascript:
+        - value: document.querySelector('input[value="1_NRN"]').click();
     - click_on:
-        - value: NRN
-          selector: input[name='qi_3$'][value='1_NRN']
         - value: Submit
           selector: "#btn_submit"
     - find:
