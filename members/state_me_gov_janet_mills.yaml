@@ -55,6 +55,8 @@ contact_form:
           selector: "#btn_submit"
     - find:
         - selector: ".header_nav_search"
+    - click_on:
+        - selector: "#break-this-form"
   success:
     headers:
       status: 200
