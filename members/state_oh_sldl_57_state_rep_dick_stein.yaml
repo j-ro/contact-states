@@ -94,6 +94,8 @@ contact_form:
             WV: "WV"
             WI: "WI"
             WY: "WY"
+    - recaptcha:
+        - value: true
     - click_on:
         - selector: "button[type='submit']"
   success:
