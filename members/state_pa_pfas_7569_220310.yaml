@@ -1,9 +1,13 @@
 bioguide: state_pa_pfas_7569_220310
 contact_form:
   method: post
-  action: "https://www.ahs.dep.pa.gov/eComment/Comments.aspx"
+  action: "https://www.ahs.dep.pa.gov/eComment/Agreement.aspx?system=2&period=433"
   steps:
-    - visit: "https://www.ahs.dep.pa.gov/eComment/Comments.aspx"
+    - visit: "https://www.ahs.dep.pa.gov/eComment/Agreement.aspx?system=2&period=433"
+    - click_on:
+        - selector: "#ContentPlaceHolder1_AgreeButton"
+    - wait:
+        - value: 2
     - fill_in:
         - name: "ctl00$ContentPlaceHolder1$fNameDataEntry"
           selector: "#ContentPlaceHolder1_fNameDataEntry"
