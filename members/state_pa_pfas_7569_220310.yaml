@@ -1,0 +1,56 @@
+bioguide: state_pa_pfas_7569_220310
+contact_form:
+  method: post
+  action: "https://www.ahs.dep.pa.gov/eComment/Comments.aspx"
+  steps:
+    - visit: "https://www.ahs.dep.pa.gov/eComment/Comments.aspx"
+    - fill_in:
+        - name: "ctl00$ContentPlaceHolder1$fNameDataEntry"
+          selector: "#ContentPlaceHolder1_fNameDataEntry"
+          value: $NAME_FIRST
+          required: true
+          options:
+            max_length: 50
+        - name: "ctl00$ContentPlaceHolder1$lNameDataEntry"
+          selector: "#ContentPlaceHolder1_lNameDataEntry"
+          value: $NAME_LAST
+          required: true
+          options:
+            max_length: 50
+        - name: "ctl00$ContentPlaceHolder1$address1DataEntry"
+          selector: "#ContentPlaceHolder1_address1DataEntry"
+          value: $ADDRESS_STREET
+          required: true
+          options:
+            max_lenth: 50
+        - name: "ctl00$ContentPlaceHolder1$cityDataEntry"
+          selector: "#ContentPlaceHolder1_cityDataEntry"
+          value: $ADDRESS_CITY
+          required: true
+          options:
+            max_length: 50
+        - name: "ctl00$ContentPlaceHolder1$zipDataEntry"
+          selector: "#ContentPlaceHolder1_zipDataEntry"
+          value: $ADDRESS_ZIP5
+          required: true
+          options:
+              max_length: 50
+        - name: "ctl00$ContentPlaceHolder1$emailDataEntry"
+          selector: "#ContentPlaceHolder1_emailDataEntry"
+          value: $EMAIL
+          required: true
+          options:
+            max_length: 50
+        - name: "ctl00$ContentPlaceHolder1$commentsDataEntry"
+          selector: "#ContentPlaceHolder1_commentsDataEntry"
+          value: $MESSAGE
+          required: true
+          options:
+            max_length: 2000
+    - click_on:
+        - selector: "#ContentPlaceHolder1_submitComments"
+  success:
+    headers:
+      status: 200
+    body:
+      contains: Your comments have been submitted.
