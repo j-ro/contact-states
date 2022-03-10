@@ -4,6 +4,8 @@ contact_form:
   action: "https://cogov.tfaforms.net/25?faIframeUniqueId=o60cs8j58y&jsid=null&hostURL=https%3A%2F%2Fwww.colorado.gov%2Fgovernor%2Fshare-comments"
   steps:
     - visit: "https://cogov.tfaforms.net/25?faIframeUniqueId=o60cs8j58y&jsid=null&hostURL=https%3A%2F%2Fwww.colorado.gov%2Fgovernor%2Fshare-comments"
+    - find:
+        - selector: "#break-this-form"
     - javascript:
         - value: "document.getElementById('tfa_2909').selectedIndex = 1;"
     - javascript:
