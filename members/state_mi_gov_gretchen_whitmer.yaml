@@ -8,49 +8,49 @@ contact_form:
         - value: 5
     - fill_in:
         - name: "ctl00$Content$CitRequestFirstName"
-          selector: "#Content_CitRequestFirstName"
+          selector: "#ctl00_Content_CitRequestFirstName"
           value: $NAME_FIRST
           required: true
           options:
             max_length: 50
         - name: "ctl00$Content$CitRequestLastName"
-          selector: "#Content_CitRequestLastName"
+          selector: "#ctl00_Content_CitRequestLastName"
           value: $NAME_LAST
           required: true
           options:
             max_length: 50
         - name: "ctl00$Content$CitRequestAddress"
-          selector: "#Content_CitRequestAddress"
+          selector: "#ctl00_Content_CitRequestAddress"
           value: $ADDRESS_STREET
           required: true
           options:
             max_lenth: 50
         - name: "ctl00$Content$CitRequestCity"
-          selector: "#Content_CitRequestCity"
+          selector: "#ctl00_Content_CitRequestCity"
           value: $ADDRESS_CITY
           required: true
           options:
             max_length: 50
         - name: "ctl00$Content$CitRequestZipCode"
-          selector: "#Content_CitRequestZipCode"
+          selector: "#ctl00_Content_CitRequestZipCode"
           value: $ADDRESS_ZIP5
           required: true
           options:
               max_length: 50
         - name: "ctl00$Content$CitRequestEmail"
-          selector: "#Content_CitRequestEmail"
+          selector: "#ctl00_Content_CitRequestEmail"
           value: $EMAIL
           required: true
           options:
             max_length: 50
         - name: "ctl00$Content$CitRequestPhone"
-          selector: "#Content_CitRequestPhone"
+          selector: "#ctl00_Content_CitRequestPhone"
           value: $PHONE
           required: true
           options:
             max_length: 50
         - name: "ctl00$Content$CitRequestText"
-          selector: "#Content_CitRequestText"
+          selector: "#ctl00_Content_CitRequestText"
           value: $MESSAGE
           required: true
           options:
@@ -65,7 +65,7 @@ contact_form:
         - value: true
     - click_on:
         - value: Submit
-          selector: "#Content_btnSubmit"
+          selector: "#ctl00$Content$btnSubmit"
   success:
     headers:
       status: 200
