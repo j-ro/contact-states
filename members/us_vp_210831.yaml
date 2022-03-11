@@ -7,75 +7,65 @@ contact_form:
     - wait:
         - value: 5
     - find:
-        - selector: "input[name='Contact.FirstName']"
+        - selector: "#form_622b592876d39_FirstName"
     - fill_in:
-        - name: "Contact.FirstName"
-          selector: "input[name='Contact.FirstName']"
+        - name: "FirstName"
+          selector: "#form_622b592876d39_FirstName"
           value: $NAME_FIRST
           required: true
           options:
             max_length: 40
-        - name: "Contact.LastName"
-          selector: "input[name='Contact.LastName']"
+        - name: "lastName"
+          selector: "#form_622b592876d39_lastName"
           value: $NAME_LAST
           required: true
           options:
             max_length: 80
-        - name: "Contact.MailingStreet"
-          selector: "textarea[name='Contact.MailingStreet']"
+        - name: "Street"
+          selector: "#form_622b592876d39_Street"
           value: $ADDRESS_STREET
           required: true
           options:
             max_length: 255
-        - name: "Contact.MailingCity"
-          selector: "input[name='Contact.MailingCity']"
+        - name: "City"
+          selector: "#form_622b592876d39_City"
           value: $ADDRESS_CITY
           required: true
           options:
             max_length: 40
-        - name: "Contact.MailingPostalCode"
-          selector: "input[name='Contact.MailingPostalCode']"
+        - name: "zipcode"
+          selector: "#form_622b592876d39_zipcode"
           value: $ADDRESS_ZIP5
           required: true
           options:
             max_length: 20
-        - name: "Contact.Email"
-          selector: "input[name='Contact.Email']"
+        - name: "email_address"
+          selector: "#form_622b592876d39_email_address"
           value: $EMAIL
           required: true
           options:
             max_length: 80
-        - name: "Contact.HomePhone"
-          selector: "input[name='Contact.HomePhone']"
+        - name: "phone"
+          selector: "#form_622b592876d39_phone"
           value: $PHONE
           required: true
           options:
             max_length: 40
-        - name: "Contact.Case.Description"
-          selector: "textarea[name='Contact.Case.Description']"
+        - name: "message"
+          selector: "#form_622b592876d39_message"
           value: $MESSAGE
           required: true
           options:
             max_length: 2000
     - select:
-        - name: "Contact.Case.Who_are_you_trying_to_contact__c"
-          selector: "select[name='Contact.Case.Who_are_you_trying_to_contact__c']"
-          value: "Contact the Vice President"
+        - name: "Subject"
+          selector: "#form_622b592876d39_Subject"
+          value: "Contact the President"
           required: true
           options:
             - Contact the Vice President
-        - name: Contact.Salutation
-          selector: "select[name='Contact.Salutation']"
-          value: $NAME_PREFIX
-          required: true
-          options:
-            - Mr.
-            - Ms.
-            - Mrs.
-            - Dr.
-            - Mx.
-        - name: "Contact.MailingState"
-          selector: "select[name='Contact.MailingState']"
+        - name: "State"
+          selector: "#form_622b592876d39_State"
           value: $ADDRESS_STATE_FULL
           required: true
           options:
@@ -143,8 +133,8 @@ contact_form:
             - Wisconsin
             - Wyoming
     - uncheck:
-        - name: "Contact.Contact_Us_Email_Opt_In__c"
-          selector: "input[name='Contact.Contact_Us_Email_Opt_In__c']"
+        - name: "Optin_code"
+          selector: "#form_622b592876d39_Optin_code"
           value: "on"
     - javascript:
         - value: "document.querySelector('input[type=submit][value=Send]').click()"
