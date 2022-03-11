@@ -7,7 +7,7 @@ contact_form:
     - wait:
         - value: 5
     - find:
-        - selector: "#form_622b592876d39_FirstName"
+        - selector: "input[name='FirstName']"
     - fill_in:
         - name: "FirstName"
           selector: "#form_622b592876d39_FirstName"
