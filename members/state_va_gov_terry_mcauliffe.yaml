@@ -1,65 +1,69 @@
 bioguide: state_va_gov_terry_mcauliffe
 contact_form:
   method: post
-  action: /communityrelations2018/form/email
+  action: "https://gov-cs-prod.powerappsportals.us/emailtogovernor/"
   steps:
-    - visit: "https://solutions.virginia.gov/communityrelations2018/form/email"
+    - visit: "https://gov-cs-prod.powerappsportals.us/emailtogovernor/"
     - javascript:
         - value: "Array.prototype.forEach.call(document.querySelectorAll('style,[rel=\"stylesheet\"],[type=\"text/css\"]'), function(element){
 try{ element.parentNode.removeChild(element) } catch(err){} });"
     - fill_in:
-        - name: RequestedByTitle
-          selector: "#RequestedByTitle"
+        - name: ctl00$ContentContainer$EntityFormControl_640fb563c235ec11b6e5001dd804c15c$EntityFormControl_640fb563c235ec11b6e5001dd804c15c_EntityFormView$cr_title
+          selector: "#cr_title"
           value: $NAME_PREFIX
           required: true
-        - name: RequestedByFirstName
-          selector: "#RequestedByFirstName"
+        - name: ctl00$ContentContainer$EntityFormControl_640fb563c235ec11b6e5001dd804c15c$EntityFormControl_640fb563c235ec11b6e5001dd804c15c_EntityFormView$cr_firstname
+          selector: "#cr_firstname"
           value: $NAME_FIRST
           required: true
-        - name: RequestedByLastName
-          selector: "#RequestedByLastName"
+        - name: ctl00$ContentContainer$EntityFormControl_640fb563c235ec11b6e5001dd804c15c$EntityFormControl_640fb563c235ec11b6e5001dd804c15c_EntityFormView$cr_lastname
+          selector: "#cr_lastname"
           value: $NAME_LAST
           required: true
-        - name: RequestedByStreetAddress
-          selector: "#RequestedByStreetAddress"
+        - name: ctl00$ContentContainer$EntityFormControl_640fb563c235ec11b6e5001dd804c15c$EntityFormControl_640fb563c235ec11b6e5001dd804c15c_EntityFormView$cr_streetaddress
+          selector: "#cr_streetaddress"
           value: $ADDRESS_STREET
           required: true
-        - name: RequestedByCity
-          selector: "#RequestedByCity"
+        - name: ctl00$ContentContainer$EntityFormControl_640fb563c235ec11b6e5001dd804c15c$EntityFormControl_640fb563c235ec11b6e5001dd804c15c_EntityFormView$cr_city
+          selector: "#cr_city"
           value: $ADDRESS_CITY
           required: true
-        - name: RequestedByZipCode
-          selector: "#RequestedByZipCode"
+        - name: ctl00$ContentContainer$EntityFormControl_640fb563c235ec11b6e5001dd804c15c$EntityFormControl_640fb563c235ec11b6e5001dd804c15c_EntityFormView$cr_state
+          selector: "#cr_state"
+          value: $ADDRESS_STATE_FULL
+          required: true
+        - name: ctl00$ContentContainer$EntityFormControl_640fb563c235ec11b6e5001dd804c15c$EntityFormControl_640fb563c235ec11b6e5001dd804c15c_EntityFormView$cr_zipcode
+          selector: "#cr_zipcode"
           value: $ADDRESS_ZIP5
           required: true
-        - name: RequestedByEmail
-          selector: "#RequestedByEmail"
+        - name: ctl00$ContentContainer$EntityFormControl_640fb563c235ec11b6e5001dd804c15c$EntityFormControl_640fb563c235ec11b6e5001dd804c15c_EntityFormView$cr_emailaddress
+          selector: "#cr_emailaddress"
           value: $EMAIL
           required: true
-        - name: RequestedByPhone
-          selector: "#RequestedByPhone"
+        - name: ctl00$ContentContainer$EntityFormControl_640fb563c235ec11b6e5001dd804c15c$EntityFormControl_640fb563c235ec11b6e5001dd804c15c_EntityFormView$cr_phone
+          selector: "#cr_phone"
           value: $PHONE
           required: true
-        - name: MessageSubject
-          selector: "#MessageSubject"
+        - name: ctl00$ContentContainer$EntityFormControl_640fb563c235ec11b6e5001dd804c15c$EntityFormControl_640fb563c235ec11b6e5001dd804c15c_EntityFormView$cr_messagesubject
+          selector: "#cr_messagesubject"
           value: $SUBJECT
           required: true
-        - name: MessageBody
-          selector: "#MessageBody"
+        - name: ctl00$ContentContainer$EntityFormControl_640fb563c235ec11b6e5001dd804c15c$EntityFormControl_640fb563c235ec11b6e5001dd804c15c_EntityFormView$cr_messagebody
+          selector: "#cr_messagebody"
           value: $MESSAGE
           required: true
+        - name: ctl00$ContentContainer$EntityFormControl_640fb563c235ec11b6e5001dd804c15c$EntityFormControl_640fb563c235ec11b6e5001dd804c15c_EntityFormView$captcha$CaptchaTextBox
+          selector: "#ctl00_ContentContainer_EntityFormControl_640fb563c235ec11b6e5001dd804c15c_EntityFormControl_640fb563c235ec11b6e5001dd804c15c_EntityFormView_captcha_CaptchaTextBox"
+          value: $CAPTCHA_SOLUTION
+          required: true
     - check:
-        - name: ResponseRequired
-          selector: "#ResponseRequired[value='Yes']"
-          value: "Yes"
+        - name: ctl00$ContentContainer$EntityFormControl_640fb563c235ec11b6e5001dd804c15c$EntityFormControl_640fb563c235ec11b6e5001dd804c15c_EntityFormView$cr_responserequired
+          selector: "#cr_responserequired_1"
+          value: 1
     - wait:
         - value: 5
     - javascript:
-      - value: document.querySelector("#g-recaptcha-response").style.display = "block";
-    - recaptcha:
-        - value: true
-    - javascript:
-        - value: "document.querySelector('input[type=submit]').click();"
+        - value: "document.querySelector('input#InsertButton').click();"
     - wait:
         - value: 8
     - find:
