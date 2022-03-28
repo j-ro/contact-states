@@ -1,69 +1,66 @@
 bioguide: state_va_gov_terry_mcauliffe
 contact_form:
   method: post
-  action: "https://gov-cs-prod.powerappsportals.us/emailtogovernor/"
+  action: /emailtogovernor/
   steps:
     - visit: "https://gov-cs-prod.powerappsportals.us/emailtogovernor/"
-    - javascript:
-        - value: "Array.prototype.forEach.call(document.querySelectorAll('style,[rel=\"stylesheet\"],[type=\"text/css\"]'), function(element){
-try{ element.parentNode.removeChild(element) } catch(err){} });"
     - fill_in:
-        - name: ctl00$ContentContainer$EntityFormControl_640fb563c235ec11b6e5001dd804c15c$EntityFormControl_640fb563c235ec11b6e5001dd804c15c_EntityFormView$cr_title
-          selector: "#cr_title"
+        - name: "ctl00$ContentContainer$EntityFormControl_640fb563c235ec11b6e5001dd804c15c$EntityFormControl_640fb563c235ec11b6e5001dd804c15c_EntityFormView$cr_title"
+          selector: "input[name='ctl00$ContentContainer$EntityFormControl_640fb563c235ec11b6e5001dd804c15c$EntityFormControl_640fb563c235ec11b6e5001dd804c15c_EntityFormView$cr_title']"
           value: $NAME_PREFIX
           required: true
-        - name: ctl00$ContentContainer$EntityFormControl_640fb563c235ec11b6e5001dd804c15c$EntityFormControl_640fb563c235ec11b6e5001dd804c15c_EntityFormView$cr_firstname
-          selector: "#cr_firstname"
+        - name: "ctl00$ContentContainer$EntityFormControl_640fb563c235ec11b6e5001dd804c15c$EntityFormControl_640fb563c235ec11b6e5001dd804c15c_EntityFormView$cr_firstname"
+          selector: "input[name='ctl00$ContentContainer$EntityFormControl_640fb563c235ec11b6e5001dd804c15c$EntityFormControl_640fb563c235ec11b6e5001dd804c15c_EntityFormView$cr_firstname']"
           value: $NAME_FIRST
           required: true
-        - name: ctl00$ContentContainer$EntityFormControl_640fb563c235ec11b6e5001dd804c15c$EntityFormControl_640fb563c235ec11b6e5001dd804c15c_EntityFormView$cr_lastname
-          selector: "#cr_lastname"
+        - name: "ctl00$ContentContainer$EntityFormControl_640fb563c235ec11b6e5001dd804c15c$EntityFormControl_640fb563c235ec11b6e5001dd804c15c_EntityFormView$cr_lastname"
+          selector: "input[name='ctl00$ContentContainer$EntityFormControl_640fb563c235ec11b6e5001dd804c15c$EntityFormControl_640fb563c235ec11b6e5001dd804c15c_EntityFormView$cr_lastname']"
           value: $NAME_LAST
           required: true
-        - name: ctl00$ContentContainer$EntityFormControl_640fb563c235ec11b6e5001dd804c15c$EntityFormControl_640fb563c235ec11b6e5001dd804c15c_EntityFormView$cr_streetaddress
-          selector: "#cr_streetaddress"
+        - name: "ctl00$ContentContainer$EntityFormControl_640fb563c235ec11b6e5001dd804c15c$EntityFormControl_640fb563c235ec11b6e5001dd804c15c_EntityFormView$cr_streetaddress"
+          selector: "input[name='ctl00$ContentContainer$EntityFormControl_640fb563c235ec11b6e5001dd804c15c$EntityFormControl_640fb563c235ec11b6e5001dd804c15c_EntityFormView$cr_streetaddress']"
           value: $ADDRESS_STREET
           required: true
-        - name: ctl00$ContentContainer$EntityFormControl_640fb563c235ec11b6e5001dd804c15c$EntityFormControl_640fb563c235ec11b6e5001dd804c15c_EntityFormView$cr_city
-          selector: "#cr_city"
+        - name: "ctl00$ContentContainer$EntityFormControl_640fb563c235ec11b6e5001dd804c15c$EntityFormControl_640fb563c235ec11b6e5001dd804c15c_EntityFormView$cr_city"
+          selector: "input[name='ctl00$ContentContainer$EntityFormControl_640fb563c235ec11b6e5001dd804c15c$EntityFormControl_640fb563c235ec11b6e5001dd804c15c_EntityFormView$cr_city']"
           value: $ADDRESS_CITY
           required: true
-        - name: ctl00$ContentContainer$EntityFormControl_640fb563c235ec11b6e5001dd804c15c$EntityFormControl_640fb563c235ec11b6e5001dd804c15c_EntityFormView$cr_state
-          selector: "#cr_state"
-          value: $ADDRESS_STATE_FULL
+        - name: "ctl00$ContentContainer$EntityFormControl_640fb563c235ec11b6e5001dd804c15c$EntityFormControl_640fb563c235ec11b6e5001dd804c15c_EntityFormView$cr_state"
+          selector: "input[name='ctl00$ContentContainer$EntityFormControl_640fb563c235ec11b6e5001dd804c15c$EntityFormControl_640fb563c235ec11b6e5001dd804c15c_EntityFormView$cr_state']"
+          value: "Virginia"
           required: true
-        - name: ctl00$ContentContainer$EntityFormControl_640fb563c235ec11b6e5001dd804c15c$EntityFormControl_640fb563c235ec11b6e5001dd804c15c_EntityFormView$cr_zipcode
-          selector: "#cr_zipcode"
+        - name: "ctl00$ContentContainer$EntityFormControl_640fb563c235ec11b6e5001dd804c15c$EntityFormControl_640fb563c235ec11b6e5001dd804c15c_EntityFormView$cr_zipcode"
+          selector: "input[name='ctl00$ContentContainer$EntityFormControl_640fb563c235ec11b6e5001dd804c15c$EntityFormControl_640fb563c235ec11b6e5001dd804c15c_EntityFormView$cr_zipcode']"
           value: $ADDRESS_ZIP5
           required: true
-        - name: ctl00$ContentContainer$EntityFormControl_640fb563c235ec11b6e5001dd804c15c$EntityFormControl_640fb563c235ec11b6e5001dd804c15c_EntityFormView$cr_emailaddress
-          selector: "#cr_emailaddress"
+        - name: "ctl00$ContentContainer$EntityFormControl_640fb563c235ec11b6e5001dd804c15c$EntityFormControl_640fb563c235ec11b6e5001dd804c15c_EntityFormView$cr_emailaddress"
+          selector: "input[name='ctl00$ContentContainer$EntityFormControl_640fb563c235ec11b6e5001dd804c15c$EntityFormControl_640fb563c235ec11b6e5001dd804c15c_EntityFormView$cr_emailaddress']"
           value: $EMAIL
           required: true
-        - name: ctl00$ContentContainer$EntityFormControl_640fb563c235ec11b6e5001dd804c15c$EntityFormControl_640fb563c235ec11b6e5001dd804c15c_EntityFormView$cr_phone
-          selector: "#cr_phone"
+        - name: "ctl00$ContentContainer$EntityFormControl_640fb563c235ec11b6e5001dd804c15c$EntityFormControl_640fb563c235ec11b6e5001dd804c15c_EntityFormView$cr_phone"
+          selector: "input[name='ctl00$ContentContainer$EntityFormControl_640fb563c235ec11b6e5001dd804c15c$EntityFormControl_640fb563c235ec11b6e5001dd804c15c_EntityFormView$cr_phone']"
           value: $PHONE
           required: true
-        - name: ctl00$ContentContainer$EntityFormControl_640fb563c235ec11b6e5001dd804c15c$EntityFormControl_640fb563c235ec11b6e5001dd804c15c_EntityFormView$cr_messagesubject
-          selector: "#cr_messagesubject"
+        - name: "ctl00$ContentContainer$EntityFormControl_640fb563c235ec11b6e5001dd804c15c$EntityFormControl_640fb563c235ec11b6e5001dd804c15c_EntityFormView$cr_messagesubject"
+          selector: "input[name='ctl00$ContentContainer$EntityFormControl_640fb563c235ec11b6e5001dd804c15c$EntityFormControl_640fb563c235ec11b6e5001dd804c15c_EntityFormView$cr_messagesubject']"
           value: $SUBJECT
           required: true
-        - name: ctl00$ContentContainer$EntityFormControl_640fb563c235ec11b6e5001dd804c15c$EntityFormControl_640fb563c235ec11b6e5001dd804c15c_EntityFormView$cr_messagebody
-          selector: "#cr_messagebody"
+        - name: "ctl00$ContentContainer$EntityFormControl_640fb563c235ec11b6e5001dd804c15c$EntityFormControl_640fb563c235ec11b6e5001dd804c15c_EntityFormView$cr_messagebody"
+          selector: "textarea[name='ctl00$ContentContainer$EntityFormControl_640fb563c235ec11b6e5001dd804c15c$EntityFormControl_640fb563c235ec11b6e5001dd804c15c_EntityFormView$cr_messagebody']"
           value: $MESSAGE
           required: true
-        - name: ctl00$ContentContainer$EntityFormControl_640fb563c235ec11b6e5001dd804c15c$EntityFormControl_640fb563c235ec11b6e5001dd804c15c_EntityFormView$captcha$CaptchaTextBox
-          selector: "#ctl00_ContentContainer_EntityFormControl_640fb563c235ec11b6e5001dd804c15c_EntityFormControl_640fb563c235ec11b6e5001dd804c15c_EntityFormView_captcha_CaptchaTextBox"
+        - name: "ctl00$ContentContainer$EntityFormControl_640fb563c235ec11b6e5001dd804c15c$EntityFormControl_640fb563c235ec11b6e5001dd804c15c_EntityFormView$captcha$CaptchaTextBox"
+          selector: "input[name='ctl00$ContentContainer$EntityFormControl_640fb563c235ec11b6e5001dd804c15c$EntityFormControl_640fb563c235ec11b6e5001dd804c15c_EntityFormView$captcha$CaptchaTextBox']"
+          captcha_selector: "#ctl00_ContentContainer_EntityFormControl_640fb563c235ec11b6e5001dd804c15c_EntityFormControl_640fb563c235ec11b6e5001dd804c15c_EntityFormView_captcha_CaptchaImageUP"
           value: $CAPTCHA_SOLUTION
           required: true
-    - check:
-        - name: ctl00$ContentContainer$EntityFormControl_640fb563c235ec11b6e5001dd804c15c$EntityFormControl_640fb563c235ec11b6e5001dd804c15c_EntityFormView$cr_responserequired
-          selector: "#cr_responserequired_1"
-          value: 1
-    - wait:
-        - value: 5
-    - javascript:
-        - value: "document.querySelector('input#InsertButton').click();"
+    - click_on:
+        - name: "ctl00$ContentContainer$EntityFormControl_640fb563c235ec11b6e5001dd804c15c$EntityFormControl_640fb563c235ec11b6e5001dd804c15c_EntityFormView$cr_responserequired"
+          selector: "input[name='ctl00$ContentContainer$EntityFormControl_640fb563c235ec11b6e5001dd804c15c$EntityFormControl_640fb563c235ec11b6e5001dd804c15c_EntityFormView$cr_responserequired']"
+          value: "1"
+    - click_on:
+        - value: Submit
+          selector: "input[name='ctl00$ContentContainer$EntityFormControl_640fb563c235ec11b6e5001dd804c15c$InsertButton']"
     - wait:
         - value: 8
     - find:
