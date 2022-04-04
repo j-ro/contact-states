@@ -1,7 +1,7 @@
 bioguide: nyc_mayor_040819
 contact_form:
   method: post
-  action: "https://www1.nyc.gov/office-of-the-mayor/mayor-contact.page"
+  action: "/cgi-bin/misc/mayor.cgi"
   steps:
     - visit: "https://www1.nyc.gov/office-of-the-mayor/mayor-contact.page"
     - fill_in:
@@ -47,6 +47,8 @@ contact_form:
             Other: OTHER
     - wait:
         - value: 5
+    - javascript:
+        - value: document.querySelector("#g-recaptcha-response").style.display = "block";
     - recaptcha:
         - value: true
     - click_on:
