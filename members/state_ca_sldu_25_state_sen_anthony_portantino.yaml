@@ -5,32 +5,32 @@ contact_form:
   steps:
     - visit: "https://lcmspubcontact.lc.ca.gov/PublicLCMS/ContactPopup.php?district=SD25"
     - fill_in:
-        - name: txtFirstName
-          selector: "#txtFirstName"
+        - name: "txtFirstName"
+          selector: "#form_name"
           value: $NAME_FIRST
           required: true
-        - name: txtLastName
-          selector: "#txtLastName"
+        - name: "txtLastName"
+          selector: "#form_lastname"
           value: $NAME_LAST
           required: true
-        - name: txtAddress
-          selector: "#txtAddress"
+        - name: "txtAddress"
+          selector: "#form_address"
           value: $ADDRESS_STREET
           required: true
-        - name: txtCity
-          selector: "#txtCity"
+        - name: "txtCity"
+          selector: "#form_city"
           value: $ADDRESS_CITY
           required: true
-        - name: txtZip
-          selector: "#txtZip"
+        - name: "txtZip"
+          selector: "#form_zip"
           value: $ADDRESS_ZIP5
           required: true
-        - name: txtEmail
-          selector: "#txtEmail"
+        - name: "txtEmail"
+          selector: "#form_email"
           value: $EMAIL
           required: true
-        - name: jv_text
-          selector: "#ContactForm textarea[name='jv_text']"
+        - name: "jv_text"
+          selector: "#comments"
           value: $MESSAGE
           required: true
     - click_on:
