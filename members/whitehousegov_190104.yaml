@@ -137,7 +137,7 @@ contact_form:
           selector: "input[name='Optin_code']"
           value: "on"
     - javascript:
-        - value: document.querySelector("#g-recaptcha-response").style.display = "block";  
+        - value: var input = document.createElement("input"); input.type = "text"; input.id = "g-recaptcha-response"; document.querySelector("#form_625edd7602a78_recaptcha").type="show"; document.querySelector("#form_625edd7602a78_recaptcha").appendChild(input);
     - recaptcha:
         - value: true
     - javascript:
