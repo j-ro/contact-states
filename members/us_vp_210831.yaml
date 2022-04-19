@@ -137,6 +137,10 @@ contact_form:
           selector: "input[name='Optin_code']"
           value: "on"
     - javascript:
+        - value: document.querySelector("#g-recaptcha-response").style.display = "block";  
+    - recaptcha:
+        - value: true
+    - javascript:
         - value: "document.querySelector('input[type=submit][value=Send]').click()"
     - wait:
         - value: 5
