@@ -65,7 +65,7 @@ contact_form:
         - value: true
     - click_on:
         - value: Submit
-          selector: "#ctl00$Content$btnSubmit"
+          selector: "#ctl00_Content_btnSubmit"
   success:
     headers:
       status: 200
