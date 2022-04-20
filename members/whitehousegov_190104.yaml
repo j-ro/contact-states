@@ -140,6 +140,8 @@ contact_form:
         - value: var input = document.createElement("input"); input.type = "text"; input.id = "g-recaptcha-response"; document.querySelector("input[name='recaptcha']").type="show"; document.querySelector("input[name='recaptcha']").appendChild(input);
     - javascript:
         - value: document.querySelector("#g-recaptcha-response").style.display = "block";
+    - find:
+        - selector: "#g-recaptcha-response"
     - recaptcha:
         - value: true
     - javascript:
