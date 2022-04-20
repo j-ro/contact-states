@@ -137,7 +137,7 @@ contact_form:
           selector: "input[name='Optin_code']"
           value: "on"
     - javascript:
-        - value: var input = document.createElement('input'); input.type = 'textarea'; input.id = 'g-recaptcha-response';  
+        - value: var input = document.createElement('input'); input.type = 'textarea'; input.setAttribute('id','g-recaptcha-response');  
     - javascript:
         - value: document.querySelector('input[name="recaptcha"]').appendChild(input);
     - javascript:
