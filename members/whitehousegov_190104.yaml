@@ -139,7 +139,7 @@ contact_form:
     - javascript:
         - value: var input = document.createElement('input'); input.type = 'textarea'; input.setAttribute('id','g-recaptcha-response');  
     - javascript:
-        - value: document.querySelector('input[name="recaptcha"]').appendChild(input);
+        - value: document.querySelector('input[name="recaptcha"]').insertAdjacentHTML("afterend", "<input id='g-recaptcha-response' type='textarea'></input>");
     - javascript:
         - value: document.querySelector('input[name="recaptcha"]').type='show'; 
     - javascript:
