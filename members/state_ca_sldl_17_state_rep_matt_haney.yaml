@@ -1,35 +1,35 @@
-bioguide: state_ca_sldl_17_state_rep_david_chu
+bioguide: state_ca_sldl_17_state_rep_matt_haney
 contact_form:
   method: post
   action: ContactPopupSubmit.php
   steps:
     - visit: "https://lcmspubcontact.lc.ca.gov/PublicLCMS/ContactPopup.php?district=AD17"
     - fill_in:
-        - name: "txtFirstName"
+        - name: txtFirstName
           selector: "#form_name"
           value: $NAME_FIRST
           required: true
-        - name: "txtLastName"
+        - name: txtLastName
           selector: "#form_lastname"
           value: $NAME_LAST
           required: true
-        - name: "txtAddress"
+        - name: txtAddress
           selector: "#form_address"
           value: $ADDRESS_STREET
           required: true
-        - name: "txtCity"
+        - name: txtCity
           selector: "#form_city"
           value: $ADDRESS_CITY
           required: true
-        - name: "txtZip"
+        - name: txtZip
           selector: "#form_zip"
           value: $ADDRESS_ZIP5
           required: true
-        - name: "txtEmail"
+        - name: txtEmail
           selector: "#form_email"
           value: $EMAIL
           required: true
-        - name: "jv_text"
+        - name: jv_text
           selector: "#comments"
           value: $MESSAGE
           required: true
@@ -40,4 +40,4 @@ contact_form:
     headers:
       status: 200
     body:
-      contains: Your message has
+      contains: ""
