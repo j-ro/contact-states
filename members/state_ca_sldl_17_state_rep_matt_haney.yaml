@@ -1,4 +1,4 @@
-bioguide: state_ca_sldl_17_state_rep_david_chu
+bioguide: state_ca_sldl_17_state_rep_matt_haney
 contact_form:
   method: post
   action: ContactPopupSubmit.php
@@ -40,4 +40,4 @@ contact_form:
     headers:
       status: 200
     body:
-      contains: Close Window
+      contains: ""
