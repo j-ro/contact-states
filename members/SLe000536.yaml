@@ -36,9 +36,6 @@ contact_form:
     - click_on:
         - value: Submit
           selector: "#submitButton"
-    - click_on:
-        - value: Submit
-          selector: "#submitButton"
   success:
     headers:
       status: 200
