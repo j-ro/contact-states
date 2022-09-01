@@ -37,7 +37,7 @@ contact_form:
         - value: Submit
           selector: "#submitButton"
   success:
-  headers:
-    status: 200
+    headers:
+      status: 200
     body:
-      contains: Thank you
+      contains: "Thank you"
