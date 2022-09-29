@@ -6,11 +6,11 @@ contact_form:
     - visit: "https://www.line5tunneleis.com/comment-here/"
     - fill_in:
         - name: "wpforms[fields][7]"
-          selector: "#wpforms-65-field_7"
+          selector: "input[name='wpforms[fields][7]']"
           value: $NAME_FIRST
           required: false
         - name: "wpforms[fields][8]"
-          selector: "#wpforms-65-field_8"
+          selector: "input[name='wpforms[fields][8]']"
           value: $NAME_LAST
           required: false
         - name: "wpforms[fields][2]"
