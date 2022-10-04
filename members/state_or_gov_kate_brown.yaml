@@ -4,6 +4,9 @@ contact_form:
   action: /gov/Pages/share-your-opinion.aspx
   steps:
     - visit: "http://www.oregon.gov/gov/Pages/share-your-opinion.aspx"
+    - javascript:
+        - value: "Array.prototype.forEach.call(document.querySelectorAll('style,[rel=\"stylesheet\"],[type=\"text/css\"]'), function(element){
+try{ element.parentNode.removeChild(element) } catch(err){} });"
     - fill_in:
         - name: First Name
           selector: "#aspnetForm input[name='First Name']"
