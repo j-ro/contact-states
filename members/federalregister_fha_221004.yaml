@@ -27,15 +27,15 @@ contact_form:
           value: $NAME_LAST
           required: true
         - name: "comment[email]"
-          selector: "comment_email"
+          selector: "#comment_email"
           value: $EMAIL
           required: true
         - name: "comment[city]"
-          selector: "comment_city"
+          selector: "#comment_city"
           value: $ADDRESS_CITY
           required: true
         - name: "comment[zip]"
-          selector: "comment_zip"
+          selector: "#comment_zip"
           value: $ADDRESS_ZIP5
           required: true        
     - select:
