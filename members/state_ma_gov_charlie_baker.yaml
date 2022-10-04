@@ -8,6 +8,8 @@ contact_form:
         - value: 1
     - javascript:
         - value: document.querySelector('.fsrDeclineButton').click();
+    - javascript:
+        - value: document.querySelector('#field90831234_1').click();
     - fill_in:
         - name: field49751862
           selector: "#field49751862"
