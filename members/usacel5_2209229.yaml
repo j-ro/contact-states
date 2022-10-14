@@ -23,10 +23,12 @@ contact_form:
           required: true
     - click_on:
         - selector: "#wpforms-65-field_4_2"
+    - javascript:
+      - value: document.querySelector("#g-recaptcha-response").style.display = "block";
+    - recaptcha:
+         - value: true  
     - click_on:
          - selector: "#wpforms-submit-65"
-    - recaptcha:
-         - value: true
   success:
     headers:
       status: 200
