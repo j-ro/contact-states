@@ -1,0 +1,40 @@
+bioguide: dolphinco_221102
+contact_form:
+  method: POST
+  action: ""
+  steps:
+    - visit: "https://thedolphinco.com/contact-us/"
+    - fill_in:
+        - name: "name-2-first-name"
+          selector: "#forminator-field-first-name-2_63627f587380d"
+          value: $NAME_FIRST
+          required: true
+        - name: "name-2-last-name"
+          selector: "#forminator-field-last-name-2_63627f587380d"
+          value: $NAME_LAST
+          required: true
+        - name: "email-1"
+          selector: "#forminator-field-email-1_63627f587380d"
+          value: $EMAIL
+          required: true
+        - name: "text-1"
+          selector: "#forminator-field-text-1_63627f587380d"
+          value: $SUBJECT
+          required: true
+        - name: "phone-1"
+          selector: "#forminator-field-phone-1_63627f587380d"
+          value: $PHONE
+          required: true        
+        - name: "textarea-1"
+          selector: "#forminator-field-textarea-1_63627f587380d"
+          value: $MESSAGE
+          required: true   
+    - click_on:
+        - selector: ".forminator-button"
+    - wait:
+        - value: 3
+  success:
+    headers:
+      status: 200
+    body:
+      contains: Thank you for contacting us
