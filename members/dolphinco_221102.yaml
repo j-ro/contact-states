@@ -12,23 +12,23 @@ contact_form:
           value: $NAME_FIRST
           required: true
         - name: "name-2-last-name"
-          selector: "#forminator-field-last-name-2_63627f587380d"
+          selector: "input[name='name-2-last-name']"
           value: $NAME_LAST
           required: true
         - name: "email-1"
-          selector: "#forminator-field-email-1_63627f587380d"
+          selector: "input[name='email-1']"
           value: $EMAIL
           required: true
         - name: "text-1"
-          selector: "#forminator-field-text-1_63627f587380d"
+          selector: "input[name='text-1']"
           value: $SUBJECT
           required: true
         - name: "phone-1"
-          selector: "#forminator-field-phone-1_63627f587380d"
+          selector: "input[name='phone-1']"
           value: $PHONE
           required: true        
         - name: "textarea-1"
-          selector: "#forminator-field-textarea-1_63627f587380d"
+          selector: "textarea[name='textarea-1']"
           value: $MESSAGE
           required: true   
     - click_on:
