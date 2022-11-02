@@ -35,6 +35,8 @@ contact_form:
         - selector: ".forminator-button"
     - wait:
         - value: 3
+    - javascript:
+        - value: document.querySelector("form.forminator-custom-form").style.display = "block";    
   success:
     headers:
       status: 200
