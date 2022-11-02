@@ -8,7 +8,7 @@ contact_form:
         - value: document.querySelector("form.forminator-custom-form").style.display = "block";
     - fill_in:
         - name: "name-2-first-name"
-          selector: "#forminator-field-first-name-2_63627f587380d"
+          selector: "input[name='name-2-first-name']"
           value: $NAME_FIRST
           required: true
         - name: "name-2-last-name"
