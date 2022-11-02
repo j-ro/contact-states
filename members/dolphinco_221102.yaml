@@ -5,8 +5,7 @@ contact_form:
   steps:
     - visit: "https://thedolphinco.com/contact-us/"
     - javascript:
-        - value: "Array.prototype.forEach.call(document.querySelectorAll('style,[rel=\"stylesheet\"],[type=\"text/css\"]'), function(element){
-try{ element.parentNode.removeChild(element) } catch(err){} });"
+        - value: document.querySelector(".forminator-custom-form ").style.display = "block";
     - fill_in:
         - name: "name-2-first-name"
           selector: "#forminator-field-first-name-2_63627f587380d"
