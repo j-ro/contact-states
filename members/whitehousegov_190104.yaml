@@ -1,7 +1,7 @@
 bioguide: whitehousegov_190104
 contact_form:
   method: POST
-  action: "https://forms.whitehouse.gov/ContactUs"
+  action: "https://www.whitehouse.gov/form-api/contact-2022-03-14.json"
   steps:
     - visit: "https://www.whitehouse.gov/contact/"
     - wait:
