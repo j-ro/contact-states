@@ -149,8 +149,11 @@ contact_form:
     - click_on:
         - value: Submit
           selector: "#btn_submit"
+    - click_on:
+        - value: Submit
+          selector: "#btn_rev_submit"
   success:
     headers:
       status: 200
     body:
-      contains: PUTTING NEVADA'S
+      contains: Thank you
