@@ -46,64 +46,39 @@ contact_form:
           options:
             Agriculture: 0_AGR
             Abortion: 1_ABO
-            Alternate Energy (Wind, Ethanol): 2_ALTEN
-            Animal Rights: 3_ANR
-            Boards and Commissions: 5_BAC
-            Child Abuse/DHS: 6_CADHS
-            Children/Family/Adoption: 7_CFA
-            Clemency/Pardon: 8_CLPA
-            Corrections: 9_COR
-            COVID -- COVID-19 Pandemic Response and Related Issues: 10_COVID
-            Civil Rights: 11_CR
-            Child Support: 12_CS
-            Drivers License: 13_DL
-            Economic Development: 14_ED
-            Education- Higher: 15_EDHIGH
-            Education- K-12: 16_EDK12
-            Education- Preschool: 17_EDPK
-            Eminent Domain: 18_EMDO
-            Environment: 19_ENV
-            Federal Government: 20_FGOV
-            Gambling: 21_GAM
-            Guns: 22_GUN
-            Health and Human Services: 23_HHS
-            Housing: 24_HOU
-            Immigration: 25_IMM
-            Insurance- Health: 26_INSH
-            Insurance- Other: 27_INSO
-            Iowa Workforce Development: 29_IWD
-            IPERS: 30_IPERS
-            Jobs: 31_JOBS
-            Judiciary: 32_JUD
-            Labor: 33_LBR
-            Legal: 34_LGL
-            Legislation: 35_LEGS
-            Local Issues: 36_LOC
-            Medicaid- Budget Cuts: 37_MEDI1
-            Medicaid- General: 38_MEDI2
-            Medicare- Federal: 39_MEDI3
-            National Guard: 41_NG
-            Natural Resources/Conservation: 42_NRC
-            Nursing Home: 43_NURH
-            Other: 44_OTH
-            Public Safety: 45_PS
-            Revenue: 46_REV
-            Small Business: 47_SMBIZ
-            Smoking Ban: 48_SMBN
-            Social Security/Aging: 49_SSEC
-            Budget: 50_BUD
-            State Economy: 51_STE
-            State Employees: 52_STEMP
-            Tax- Federal: 53_TAXF
-            TAXI -- Tax- Income: 54_TAXI
-            TAXP -- Tax- Property: 55_TAXP
-            Taxes: 56_TAX
-            Tourism: 57_TOUR
-            Transportation: 58_TRA
-            Utilities: 59_UTIL
-            Veterans: 60_VET
-            Welfare/Food Stamps: 62_WEL
-            Worker's Compensation: 63_WORKC
+            Boards and Commissions: 2_BAC
+            Child Abuse/DHS: 3_CADHS
+            Corrections: 4_COR
+            COVID -- COVID-19 Pandemic Response &amp; Related Issues: 5_COVID
+            Civil Rights: 6_CR
+            Child Support: 7_CS
+            Education: 8_EDHIGH
+            Environment: 9_ENV
+            Federal Government: 10_FGOV
+            Financial Assistance: 11_FINANCIAL ASSISTANCE
+            Guns: 12_GUN
+            Housing: 13_HOU
+            Immigration: 14_IMM
+            Iowa Workforce Development: 15_IWD
+            Jobs: 16_JOBS
+            Judiciary: 17_JUD
+            Labor: 18_LBR
+            Legal: 19_LGL
+            Legislation: 20_LEGS
+            Local Issues: 21_LOC
+            Medicaid: 22_MEDI1
+            Medicare- Federal: 23_MEDI3
+            Mental Health: 24_MEDI1
+            National Guard: 25_NG
+            Natural Resources/Conservation: 26_NRC
+            Nursing Home: 27_NURH
+            Public Safety: 28_PS
+            Revenue: 29_REV
+            Small Business: 30_SMBIZ
+            Taxes: 31_TAXP
+            Utilities: 32_UTIL
+            Veterans: 33_VET
+            OTHER -- Other: 34_OTHER
     - javascript:
       - value: document.querySelector("#g-recaptcha-response").style.display = "block";
     - recaptcha:
