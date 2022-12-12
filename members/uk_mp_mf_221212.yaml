@@ -1,0 +1,50 @@
+bioguide: uk_mp_mf_221212
+contact_form:
+  method: POST
+  action: ""
+  steps:
+    - visit: "https://www.michael.fabricant.mp.co.uk/contact/"        
+    - fill_in:
+        - name: "your-name"
+          selector: "input[name='your-name']"
+          value: $NAME_FULL
+          required: true
+        - name: "email-ad"
+          selector: "input[name='email-ad']"
+          value: $NAME_LAST
+          required: true
+        - name: "your-subject"
+          selector: "input[name='your-subject']"
+          value: $SUBJECT
+          required: true
+        - name: "address-1"
+          selector: "input[name='address-1']"
+          value: $ADDRESS_STREET
+          required: true
+        - name: "town"
+          selector: "input[name='town']"
+          value: $ADDRESS_CITY
+          required: true
+        - name: "your-post"
+          selector: "input[name='your-post']"
+          value: $ADDRESS_ZIP5
+          required: true       
+        - name: "your-phone"
+          selector: "input[name='your-phone']"
+          value: $PHONE
+          required: true
+        - name: "your-message"
+          selector: "textarea[name='your-message']"
+          value: $COMMENT
+          required: true     
+    - recaptcha:
+        - value: true
+    - click_on:
+        - ".wpcf7-submit"   
+    - wait:
+        - value: 5
+  success:
+    headers:
+      status: 200
+    body:
+      contains: Thank you for your message.
