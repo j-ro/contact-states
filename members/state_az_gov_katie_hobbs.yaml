@@ -6,7 +6,7 @@ contact_form:
     - visit: "https://azgovernor.gov/contact/form/contact-governor-hobbs"
     - check:
         - name: "submitted[_fid_40]"
-          selector: "edit-submitted-fid-40-2"
+          selector: "#edit-submitted-fid-40-2"
           value: "Comment"
     - select:
         - name: "submitted[_fid_9]"
