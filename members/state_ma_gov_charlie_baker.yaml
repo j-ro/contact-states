@@ -8,7 +8,7 @@ contact_form:
         - value: 1
     - fill_in:
         - name: qi_1_first_name
-          selector: "#qi_1_first_name"
+          selector: "input[name='qi_1_first_name']"
           value: $NAME_FIRST
           required: true
         - name: qi_1_last_name
