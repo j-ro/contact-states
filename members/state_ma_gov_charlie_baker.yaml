@@ -23,8 +23,8 @@ contact_form:
           selector: "#qi_1_city"
           value: $ADDRESS_CITY
           required: true
-        - name: field49751937
-          selector: "#field49751937"
+        - name: qi_1_state
+          selector: "#qi_1_state"
           value: $ADDRESS_STATE_POSTAL_ABBREV
           required: true
         - name: qi_1_zip
