@@ -86,6 +86,8 @@ contact_form:
           required: true
           options:
             - AR
+    - recaptcha:
+        - value: true
     - click_on:
         - value: Submit
           selector: input[name="submit"]
