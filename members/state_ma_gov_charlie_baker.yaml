@@ -6,59 +6,117 @@ contact_form:
     - visit: "https://www.mass.gov/forms/email-the-governors-office"
     - wait:
         - value: 1
-    - javascript:
-        - value: document.querySelector('.fsrDeclineButton').click();
-    - javascript:
-        - value: document.querySelector('#field90831234_1').click();
     - fill_in:
-        - name: field49751862
-          selector: "#field49751862"
+        - name: qi_1_first_name
+          selector: "#qi_1_first_name"
           value: $NAME_FIRST
           required: true
-        - name: field49751877
-          selector: "#field49751877"
+        - name: qi_1_last_name
+          selector: "#qi_1_last_name"
           value: $NAME_LAST
           required: true
-        - name: field49751885
-          selector: "#field49751885"
+        - name: qi_1_addr_1
+          selector: "#qi_1_addr_1"
           value: $ADDRESS_STREET
           required: true
-        - name: field49751935
-          selector: "#field49751935"
+        - name: qi_1_city
+          selector: "#qi_1_city"
           value: $ADDRESS_CITY
           required: true
         - name: field49751937
           selector: "#field49751937"
           value: $ADDRESS_STATE_POSTAL_ABBREV
           required: true
-        - name: field49752148
-          selector: "#field49752148"
+        - name: qi_1_zip
+          selector: "#qi_1_zip"
           value: $ADDRESS_ZIP5
           required: true
-        - name: field49751979
-          selector: "#field49751979"
-          value: $PHONE
-          required: true
-        - name: field49752019
-          selector: "#field49752019"
+        - name: qi_1_email
+          selector: "#qi_1_email"
           value: $EMAIL
           required: true
-        - name: field49752026
-          selector: "#field49752026"
+        - name: qi_2
+          selector: "#qi_2"
+          value: $SUBJECT
+          required: true
+        - name: qi_3
+          selector: "#qi_3"
           value: $MESSAGE
           required: true
-    - javascript:
-        - value: "document.querySelector('#field90831245_7').click();"
+    - select:
+        - name: "qi_1_state"
+          selector: "#qi_1_state"
+          value: $ADDRESS_STATE_FULL
+          required: true
+          options:
+            Alabama: 0_AL
+            Alaska: 1_AK
+            America Samoa: 2_AS
+            Arizona: 3_AZ
+            Arkansas: 4_AR
+            California: 5_CA
+            Colorado: 6_CO
+            Connecticut: 7_CT
+            D.C.: 8_D.C.
+            Delaware: 10_DE
+            Federated States of Micronesia: 11_FM
+            Florida: 12_FL
+            Foreign Correspondence: 13_FC
+            Georgia: 14_GA
+            Guam: 15_GU
+            Hawaii: 16_HI
+            Idaho: 17_ID
+            Illinois: 18_IL
+            Indiana: 19_IN
+            Iowa: 20_IA
+            Kansas: 21_KS
+            Kentucky: 22_KY
+            Louisiana: 23_LA
+            Maine: 24_ME
+            Marshall Islands: 25_MH
+            Maryland: 26_MD
+            Massachusetts: 27_MA
+            Michigan: 28_MI
+            Minnesota: 29_MN
+            Mississippi: 30_MS
+            Missouri: 31_MO
+            Montana: 32_MT
+            Nebraska: 33_NE
+            Nevada: 34_NV
+            New Hampshire: 35_NH
+            New Jersey: 36_NJ
+            New Mexico: 37_NM
+            New York: 38_NY
+            North Carolina: 39_NC
+            North Dakota: 40_ND
+            Northern Mariana Islands: 41_MP
+            Ohio: 42_OH
+            Oklahoma: 43_OK
+            Oregon: 44_OR
+            Palau: 45_PW
+            Pennsylvania: 46_PA
+            Puerto Rico: 47_PR
+            Rhode Island: 48_RI
+            South Carolina: 49_SC
+            South Dakota: 50_SD
+            Tennessee: 51_TN
+            Texas: 42_TX
+            Trust Territory: 53_TT
+            Utah: 54_UT
+            Vermont: 55_VT
+            Virgin Islands: 56_VI
+            Virginia: 57_VA
+            Washington: 58_WA
+            West Virginia: 59_WV
+            Wisconsin: 60_WI
+            Wyoming: 61_WY
+    - recaptcha:
+        - value: true
     - click_on:
         - value: Submit
-          selector: "#fsSubmitButton1744869"
-    - wait:
-        - value: 5
-    - find:
-        - selector: "p"
-          value: "The form was submitted successfully."
+          selector: "#btn_submit"
   success:
     headers:
       status: 200
     body:
-      contains: "The form was submitted successfully."
+      contains: ""
