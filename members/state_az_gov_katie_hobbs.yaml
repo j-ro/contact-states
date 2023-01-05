@@ -1,0 +1,83 @@
+bioguide:   state_az_gov_katie_hobbs
+contact_form:
+  method: post
+  action: "https://azgovernor.gov/contact/form/contact-governor-hobbs"
+  steps:
+    - visit: "https://azgovernor.gov/contact/form/contact-governor-hobbs"
+    - check:
+        - name: "submitted[_fid_40]"
+          selector: "edit-submitted-fid-40-2"
+          value: "Comment"
+    - select:
+        - name: "submitted[_fid_9]"
+          selector: "#edit-submitted-fid-9"
+          value: $NAME_PREFIX
+          required: true
+          options:
+            Mr.: "Mr."
+            Ms.: "Ms."
+            Mrs.: "Mrs."
+            Dr.: "Dr."
+        - name: "submitted[_fid_26]"
+          selector: "#edit-submitted-fid-26"
+          value: "Uknown"
+          required: true
+          options:
+            I don't know: Uknown
+        - name: "submitted[_fid_6]"
+          selector: "#edit-submitted-fid-6"
+          value: "Other"
+          required: true
+          options:
+            Other: Other
+    - fill_in:
+        - name: "submitted[_fid_10]"
+          selector: "#edit-submitted-fid-10"
+          value: $NAME_FIRST
+          required: true
+        - name: "submitted[_fid_11]"
+          selector: "#edit-submitted-fid-11"
+          value: $NAME_LAST
+          required: true
+        - name: "submitted[_fid_20]"
+          selector: "#edit-submitted-fid-20"
+          value: $EMAIL
+          required: true
+        - name: "submitted[conf_email_address]"
+          selector: "#edit-submitted-conf-email-address"
+          value: $EMAIL
+          required: true  
+        - name: "submitted[_fid_21]"
+          selector: "#edit-submitted-fid-21"
+          value: $PHONE
+          required: true 
+        - name: "submitted[_fid_14]"
+          selector: "#edit-submitted-fid-14"
+          value: $ADDRESS_STREET
+          required: true
+        - name: "submitted[_fid_16]"
+          selector: "#edit-submitted-fid-16"
+          value: $ADDRESS_CITY
+          required: true        
+        - name: "submitted[_fid_18]"
+          selector: "#edit-submitted-fid-18"
+          value: $ADDRESS_ZIP5
+          required: true
+        - name: "submitted[_fid_37]"
+          selector: "#edit-submitted-fid-37"
+          value: $SUBJECT
+          required: true
+        - name: "submitted[_fid_22]"
+          selector: "#edit-submitted-fid-22"
+          value: $MESSAGE
+          required: true   
+    - recaptcha:
+        - value: true
+    - click_on:
+        - value: Send Email
+          selector: ".webform-submit"
+  success:
+    headers:
+      status: 200
+    body:
+      contains: "Thank you for contacting"
