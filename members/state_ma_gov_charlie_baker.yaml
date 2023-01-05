@@ -1,9 +1,9 @@
 bioguide: state_ma_gov_charlie_baker
 contact_form:
   method: post
-  action: "https://www.mass.gov/forms/email-the-governors-office"
+  action: "https://iqconnect.lmhostediq.com/iqextranet/EForm.aspx?__cid=FSL_MA_GOV&__fid=100011"
   steps:
-    - visit: "https://www.mass.gov/forms/email-the-governors-office"
+    - visit: "https://iqconnect.lmhostediq.com/iqextranet/EForm.aspx?__cid=FSL_MA_GOV&__fid=100011"
     - wait:
         - value: 1
     - fill_in:
