@@ -9,7 +9,7 @@ contact_form:
     - javascript:
       - value: "document.querySelector('body').style.color = 'red'"
     - wait:
-        - value: 10
+        - value: 17
     - find:
         - selector: "#radio-1-9"
           value: "No"
