@@ -61,6 +61,8 @@ contact_form:
           selector: "input[name='ctl00$ContentContainer$EntityFormControl_640fb563c235ec11b6e5001dd804c15c$EntityFormControl_640fb563c235ec11b6e5001dd804c15c_EntityFormView$cr_responserequired'][value='0']"
           value: "0"
     - javascript:
+        - value: var input = document.createElement("INPUT"); input.setAttribute("name", "ctl00$ContentContainer$EntityFormControl_640fb563c235ec11b6e5001dd804c15c$EntityFormControl_640fb563c235ec11b6e5001dd804c15c_EntityFormView$cr_topicid"); document.appendChild(input);
+    - javascript:
          - value: document.querySelector(".entitylist-search button").click()
     - find:
         - selector: ".modal-title[title='Lookup records']"
