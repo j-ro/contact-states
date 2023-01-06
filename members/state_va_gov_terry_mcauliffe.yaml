@@ -63,7 +63,7 @@ contact_form:
     - javascript:
          - value: document.querySelector(".entitylist-search button").click()
     - find:
-        - selector: ".modal-title"
+        - selector: ".modal-title[title='Lookup records']"
     - javascript:
          - value: document.querySelector("tr[data-id='b16e750e-6e72-ed11-9562-001dd807278f']").click()
     - javascript:
