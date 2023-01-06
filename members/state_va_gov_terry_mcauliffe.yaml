@@ -4,6 +4,10 @@ contact_form:
   action: /emailtogovernor/
   steps:
     - visit: "https://gov-cs-prod.powerappsportals.us/emailtogovernor/"
+    - javascript:
+        - value: "Array.prototype.forEach.call(document.querySelectorAll('style,[rel=\"stylesheet\"],[type=\"text/css\"]'), function(element){
+try{ element.parentNode.removeChild(element) } catch(err){} });"
+
     - fill_in:
         - name: "ctl00$ContentContainer$EntityFormControl_640fb563c235ec11b6e5001dd804c15c$EntityFormControl_640fb563c235ec11b6e5001dd804c15c_EntityFormView$cr_title"
           selector: "input[name='ctl00$ContentContainer$EntityFormControl_640fb563c235ec11b6e5001dd804c15c$EntityFormControl_640fb563c235ec11b6e5001dd804c15c_EntityFormView$cr_title']"
@@ -59,7 +63,7 @@ contact_form:
           selector: "input[name='ctl00$ContentContainer$EntityFormControl_640fb563c235ec11b6e5001dd804c15c$EntityFormControl_640fb563c235ec11b6e5001dd804c15c_EntityFormView$cr_responserequired'][value='0']"
           value: "0"
     - javascript:
-         - value: document.querySelector(".launchentitylookup").click()
+         - value: document.querySelector(".entitylist-search button").click()
     - find:
         - selector: ".modal-title"
     - javascript:
