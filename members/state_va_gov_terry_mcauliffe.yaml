@@ -79,11 +79,11 @@ contact_form:
          - value: document.querySelector(".modal-footer .btn-primary").click()
     - javascript:
          - value: document.querySelector("input[name='ctl00$ContentContainer$EntityFormControl_640fb563c235ec11b6e5001dd804c15c$EntityFormControl_640fb563c235ec11b6e5001dd804c15c_EntityFormView$cr_topicid']").value = "b16e750e-6e72-ed11-9562-001dd807278f"
-    - find:
-        - selector: "input[name='ctl00$ContentContainer$EntityFormControl_640fb563c235ec11b6e5001dd804c15c$EntityFormControl_640fb563c235ec11b6e5001dd804c15c_EntityFormView$cr_topicid_entityname']"
-    - find:
-        - selector: "input[name='ctl00$ContentContainer$EntityFormControl_640fb563c235ec11b6e5001dd804c15c$EntityFormControl_640fb563c235ec11b6e5001dd804c15c_EntityFormView$cr_topicid']"
-    - find:
+    # - find:
+    #     - selector: "input[name='ctl00$ContentContainer$EntityFormControl_640fb563c235ec11b6e5001dd804c15c$EntityFormControl_640fb563c235ec11b6e5001dd804c15c_EntityFormView$cr_topicid_entityname']"
+    # - find:
+    #     - selector: "input[name='ctl00$ContentContainer$EntityFormControl_640fb563c235ec11b6e5001dd804c15c$EntityFormControl_640fb563c235ec11b6e5001dd804c15c_EntityFormView$cr_topicid']"
+    # - find:
         - selector: "input[value='b16e750e-6e72-ed11-9562-001dd807278f']"
     - click_on:
         - value: Submit
