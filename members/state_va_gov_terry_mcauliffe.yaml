@@ -67,6 +67,8 @@ contact_form:
     - find:
         - selector: "#EntityFormControl_640fb563c235ec11b6e5001dd804c15c_EntityFormView_EntityLayoutConfig"
     - javascript:
+        - value: document.querySelector("#EntityFormControl_640fb563c235ec11b6e5001dd804c15c_EntityFormView_EntityLayoutConfig").setAttribute('data-form-layout', '{"EntityName":"cr_emailthegovernor","Id":"00000000-0000-0000-0000-000000000000","SubmitActionLink":{"Modal":{},"Type":0,"Enabled":false,"ShowModal":0,"FilterCriteriaId":"a2d23c4f-90cf-4965-97b0-4754224223e8"},"PreviousActionLink":{"Type":0,"Enabled":false,"ShowModal":0,"FilterCriteriaId":"e225b13c-d8fc-4df2-8b27-9492f459c4ec"},"NextActionLink":{"Type":0,"Enabled":false,"ShowModal":0,"FilterCriteriaId":"e02f28be-875c-44b9-a4e5-bdcb9a3344f1"},"CreateRelatedRecordActionLink":{"Modal":{},"Type":0,"Enabled":false,"ShowModal":0,"FilterCriteriaId":"ccb339a9-b1c7-4d3a-90da-27493cb4f621"},"EnableEntityPermissions":false,"LanguageCode":0,"EnableActions":false,"ShowActionButtonContainer":0,"AutoGenerateSteps":false}')
+    - javascript:
         - value: var input = document.createElement("INPUT"); input.setAttribute("name", "ctl00$ContentContainer$EntityFormControl_640fb563c235ec11b6e5001dd804c15c$EntityFormControl_640fb563c235ec11b6e5001dd804c15c_EntityFormView$cr_topicid"); document.appendChild(input);
     - javascript:
          - value: document.querySelector("tr[data-id='b16e750e-6e72-ed11-9562-001dd807278f']").click()
