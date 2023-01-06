@@ -56,8 +56,8 @@ contact_form:
           required: true
     - click_on:
         - name: "ctl00$ContentContainer$EntityFormControl_640fb563c235ec11b6e5001dd804c15c$EntityFormControl_640fb563c235ec11b6e5001dd804c15c_EntityFormView$cr_responserequired"
-          selector: "input[name='ctl00$ContentContainer$EntityFormControl_640fb563c235ec11b6e5001dd804c15c$EntityFormControl_640fb563c235ec11b6e5001dd804c15c_EntityFormView$cr_responserequired']"
-          value: "1"
+          selector: "input[name='ctl00$ContentContainer$EntityFormControl_640fb563c235ec11b6e5001dd804c15c$EntityFormControl_640fb563c235ec11b6e5001dd804c15c_EntityFormView$cr_responserequired'][value='0']"
+          value: "0"
     - javascript:
          - value: document.querySelector(".launchentitylookup").click()
     - find:
