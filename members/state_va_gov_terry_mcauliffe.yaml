@@ -84,7 +84,7 @@ contact_form:
     # - find:
     #     - selector: "input[name='ctl00$ContentContainer$EntityFormControl_640fb563c235ec11b6e5001dd804c15c$EntityFormControl_640fb563c235ec11b6e5001dd804c15c_EntityFormView$cr_topicid']"
     # - find:
-        - selector: "input[value='b16e750e-6e72-ed11-9562-001dd807278f']"
+        # - selector: "input[value='b16e750e-6e72-ed11-9562-001dd807278f']"
     - click_on:
         - value: Submit
           selector: "input[name='ctl00$ContentContainer$EntityFormControl_640fb563c235ec11b6e5001dd804c15c$InsertButton']"
