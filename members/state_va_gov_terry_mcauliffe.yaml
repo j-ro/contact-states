@@ -51,11 +51,11 @@ contact_form:
         #   selector: "textarea[name='ctl00$ContentContainer$EntityFormControl_640fb563c235ec11b6e5001dd804c15c$EntityFormControl_640fb563c235ec11b6e5001dd804c15c_EntityFormView$cr_messagebody']"
         #   value: $MESSAGE
         #   required: true
-        # - name: "ctl00$ContentContainer$EntityFormControl_640fb563c235ec11b6e5001dd804c15c$EntityFormControl_640fb563c235ec11b6e5001dd804c15c_EntityFormView$captcha$CaptchaTextBox"
-        #   selector: "input[name='ctl00$ContentContainer$EntityFormControl_640fb563c235ec11b6e5001dd804c15c$EntityFormControl_640fb563c235ec11b6e5001dd804c15c_EntityFormView$captcha$CaptchaTextBox']"
-        #   captcha_selector: "#ctl00_ContentContainer_EntityFormControl_640fb563c235ec11b6e5001dd804c15c_EntityFormControl_640fb563c235ec11b6e5001dd804c15c_EntityFormView_captcha_CaptchaImageUP"
-        #   value: $CAPTCHA_SOLUTION
-        #   required: true
+        - name: "ctl00$ContentContainer$EntityFormControl_640fb563c235ec11b6e5001dd804c15c$EntityFormControl_640fb563c235ec11b6e5001dd804c15c_EntityFormView$captcha$CaptchaTextBox"
+          selector: "input[name='ctl00$ContentContainer$EntityFormControl_640fb563c235ec11b6e5001dd804c15c$EntityFormControl_640fb563c235ec11b6e5001dd804c15c_EntityFormView$captcha$CaptchaTextBox']"
+          captcha_selector: "#ctl00_ContentContainer_EntityFormControl_640fb563c235ec11b6e5001dd804c15c_EntityFormControl_640fb563c235ec11b6e5001dd804c15c_EntityFormView_captcha_CaptchaImageUP"
+          value: $CAPTCHA_SOLUTION
+          required: true
     - click_on:
         - name: "ctl00$ContentContainer$EntityFormControl_640fb563c235ec11b6e5001dd804c15c$EntityFormControl_640fb563c235ec11b6e5001dd804c15c_EntityFormView$cr_responserequired"
           selector: "input[name='ctl00$ContentContainer$EntityFormControl_640fb563c235ec11b6e5001dd804c15c$EntityFormControl_640fb563c235ec11b6e5001dd804c15c_EntityFormView$cr_responserequired'][value='0']"
