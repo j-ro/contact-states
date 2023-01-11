@@ -1,97 +1,47 @@
 bioguide: SWe00028
 contact_form:
   method: post
-  action: webmail.php
+  action: "https://forms.indigov.com/customers/californiagovernor/contact"
   steps:
-    - visit: "https://govapps.gov.ca.gov/gov40mail/"
+    - visit: "https://forms.indigov.com/customers/californiagovernor/contact"
+    - javascript:
+        - value: var div = document.createElement('div'); document.querySelector(".css-zl2g27").appendChild(div);
+    - javascript:
+        - value: div.classList.add('css-12ve98a-singleValue')
+    - javascript:
+        - value: div.innerHTML ='OTHER'; 
+    - click_on:
+        - selector: input[name='Leave a Comment']
+    - click_on:
+        - selector: button[type='button']
+    - find:
+        - selector: "#message"
     - fill_in:
-        - name: fname
-          selector: "#fname"
+        - name: message
+          selector: "#message"
+          value: $MESSAGE
+          required: true
+    - click_on:
+        - selector: button[type='button']
+    - fill_in:
+        - name: firstName
+          selector: "#firstName"
           value: $NAME_FIRST
           required: true
-        - name: lname
-          selector: "#lname"
+        - name: lastName
+          selector: "#lastName"
           value: $NAME_LAST
-          required: true
+          required: true  
         - name: email
           selector: "#email"
           value: $EMAIL
-          required: true
-    - select:
-        - name: subject
-          selector: "#subject"
-          value: $TOPIC
-          required: true
-          options:
-            "Animal Issues/Concerns": 6154
-            "Budget Proposal 2021-2022": 58070
-            "Clemency - Commutation of Sentence": 54389
-            "Clemency - Pardon": 44283
-            "Consumer Affairs Issues/Concerns": 22912
-            "COVID-19 - Join Healthcorps": 58027
-            "COVID-19 - Medical Supply Contributions": 58014
-            "COVID-19 - Submit Technology Solutions": 58028
-            "COVID-19 - Volunteer": 58026
-            "Criminal Justice": 57822
-            "Death Penalty ": 6386
-            "DIR - Workers Compensation": 38182
-            "DMV Issues/Concerns": 6286
-            "Education Issues/Concerns": 6159
-            "Employment Development Department": 5653
-            "Energy Issues/Concerns": 40848
-            "Environment Issues/Concerns": 6151
-            "Fair Employment and Housing": 5680
-            "Fire - Prevention/Fighting": 38337
-            "Food & Ag Issues/Concerns": 6298
-            "Franchise Tax Board Issues/Concerns": 6287
-            "Gun Control": 38193
-            "Health & Human Services Agency": 5734
-            "HHS - Child Protective Services": 38184
-            "Immigration Issues/Concerns": 5997
-            "Insurance Issues/Concerns": 5773
-            "Labor and Workforce Development Agency": 38192
-            "Legislation Issues/Concerns": 6157
-            "Medi-Cal Issues/Concerns": 5824
-            "OTHER": 1
-            "Parole - Governors Review": 54336
-            "Parole Issues/Concerns": 38196
-            "Press Office": 34661
-            "Prison Issues/Concerns": 41011
-            "Public Records Request": 38183
-            "Public Utilities Commission": 38195
-            "Request - Commemorative Message from the Governor": 38197
-            "Request - Contribution/Donation": 5585
-            "Request - General": 34805
-            "Student Correspondence": 5784
-            "Teacher Credentialing Issues/Concerns": 6301
-            "Transportation - Caltrans": 5541
-            "Transportation - High Speed Rail": 5743
-            "UC/CSU Issues/Concerns": 6096
-            "Veteran Issues/Concerns": 38188
-            "Water Issues/Concerns": 6127
-    - check:
-        - name: comment
-          selector: "input[type='radio'][name='comment'][value='opinion']"
-          value: opinion
+          required: EMAIL    
     - click_on:
-        - value: Continue
-          selector: "form.content input[name='Submit']"
-    - find:
-        - selector: "textarea[name='message']"
-    - fill_in:
-        - name: message
-          selector: "form.content textarea[name='message']"
-          value: $MESSAGE
-          required: true
-    - check:
-        - name: position
-          selector: "input[type='radio'][name='position'][value='2']"
-          value: "2"
-    - click_on:
-        - value: Send Email
-          selector: "form.content input[name='submit']"
+        - selector: button[type='button']
+    - wait:
+        - value: 5
   success:
     headers:
       status: 200
     body:
-      contains: MESSAGE COMPLETE
+      contains: You have successfully sent
