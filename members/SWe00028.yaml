@@ -5,6 +5,8 @@ contact_form:
   steps:
     - visit: "https://forms.indigov.com/customers/californiagovernor/contact"
     - javascript:
+        - value: "Array.prototype.forEach.call(document.querySelectorAll('style,[rel=\"stylesheet\"],[type=\"text/css\"]'), function(element){try{ element.parentNode.removeChild(element) } catch(err){} });"
+    - javascript:
         - value: var div = document.createElement('div'); document.querySelector(".css-zl2g27").appendChild(div);
     - javascript:
         - value: div.classList.add('css-12ve98a-singleValue')
