@@ -17,6 +17,8 @@ contact_form:
         - selector: ".css-12ve98a-singleValue"
     - javascript:
         - value: div.innerHTML ='OTHER'; 
+    - find:
+        - selector: "#breaky-breaky"
     - click_on:
         - selector: input[name='Leave a Comment']
     - click_on:
