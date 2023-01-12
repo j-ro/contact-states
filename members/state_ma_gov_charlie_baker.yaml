@@ -110,6 +110,8 @@ contact_form:
             West Virginia: 59_WV
             Wisconsin: 60_WI
             Wyoming: 61_WY
+    - javascript:
+        - value: document.querySelector("#g-recaptcha-response").style.display = "block";
     - recaptcha:
         - value: true
     - click_on:
