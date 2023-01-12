@@ -12,6 +12,8 @@ contact_form:
         - value: var div = document.createElement('div'); document.querySelector(".css-zl2g27").appendChild(div);
     - javascript:
         - value: div.classList.add('css-12ve98a-singleValue')
+    - find:
+        - selector: ".css-12ve98a-singleValue"
     - javascript:
         - value: div.innerHTML ='OTHER'; 
     - click_on:
