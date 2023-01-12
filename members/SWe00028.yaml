@@ -19,8 +19,8 @@ contact_form:
         - value: div.innerHTML ='OTHER';  
     - click_on:
         - selector: input[name='Leave a Comment']
-    - click_on:
-        - selector: button[type='button']
+    - javascript:
+        - value: document.querySelector('button[type='button']').click()
     - find:
         - selector: "#message"
     - fill_in:
