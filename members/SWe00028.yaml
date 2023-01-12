@@ -20,7 +20,7 @@ contact_form:
     - click_on:
         - selector: input[name='Leave a Comment']
     - javascript:
-        - value: document.querySelector('button[type='button']').click()
+        - value: document.querySelector('button[type="button"]').click()
     - find:
         - selector: "#message"
     - fill_in:
