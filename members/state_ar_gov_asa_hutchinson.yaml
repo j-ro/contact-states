@@ -1,45 +1,49 @@
 bioguide: state_ar_gov_asa_hutchinson
 contact_form:
   method: post
-  action: "https://governor.arkansas.gov/online-services/contact-us/"
+  action: "https://governor.arkansas.gov/online-services/contact-the-governor/"
   steps:
-    - visit: "https://governor.arkansas.gov/online-services/contact-us/"
+    - visit: "https://governor.arkansas.gov/online-services/contact-the-governor/"
     - fill_in:
-        - name: name
-          selector: "#name"
-          value: $NAME_FULL
+        - name: input_4.3
+          selector: "#input_7_4_3"
+          value: $NAME_FIRST
           required: true
-        - name: 00Nt0000000IPXP
-          selector: input[name='00Nt0000000IPXP']
+        - name: input_4.6
+          selector: "#input_7_4_6"
+          value: $NAME_LAST
+          required: true  
+        - name: input_5.1
+          selector: "#input_7_5_1"
           value: $ADDRESS_STREET
           required: true
-        - name: 00Nt0000000IPWn
-          selector: input[name='00Nt0000000IPWn']
+        - name: input_5.3
+          selector: "#input_7_5_3"
           value: $ADDRESS_CITY
           required: true
-        - name: 00Nt0000000IPXU
-          selector: input[name='00Nt0000000IPXU']
+        - name: input_5.5
+          selector: "#input_7_5_5"
           value: $ADDRESS_ZIP5
           required: true
-        - name: email
-          selector: "#email"
+        - name: input_5.4
+          selector: "#input_7_5_4"
+          value: $ADDRESS_STATE_FULL
+          required: true  
+        - name: input_6
+          selector: "#input_7_6"
           value: $EMAIL
           required: true
-        - name: phone
-          selector: "#phone"
+        - name: input_7
+          selector: "#input_7_7"
           value: $PHONE
           required: true
-        - name: 00Nt0000000IPWm
-          selector: input[name='00Nt0000000IPWm']
-          value: $PHONE
-          required: true
-        - name: 00Nt0000000IPWo
-          selector: textarea[name='00Nt0000000IPWo']
+        - name: input_14
+          selector: "#input_7_14"
           value: $MESSAGE
           required: true
     - select:
-        - name: 00Nt0000000IPWl
-          selector: select[name='00Nt0000000IPWl']
+        - name: input_1
+          selector: "#input_7_1"
           value: $TOPIC
           required: true
           options:
@@ -49,7 +53,7 @@ contact_form:
             - Courts / Criminal Justice
             - Education
             - Environment
-            - OI Request
+            - FOI Request
             - Governor's Special Projects
             - Grants
             - Health and Human Services
@@ -71,8 +75,8 @@ contact_form:
             - Tourism / Recreation
             - Workforce
             - General Comments / Concerns
-        - name: 00Nt0000000IPXM
-          selector: select[name='00Nt0000000IPXM']
+        - name: input_3
+          selector: "#input_7_3"
           value: $NAME_PREFIX
           required: true
           options:
@@ -80,19 +84,18 @@ contact_form:
             - Ms.
             - Mrs.
             - Other
-        - name: 00Nt0000000IPXO
-          selector: select[name='00Nt0000000IPXO']
-          value: $ADDRESS_STATE_POSTAL_ABBREV
+        - name: input_5.6
+          selector: "#input_7_5_6"
+          value: United States
           required: true
           options:
-            - AR
+            - United States
     - recaptcha:
         - value: true
     - click_on:
-        - value: Submit
-          selector: input[name="submit"]
+        - selector: "#gform_submit_button_7"
   success:
     headers:
       status: 200
     body:
-      contains: "Thank you for contacting the Governor's Office. The Governor or the appropriate staff will be reviewing your comments."
+      contains: "Thanks for contacting us"
