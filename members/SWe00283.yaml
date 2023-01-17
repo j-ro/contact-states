@@ -4,8 +4,12 @@ contact_form:
   action: "https://vermont.force.com/vermontce/s/governor-office-ce"
   steps:
     - visit: "https://vermont.force.com/vermontce/s/governor-office-ce"
+    - wait:
+        - value: 10
     - javascript:
         - value: "Array.prototype.forEach.call(document.querySelectorAll('style,[rel=\"stylesheet\"],[type=\"text/css\"]'), function(element){ try{ element.parentNode.removeChild(element) } catch(err){} });"
+    - click_on:
+        - selector: "#auraErrorReload"
     - fill_in:
         - name: "firstName"
           selector: "#input-10"
