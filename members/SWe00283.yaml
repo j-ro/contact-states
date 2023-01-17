@@ -1,12 +1,14 @@
 bioguide: SWe00283
 contact_form:
   method: post
-  action: "https://governor.vermont.gov/email"
+  action: "https://vermont.force.com/vermontce/s/governor-office-ce"
   steps:
-    - visit: "https://governor.vermont.gov/email"
+    - visit: "https://vermont.force.com/vermontce/s/governor-office-ce"
+    - javascript:
+        - value: "Array.prototype.forEach.call(document.querySelectorAll('style,[rel=\"stylesheet\"],[type=\"text/css\"]'), function(element){ try{ element.parentNode.removeChild(element) } catch(err){} });"
     - fill_in:
-        - name: "submitted[FIRST]"
-          selector: "#edit-submitted-first"
+        - name: "firstName"
+          selector: "#input-10"
           value: $NAME_FIRST
           required: true
         - name: "submitted[LAST]"
