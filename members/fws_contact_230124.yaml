@@ -34,7 +34,7 @@ contact_form:
     - javascript:
         - value: document.querySelector("label[for='edit-send-me-a-copy']").click()
     - javascript:
-        - value: document.querySelector("#edit-email-address").setAttribute("value", solution)
+        - value: document.querySelector("#edit-email-address").setAttribute("value", math)
     - click_on:
         - selector: "#edit-actions-submit"
     - find:
