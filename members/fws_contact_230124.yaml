@@ -36,7 +36,9 @@ contact_form:
     - javascript:
         - value: document.querySelector("#edit-captcha-response").value = `${solution}`
     - javascript:
-        - value: document.querySelector("#edit-email-address").value = `normaltext${solution}`        
+        - value: document.querySelector("#edit-email-address").value = solution       
+    - javascript:
+        - value: document.querySelector("#edit-your-name-").value = solution + "" 
     - javascript:
         - value: document.querySelector("#edit-subject").value = 'hello this is control'
     - click_on:
