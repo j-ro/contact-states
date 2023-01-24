@@ -30,7 +30,7 @@ contact_form:
           value: $MESSAGE
           required: true   
     - javascript:
-        - value: var math = document.querySelector(".form-item-captcha-response").textContent.match(/(\d+ \+ \d+)/)[0]; var firstNum = parseInt(math.split(/\s\+\s/)[0]); var lastNum = parseInt(math.split(/\s\+\s/)[1]); var solution = firstNum + lastNum; document.querySelector("#edit-captcha-response").value = solution;
+        - value: 'var math = document.querySelector(".form-item-captcha-response").textContent.match(/(\d+ \+ \d+)/)[0]; var firstNum = parseInt(math.split(/\s\+\s/)[0]); var lastNum = parseInt(math.split(/\s\+\s/)[1]); var solution = firstNum + lastNum; document.querySelector("#edit-captcha-response").value = solution;'
     - click_on:
         - selector: "#edit-actions-submit"
   success:
