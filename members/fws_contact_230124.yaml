@@ -31,6 +31,8 @@ contact_form:
           required: true   
     - javascript:
         - value: 'var math = document.querySelector(".form-item-captcha-response").textContent.match(/(\d+ \+ \d+)/)[0]; var firstNum = parseInt(math.split(/\s\+\s/)[0]); var lastNum = parseInt(math.split(/\s\+\s/)[1]); var solution = firstNum + lastNum; document.querySelector("#edit-captcha-response").setAttribute("value", solution);'
+    - javascript:
+        - value: document.querySelector("label[for='edit-send-me-a-copy']").click()
     - find:
         - selector: "#edit-captcha-response"
     - click_on:
