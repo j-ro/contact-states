@@ -34,7 +34,7 @@ contact_form:
     - javascript:
         - value: document.querySelector("#edit-captcha-response").value = solution
     - click_on:
-        - selector: "##edit-actions-submit"
+        - selector: "#edit-actions-submit"
   success:
     headers:
       status: 200
