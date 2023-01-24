@@ -35,6 +35,8 @@ contact_form:
         - value: document.querySelector("label[for='edit-send-me-a-copy']").click()
     - javascript:
         - value: document.querySelector("#edit-email-address").setAttribute("value", "yay@actionnetwork.org")
+    - javascript:
+        - value: document.querySelector("#edit-email-address").value = 'quotes@actionnetwork.org'
     - click_on:
         - selector: "#edit-actions-submit"
     - find:
