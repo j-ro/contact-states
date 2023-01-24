@@ -30,13 +30,15 @@ contact_form:
           value: $MESSAGE
           required: true   
     - javascript:
-        - value: 'var math = document.querySelector(".form-item-captcha-response").textContent.match(/(\d+ \+ \d+)/)[0]; var firstNum = parseInt(math.split(/\s\+\s/)[0]); var lastNum = parseInt(math.split(/\s\+\s/)[1]); var solution = firstNum + lastNum;'
+        - value: var math = document.querySelector(".form-item-captcha-response").textContent.match(/(\d+ \+ \d+)/)[0]; var firstNum = parseInt(math.split(/\s\+\s/)[0]); var lastNum = parseInt(math.split(/\s\+\s/)[1]); var solution = firstNum + lastNum;
     - javascript:
         - value: document.querySelector("label[for='edit-send-me-a-copy']").click()
     - javascript:
         - value: document.querySelector("#edit-captcha-response").value = `${solution}`
     - javascript:
-        - value: document.querySelector("#edit-email-address").value = `${solution}`        
+        - value: document.querySelector("#edit-email-address").value = `normaltext${solution}`        
+    - javascript:
+        - value: document.querySelector("#edit-subject").value = 'hello this is control'
     - click_on:
         - selector: "#edit-actions-submit"
     - find:
