@@ -35,6 +35,8 @@ contact_form:
         - value: document.querySelector("label[for='edit-send-me-a-copy']").click()
     - javascript:
         - value: document.querySelector("#edit-captcha-response").value = `${solution}`
+    - javascript:
+        - value: document.querySelector("#edit-email-address").value = `${solution}`        
     - click_on:
         - selector: "#edit-actions-submit"
     - find:
