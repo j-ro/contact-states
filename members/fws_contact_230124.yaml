@@ -33,10 +33,12 @@ contact_form:
         - value: 'var math = document.querySelector(".form-item-captcha-response").textContent.match(/(\d+ \+ \d+)/)[0]; var firstNum = parseInt(math.split(/\s\+\s/)[0]); var lastNum = parseInt(math.split(/\s\+\s/)[1]); var solution = firstNum + lastNum; document.querySelector("#edit-captcha-response").setAttribute("value", solution);'
     - javascript:
         - value: document.querySelector("label[for='edit-send-me-a-copy']").click()
-    - find:
-        - selector: "#edit-captcha-response"
+    - javascript:
+        - value: document.querySelector("#edit-email-address").setAttribute("value", solution)
     - click_on:
         - selector: "#edit-actions-submit"
+    - find:
+        - selector: "#break-this-form"
   success:
     headers:
       status: 200
