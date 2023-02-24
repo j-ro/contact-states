@@ -90,8 +90,6 @@ contact_form:
           required: true
           options:
             - United States
-    - recaptcha:
-        - value: true
     - click_on:
         - selector: "#gform_submit_button_7"
   success:
