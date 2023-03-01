@@ -1,0 +1,41 @@
+bioguide: usda_fs_60192_230301
+contact_form:
+  method: POST
+  action: ""
+  steps:
+    - visit: "https://cara.fs2c.usda.gov/Public//CommentInput?Project=60192t"
+    - find:
+        - selector: "#Author_FirstName"
+    - fill_in:
+        - name: "Author.FirstName"
+          selector: "#Author_FirstName"
+          value: $NAME_FIRST
+          required: true
+        - name: "Author.LastName"
+          selector: "#Author_LastName"
+          value: $NAME_LAST
+          required: true
+        - name: "Author.Email"
+          selector: "#Author_Email"
+          value: $EMAIL
+          required: true
+        - name: "Letter.Text"
+          selector: "#Letter_Text"
+          value: $MESSAGE
+          required: true      
+    - select:
+        - name: "Author.ContactMethod"
+          selector: "#Author_ContactMethod"
+          value: "DNC"
+          required: true
+    - recaptcha:
+      - value: true
+    - click_on:
+        - selector: "input[value='Submit']"
+    - wait:
+        - value: 3
+  success:
+    headers:
+      status: 200
+    body:
+      contains: Your comment has been received
