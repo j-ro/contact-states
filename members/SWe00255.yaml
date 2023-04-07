@@ -48,7 +48,7 @@ contact_form:
           options:
             "South Dakota": 50_SD
     - click_on:
-        - selector: "#qi_5_0"
+        - selector: "input[value='0_Response Not Required - Web Form ID#2100060 ']"
     - click_on:
         - value: Submit
           selector: "#btn_submit"

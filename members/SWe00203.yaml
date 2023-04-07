@@ -37,6 +37,10 @@ contact_form:
           selector: "#qi_2_email"
           value: $EMAIL
           required: true
+        - name: qi_2_email_confirm
+          selector: "#qi_2_email_confirm"
+          value: $EMAIL
+          required: true  
         - name: qi_7
           selector: "#qi_7"
           value: $MESSAGE
