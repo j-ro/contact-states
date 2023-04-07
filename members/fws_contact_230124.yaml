@@ -4,14 +4,14 @@ contact_form:
   action: "https://www.fws.gov/contact-us"
   steps:
     - visit: "https://www.fws.gov/contact-us"
-    - select:
-        - name: "age"
-          selector: "#edit-age"
-          value: "over_13"
-          required: true
-          options:
-            "I am under 13 years old": under_13
-            "I am 13 years old or older": over_13
+    # - select:
+    #     - name: "age"
+    #       selector: "#edit-age"
+    #       value: "over_13"
+    #       required: true
+    #       options:
+    #         "I am under 13 years old": under_13
+    #         "I am 13 years old or older": over_13
     - fill_in:
         - name: "your_name_"
           selector: "#edit-your-name-"

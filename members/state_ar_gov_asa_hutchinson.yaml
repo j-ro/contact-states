@@ -5,37 +5,13 @@ contact_form:
   steps:
     - visit: "https://governor.arkansas.gov/online-services/contact-the-governor/"
     - fill_in:
-        - name: input_4.3
-          selector: "#input_7_4_3"
-          value: $NAME_FIRST
-          required: true
-        - name: input_4.6
-          selector: "#input_7_4_6"
-          value: $NAME_LAST
-          required: true  
-        - name: input_5.1
-          selector: "#input_7_5_1"
-          value: $ADDRESS_STREET
-          required: true
-        - name: input_5.3
-          selector: "#input_7_5_3"
-          value: $ADDRESS_CITY
-          required: true
-        - name: input_5.5
-          selector: "#input_7_5_5"
-          value: $ADDRESS_ZIP5
-          required: true
-        - name: input_5.4
-          selector: "#input_7_5_4"
-          value: $ADDRESS_STATE_FULL
-          required: true  
+        - name: input_16
+          selector: "#input_7_16"
+          value: $NAME_FULL
+          required: true 
         - name: input_6
           selector: "#input_7_6"
           value: $EMAIL
-          required: true
-        - name: input_7
-          selector: "#input_7_7"
-          value: $PHONE
           required: true
         - name: input_14
           selector: "#input_7_14"
@@ -75,21 +51,12 @@ contact_form:
             - Tourism / Recreation
             - Workforce
             - General Comments / Concerns
-        - name: input_3
-          selector: "#input_7_3"
-          value: $NAME_PREFIX
+        - name: input_10
+          selector: "#input_7_10"
+          value: Organization
           required: true
           options:
-            - Mr.
-            - Ms.
-            - Mrs.
-            - Other
-        - name: input_5.6
-          selector: "#input_7_5_6"
-          value: United States
-          required: true
-          options:
-            - United States
+            - Organization
     - click_on:
         - selector: "#gform_submit_button_7"
   success:

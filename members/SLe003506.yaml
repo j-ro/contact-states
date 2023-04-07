@@ -21,6 +21,10 @@ contact_form:
           selector: "#MainContent_txtZip"
           value: $ADDRESS_ZIP5
           required: true
+        - name: "ctl00$MainContent$txtState"
+          selector: "#MainContent_txtState"
+          value: $ADDRESS_STATE_POSTAL_ABBREV
+          required: true
         - name: "ctl00$MainContent$txtZip4"
           selector: "#MainContent_txtZip4"
           value: $ADDRESS_ZIP4
