@@ -3,7 +3,7 @@ contact_form:
   method: post
   action: "http://www.in.gov/apps/afss/afss2"
   steps:
-    - visit: "http://www.in.gov/gov/2752.htm"
+    - visit: "https://www.in.gov/gov/ask-eric/"
     - fill_in:
         - name: first
           selector: "#first"
