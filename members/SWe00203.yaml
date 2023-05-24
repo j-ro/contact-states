@@ -41,6 +41,10 @@ contact_form:
           selector: "#qi_2_email_confirm"
           value: $EMAIL
           required: true  
+        - name: qi_2_cphone
+          selector: "#qi_2_cphone"
+          value: $PHONE
+          required: true  
         - name: qi_7
           selector: "#qi_7"
           value: $MESSAGE
@@ -150,12 +154,11 @@ contact_form:
             Welfare: 30_WELFARE
             Health Care: 31_HEALTH CARE
             Board and Commission: 32_BOARD AND COMMISSION
+    - recaptcha: 
+        - value: true
     - click_on:
         - value: Submit
           selector: "#btn_submit"
-    - click_on:
-        - value: Submit
-          selector: "#btn_rev_submit"
   success:
     headers:
       status: 200
