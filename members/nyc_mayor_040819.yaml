@@ -5,24 +5,24 @@ contact_form:
   steps:
     - visit: "https://www1.nyc.gov/office-of-the-mayor/mayor-contact.page"
     - fill_in:
-        - name: First Name
-          selector: "input[name='First Name']"
+        - name: FIRST
+          selector: "input[name='FIRST']"
           value: $NAME_FIRST
           required: true
-        - name: Last Name
-          selector: "input[name='Last Name']"
+        - name: LAST
+          selector: "input[name='LAST']"
           value: $NAME_LAST
           required: true
-        - name: Postal Code
-          selector: "input[name='Postal Code']"
+        - name: ZIP
+          selector: "input[name='ZIP']"
           value: $ADDRESS_ZIP5
           required: true
-        - name: Email Address
-          selector: "input[name='Email Address']"
+        - name: EMAIL
+          selector: "input[name='EMAIL']"
           value: $EMAIL
           required: true
-        - name: Message
-          selector: "textarea[name='Message']"
+        - name: MSG
+          selector: "textarea[name='MSG']"
           value: $MESSAGE
           required: true
     - select:
@@ -41,7 +41,6 @@ contact_form:
             Public Safety: PUBLICSAFETY
             Quality of Life: QOL
             Request for Assitance: CASE
-            Scheduling Requests: SCHED
             Traffc Safety: TRANSPORT
             Transportation: TRANSPORT
             Other: OTHER
