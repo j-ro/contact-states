@@ -97,25 +97,6 @@ try{ element.parentNode.removeChild(element) } catch(err){} });"
             West Virginia: WV
             Wisconsin: WI
             Wyoming: WY
-        - name: issue
-          selector: "#aspnetForm select[name='issue']"
-          value: $TOPIC
-          required: true
-          options:
-            Agriculture and Animal Welfare: AG
-            Economy and Jobs: ECO
-            Education: EDU
-            Energy: ENG
-            Federal Issues: FED
-            Health Care: HC
-            Human and Social Services: HSS
-            Immigration and Diversity: DIV
-            Military and Emergency Management: MIL
-            Natural Resources and Wildlife: NAT
-            Public Employee Benefits: BENE
-            Public Safety: PS
-            Taxes: TAX
-            Transportation: TRANS
     - click_on:
         - value: Submit
           selector: "#aspnetForm input[name='formsend']"
