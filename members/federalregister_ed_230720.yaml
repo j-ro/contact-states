@@ -113,7 +113,7 @@ contact_form:
     - javascript:
         - value: "document.querySelector('.commit input').click();"
     - wait:
-        - value: 7
+        - value: 10
   success:
     headers:
       status: 200
