@@ -5,42 +5,40 @@ contact_form:
   steps:
     - visit: "https://governor.ohio.gov/wps/portal/gov/governor/contact"
     - fill_in:
-        - name: first-name
-          selector: "#first-name"
+        - name: qi_2_first_name
+          selector: "#qi_2_first_name"
           value: $NAME_FIRST
           required: true
-        - name: last-name
-          selector: "#last-name"
+        - name: qi_2_last_name
+          selector: "#qi_2_last_name"
           value: $NAME_LAST
           required: true
-        - name: street
-          selector: "#street"
-          value: $ADDRESS_STREET
-          required: true
-        - name: city
-          selector: "#city"
-          value: $ADDRESS_CITY
-          required: true
-        - name: zip-code
-          selector: "#zip-code"
-          value: $ADDRESS_ZIP5
-          required: true
-        - name: txt-email
-          selector: "#txt-email"
+        # - name: street
+        #   selector: "#street"
+        #   value: $ADDRESS_STREET
+        #   required: true
+        # - name: city
+        #   selector: "#city"
+        #   value: $ADDRESS_CITY
+        #   required: true
+        # - name: zip-code
+        #   selector: "#zip-code"
+        #   value: $ADDRESS_ZIP5
+        #   required: true
+        - name: qi_2_email
+          selector: "#qi_2_email"
           value: $EMAIL
           required: true
-        - name: phone-number
-          selector: "#phone-number"
-          value: $PHONE
-          required: true
-        - name: subject
-          selector: "#subject"
-          value: $SUBJECT
-          required: true
-        - name: txt-message
-          selector: "#txt-message"
+        # - name: phone-number
+        #   selector: "#phone-number"
+        #   value: $PHONE
+        #   required: true
+        - name: qi_3
+          selector: "#qi_3"
           value: $MESSAGE
           required: true
+    - recaptcha:
+        - value: true
     - click_on:
         - selector: ".oda-contact-form .odx-full-banner__button"
     - javascript:
