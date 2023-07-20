@@ -13,26 +13,10 @@ contact_form:
           selector: "#qi_2_last_name"
           value: $NAME_LAST
           required: true
-        # - name: street
-        #   selector: "#street"
-        #   value: $ADDRESS_STREET
-        #   required: true
-        # - name: city
-        #   selector: "#city"
-        #   value: $ADDRESS_CITY
-        #   required: true
-        # - name: zip-code
-        #   selector: "#zip-code"
-        #   value: $ADDRESS_ZIP5
-        #   required: true
         - name: qi_2_email
           selector: "#qi_2_email"
           value: $EMAIL
           required: true
-        # - name: phone-number
-        #   selector: "#phone-number"
-        #   value: $PHONE
-        #   required: true
         - name: qi_3
           selector: "#qi_3"
           value: $MESSAGE
@@ -40,13 +24,9 @@ contact_form:
     - recaptcha:
         - value: true
     - click_on:
-        - selector: ".oda-contact-form .odx-full-banner__button"
-    - javascript:
-        - value: 'document.querySelector(".alert-success").style.display = "block";'
-    - find:
-        - selector: ".alert-success"
+        - selector: "#btn_submit"
   success:
     headers:
       status: 200
     body:
-      contains: "Message successfully sent"
+      contains: "Form Submitted"
