@@ -25,6 +25,7 @@ contact_form:
           selector: "textarea[name='MSG']"
           value: $MESSAGE
           required: true
+          max_length: 500
     - select:
         - name: Topic
           selector: "select[name='Topic']"
