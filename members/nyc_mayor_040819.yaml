@@ -48,7 +48,7 @@ contact_form:
     - wait:
         - value: 5
     - javascript:
-        - value: document.querySelector("#g-recaptcha-response").style.display = "block";
+        - value: document.querySelector("#g-recaptcha-response-100000").style.display = "block";
     - recaptcha:
         - value: true
     - click_on:
