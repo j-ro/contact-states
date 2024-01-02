@@ -11,7 +11,7 @@ contact_form:
     - fill_in:
         - selector: "#comment_comment"
           name: "comment[comment]"
-          value: $MESSAGE
+          value: $MESSAGE 
           required: true
           options:
             max_length: 2000
