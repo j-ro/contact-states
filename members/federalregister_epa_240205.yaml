@@ -109,11 +109,11 @@ contact_form:
     - click_on:
         - selector: "#comment_confirm_submission"
     - wait:
-        - value: 5
+        - value: 7
     - javascript:
         - value: "document.querySelector('.commit input').click();"
     - wait:
-        - value: 7
+        - value: 12
   success:
     headers:
       status: 200
