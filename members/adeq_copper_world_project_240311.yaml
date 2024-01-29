@@ -45,7 +45,7 @@ contact_form:
     - find:
         - selector: "#commentSubmit"
     - wait:
-        - value: 10
+        - value: 20
     - click_on:
         - selector: "#commentSubmit"    
   success:
