@@ -1,7 +1,7 @@
 bioguide: adeq_copper_world_project_240311
 contact_form:
   method: post
-  action: "https://azdeq.commentinput.com/?id=A9McgdYEZ"
+  action: ""
   steps:
     - visit: "https://azdeq.commentinput.com/?id=A9McgdYEZ"
     - select:
