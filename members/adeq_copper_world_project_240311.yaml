@@ -44,6 +44,8 @@ contact_form:
         - selector: "#publicSubmit"
     - find:
         - selector: "#commentSubmit"
+    - wait:
+        - value: 4
     - click_on:
         - selector: "#commentSubmit"    
   success:
