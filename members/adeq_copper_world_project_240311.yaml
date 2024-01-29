@@ -1,0 +1,53 @@
+bioguide: adeq_copper_world_project_240311
+contact_form:
+  method: post
+  action: "https://azdeq.commentinput.com/?id=A9McgdYEZ"
+  steps:
+    - visit: "https://azdeq.commentinput.com/?id=A9McgdYEZ"
+    - select:
+        - name: "frmSubmittedValue"
+          selector: "#frmSubmittedValue"
+          value: "Individual"
+          required: true
+          options:
+            - Individual
+    - fill_in:
+        - name: personFirstname
+          selector: "#personFirstname"
+          value: $NAME_FIRST
+          required: true
+        - name: personLastname
+          selector: "#personLastname"
+          value: $NAME_LAST
+          required: true
+        - name: personAddress01
+          selector: "#personAddress01"
+          value: $ADDRESS_STREET
+          required: true
+        - name: personCity
+          selector: "#personCity"
+          value: $ADDRESS_CITY
+          required: true
+        - name: personZip
+          selector: "#personZip"
+          value: $ADDRESS_ZIP5
+          required: true
+        - name: personEmail
+          selector: "#personEmail"
+          value: $EMAIL
+          required: true
+        - name: frmComment207836
+          selector: "#frmComment207836"
+          value: $MESSAGE
+          required: true
+    - click_on:
+        - selector: "#publicSubmit"
+    - find:
+        - selector: "#commentSubmit"
+    - click_on:
+        - selector: "#commentSubmit"    
+  success:
+    headers:
+      status: 200
+    body:
+      contains: Your comment has been submitted.
