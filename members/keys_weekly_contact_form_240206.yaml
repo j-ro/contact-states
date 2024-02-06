@@ -1,0 +1,58 @@
+bioguide: keys_weekly_contact_form_240206
+contact_form:
+  method: POST
+  action: ""
+  steps:
+    - visit: "https://keysweekly.com/contact/"  
+    - check:
+        - name: "input_7.2"
+          selector: "#choice_1_7_2"
+          value: "Email"
+          required: true
+        - name: "input_10.1"
+          selector: "#choice_1_10_1"
+          value: "Upper Keys"
+          required: true
+        - name: "input_10.2"
+          selector: "#choice_1_10_2"
+          value: "Middle Keys"
+          required: true 
+        - name: "input_10.3"
+          selector: "#choice_1_10_3"
+          value: "Lower Keys"
+          required: true          
+    - fill_in:
+        - name: "input_3.3"
+          selector: "#input_1_3_3"
+          value: $NAME_FIRST
+          required: true
+        - name: "input_3.6"
+          selector: "#input_1_3_6"
+          value: $NAME_LAST
+          required: true
+        - name: "input_6"
+          selector: "#input_1_6"
+          value: $EMAIL
+          required: true  
+        - name: "input_2"
+          selector: "#input_1_2"
+          value: $MESSAGE
+          required: true         
+    - select:
+        - name: "input_1"
+          selector: "#input_1_1"
+          value: "Contact the Publisher"
+          required: true
+    - javascript:
+        - value: document.querySelector("#g-recaptcha-response").style.display = "block";
+    - recaptcha:
+        - value: true
+    - click_on:
+        - selector: "#gform_submit_button_1"
+    - wait:
+        - value: 7
+  success:
+    headers:
+      status: 200
+    body:
+      contains: We have received your message and will be contacting you shortly.
