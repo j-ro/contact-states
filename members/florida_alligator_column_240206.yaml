@@ -3,7 +3,7 @@ contact_form:
   method: POST
   action: ""
   steps:
-    - visit: "https://www.alligator.org/page/submit-a-column"         
+    - visit: "https://statenews.wufoo.com/forms/m1f6vhyv0q7xmlp"         
     - fill_in:
         - name: "Field1"
           selector: "#Field1"
