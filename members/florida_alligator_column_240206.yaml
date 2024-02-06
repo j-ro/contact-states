@@ -1,0 +1,40 @@
+bioguide: florida_alligator_column_240206
+contact_form:
+  method: POST
+  action: ""
+  steps:
+    - visit: "https://www.alligator.org/page/submit-a-column"         
+    - fill_in:
+        - name: "Field1"
+          selector: "#Field1"
+          value: $NAME_FIRST
+          required: true
+        - name: "Field2"
+          selector: "#Field2"
+          value: $NAME_LAST
+          required: true
+        - name: "Field3"
+          selector: "#Field3"
+          value: $EMAIL
+          required: true  
+        - name: "Field4"
+          selector: "#Field4"
+          value: "-"
+          required: true
+        - name: "Field6"
+          selector: "#Field6"
+          value: $MESSAGE
+          required: true         
+    - javascript:
+        - value: document.querySelector("#g-recaptcha-response").style.display = "block";
+    - recaptcha:
+        - value: true
+    - click_on:
+        - selector: "input[value='Submit']"
+    - wait:
+        - value: 3
+  success:
+    headers:
+      status: 200
+    body:
+      contains: Thank you for submitting your letter to the editor
