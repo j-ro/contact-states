@@ -5,56 +5,52 @@ contact_form:
   steps:
     - visit: "https://mcclatchyinteractive.wufoo.com/embed/m13vizet0ic3jyu?embedKey=m13vizet0ic3jyu892944&entsource=&referrer=&mi_mcid=&mi_ucid="  
     - find:
-        - selector: "#Field3"
-    - check:
-        - name: "input_7.2"
-          selector: "#choice_1_7_2"
-          value: "Email"
-          required: true
-        - name: "input_10.1"
-          selector: "#choice_1_10_1"
-          value: "Upper Keys"
-          required: true
-        - name: "input_10.2"
-          selector: "#choice_1_10_2"
-          value: "Middle Keys"
-          required: true 
-        - name: "input_10.3"
-          selector: "#choice_1_10_3"
-          value: "Lower Keys"
-          required: true          
+        - selector: "#Field3"        
     - fill_in:
-        - name: "input_3.3"
-          selector: "#input_1_3_3"
-          value: $NAME_FIRST
+        - name: "Field3"
+          selector: "#Field3"
+          value: $NAME_FULL
           required: true
-        - name: "input_3.6"
-          selector: "#input_1_3_6"
-          value: $NAME_LAST
-          required: true
-        - name: "input_6"
-          selector: "#input_1_6"
+        - name: "Field4"
+          selector: "#Field4"
           value: $EMAIL
-          required: true  
-        - name: "input_2"
-          selector: "#input_1_2"
-          value: $MESSAGE
-          required: true         
-    - select:
-        - name: "input_1"
-          selector: "#input_1_1"
-          value: "Contact the Publisher"
           required: true
-    - javascript:
-        - value: document.querySelector("#g-recaptcha-response").style.display = "block";
-    - recaptcha:
-        - value: true
+        - name: "Field6"
+          selector: "#Field6"
+          value: $PHONE
+          required: true
+        - name: "Field11"
+          selector: "#Field11"
+          value: $ADDRESS_STREET
+          required: true    
+        - name: "Field13"
+          selector: "#Field13"
+          value: $ADDRESS_CITY
+          required: true   
+        - name: "Field14"
+          selector: "#Field14"
+          value: $ADDRESS_STATE_POSTAL_ABBREV
+          required: true  
+        - name: "Field15"
+          selector: "#Field15"
+          value: $ADDRESS_ZIP5
+          required: true 
+        - name: "Field18"
+          selector: "#Field18"
+          value: $SUBJECT
+          required: true    
+          max_length: 30       
+        - name: "Field9"
+          selector: "#Field9"
+          value: $MESSAGE
+          required: true   
+          max_length: 600      
     - click_on:
-        - selector: "#gform_submit_button_1"
+        - selector: "#saveForm"
     - wait:
-        - value: 7
+        - value: 3
   success:
     headers:
       status: 200
     body:
-      contains: We have received your message and will be contacting you shortly.
+      contains: Thank you for taking the time to contact us. 
