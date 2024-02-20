@@ -48,7 +48,7 @@ contact_form:
     - click_on:
         - selector: "#saveForm"
     - wait:
-        - value: 3
+        - value: 10
   success:
     headers:
       status: 200
