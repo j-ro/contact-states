@@ -3,7 +3,7 @@ contact_form:
   method: POST
   action: ""
   steps:
-    - visit: "https://www.miamiherald.com/opinion/letters-to-the-editor/submit-letter/"  
+    - visit: "https://www.tampabay.com/opinion/submit-letter/"  
     - find:
         - selector: "#Field3"
     - check:
