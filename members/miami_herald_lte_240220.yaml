@@ -3,7 +3,7 @@ contact_form:
   method: POST
   action: ""
   steps:
-    - visit: "https://www.tampabay.com/opinion/submit-letter/"  
+    - visit: "https://mcclatchyinteractive.wufoo.com/embed/m13vizet0ic3jyu?embedKey=m13vizet0ic3jyu892944&entsource=&referrer=&mi_mcid=&mi_ucid="  
     - find:
         - selector: "#Field3"
     - check:
