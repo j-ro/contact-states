@@ -5,9 +5,10 @@ contact_form:
   steps:
     - visit: "https://alaskadnr.commentinput.com/?id=fRbhuVeiC"
     - find:
-        - selector: "#contact_form"
-    - find:
-        - selector: "#breaking-the-form"
+        - selector: "#contact_form" 
+        # finding this
+    - javascript:
+        - value: "$('#pSubmittedByValue').css('visibility', 'visible'); $('#labelPersonSubmittedByValue').html('Individual');"
     - select:
         - name: "frmSubmittedValue"
         - selector: "#frmSubmittedValue"
