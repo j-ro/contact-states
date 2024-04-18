@@ -6,6 +6,8 @@ contact_form:
     - visit: "https://alaskadnr.commentinput.com/?id=fRbhuVeiC"
     - find:
         - selector: "#contact_form"
+    - find:
+        - selector: "#breaking-the-form"
     - select:
         - name: "frmSubmittedValue"
         - selector: "#frmSubmittedValue"
