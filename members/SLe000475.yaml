@@ -44,6 +44,8 @@ contact_form:
     - click_on:
         - value: Submit
           selector: "#submitButton"
+    - wait:
+        - value: 3
   success:
     headers:
       status: 200
