@@ -33,9 +33,59 @@ contact_form:
           selector: "#comments"
           value: $MESSAGE
           required: true
-    - click_on:
-        - value: Submit
-          selector: "#submitButton"
+bioguide: SLe000437
+contact_form:
+  method: post
+  action: ContactPopupSubmit.php
+  steps:
+    - visit: "https://lcmspubcontact.lc.ca.gov/PublicLCMS/ContactPopup.php?district=AD12"
+    - fill_in:
+        - name: "txtFirstName"
+          selector: "#form_name"
+          value: $NAME_FIRST
+          required: true
+        - name: "txtLastName"
+          selector: "#form_lastname"
+          value: $NAME_LAST
+          required: true
+        - name: "txtAddress"
+          selector: "#form_address"
+          value: $ADDRESS_STREET
+          required: true
+        - name: "txtCity"
+          selector: "#form_city"
+          value: $ADDRESS_CITY
+          required: true
+        - name: "txtZip"
+          selector: "#form_zip"
+          value: $ADDRESS_ZIP5
+          required: true
+        - name: "txtEmail"
+          selector: "#form_email"
+          value: $EMAIL
+          required: true
+        - name: "jv_text"
+          selector: "#comments"
+          value: $MESSAGE
+          required: true
+    - find:
+        - selector: "#stance-div"
+    - javascript:
+        - value: "const stanceDiv = document.querySelector('#stance-div'); stanceDiv.setAttribute('aria-hidden', 'false'); document.querySelector('#stance-div').style.display='block';"
+    - javascript:
+        - value: "$('input[name=stanceRadioButtonList][value=Y]').prop('checked', true);"
+    - wait: 
+        - value: 1
+    - javascript:
+        - value: "document.ContactForm.submit();"
+    - wait:
+        - value: 3
+  success:
+  headers:
+    status: 200
+    body:
+      contains: "Your message has"
+
   success:
     headers:
       status: 200

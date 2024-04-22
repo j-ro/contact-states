@@ -33,14 +33,18 @@ contact_form:
           selector: "#comments"
           value: $MESSAGE
           required: true
-    - choose:
-        - name: "stanceRadioButtonList"
-          selector: "#Y"
-          value: "Y"
-          required: true
-    - click_on:
-        - value: Submit
-          selector: "#submitButton"
+    - find:
+        - selector: "#stance-div"
+    - javascript:
+        - value: "const stanceDiv = document.querySelector('#stance-div'); stanceDiv.setAttribute('aria-hidden', 'false'); document.querySelector('#stance-div').style.display='block';"
+    - javascript:
+        - value: "$('input[name=stanceRadioButtonList][value=Y]').prop('checked', true);"
+    - wait: 
+        - value: 1
+    - javascript:
+        - value: "document.ContactForm.submit();"
+    - wait:
+        - value: 3
   success:
     headers:
       status: 200
