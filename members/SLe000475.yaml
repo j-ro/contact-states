@@ -41,6 +41,8 @@ contact_form:
         - value: "$('input[name=stanceRadioButtonList][value=Y]').prop('checked', true);"
     - wait: 
         - value: 1
+    - javascript:
+        - value: "$('#submitButton').click();"
     - click_on:
         - value: Submit
           selector: "#submitButton"
