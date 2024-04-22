@@ -36,7 +36,7 @@ contact_form:
     - javascript:
         - value: "document.querySelector('#stance-div').style.display='block';"
     - click_on:
-        - selector: "#Y"
+        - selector: "input[name='stanceRadioButtonList']"
           value: "Y"
     - click_on:
         - value: Submit
