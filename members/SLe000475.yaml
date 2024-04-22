@@ -35,9 +35,11 @@ contact_form:
           required: true
     - javascript:
         - value: "document.querySelector('#stance-div').style.display='block';"
-    - click_on:
-        - selector: "input[name='stanceRadioButtonList']"
-          value: "Y"
+    - javascript:
+        - value: "document.querySelector('#Y').click();"    
+    # - click_on:
+    #     - selector: "input[name='stanceRadioButtonList']"
+    #       value: "Y"
     - click_on:
         - value: Submit
           selector: "#submitButton"
