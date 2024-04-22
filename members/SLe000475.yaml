@@ -33,6 +33,8 @@ contact_form:
           selector: "#comments"
           value: $MESSAGE
           required: true
+    - javascript:
+        - value: "document.querySelector('#stance-div').style.display='block';"
     - click_on:
         - selector: "#Y"
           value: "Y"
