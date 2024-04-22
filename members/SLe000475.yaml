@@ -34,6 +34,9 @@ contact_form:
           value: $MESSAGE
           required: true
     - click_on:
+        - selector: "#Y"
+          value: "Y"
+    - click_on:
         - value: Submit
           selector: "#submitButton"
   success:
