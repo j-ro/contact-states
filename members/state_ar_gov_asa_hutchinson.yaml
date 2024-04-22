@@ -5,18 +5,24 @@ contact_form:
   steps:
     - visit: "https://governor.arkansas.gov/online-services/contact-the-governor/"
     - fill_in:
-        - name: input_16
-          selector: "#input_7_16"
-          value: $NAME_FULL
+        - name: name.firstName
+          selector: "#uniforms-0000-0003"
+          value: $NAME_FIRST
           required: true 
-        - name: input_6
-          selector: "#input_7_6"
+         - name: name.lastName
+          selector: "#uniforms-0000-0005"
+          value: $NAME_LAST
+          required: true  
+        - name: email
+          selector: "#uniforms-0000-0007"
           value: $EMAIL
           required: true
-        - name: input_14
-          selector: "#input_7_14"
-          value: $MESSAGE
+        - name: company
+          selector: "#uniforms-0000-000b"
+          value: "Individual"
           required: true
+    - click_on: 
+        - selector: button[type='submit']
     - select:
         - name: input_1
           selector: "#input_7_1"
