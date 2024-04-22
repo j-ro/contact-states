@@ -35,6 +35,10 @@ contact_form:
           required: true
     - find:
         - selector: "#stance-div"
+    - find: 
+        - selector: "input[name='stanceRadioButtonList']"
+    - find: 
+        - selector: "input[name='stanceRadioButtonList'][value='Y']"
     - javascript:
         - value: "document.querySelector('#stance-div').style.display='block';"
     - javascript:
