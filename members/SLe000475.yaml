@@ -39,6 +39,8 @@ contact_form:
         - value: "const stanceDiv = document.querySelector('#stance-div'); stanceDiv.setAttribute('aria-hidden', 'false'); document.querySelector('#stance-div').style.display='block';"
     - javascript:
         - value: "$('input[name=stanceRadioButtonList][value=Y]').prop('checked', true);"
+    - find: 
+        - selector: "input[name=stanceRadioButtonList][value=Y]"
     - click_on:
         - value: Submit
           selector: "#submitButton"
