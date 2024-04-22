@@ -4,10 +4,10 @@ contact_form:
   action: ""
   steps:
     - visit: "https://www.federalregister.gov/documents/2024/04/15/2024-07693/amendments-to-penalty-provisions-provision-of-information-negotiation-of-mitigation-agreements-and#open-comment"
-    - find:
-        - selector: "#comment_comment"
     - wait:
         - value: 5
+    - find:
+        - selector: "#comment_comment"    
     - fill_in:
         - selector: "#comment_comment"
           name: "comment[comment]"
