@@ -35,17 +35,8 @@ contact_form:
           required: true
     - find:
         - selector: "#stance-div"
-    - find: 
-        - selector: "input[name='stanceRadioButtonList']"
-    - find: 
-        - selector: "input[name='stanceRadioButtonList'][value='Y']"
     - javascript:
-        - value: "document.querySelector('#stance-div').style.display='block';"
-    - javascript:
-        - value: "document.querySelector('#Y').click();"    
-    # - click_on:
-    #     - selector: "input[name='stanceRadioButtonList']"
-    #       value: "Y"
+        - value: "$('input[name=stanceRadioButtonList][value='Y']').prop('checked', true);"
     - click_on:
         - value: Submit
           selector: "#submitButton"
