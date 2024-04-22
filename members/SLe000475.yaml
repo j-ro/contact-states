@@ -42,10 +42,7 @@ contact_form:
     - wait: 
         - value: 1
     - javascript:
-        - value: "$('#submitButton').click();"
-    - click_on:
-        - value: Submit
-          selector: "#submitButton"
+        - value: "document.ContactForm.submit();"
     - wait:
         - value: 3
   success:
