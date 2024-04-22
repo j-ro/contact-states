@@ -143,9 +143,9 @@ contact_form:
     - javascript:
         - value: document.querySelector('input[name="recaptcha"]').type='show'; 
     - javascript:
-        - value: document.querySelector("#g-recaptcha-response").style.display = "block";
+        - value: document.querySelector("#g-recaptcha-response-100000").style.display = "block";
     - find:
-        - selector: "#g-recaptcha-response-100000
+        - selector: "#g-recaptcha-response-100000"
     - recaptcha:
         - value: true
     - javascript:

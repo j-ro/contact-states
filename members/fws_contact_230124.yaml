@@ -33,6 +33,10 @@ contact_form:
         - value: document.querySelector("label[for='edit-send-me-a-copy']").click()
     - javascript:
         - value: document.querySelector("#edit-captcha-response").value = (parseInt(document.querySelector(".form-item-captcha-response").textContent.match(/(\d+ \+ \d+)/)[0].split(/\s\+\s/)[0]) + (parseInt(document.querySelector(".form-item-captcha-response").textContent.match(/(\d+ \+ \d+)/)[0].split(/\s\+\s/)[1])));     
+    -  javascript:
+        - value: document.querySelector("#g-recaptcha-response").style.display = "block";
+    - recaptcha:
+        - value: true
     - click_on:
         - selector: "#edit-actions-submit"
   success:
