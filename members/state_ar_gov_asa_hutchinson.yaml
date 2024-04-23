@@ -9,7 +9,7 @@ contact_form:
           selector: "#uniforms-0000-0003"
           value: $NAME_FIRST
           required: true 
-         - name: name.lastName
+        - name: name.lastName
           selector: "#uniforms-0000-0005"
           value: $NAME_LAST
           required: true  
