@@ -157,6 +157,8 @@ contact_form:
             - Other
     -  javascript:
         - value: "document.querySelector('#g-recaptcha-response-100000').style.display = 'block';"
+    - recaptcha:
+        - value: true
     - click_on:
         - value: Send Message
           selector: input[type='submit']
