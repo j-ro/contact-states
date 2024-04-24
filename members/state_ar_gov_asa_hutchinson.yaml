@@ -4,6 +4,10 @@ contact_form:
   action: "https://governor.arkansas.gov/online-services/contact-the-governor/"
   steps:
     - visit: "https://governor.arkansas.gov/online-services/contact-the-governor/"
+    - wait:
+        - value: 1
+    - javascript:
+        - value: "Array.prototype.forEach.call(document.querySelectorAll('style,[rel=\"stylesheet\"],[type=\"text/css\"]'), function(element){ try{ element.parentNode.removeChild(element) } catch(err){} });"
     - fill_in:
         - name: name.firstName
           selector: "#uniforms-0000-0003"
