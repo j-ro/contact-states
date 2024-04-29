@@ -51,6 +51,8 @@ contact_form:
         - value: document.querySelector("#g-recaptcha-response-100000").style.display = "block";
     - javascript:
         - value: document.querySelector("#g-recaptcha-response").style.display = "block";
+    - javascript:
+        - value: $("#g-recaptcha-response-100000").detach().appendTo("#message-to-the-mayor");
     - recaptcha:
         - value: true
     - click_on:
