@@ -4,6 +4,8 @@ contact_form:
   action: ""
   steps:
     - visit: "https://www.federalregister.gov/documents/2024/06/28/2024-14042/fair-and-competitive-livestock-and-poultry-markets#open-comment"
+    - javascript:
+        - value: "document.querySelector('#start_comment').click()"
     - wait:
         - value: 3
     - find:
