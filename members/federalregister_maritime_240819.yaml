@@ -9,7 +9,7 @@ contact_form:
     - click_on:
         - selector: "#start_comment"
     - find:
-        - selector: "#comment_comment"
+        - selector: "name=[comment[comment]]"
     - wait:
         - value: 5
     - fill_in:
