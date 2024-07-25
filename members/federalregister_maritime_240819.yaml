@@ -25,7 +25,7 @@ contact_form:
         - value: "document.querySelector('div.submitter-section-js[data-submitter-type=\"individual\"]').classList.remove('cj-hidden')"
     - fill_in:
         - name: "comment[firstName]"
-          selector: "#comment_firstName_input"
+          selector: "input[name='comment[firstName]']"
           value: $NAME_FIRST
           required: true
         - name: "comment[lastName]"
