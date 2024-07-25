@@ -13,7 +13,7 @@ contact_form:
     - wait:
         - value: 5
     - fill_in:
-        - selector: "#comment_comment"
+        - selector: "textarea[name='comment[comment]']"
           name: "comment[comment]"
           value: $MESSAGE
           required: true
@@ -23,28 +23,28 @@ contact_form:
         - selector: "div[data-submitter-type='individual'] input[type='radio']"        
     - fill_in:
         - name: "comment[firstName]"
-          selector: "#comment_firstName"
+          selector: "input[name='comment[firstName]']"
           value: $NAME_FIRST
           required: true
         - name: "comment[lastName]"
-          selector: "#comment_lastName"
+          selector: "input[name='comment[lastName]']"
           value: $NAME_LAST
           required: true
         - name: "comment[email]"
-          selector: "#comment_email"
+          selector: "input[name='comment[email]'"
           value: $EMAIL
           required: true
         - name: "comment[city]"
-          selector: "#comment_city"
+          selector: "input[name='comment[city]']"
           value: $ADDRESS_CITY
           required: true
         - name: "comment[zip]"
-          selector: "#comment_zip"
+          selector: "input[name='comment[zip]']"
           value: $ADDRESS_ZIP5
           required: true        
     - select:
         - name: "comment[stateProvinceRegion]"
-          selector: "#comment_stateProvinceRegion"
+          selector: "select[name='comment_stateProvinceRegion']"
           value: $ADDRESS_STATE_POSTAL_ABBREV
           required: true
           options:
@@ -107,7 +107,7 @@ contact_form:
             Wisconsin: WI
             Wyoming: WY
         - name: "comment[country]"
-          selector: "#comment_country"
+          selector: "select[name='comment[country]']"
           value: "United States"
           required: true   
     - click_on:
