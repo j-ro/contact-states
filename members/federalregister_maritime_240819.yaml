@@ -23,7 +23,7 @@ contact_form:
         - selector: "div[data-submitter-type='individual'] input[type='radio']"        
     - fill_in:
         - name: "comment[firstName]"
-          selector: "input[name='comment[firstName]']"
+          selector: "#comment_firstName_input"
           value: $NAME_FIRST
           required: true
         - name: "comment[lastName]"
