@@ -22,7 +22,7 @@ contact_form:
     - click_on:
         - selector: "div[data-submitter-type='individual'] input[type='radio']"        
     - javascript:
-        - value: "document.querySelector('div.submitter-section-js[data-submitter-type=\"individual\"]').style.display = 'block'"
+        - value: "document.querySelector('div.submitter-section-js[data-submitter-type=\"individual\"]').classList.remove('cj-hidden')"
     - fill_in:
         - name: "comment[firstName]"
           selector: "#comment_firstName_input"
