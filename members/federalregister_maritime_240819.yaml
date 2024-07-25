@@ -33,7 +33,7 @@ contact_form:
           value: $NAME_LAST
           required: true
         - name: "comment[email]"
-          selector: "input[name='comment[email]'"
+          selector: "input[name='comment[email]']"
           value: $EMAIL
           required: true
         - name: "comment[city]"
