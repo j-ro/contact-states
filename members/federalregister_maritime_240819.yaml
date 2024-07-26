@@ -28,10 +28,10 @@ contact_form:
           selector: "input[name='comment[firstName]']"
           value: $NAME_FIRST
           required: true
-        - name: "comment[lastName]"
-          selector: "input[name='comment[lastName]']"
-          value: $NAME_LAST
-          required: true
+        # - name: "comment[lastName]"
+        #   selector: "input[name='comment[lastName]']"
+        #   value: $NAME_LAST
+        #   required: true
     #     - name: "comment[email]"
     #       selector: "input[name='comment[email]']"
     #       value: $EMAIL
