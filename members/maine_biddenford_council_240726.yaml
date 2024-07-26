@@ -4,6 +4,8 @@ contact_form:
   action: ""
   steps:
     - visit: "https://www.biddefordmaine.org/FormCenter/City-Council-19/Contact-all-Councilors-84"
+    - javascript:
+        - value: "Array.prototype.forEach.call(document.querySelectorAll('style,[rel=\"stylesheet\"],[type=\"text/css\"]'), function(element){ try{ element.parentNode.removeChild(element) } catch(err){} });"
     - find:
         - selector: "#input[name='fields[7].Value']"      
     - fill_in:
