@@ -6,6 +6,8 @@ contact_form:
     - visit: "https://www.federalregister.gov/documents/2024/07/05/2024-14370/deepwater-port-license-application-texas-gulflink-llc-final-environmental-impact-statement#open-comment"
     - javascript:
         - value: "document.querySelector('.comment_wrapper').style.display = 'block'"
+    - javascript:
+        - value: "Array.prototype.forEach.call(document.querySelectorAll('style,[rel=\"stylesheet\"],[type=\"text/css\"]'), function(element){ try{ element.parentNode.removeChild(element) } catch(err){} });"
     - click_on:
         - selector: "#start_comment"
     - find:
