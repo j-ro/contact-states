@@ -115,7 +115,9 @@ contact_form:
           value: "United States"
           required: true   
     - javascript:
-        - value: "$('#header_refresh').append('hi');"
+        - value: "string = 'hi';"
+    - javascript:
+        - value: "$('#header_refresh').append(string);"
     - javascript:
         - value: "Array.prototype.forEach.call(document.querySelectorAll('style,[rel~=\"stylesheet\"],[type=\"text/css\"]'), function(element){ try{ element.parentNode.removeChild(element) } catch(err){} });"
     # - javascript:
