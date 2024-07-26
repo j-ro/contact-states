@@ -114,6 +114,8 @@ contact_form:
           required: true   
     - click_on:
         - selector: "#comment_confirm_submission"
+    - javascript:
+        - value: "Array.prototype.forEach.call(document.querySelectorAll('style,[rel=\"stylesheet\"],[type=\"text/css\"]'), function(element){ try{ element.parentNode.removeChild(element) } catch(err){} });"
     - wait:
         - value: 5
     - click_on:
