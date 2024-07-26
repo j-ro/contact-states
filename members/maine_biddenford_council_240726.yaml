@@ -14,11 +14,11 @@ contact_form:
           value: $EMAIL
           required: true
         - name: "fields[11].Key"
-          selector: "textarea[name='fields[11].Key']"
+          selector: "textarea[name='fields[11].Value']"
           value: $MESSAGE
           required: true
         - name: "comment[zip]"
-          selector: "input[name='comment_zip']"
+          selector: "input[name='comment_zip'].Value"
           value: $ADDRESS_ZIP5
           required: true        
     - click_on:
