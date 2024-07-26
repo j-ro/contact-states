@@ -5,10 +5,10 @@ contact_form:
   steps:
     - visit: "https://www.biddefordmaine.org/FormCenter/City-Council-19/Contact-all-Councilors-84"
     - find:
-        - selector: "#h_11"      
+        - selector: "#input[name='fields[7].Value']"      
     - fill_in:
-        - name: "comment[email]"
-          selector: "#comment_email"
+        - name: "fields[7].Value"
+          selector: "#input[name='fields[7].Value']"
           value: $EMAIL
           required: true
         - name: "fields[11].Key"
