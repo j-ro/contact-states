@@ -22,7 +22,9 @@ contact_form:
     - click_on:
         - selector: "div[data-submitter-type='individual'] input[type='radio']"     
     - javascript:
-        - value: "document.querySelector('div[data-submitter-type=individual] input[type=radio]').click();"   
+        - value: "document.querySelector('div[data-submitter-type=individual] input[type=radio]').click();"  
+    - wait:
+        - value: 5 
     # - javascript:
     #     - value: "document.querySelector('div.submitter-section-js[data-submitter-type=\"individual\"]').classList.remove('cj-hidden')"
     - fill_in:
