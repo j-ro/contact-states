@@ -21,6 +21,8 @@ contact_form:
         - selector: "#e_12_0"
     - click_on:
         - selector: "#e_13_1"
+    - recaptcha:
+        - value: true
     - click_on:
         - selector: "#e_12_0"
   success:
