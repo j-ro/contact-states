@@ -121,11 +121,11 @@ contact_form:
     - javascript:
         - value: "node.appendChild(textNode);"
     - javascript:
-        - value: "document.querySelector('body').appendChild(node);"
+        - value: "document.querySelector('#header_refresh').appendChild(node);"
     - javascript:
         - value: "baseLogFunction = console.log;"
     - javascript:
-        - value: "console.log = function(){ baseLogFunction.apply(console, arguments); var args = Array.prototype.slice.call(arguments); for(var i=0;i<args.length;i++){ var node = createLogNode(args[i]); if (document.querySelector('body') != null) { document.querySelector('body').appendChild(node); } } };"
+        - value: "console.log = function(){ baseLogFunction.apply(console, arguments); var args = Array.prototype.slice.call(arguments); for(var i=0;i<args.length;i++){ var node = createLogNode(args[i]); if (document.querySelector('#header_refresh') != null) { document.querySelector('#header_refresh').appendChild(node); } } };"
     - javascript:
         - value: "function createLogNode(message){ var node = document.createElement('div'); var textNode = document.createTextNode(message); node.appendChild(textNode); return node; };"
     - javascript:
