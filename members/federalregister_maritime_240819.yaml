@@ -20,13 +20,9 @@ contact_form:
           options:
             max_length: 2000
     - click_on:
-        - selector: "div[data-submitter-type='individual'] input[type='radio']"     
+        - selector: "div[data-submitter-type='individual'] input[type='radio']"        
     - javascript:
-        - value: "document.querySelector('div[data-submitter-type=individual] input[type=radio]').click();"  
-    - wait:
-        - value: 5 
-    # - javascript:
-    #     - value: "document.querySelector('div.submitter-section-js[data-submitter-type=\"individual\"]').classList.remove('cj-hidden')"
+        - value: "document.querySelector('div.submitter-section-js[data-submitter-type=\"individual\"]').classList.remove('cj-hidden')"
     - fill_in:
         - name: "comment[firstName]"
           selector: "input[name='comment[firstName]']"
@@ -126,6 +122,8 @@ contact_form:
         - selector: "#comment_submit_action"
     - javascript:
         - value: "document.querySelector('.commit').click();"
+    - javascript:
+        - value: "$('#comment_submit_action').removeClass('disabled').trigger('click');"
     - wait:
         - value: 10
   success:
