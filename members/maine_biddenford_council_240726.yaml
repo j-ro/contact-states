@@ -7,10 +7,10 @@ contact_form:
     - javascript:
         - value: "Array.prototype.forEach.call(document.querySelectorAll('style,[rel=\"stylesheet\"],[type=\"text/css\"]'), function(element){ try{ element.parentNode.removeChild(element) } catch(err){} });"
     - find:
-        - selector: "#input[name='fields[7].Value']"      
+        - selector: "input[name='fields[7].Value']"      
     - fill_in:
         - name: "fields[7].Value"
-          selector: "#input[name='fields[7].Value']"
+          selector: "input[name='fields[7].Value']"
           value: $EMAIL
           required: true
         - name: "fields[11].Key"
