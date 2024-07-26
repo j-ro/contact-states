@@ -118,8 +118,8 @@ contact_form:
         - value: 5
     - click_on:
         - selector: "#comment_submit_action"
-    # - javascript:
-    #     - value: "document.querySelector('.commit input').click();"
+    - javascript:
+        - value: "document.querySelector('.commit').click();"
     - wait:
         - value: 10
   success:
