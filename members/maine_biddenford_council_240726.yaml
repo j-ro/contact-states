@@ -1,0 +1,32 @@
+bioguide: maine_biddenford_council_240726
+contact_form:
+  method: POST
+  action: ""
+  steps:
+    - visit: "https://www.biddefordmaine.org/FormCenter/City-Council-19/Contact-all-Councilors-84"
+    - find:
+        - selector: "#h_11"      
+    - fill_in:
+        - name: "comment[email]"
+          selector: "#comment_email"
+          value: $EMAIL
+          required: true
+        - name: "fields[11].Key"
+          selector: "#h_14"
+          value: $MESSAGE
+          required: true
+        - name: "comment[zip]"
+          selector: "#comment_zip"
+          value: $ADDRESS_ZIP5
+          required: true        
+    - click_on:
+        - selector: "#e_12_0"
+    - click_on:
+        - selector: "#e_13_1"
+    - click_on:
+        - selector: "#e_12_0"
+  success:
+    headers:
+      status: 200
+    body:
+      contains: Thank you for your submission
