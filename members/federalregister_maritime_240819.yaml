@@ -116,10 +116,12 @@ contact_form:
         - selector: "#comment_confirm_submission"
     - wait:
         - value: 5
+    - click_on:
+        - selector: "#comment_submit_action"
     - javascript:
         - value: "document.querySelector('.commit input').click();"
     - wait:
-        - value: 15
+        - value: 10
   success:
     headers:
       status: 200
