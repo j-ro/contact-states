@@ -16,11 +16,7 @@ contact_form:
         - name: "fields[11].Key"
           selector: "textarea[name='fields[11].Value']"
           value: $MESSAGE
-          required: true
-        - name: "comment[zip]"
-          selector: "input[name='comment_zip'].Value"
-          value: $ADDRESS_ZIP5
-          required: true        
+          required: true    
     - click_on:
         - selector: "#e_12_0"
     - click_on:
