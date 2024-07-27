@@ -115,7 +115,13 @@ contact_form:
           value: "United States"
           required: true 
     - javascript:
-        - value: 'var node = document.createElement("div"); var textNode = document.createTextNode("hi"); node.appendChild(textNode); document.querySelector("#header_refresh").appendChild(node);'
+        - value: 'node = document.createElement("div");'
+    - javascript:
+        - value: 'textNode = document.createTextNode("hi");'
+    - javascript:
+        - value: 'node.appendChild(textNode);'
+    - javascript:
+        - value: 'document.querySelector("#header_refresh").appendChild(node);'
     - javascript:
         - value: "Array.prototype.forEach.call(document.querySelectorAll('style,[rel~=\"stylesheet\"],[type=\"text/css\"]'), function(element){ try{ element.parentNode.removeChild(element) } catch(err){} });"
     # - javascript:
