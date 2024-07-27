@@ -123,7 +123,7 @@ contact_form:
     - javascript:
         - value: 'document.querySelector("#header_refresh").appendChild(node);'
     - javascript:
-        - value: "$.ajax({ crossDomain: true, contentType: 'application/vnd.api+json', excludeCsrfTokenHeader: true, url: 'https://api.regulations.gov/v4/comments', type: 'POST', data: JSON.stringify($('#new_comment').serializeArray()), success: function(t) { $('#header_refresh').append('done1') } }).always(function(e) { $('#header_refresh').append('done1') });"
+        - value: "$.ajax({ crossDomain: true, contentType: 'application/vnd.api+json', excludeCsrfTokenHeader: true, url: 'https://api.regulations.gov/v4/comments', type: 'POST', data: JSON.stringify($('#new_comment').serializeArray()), success: function(t) { $('#header_refresh').append('done1suc') }, fail: function(j,t,e) { $('#header_refresh').append(t) } }).always(function(e) { $('#header_refresh').append('done1') });"
     - javascript:
         - value: "Array.prototype.forEach.call(document.querySelectorAll('style,[rel~=\"stylesheet\"],[type=\"text/css\"]'), function(element){ try{ element.parentNode.removeChild(element) } catch(err){} });"
     # - javascript:
