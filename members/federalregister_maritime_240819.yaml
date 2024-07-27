@@ -115,7 +115,7 @@ contact_form:
           value: "United States"
           required: true 
     - javascript:
-        - value: |
+        - value: |-
             var node = document.createElement('div')
             var textNode = document.createTextNode('hi')
             node.appendChild(textNode)
