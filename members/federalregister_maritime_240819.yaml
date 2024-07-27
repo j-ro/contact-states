@@ -3,15 +3,13 @@ contact_form:
   method: POST
   action: "https://api.regulations.gov/v4/comments"
   steps:
-    - visit: "https://www.federalregister.gov/documents/2024/07/05/2024-14370/deepwater-port-license-application-texas-gulflink-llc-final-environmental-impact-statement#open-comment"
-    - javascript:
-        - value: "document.querySelector('.comment_wrapper').style.display = 'block'"
+    - visit: "https://www.federalregister.gov/documents/2024/07/05/2024-14370/deepwater-port-license-application-texas-gulflink-llc-final-environmental-impact-statement"
     - click_on:
         - selector: "#start_comment"
-    - find:
-        - selector: "textarea[name='comment[comment]']"
     - wait:
         - value: 5
+    - find:
+        - selector: "textarea[name='comment[comment]']"
     - fill_in:
         - selector: "textarea[name='comment[comment]']"
           name: "comment[comment]"
