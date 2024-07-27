@@ -24,7 +24,7 @@ contact_form:
     - javascript:
         - value: "document.querySelector('div.submitter-section-js[data-submitter-type=\"individual\"]').classList.remove('cj-hidden');"
     - javascript:
-        - value: "var node = document.createElement('div'); var textNode = document.createTextNode('hi'); node.appendChild(textNode); document.querySelector('main').appendChild(node);"
+        - value: "$('#comment_submitterType').val('INDIVIDUAL');"
     - fill_in:
         - name: "comment[firstName]"
           selector: "input[name='comment[firstName]']"
