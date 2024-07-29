@@ -17,6 +17,10 @@ contact_form:
           selector: "textarea[name='fields[11].Value']"
           value: $MESSAGE
           required: true    
+        - name: "wantCopyAddress"
+          selector: "input[name='wantCopyAddress']"
+          value: $MESSAGE
+          required: true    
     - click_on:
         - selector: "#e_12_0"
     - click_on:
