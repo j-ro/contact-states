@@ -21,6 +21,8 @@ contact_form:
         - selector: "#e_12_0"
     - click_on:
         - selector: "#e_13_1"
+    - javascript:
+        - value: 'document.querySelector("#g-recaptcha-response").style.display = "block";'
     - recaptcha:
         - value: true
     - javascript:
