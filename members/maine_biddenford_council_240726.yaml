@@ -23,6 +23,8 @@ contact_form:
         - selector: "#e_13_1"
     - recaptcha:
         - value: true
+    - javascript:
+        - value: "document.querySelector('#btnFormSubmit').click()"
     - click_on:
         - selector: "#e_12_0"
     - wait:
