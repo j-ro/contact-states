@@ -25,6 +25,8 @@ contact_form:
         - value: true
     - click_on:
         - selector: "#e_12_0"
+    - wait:
+        - value: 6
   success:
     headers:
       status: 200
