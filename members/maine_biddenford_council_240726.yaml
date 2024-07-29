@@ -19,7 +19,7 @@ contact_form:
           required: true    
         - name: "wantCopyAddress"
           selector: "input[name='wantCopyAddress']"
-          value: $MESSAGE
+          value: $EMAIL
           required: true    
     - click_on:
         - selector: "#e_12_0"
