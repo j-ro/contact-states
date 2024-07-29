@@ -1,9 +1,9 @@
-bioguide: federalregister_ams_240827
+bioguide: federalregister_maritime_240819
 contact_form:
   method: POST
-  action: ""
+  action: "https://api.regulations.gov/v4/comments"
   steps:
-    - visit: "https://www.federalregister.gov/documents/2024/06/28/2024-14042/fair-and-competitive-livestock-and-poultry-markets#open-comment"
+    - visit: "https://www.federalregister.gov/documents/2024/06/20/2024-13467/notice-of-request-for-information-related-to-the-department-of-energys-environmental-justice#open-comment"
     - javascript:
         - value: "document.querySelector('.comment_wrapper').style.display = 'block'"
     - click_on:
