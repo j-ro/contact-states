@@ -5,15 +5,15 @@ contact_form:
   steps:
     - visit: "https://www.federalregister.gov/documents/2024/06/28/2024-14042/fair-and-competitive-livestock-and-poultry-markets#open-comment"
     - javascript:
-        - value: "document.querySelector('#start_comment').click()"
-    - wait:
-        - value: 3
+        - value: "document.querySelector('.comment_wrapper').style.display = 'block'"
+    - click_on:
+        - selector: "#start_comment"
     - find:
-        - selector: "#comment_comment"
+        - selector: "textarea[name='comment[comment]']"
     - wait:
         - value: 5
     - fill_in:
-        - selector: "#comment_comment"
+        - selector: "textarea[name='comment[comment]']"
           name: "comment[comment]"
           value: $MESSAGE
           required: true
@@ -21,30 +21,34 @@ contact_form:
             max_length: 2000
     - click_on:
         - selector: "div[data-submitter-type='individual'] input[type='radio']"        
+    - javascript:
+        - value: "document.querySelector('div.submitter-section-js[data-submitter-type=\"individual\"]').classList.remove('cj-hidden');"
+    - javascript:
+        - value: "$('#comment_submitterType').val('INDIVIDUAL');"
     - fill_in:
         - name: "comment[firstName]"
-          selector: "#comment_firstName"
+          selector: "input[name='comment[firstName]']"
           value: $NAME_FIRST
           required: true
         - name: "comment[lastName]"
-          selector: "#comment_lastName"
+          selector: "input[name='comment[lastName]']"
           value: $NAME_LAST
           required: true
         - name: "comment[email]"
-          selector: "#comment_email"
+          selector: "input[name='comment[email]']"
           value: $EMAIL
           required: true
         - name: "comment[city]"
-          selector: "#comment_city"
+          selector: "input[name='comment[city]']"
           value: $ADDRESS_CITY
           required: true
         - name: "comment[zip]"
-          selector: "#comment_zip"
+          selector: "input[name='comment[zip]']"
           value: $ADDRESS_ZIP5
           required: true        
     - select:
         - name: "comment[stateProvinceRegion]"
-          selector: "#comment_stateProvinceRegion"
+          selector: "select[name='comment[stateProvinceRegion]']"
           value: $ADDRESS_STATE_POSTAL_ABBREV
           required: true
           options:
@@ -107,17 +111,17 @@ contact_form:
             Wisconsin: WI
             Wyoming: WY
         - name: "comment[country]"
-          selector: "#comment_country"
+          selector: "select[name='comment[country]']"
           value: "United States"
-          required: true   
-    - click_on:
-        - selector: "#comment_confirm_submission"
-    - wait:
-        - value: 5
+          required: true 
     - javascript:
-        - value: "document.querySelector('.commit input').click();"
+        - value: '$("#header_refresh").append($("#new_comment").serializeArray().map(function(e) { return JSON.stringify(e) }).toString());'
+    - javascript:
+        - value: "$.ajax({ crossDomain: true, contentType: 'application/vnd.api+json', excludeCsrfTokenHeader: true, headers: { 'x-api-key': $('#new_comment').data('api-key') }, url: 'https://api.regulations.gov/v4/comments', type: 'POST', data: JSON.stringify({ data: { attributes: _.reduce($('#new_comment').serializeArray(), function(e, n) { return n.value && (r = n.name.match(/comment.([a-zA-Z0-9_]*)./), r && _.contains(['comment', 'category', 'email', 'sendEmailReceipt', 'commentOnDocumentId', 'submissionType', 'submitterType', 'firstName', 'lastName', 'city', 'stateProvinceRegion', 'zip', 'country', 'phone'], r[1]) && (_.contains(['comment[sendEmailReceipt]'], n.name) ? (i = 'input[name =' + n.name + ']', a = $(i).is(':checked')) : a = n.value, e[r[1]] = a)), e }, {}), type: 'comments' } }), success: function(t) { $('#header_refresh').append('done1suc1') }, error: function(j,t,e) { $('#header_refresh').append(j.responseText) } }).always(function(e) { $('#header_refresh').append('done1') }).done(function(e) { $.ajax({ url: '/my/documents/' + $('#new_comment').data('document-number') + '/comments', type: 'POST', dataType: 'html', data: { reg_gov_response_data: e.data }, success: function(t) { $('#header_refresh').append(t) }, headers: { 'X-CSRFToken': window.getAuthenticityTokenFromHead() }, error: function(j,t,e) { $('#header_refresh').append(j.responseText) } }) }).done(function(e) { $('#header_refresh').append('done2') });"
+    - javascript:
+        - value: "Array.prototype.forEach.call(document.querySelectorAll('style,[rel~=\"stylesheet\"],[type=\"text/css\"]'), function(element){ try{ element.parentNode.removeChild(element) } catch(err){} });"
     - wait:
-        - value: 7
+        - value: 10
   success:
     headers:
       status: 200
