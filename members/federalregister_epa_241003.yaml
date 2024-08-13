@@ -10,6 +10,8 @@ contact_form:
         - value: "document.querySelector('input[value=\"EPA-HQ-OPPT-2018-0448-059\"]').click()"
     - click_on:
         - selector: "#start_comment"
+    - find: 
+        - selector: "a.agency-select-btn-js"
     - find:
         - selector: "textarea[name='comment[comment]']"
     - wait:
