@@ -30,7 +30,7 @@ contact_form:
     - click_on:
         - selector: "div[data-submitter-type='individual'] input[type='radio']"        
     - javascript:
-        - value: "document.querySelector('div.submitter-section-js[data-submitter-type=\"individual\"]').classList.remove('cj-hidden');"
+        - value: "const elementsToReveal = document.querySelectorAll('.hidden, .cj-hidden');elementsToReveal.forEach(element => {element.classList.remove('hidden');element.classList.remove('cj-hidden');});"
     - javascript:
         - value: "$('#comment_submitterType').val('INDIVIDUAL');"
     - fill_in:
