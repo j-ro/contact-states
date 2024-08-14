@@ -32,6 +32,8 @@ contact_form:
     - javascript:
         - value: "document.querySelector('div.comment-form-fields-js').classList.remove('cj-hidden');"
     - javascript:
+        - value: "document.querySelector('div.comment-form-fields-js').style.display = 'block'"
+    - javascript:
         - value: "$('#comment_submitterType').val('INDIVIDUAL');"
     - fill_in:
         - name: "comment[firstName]"
