@@ -34,7 +34,7 @@ contact_form:
     - click_on:
         - selector: "div[data-submitter-type='individual'] input[type='radio']"        
     - javascript:
-        - value: "document.querySelector('div.comment-form-fields-js').classList.remove('cj-hidden');"
+        - value: "document.querySelector('div.submitter-section-js[data-submitter-type=\"individual\"]').classList.remove('cj-hidden');"
     - javascript:
         - value: "$('#comment_submitterType').val('INDIVIDUAL');"
     - fill_in:
