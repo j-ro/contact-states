@@ -126,6 +126,10 @@ contact_form:
           selector: "select[name='comment[country]']"
           value: "United States"
           required: true 
+    - check:
+        - name: "comment[confirm_submission]"
+          selector: "input[name='comment[confirm_submission]']"
+          required: true
     - javascript:
         - value: '$("#header_refresh").append($("#new_comment").serializeArray().map(function(e) { return JSON.stringify(e) }).toString());'
     - javascript:
