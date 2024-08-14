@@ -10,10 +10,12 @@ contact_form:
         - value: "document.querySelector('input[value=\"EPA-HQ-OPPT-2018-0448-059\"]').click()"
     - click_on:
         - selector: "#start_comment"
-    - find: 
-        - selector: "a.agency-select-btn-js[data-regs-dot-gov-document-id='EPA-HQ-OPPT-2018-0448-0591']"
     - click_on: 
         - selector: "a.agency-select-btn-js[data-regs-dot-gov-document-id='EPA-HQ-OPPT-2018-0448-0591']"
+    - choose: 
+        - name: "hiddenAgencyRadio-EPA-HQ-OPPT-2018-0448-0591"
+          selector: "input[name='hiddenAgencyRadio-EPA-HQ-OPPT-2018-0448-0591']"
+          required: true
     - javascript:
         - value: "document.querySelector('div.comment-form-fields-js').classList.remove('cj-hidden');"
     - javascript:
