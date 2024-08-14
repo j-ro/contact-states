@@ -11,7 +11,7 @@ contact_form:
     - click_on:
         - selector: "#start_comment"
     - find: 
-        - selector: "a.agency-select-btn-js"
+        - selector: "a.agency-select-btn-js[data-regs-dot-gov-document-id='EPA-HQ-OPPT-2018-0448-0591']"
     - find:
         - selector: "textarea[name='comment[comment]']"
     - wait:
