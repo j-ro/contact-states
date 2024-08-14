@@ -15,7 +15,7 @@ contact_form:
     - click_on: 
         - selector: "a.agency-select-btn-js[data-regs-dot-gov-document-id='EPA-HQ-OPPT-2018-0448-0591']"
     - javascript:
-        - value: "const elementsToReveal = document.querySelectorAll('.hidden, .cj-hidden');elementsToReveal.forEach(element => {element.classList.remove('hidden');element.classList.remove('cj-hidden');});"
+        - value: "document.querySelector('div.comment-form-fields-js').classList.remove('cj-hidden');"
     - find:
         - selector: "textarea[name='comment[comment]']"
     - wait:
