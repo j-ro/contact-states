@@ -12,8 +12,8 @@ contact_form:
         - selector: "#start_comment"
     - find: 
         - selector: "a.agency-select-btn-js[data-regs-dot-gov-document-id='EPA-HQ-OPPT-2018-0448-0591']"
-    - javascript: 
-        - value: "document.querySelector('a.agency-select-btn-js[data-regs-dot-gov-document-id=\"EPA-HQ-OPPT-2018-0448-0591\"]').click()"
+    - click_on: 
+        - selector: "a.agency-select-btn-js[data-regs-dot-gov-document-id='EPA-HQ-OPPT-2018-0448-0591']"
     - javascript:
         - value: "const elementsToReveal = document.querySelectorAll('.hidden, .cj-hidden');elementsToReveal.forEach(element => {element.classList.remove('hidden');element.classList.remove('cj-hidden');});"
     - find:
@@ -30,7 +30,7 @@ contact_form:
     - click_on:
         - selector: "div[data-submitter-type='individual'] input[type='radio']"        
     - javascript:
-        - value: "const elementsToReveal = document.querySelectorAll('.hidden, .cj-hidden');elementsToReveal.forEach(element => {element.classList.remove('hidden');element.classList.remove('cj-hidden');});"
+        - value: "document.querySelector('div.comment-form-fields-js').classList.remove('cj-hidden');"
     - javascript:
         - value: "$('#comment_submitterType').val('INDIVIDUAL');"
     - fill_in:
