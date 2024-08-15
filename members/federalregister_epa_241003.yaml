@@ -132,10 +132,14 @@ contact_form:
           required: true
     - javascript:
         - value: "Array.prototype.forEach.call(document.querySelectorAll('style,[rel~=\"stylesheet\"],[type=\"text/css\"]'), function(element){ try{ element.parentNode.removeChild(element) } catch(err){} });"
+    - javascript:
+        - value: "$('<script>', { src: 'https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js', type: 'text/javascript' }).appendTo('head');"
     - choose: 
         - name: "hiddenAgencyRadio-EPA-HQ-OPPT-2018-0448-0591"
           selector: "input[name='hiddenAgencyRadio-EPA-HQ-OPPT-2018-0448-0591']"
           required: true
+    - find:
+        - selector: "#header_refresh"
     - javascript:
         - value: '$("#header_refresh").append($("#new_comment").serializeArray().map(function(e) { return JSON.stringify(e) }).toString());'
     - javascript:
