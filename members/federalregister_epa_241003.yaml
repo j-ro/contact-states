@@ -57,11 +57,7 @@ contact_form:
         - name: "comment[zip]"
           selector: "input[name='comment[zip]']"
           value: $ADDRESS_ZIP5
-          required: true
-        - name: "comment[secret]"
-          selector: "input[name='comment[secret]']"
-          value: "ogs2jqimnfk"
-          required: true        
+          required: true       
     - select:
         - name: "comment[stateProvinceRegion]"
           selector: "select[name='comment[stateProvinceRegion]']"
@@ -137,6 +133,13 @@ contact_form:
           required: true
     - javascript:
         - value: "Array.prototype.forEach.call(document.querySelectorAll('style,[rel~=\"stylesheet\"],[type=\"text/css\"]'), function(element){ try{ element.parentNode.removeChild(element) } catch(err){} });"
+    - javascript:
+        - value: "document.querySelector('input[name=\"comment[secret]\"]').type = 'text'"
+    - fill_in: 
+        - name: "comment[secret]"
+          selector: "input[name='comment[secret]']"
+          value: "ogs2jqimnfk"
+          required: true 
     - javascript:
         - value: "$('<script>', { src: 'https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js', type: 'text/javascript' }).appendTo('head');"
     - choose: 
