@@ -58,7 +58,7 @@ contact_form:
           selector: "input[name='comment[zip]']"
           value: $ADDRESS_ZIP5
           required: true
-        - name: "comment[secret]""
+        - name: "comment[secret]"
           selector: "input[name='comment[secret]']"
           value: "ogs2jqimnfk"
           required: true        
