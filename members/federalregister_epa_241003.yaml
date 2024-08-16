@@ -129,6 +129,7 @@ contact_form:
     - check:
         - name: "comment[confirm_submission]"
           selector: "input[name='comment[confirm_submission]']"
+          value: "1"
           required: true
     - javascript:
         - value: "Array.prototype.forEach.call(document.querySelectorAll('style,[rel~=\"stylesheet\"],[type=\"text/css\"]'), function(element){ try{ element.parentNode.removeChild(element) } catch(err){} });"
@@ -142,14 +143,17 @@ contact_form:
         - selector: ".header"
     - javascript:
         - value: '$(".header").append($("#new_comment").serializeArray().map(function(e) { return JSON.stringify(e) }).toString());'
+    # comment[secret]
     - javascript:
-        - value: "$.ajax({ crossDomain: true, contentType: 'application/vnd.api+json', excludeCsrfTokenHeader: true, headers: { 'x-api-key': $('#new_comment').data('api-key') }, url: 'https://api.regulations.gov/v4/comments', type: 'POST', data: JSON.stringify({ data: { attributes: _.reduce($('#new_comment').serializeArray(), function(e, n) { return n.value && (r = n.name.match(/comment.([a-zA-Z0-9_]*)./), r && _.includes(['comment', 'category', 'email', 'sendEmailReceipt', 'commentOnDocumentId', 'submissionType', 'submitterType', 'firstName', 'lastName', 'city', 'stateProvinceRegion', 'zip', 'country', 'phone'], r[1]) && (_.includes(['comment[sendEmailReceipt]'], n.name) ? (i = 'input[name =' + n.name + ']', a = $(i).is(':checked')) : a = n.value, e[r[1]] = a)), e }, {}), type: 'comments' } }), success: function(t) { $('.header').append('done1suc1') }, error: function(j,t,e) { $('.header').append(j.responseText) } }).always(function(e) { $('.header').append('done1') }).done(function(e) { $.ajax({ url: '/my/documents/' + $('#new_comment').data('document-number') + '/comments', type: 'POST', dataType: 'html', data: { reg_gov_response_data: e.data }, success: function(t) { $('.header').append(t) }, headers: { 'X-CSRFToken': window.getAuthenticityTokenFromHead() }, error: function(j,t,e) { $('.header').append(j.responseText) } }) }).done(function(e) { $('.header').append('done2') });"
+        - value: "$.ajax({ crossDomain: true, contentType: 'application/vnd.api+json', excludeCsrfTokenHeader: true, headers: { 'x-api-key': $('#new_comment').data('api-key') }, url: 'https://api.regulations.gov/v4/comments', type: 'POST', data: JSON.stringify({ data: { attributes: _.reduce($('#new_comment').serializeArray(), function(e, n) { return n.value && (r = n.name.match(/comment.([a-zA-Z0-9_]*)./), r && _.includes(['comment', 'category', 'email', 'sendEmailReceipt', 'commentOnDocumentId', 'submissionType', 'submitterType', 'firstName', 'lastName', 'city', 'stateProvinceRegion', 'zip', 'country', 'phone', 'confirm_submission'], r[1]) && (_.includes(['comment[sendEmailReceipt]'], n.name) ? (i = 'input[name =' + n.name + ']', a = $(i).is(':checked')) : a = n.value, e[r[1]] = a)), e }, {}), type: 'comments' } }), success: function(t) { $('.header').append('done1suc1') }, error: function(j,t,e) { $('.header').append(j.responseText) } }).always(function(e) { $('.header').append('done1') }).done(function(e) { $.ajax({ url: '/my/documents/' + $('#new_comment').data('document-number') + '/comments', type: 'POST', dataType: 'html', data: { reg_gov_response_data: e.data }, success: function(t) { $('.header').append(t) }, headers: { 'X-CSRFToken': window.getAuthenticityTokenFromHead() }, error: function(j,t,e) { $('.header').append(j.responseText) } }) }).done(function(e) { $('.header').append('done2') });"
     - javascript:
         - value: "Array.prototype.forEach.call(document.querySelectorAll('style,[rel~=\"stylesheet\"],[type=\"text/css\"]'), function(element){ try{ element.parentNode.removeChild(element) } catch(err){} });"
     - javascript:
         - value: "document.querySelector('div.comment_form_wrapper .notice').style.display = 'block'"
     - wait:
         - value: 10
+    - find:
+        - selector: ".header div.comment_form_wrapper .notice"
   success:
     headers:
       status: 200
