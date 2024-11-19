@@ -138,12 +138,12 @@ contact_form:
     - fill_in: 
         - name: "comment[secret]"
           selector: "input[name='comment[secret]']"
-          value: "ogs2jqimnfk"
+          value: "jcukbhbh5k" # swap on new yamls
           required: true 
-    - choose: 
-        - name: "hiddenAgencyRadio-EPA-HQ-OPPT-2018-0448-0591"
-          selector: "input[name='hiddenAgencyRadio-EPA-HQ-OPPT-2018-0448-0591']"
-          required: true
+    # - choose: 
+    #     - name: "hiddenAgencyRadio-EPA-HQ-OPPT-2018-0448-0591"
+    #       selector: "input[name='hiddenAgencyRadio-EPA-HQ-OPPT-2018-0448-0591']"
+    #       required: true
     - find:
         - selector: ".header"
     - javascript:
