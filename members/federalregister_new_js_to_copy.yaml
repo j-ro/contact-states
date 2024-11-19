@@ -1,13 +1,23 @@
-bioguide: federalregister_maritime_240819
+bioguide: federalregister_ed_241202
 contact_form:
   method: POST
   action: "https://api.regulations.gov/v4/comments"
   steps:
-    - visit: "https://www.federalregister.gov/documents/2024/06/20/2024-13467/notice-of-request-for-information-related-to-the-department-of-energys-environmental-justice#open-comment"
+    - visit: "https://www.federalregister.gov/documents/2024/10/31/2024-25067/student-debt-relief-based-on-hardship-for-the-william-d-ford-federal-direct-loan-program-direct#open-comment"
     - javascript:
         - value: "document.querySelector('.comment_wrapper').style.display = 'block'"
+    # - javascript:
+    #     - value: "document.querySelector('input[value=\"FWS-R4-ES-2024-0073-0001\"]').click()"d
     - click_on:
         - selector: "#start_comment"
+    # - click_on: 
+    #     - selector: "a.agency-select-btn-js[data-regs-dot-gov-document-id='EPA-HQ-OPPT-2018-0448-0591']"
+    - javascript:
+        - value: "document.querySelector('div.comment-form-fields-js').classList.remove('cj-hidden')"
+    - javascript:
+        - value: "document.querySelector('div.comment-form-fields-js').style.display = 'block'"    
+    - wait:
+        - value: 3
     - find:
         - selector: "textarea[name='comment[comment]']"
     - wait:
@@ -25,6 +35,8 @@ contact_form:
         - value: "document.querySelector('div.submitter-section-js[data-submitter-type=\"individual\"]').classList.remove('cj-hidden');"
     - javascript:
         - value: "$('#comment_submitterType').val('INDIVIDUAL');"
+    - javascript:
+        - value: "$('input[name=\"comment[commentOnDocumentId]\"]').val(\"ED-2023-OPE-0123-32489\")" # swap on new yamls
     - fill_in:
         - name: "comment[firstName]"
           selector: "input[name='comment[firstName]']"
@@ -45,7 +57,7 @@ contact_form:
         - name: "comment[zip]"
           selector: "input[name='comment[zip]']"
           value: $ADDRESS_ZIP5
-          required: true        
+          required: true       
     - select:
         - name: "comment[stateProvinceRegion]"
           selector: "select[name='comment[stateProvinceRegion]']"
@@ -114,16 +126,39 @@ contact_form:
           selector: "select[name='comment[country]']"
           value: "United States"
           required: true 
-    - javascript:
-        - value: '$("#header_refresh").append($("#new_comment").serializeArray().map(function(e) { return JSON.stringify(e) }).toString());'
-    - javascript:
-        - value: "$.ajax({ crossDomain: true, contentType: 'application/vnd.api+json', excludeCsrfTokenHeader: true, headers: { 'x-api-key': $('#new_comment').data('api-key') }, url: 'https://api.regulations.gov/v4/comments', type: 'POST', data: JSON.stringify({ data: { attributes: _.reduce($('#new_comment').serializeArray(), function(e, n) { return n.value && (r = n.name.match(/comment.([a-zA-Z0-9_]*)./), r && _.contains(['comment', 'category', 'email', 'sendEmailReceipt', 'commentOnDocumentId', 'submissionType', 'submitterType', 'firstName', 'lastName', 'city', 'stateProvinceRegion', 'zip', 'country', 'phone'], r[1]) && (_.contains(['comment[sendEmailReceipt]'], n.name) ? (i = 'input[name =' + n.name + ']', a = $(i).is(':checked')) : a = n.value, e[r[1]] = a)), e }, {}), type: 'comments' } }), success: function(t) { $('#header_refresh').append('done1suc1') }, error: function(j,t,e) { $('#header_refresh').append(j.responseText) } }).always(function(e) { $('#header_refresh').append('done1') }).done(function(e) { $.ajax({ url: '/my/documents/' + $('#new_comment').data('document-number') + '/comments', type: 'POST', dataType: 'html', data: { reg_gov_response_data: e.data }, success: function(t) { $('#header_refresh').append(t) }, headers: { 'X-CSRFToken': window.getAuthenticityTokenFromHead() }, error: function(j,t,e) { $('#header_refresh').append(j.responseText) } }) }).done(function(e) { $('#header_refresh').append('done2') });"
+    - check:
+        - name: "comment[confirm_submission]"
+          selector: "input[name='comment[confirm_submission]']"
+          value: "1"
+          required: true
     - javascript:
         - value: "Array.prototype.forEach.call(document.querySelectorAll('style,[rel~=\"stylesheet\"],[type=\"text/css\"]'), function(element){ try{ element.parentNode.removeChild(element) } catch(err){} });"
+    - javascript:
+        - value: "document.querySelector('input[name=\"comment[secret]\"]').type = 'text'"
+    - fill_in: 
+        - name: "comment[secret]"
+          selector: "input[name='comment[secret]']"
+          value: "3spdljehnxn" # swap on new yamls
+          required: true 
+    # - choose: 
+    #     - name: "hiddenAgencyRadio-EPA-HQ-OPPT-2018-0448-0591"
+    #       selector: "input[name='hiddenAgencyRadio-EPA-HQ-OPPT-2018-0448-0591']"
+    #       required: true
+    - find:
+        - selector: ".header"
+    - javascript:
+        - value: "$.ajax({ crossDomain: true, contentType: 'application/vnd.api+json', excludeCsrfTokenHeader: true, headers: { 'x-api-key': $('#new_comment').data('api-key') }, url: 'https://api.regulations.gov/v4/comments', type: 'POST', data: JSON.stringify({ data: { attributes: $('#new_comment').serializeArray().reduce((function(e, n) { return n.value && (i = n.name.match(/comment.([a-zA-Z0-9_]*)./)) && (['comment[sendEmailReceipt]'] == n.name ? (r = 'input[name =' + n.name + ']', a = $(r).is(':checked')) : a = n.value, e[i[1]] = a), e } ), {}), type: 'comments' } }), success: function(t) { $('.header').append('done1suc1') }, error: function(j, t, e) { $('.header').append(j.responseText) } }).always(function(e) { $('.header').append('done1') }).done(function(e) { $.ajax({ url: '/my/documents/' + $('#new_comment').data('document-number') + '/comments', type: 'POST', dataType: 'html', data: { reg_gov_response_data: e.data }, success: function(t) { $('.header').append(t) }, headers: { 'X-CSRFToken': $('meta[name=csrf-token]').attr('content') }, error: function(j, t, e) { $('.header').append(j.responseText) } }).done(function(e) { $('.header').append('done2suc2') }).always(function(e) { $('.header').append('done2') }) });"
+    - javascript:
+        - value: "Array.prototype.forEach.call(document.querySelectorAll('style,[rel~=\"stylesheet\"],[type=\"text/css\"]'), function(element){ try{ element.parentNode.removeChild(element) } catch(err){} });"
+    - javascript:
+        - value: "document.querySelector('div.comment_form_wrapper .notice').style.display = 'block'"
     - wait:
         - value: 10
+    - find:
+        - selector: ".header div.comment_form_wrapper .notice"
   success:
     headers:
       status: 200
     body:
       contains: Thank you! Your comment has been submitted
+
