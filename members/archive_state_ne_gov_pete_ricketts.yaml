@@ -1,4 +1,4 @@
-bioguide: state_ne_gov_pete_ricketts
+bioguide: archive_state_ne_gov_pete_ricketts
 contact_form:
   method: post
   action: "https://www.nebraska.gov/simpleMail/advanced.cgi"
