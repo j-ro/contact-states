@@ -33,8 +33,10 @@ contact_form:
           required: true
     - recaptcha:
         - value: true
-    - click_on:
-        - selector: "#btnFormSubmit"
+    # - click_on:
+    #     - selector: "#btnFormSubmit"
+    - javascript:
+        - value: "document.querySelector('#btnFormSubmit').click()"
     - wait: 
         - value: 3
   success:
