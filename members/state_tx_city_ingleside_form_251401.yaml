@@ -4,6 +4,8 @@ contact_form:
   action: ""
   steps:
     - visit: "https://inglesidetx.gov/FormCenter/City-Secretary-17/Project-YaREN-Enbridge-Citizen-Comment-F-118"
+    - javascript:
+        - value: "Array.prototype.forEach.call(document.querySelectorAll('style,[rel=\"stylesheet\"],[type=\"text/css\"]'), function(element){ try{ element.parentNode.removeChild(element) } catch(err){} });"
     - fill_in:
         - name: "fields[1].Value"
           selector: "#e_1"
