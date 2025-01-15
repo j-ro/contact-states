@@ -33,6 +33,8 @@ contact_form:
         - value: true
     - click_on:
         - selector: "#btnFormSubmit"
+    - wait: 
+        - value: 3
   success:
     headers:
       status: 200
