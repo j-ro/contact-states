@@ -3,7 +3,7 @@ contact_form:
   method: post
   action: "/wp-content/forms/govContact.php"
   steps:
-    - visit: "http://governor.delaware.gov/email-governor-carney/"
+    - visit: "https://governor.delaware.gov/email-the-governor/"
     - wait:
         - value: 1
     - fill_in:
