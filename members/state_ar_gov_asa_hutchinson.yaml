@@ -1,9 +1,9 @@
 bioguide: state_ar_gov_asa_hutchinson
 contact_form:
   method: post
-  action: "https://governor.arkansas.gov/online-services/contact-the-governor/"
+  action: ""
   steps:
-    - visit: "https://governor.arkansas.gov/online-services/contact-the-governor/"
+    - visit: "https://forms.indigov.com/customers/arkansasgovernor/ad43be61-b148-4b0e-8835-b4a18bc5a011/"
     - wait:
         - value: 1
     - javascript:
