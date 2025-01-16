@@ -3,46 +3,46 @@ contact_form:
   method: POST
   action: ""
   steps:
-    - visit: https://contact.no10.gov.uk/
+    - visit: "https://contact.no10.gov.uk/"        
     - fill_in:
-        - name: ctl00$ContentPlaceHolderMain$txtName
+        - name: "ctl00$ContentPlaceHolderMain$txtName"
           selector: "#ContentPlaceHolderMain_txtName"
           value: $NAME_FULL
           required: true
-        - name: ctl00$ContentPlaceHolderMain$txtSubject
+        - name: "ctl00$ContentPlaceHolderMain$txtSubject"
           selector: "#ContentPlaceHolderMain_txtSubject"
           value: $SUBJECT
           required: true
-        - name: ctl00$ContentPlaceHolderMain$txtAddress1
+        - name: "ctl00$ContentPlaceHolderMain$txtAddress1"
           selector: "#ContentPlaceHolderMain_txtAddress1"
           value: $ADDRESS_STREET
           required: true
-        - name: ctl00$ContentPlaceHolderMain$txtTown
+        - name: "ctl00$ContentPlaceHolderMain$txtTown"
           selector: "#ContentPlaceHolderMain_txtTown"
           value: $ADDRESS_CITY
           required: true
-        - name: ctl00$ContentPlaceHolderMain$txtPostcode
+        - name: "ctl00$ContentPlaceHolderMain$txtPostcode"
           selector: "#ContentPlaceHolderMain_txtPostcode"
           value: $ADDRESS_ZIP5
-          required: true
-        - name: ctl00$ContentPlaceHolderMain$txtMessage
+          required: true       
+        - name: "ctl00$ContentPlaceHolderMain$txtMessage"
           selector: "#ContentPlaceHolderMain_txtMessage"
           value: $MESSAGE
-          required: true
-        - name: ctl00$ContentPlaceHolderMain$txtEmail
+          required: true     
+        - name: "ctl00$ContentPlaceHolderMain$txtEmail"
           selector: "#ContentPlaceHolderMain_txtEmail"
           value: $EMAIL
-          required: true
-        - name: ctl00$ContentPlaceHolderMain$txtEmailConfirm
+          required: true    
+        - name: "ctl00$ContentPlaceHolderMain$txtEmailConfirm"
           selector: "#ContentPlaceHolderMain_txtEmailConfirm"
           value: $EMAIL
-          required: true
+          required: true     
     - click_on:
-        - "#ContentPlaceHolderMain_butSendMessage"
+        - "#ContentPlaceHolderMain_butSendMessage"   
     - wait:
         - value: 5
   success:
     headers:
       status: 200
     body:
-      contains: "An email has been sent to the email address you gave"
+      contains: An email has been sent to the email address you gave
