@@ -3,7 +3,7 @@ contact_form:
   method: POST
   action: ""
   steps:
-    - visit: "https://contact.no10.gov.uk/"        
+    - visit: "https://contact.no10.gov.uk/"         
     - fill_in:
         - name: "ctl00$ContentPlaceHolderMain$txtName"
           selector: "#ContentPlaceHolderMain_txtName"
