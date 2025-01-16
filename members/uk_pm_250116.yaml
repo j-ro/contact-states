@@ -45,4 +45,4 @@ contact_form:
     headers:
       status: 200
     body:
-      contains: An email has been sent to the email address you gave
+      contains: "An email has been sent to the email address you gave"
