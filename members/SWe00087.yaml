@@ -1,41 +1,43 @@
 bioguide: SWe00087
 contact_form:
   method: post
-  action: "http://www.in.gov/apps/afss/afss2"
+  action: "" #http://www.in.gov/apps/afss/afss2"
   steps:
-    - visit: "https://www.in.gov/gov/ask-eric/"
+    - visit: "https://in.accessgov.com/gov/Forms/Page/gov/ask-mike/0"
     - fill_in:
         - name: first
-          selector: "#first"
+          selector: "#a52b4b48-f55f-4fed-8ee3-0f289c78c414"
           value: $NAME_FIRST
           required: true
         - name: last
-          selector: "#last"
+          selector: "#4ee578a7-d97a-4c13-8727-14118f1b3880"
           value: $NAME_LAST
           required: true
         - name: street
-          selector: "#street"
+          selector: "#dd16d7ca-911e-4304-ae8a-854172549cf6"
           value: $ADDRESS_STREET
           required: true
         - name: city
-          selector: "#city"
+          selector: "#ci0eae9fae-7a0f-4f46-99f8-f1f6b63805daty"
           value: $ADDRESS_CITY
           required: true
         - name: zip
-          selector: "#zip"
+          selector: "#b46500bc-219f-4809-bc95-050de6ffc3d3"
           value: $ADDRESS_ZIP5
           required: true
         - name: email
-          selector: "#email"
+          selector: "#96839140-88ac-499d-a870-80be81260071"
           value: $EMAIL
           required: true
         - name: message
-          selector: "#message"
+          selector: "#741a51c4-65cc-4132-ad21-1c30501b9f59"
           value: $MESSAGE
           required: true
+    - click_on:
+        - selector: "#c823d3f2-45c4-4059-8a35-e42d664e850b"
     - select:
         - name: subject
-          selector: "#subject"
+          selector: "#c823d3f2-45c4-4059-8a35-e42d664e850b"
           value: $TOPIC
           required: true
           options:
@@ -106,7 +108,7 @@ contact_form:
             Other: other
     - click_on:
         - value: Submit
-          selector: "#govcontact input[type='submit'][value='Submit']"
+          selector: "button[name='saveType'].df-save-and-continue-btn"
     - wait:
         - value: 5
   success:
