@@ -5,7 +5,7 @@ contact_form:
   steps:
     - visit: "https://in.accessgov.com/gov/Forms/Page/gov/ask-mike/0"
     - wait:
-        - value: 5
+        - value: 20
     - fill_in:
         - selector: "#a52b4b48-f55f-4fed-8ee3-0f289c78c414"
           value: $NAME_FIRST
