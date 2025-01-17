@@ -1,9 +1,9 @@
-bioguide: federalregister_ed_241202
+bioguide: federalregister_fws_241125
 contact_form:
   method: POST
   action: "https://api.regulations.gov/v4/comments"
   steps:
-    - visit: "https://www.federalregister.gov/documents/2024/10/31/2024-25067/student-debt-relief-based-on-hardship-for-the-william-d-ford-federal-direct-loan-program-direct#open-comment"
+    - visit: "https://www.federalregister.gov/documents/2024/09/24/2024-21182/endangered-and-threatened-wildlife-and-plants-critical-habitat-designations-for-florida-manatee-and#open-comment"
     - javascript:
         - value: "document.querySelector('.comment_wrapper').style.display = 'block'"
     # - javascript:
@@ -36,7 +36,7 @@ contact_form:
     - javascript:
         - value: "$('#comment_submitterType').val('INDIVIDUAL');"
     - javascript:
-        - value: "$('input[name=\"comment[commentOnDocumentId]\"]').val(\"ED-2023-OPE-0123-32489\")" # swap on new yamls
+        - value: "$('input[name=\"comment[commentOnDocumentId]\"]').val(\"FWS-R4-ES-2024-0073-0001\")" # swap on new yamls
     - fill_in:
         - name: "comment[firstName]"
           selector: "input[name='comment[firstName]']"
@@ -138,7 +138,7 @@ contact_form:
     - fill_in: 
         - name: "comment[secret]"
           selector: "input[name='comment[secret]']"
-          value: "3spdljehnxn" # swap on new yamls
+          value: "jcukbhbh5k" # swap on new yamls
           required: true 
     # - choose: 
     #     - name: "hiddenAgencyRadio-EPA-HQ-OPPT-2018-0448-0591"

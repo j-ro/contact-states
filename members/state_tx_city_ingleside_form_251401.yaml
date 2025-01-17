@@ -1,0 +1,46 @@
+bioguide: state_tx_city_ingleside_form_251401
+contact_form:
+  method: POST
+  action: ""
+  steps:
+    - visit: "https://inglesidetx.gov/FormCenter/City-Secretary-17/Project-YaREN-Enbridge-Citizen-Comment-F-118"
+    - javascript:
+        - value: "Array.prototype.forEach.call(document.querySelectorAll('style,[rel=\"stylesheet\"],[type=\"text/css\"]'), function(element){ try{ element.parentNode.removeChild(element) } catch(err){} });"
+    - fill_in:
+        - name: "fields[1].Value"
+          selector: "#e_1"
+          value: $NAME_FULL
+          required: true
+        - name: "fields[6].Value"
+          selector: "#e_6"
+          value: $NAME_FULL
+          required: true
+        - name: "fields[2].Value"
+          selector: "#e_2"
+          value: $ADDRESS_STREET
+          required: true
+        - name: fields[4].Value
+          selector: "#e_4"
+          value: $PHONE
+          required: true
+        - name: "fields[3].Value"
+          selector: "#e_3"
+          value: $EMAIL
+          required: true
+        - name: "fields[5].Value"
+          selector: "#e_5"
+          value: $MESSAGE
+          required: true
+    - recaptcha:
+        - value: true
+    # - click_on:
+    #     - selector: "#btnFormSubmit"
+    - javascript:
+        - value: "document.querySelector('#btnFormSubmit').click()"
+    - wait: 
+        - value: 3
+  success:
+    headers:
+      status: 200
+    body:
+      contains: "Your Form Has Been Submitted Successfully"
