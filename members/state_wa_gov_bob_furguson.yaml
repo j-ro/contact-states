@@ -1,0 +1,84 @@
+bioguide: state_wa_gov_bob_furguson
+contact_form:
+  method: post
+  action: "https://iqconnect.lmhostediq.com/iqextranet/EForm.aspx?__cid=FSL_WA_GOV&__fid=100110"
+  steps:
+    - visit: "https://iqconnect.lmhostediq.com/iqextranet/EForm.aspx?__cid=FSL_WA_GOV&__fid=100110"
+    - fill_in:
+        - name: qi_1_first_name
+          selector: "#qi_1_first_name"
+          value: $NAME_FIRST
+          required: true
+        - name: qi_1_last_name
+          selector: "#qi_1_last_name"
+          value: $NAME_LAST
+          required: true
+        - name: qi_1_addr_1
+          selector: "#qi_1_addr_1"
+          value: $ADDRESS_STREET
+          required: true
+        - name: qi_1_city
+          selector: "#qi_1_city"
+          value: $ADDRESS_CITY
+          required: true
+        - name: qi_1_zip
+          selector: "#qi_1_zip"
+          value: $ADDRESS_ZIP5
+          required: true
+        - name: qi_1_email
+          selector: "#qi_1_email"
+          value: $EMAIL
+          required: true
+        - name: qi_1_hphone
+          selector: "#qi_1_hphone"
+          value: $PHONE
+          required: true
+        - name: qi_5
+          selector: "#qi_5"
+          value: $MESSAGE
+          required: true
+    - select:
+        - name: qi_1_state
+          selector: "#qi_1_state"
+          value: $ADDRESS_STATE_FULL
+          options:
+            Iowa: 58_WA
+        - name: qi_4
+          selector: "#qi_4"
+          value: $TOPIC
+          required: true
+          options:
+            Agriculture: 0_Agriculture
+            Animal: 1_Animal
+            Budget: 2_Budget
+            Commerce/Business/Economic Development: 3_Commerce/Business/Economic Development
+            COVID-19: 4_COVID-19
+            Education/Schools: 5_Education/Schools
+            Emergency Preparedness: 6_Emergency Preparedness
+            Energy: 7_Energy
+            Environment: 8_Environment
+            Gun Control: 9_Gun Control
+            Health Care: 10_Health Care
+            Housing: 11_Housing
+            Immigration: 12_Immigration
+            Issue with a State Agency: 13_Issue with a State Agency
+            Legal/Crime/Law Enforcement: 14_Legal/Crime/Law Enforcement
+            Legislative Bills and Comments: 15_Legislative Bills and Comments
+            Licensing: 16_Licensing
+            Mortgage/Loans/Banking/Foreclosure: 17_Mortgage/Loans/Banking/Foreclosure
+            Natural Resources: 18_Natural Resources
+            Parks and Recreation: 19_Parks and Recreation
+            Social Services: 20_Social Services
+            Taxes: 21_Taxes
+            Transportation: 22_Transportation
+            Tribal: 23_Tribal
+            Utilities: 24_Utilities
+            Veterans: 25_Veterans
+    - click_on:
+        - value: Submit
+          selector: "#btn_submit"
+  success:
+    headers:
+      status: 200
+    body:
+      contains: Thank you for contacting
