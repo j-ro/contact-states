@@ -4,6 +4,8 @@ contact_form:
   action: "https://www.whitehouse.gov/contact/"
   steps:
     - visit: "https://www.whitehouse.gov/contact/"
+    - wait:
+        - value: 10
     - find:
         - selector: "input[name='FirstName']"
     - fill_in:
