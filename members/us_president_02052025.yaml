@@ -1,11 +1,11 @@
 bioguide: us_president_02052025
 contact_form:
   method: POST
-  action: "https://www.whitehouse.gov/contact/"
+  action: "https://www.whitehouse.gov/form-api/contact-v1.json"
   steps:
     - visit: "https://www.whitehouse.gov/contact/"
     - wait:
-        - value: 10
+        - value: 5
     - find:
         - selector: "input[name='FirstName']"
     - fill_in:
@@ -125,8 +125,10 @@ contact_form:
             - Dr.
     - click_on:
         - selector: ".whitehouse-form__button"
+    - javascript:
+        - value: "document.querySelector('.whitehouse-form__button').click()"
     - wait:
-        - value: 2
+        - value: 5
   success:
     headers:
       status: 200
