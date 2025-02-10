@@ -126,7 +126,9 @@ contact_form:
     - click_on:
         - selector: ".whitehouse-form__button"
     - javascript:
-        - value: "document.querySelector('.whitehouse-form__button').click()"
+        - value: "document.body.appendChild(Object.assign(document.createElement('script'), {src: 'https://code.jquery.com/jquery-3.7.1.min.js'}));"
+    - javascript:
+        - value: "jQuery('form').append('hi from  jquery');"
     - wait:
         - value: 5
   success:
