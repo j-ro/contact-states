@@ -3,9 +3,15 @@ contact_form:
   method: POST
   action: "https://www.whitehouse.gov/form-api/contact-2022-03-14.json"
   steps:
-    - visit: "https://www.whitehouse.gov/contact/"
+    - visit: "https://www.whitehouse.gov/news/"
     - wait:
         - value: 5
+    - javascript:
+        - value: "document.querySelector('.wp-block-whitehouse-header__menu-toggle--button').click()"
+    - javascript:
+        - value: "document.querySelector('#menu-item-1271').click()"
+    - wait:
+        - value: 2
     - find:
         - selector: "input[name='FirstName']"
     - fill_in:
