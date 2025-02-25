@@ -6,11 +6,11 @@ contact_form:
     - visit: "https://www.senatorlightford.com/contact-us"
     - fill_in:
         - name: "form[firstName]"
-          selector: "#firstName"
+          selector: "#rsform_3_page_0 #firstName"
           value: $NAME_FIRST
           required: true
         - name: "form[lastName]"
-          selector: "#lastName"
+          selector: "#rsform_3_page_0 #lastName"
           value: $NAME_LAST
           required: true
         - name: "form[address]"
@@ -30,7 +30,7 @@ contact_form:
           value: $ADDRESS_ZIP5
           required: true
         - name: "form[email]"
-          selector: "#email"
+          selector: "#rsform_3_page_0 #email"
           value: $EMAIL
           required: true
         - name: "form[essay1]"
