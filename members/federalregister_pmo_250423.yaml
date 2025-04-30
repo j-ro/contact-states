@@ -153,7 +153,7 @@ contact_form:
     - javascript:
         - value: "document.querySelector('div.comment_form_wrapper .notice').style.display = 'block'"
     - wait:
-        - value: 10
+        - value: 15
     - find:
         - selector: ".header div.comment_form_wrapper .notice"
   success:
