@@ -1,0 +1,38 @@
+bioguide: joe_rogan_experiencee_250502
+contact_form:
+  method: POST
+  action: ""
+  steps:
+    - visit: "https://www.joeroganexperiencereview.com/contact"
+    - fill_in:
+        - name: "first-name"
+          selector: "#input_comp-kyc26wzb"
+          value: $NAME_FIRST
+          required: false
+        - name: "last-name"
+          selector: "#input_comp-kyc26wzq1"
+          value: $NAME_LAST
+          required: false
+        - name: "email"
+          selector: "#input_comp-kyc26x00"
+          value: $EMAIL
+          required: true
+          required: true
+        - name: "custom-1117"
+          selector: "#textarea_comp-kyc26x021"
+          value: $MESSAGE
+          required: true
+    - select:
+        - name: "custom-15644"
+          selector: "#custom-15644"
+          value: Policy/Strategy
+          required: true
+    - click_on:
+         - selector: "#comp-kyc26x0h1"
+
+  success:
+    headers:
+      status: 200
+    body:
+      contains: RECEIVED
+
