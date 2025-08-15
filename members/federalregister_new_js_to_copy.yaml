@@ -3,15 +3,11 @@ contact_form:
   method: POST
   action: "https://api.regulations.gov/v4/comments"
   steps:
-    - visit: "https://www.federalregister.gov/documents/2024/10/31/2024-25067/student-debt-relief-based-on-hardship-for-the-william-d-ford-federal-direct-loan-program-direct#open-comment"
+    - visit: "https://www.federalregister.gov/documents/2024/10/31/2024-25067/student-debt-relief-based-on-hardship-for-the-william-d-ford-federal-direct-loan-program-direct#open-comment" #TODO: swap on new yamls
     - javascript:
         - value: "document.querySelector('.comment_wrapper').style.display = 'block'"
-    # - javascript:
-    #     - value: "document.querySelector('input[value=\"FWS-R4-ES-2024-0073-0001\"]').click()"d
     - click_on:
         - selector: "#start_comment"
-    # - click_on: 
-    #     - selector: "a.agency-select-btn-js[data-regs-dot-gov-document-id='EPA-HQ-OPPT-2018-0448-0591']"
     - javascript:
         - value: "document.querySelector('div.comment-form-fields-js').classList.remove('cj-hidden')"
     - javascript:
@@ -140,10 +136,6 @@ contact_form:
           selector: "input[name='comment[secret]']"
           value: "3spdljehnxn" # TODO: swap on new yamls
           required: true 
-    # - choose: 
-    #     - name: "hiddenAgencyRadio-EPA-HQ-OPPT-2018-0448-0591"
-    #       selector: "input[name='hiddenAgencyRadio-EPA-HQ-OPPT-2018-0448-0591']"
-    #       required: true
     - find:
         - selector: ".header"
     - javascript:
