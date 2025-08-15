@@ -155,7 +155,7 @@ contact_form:
     - wait:
         - value: 10
     - find:
-        - selector: ".header div.comment_form_wrapper"
+        - selector: ".header"
   success:
     headers:
       status: 200
