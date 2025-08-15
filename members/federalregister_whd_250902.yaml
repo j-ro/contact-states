@@ -36,7 +36,7 @@ contact_form:
     - javascript:
         - value: "$('#comment_submitterType').val('INDIVIDUAL');"
     - javascript:
-        - value: "$('input[name=\"comment[commentOnDocumentId]\"]').val(\"WHD-2025-0001-0001\")" # swap on new yamls
+        - value: "$('input[name=\"comment[commentOnDocumentId]\"]').val(\"WHD-2025-0001-0001\")" # swap on new yamls, remove slashes when debugging on console
     - fill_in:
         - name: "comment[firstName]"
           selector: "input[name='comment[firstName]']"
@@ -138,7 +138,7 @@ contact_form:
     - fill_in: 
         - name: "comment[secret]"
           selector: "input[name='comment[secret]']"
-          value: "4u5bii8w4x" # swap on new yamls
+          value: "91s0qybxqfg" # swap on new yamls
           required: true 
     # - choose: 
     #     - name: "hiddenAgencyRadio-EPA-HQ-OPPT-2018-0448-0591"
