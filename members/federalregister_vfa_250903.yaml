@@ -4,8 +4,10 @@ contact_form:
   action: ""
   steps:
     - visit: "https://www.federalregister.gov/documents/2025/08/04/2025-14687/reproductive-health-services#open-comment"
-    - find:
-        - selector: "#comment_comment"
+    - javascript:
+        - value: "document.querySelector('.comment_wrapper').style.display = 'block'"
+    - click_on:
+        - selector: "#start_comment"
     - wait:
         - value: 5
     - fill_in:
