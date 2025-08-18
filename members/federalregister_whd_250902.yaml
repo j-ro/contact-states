@@ -18,13 +18,13 @@ contact_form:
         - selector: "textarea[name='comment[comment]']"
     - wait:
         - value: 5
-    # - fill_in:
-    #     - selector: "textarea[name='comment[comment]']"
-    #       name: "comment[comment]"
-    #       value: $MESSAGE
-    #       required: true
-    #       options:
-    #         max_length: 2000
+    - fill_in:
+        - selector: "textarea[name='comment[comment]']"
+          name: "comment[comment]"
+          value: $MESSAGE
+          required: true
+          options:
+            max_length: 2000
     - click_on:
         - selector: "div[data-submitter-type='individual'] input[type='radio']"        
     - javascript:
