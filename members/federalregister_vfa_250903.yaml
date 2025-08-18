@@ -19,6 +19,12 @@ contact_form:
             max_length: 2000
     - click_on:
         - selector: "div[data-submitter-type='individual'] input[type='radio']"        
+    - javascript:
+        - value: "document.querySelector('div.submitter-section-js[data-submitter-type=\"individual\"]').classList.remove('cj-hidden');"
+    - javascript:
+        - value: "$('#comment_submitterType').val('INDIVIDUAL');"
+    - javascript:
+        - value: "$('input[name=\"comment[commentOnDocumentId]\"]').val(\"VA-2025-VHA-0073-0002\")" # swap on new yamls, remove slashes when debugging on console
     - fill_in:
         - name: "comment[firstName]"
           selector: "#comment_firstName"
