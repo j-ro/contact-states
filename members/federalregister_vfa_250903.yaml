@@ -1,29 +1,15 @@
 bioguide: federalregister_vfa_250903
 contact_form:
   method: POST
-  action: "https://api.regulations.gov/v4/comments"
+  action: ""
   steps:
     - visit: "https://www.federalregister.gov/documents/2025/08/04/2025-14687/reproductive-health-services#open-comment"
-    - javascript:
-        - value: "document.querySelector('.comment_wrapper').style.display = 'block'"
-    # - javascript:
-    #     - value: "document.querySelector('input[value=\"FWS-R4-ES-2024-0073-0001\"]').click()"d
-    - click_on:
-        - selector: "#start_comment"
-    # - click_on: 
-    #     - selector: "a.agency-select-btn-js[data-regs-dot-gov-document-id='EPA-HQ-OPPT-2018-0448-0591']"
-    - javascript:
-        - value: "document.querySelector('div.comment-form-fields-js').classList.remove('cj-hidden')"
-    - javascript:
-        - value: "document.querySelector('div.comment-form-fields-js').style.display = 'block'"    
-    - wait:
-        - value: 3
     - find:
-        - selector: "textarea[name='comment[comment]']"
+        - selector: "#comment_comment"
     - wait:
         - value: 5
     - fill_in:
-        - selector: "textarea[name='comment[comment]']"
+        - selector: "#comment_comment"
           name: "comment[comment]"
           value: $MESSAGE
           required: true
@@ -31,36 +17,30 @@ contact_form:
             max_length: 2000
     - click_on:
         - selector: "div[data-submitter-type='individual'] input[type='radio']"        
-    - javascript:
-        - value: "document.querySelector('div.submitter-section-js[data-submitter-type=\"individual\"]').classList.remove('cj-hidden');"
-    - javascript:
-        - value: "$('#comment_submitterType').val('INDIVIDUAL');"
-    - javascript:
-        - value: "$('input[name=\"comment[commentOnDocumentId]\"]').val(\"VA-2025-VHA-0073-0002\")" # swap on new yamls
     - fill_in:
         - name: "comment[firstName]"
-          selector: "input[name='comment[firstName]']"
+          selector: "#comment_firstName"
           value: $NAME_FIRST
           required: true
         - name: "comment[lastName]"
-          selector: "input[name='comment[lastName]']"
+          selector: "#comment_lastName"
           value: $NAME_LAST
           required: true
         - name: "comment[email]"
-          selector: "input[name='comment[email]']"
+          selector: "#comment_email"
           value: $EMAIL
           required: true
         - name: "comment[city]"
-          selector: "input[name='comment[city]']"
+          selector: "#comment_city"
           value: $ADDRESS_CITY
           required: true
         - name: "comment[zip]"
-          selector: "input[name='comment[zip]']"
+          selector: "#comment_zip"
           value: $ADDRESS_ZIP5
-          required: true       
+          required: true        
     - select:
         - name: "comment[stateProvinceRegion]"
-          selector: "select[name='comment[stateProvinceRegion]']"
+          selector: "#comment_stateProvinceRegion"
           value: $ADDRESS_STATE_POSTAL_ABBREV
           required: true
           options:
@@ -123,42 +103,19 @@ contact_form:
             Wisconsin: WI
             Wyoming: WY
         - name: "comment[country]"
-          selector: "select[name='comment[country]']"
+          selector: "#comment_country"
           value: "United States"
-          required: true 
-    - check:
-        - name: "comment[confirm_submission]"
-          selector: "input[name='comment[confirm_submission]']"
-          value: "1"
-          required: true
-    - javascript:
-        - value: "Array.prototype.forEach.call(document.querySelectorAll('style,[rel~=\"stylesheet\"],[type=\"text/css\"]'), function(element){ try{ element.parentNode.removeChild(element) } catch(err){} });"
-    - javascript:
-        - value: "document.querySelector('input[name=\"comment[secret]\"]').type = 'text'"
-    - fill_in: 
-        - name: "comment[secret]"
-          selector: "input[name='comment[secret]']"
-          value: "ej29cfcuv7d" # swap on new yamls
-          required: true 
-    # - choose: 
-    #     - name: "hiddenAgencyRadio-EPA-HQ-OPPT-2018-0448-0591"
-    #       selector: "input[name='hiddenAgencyRadio-EPA-HQ-OPPT-2018-0448-0591']"
-    #       required: true
-    - find:
-        - selector: ".header"
-    - javascript:
-        - value: "$.ajax({ crossDomain: true, contentType: 'application/vnd.api+json', excludeCsrfTokenHeader: true, headers: { 'x-api-key': $('#new_comment').data('api-key') }, url: 'https://api.regulations.gov/v4/comments', type: 'POST', data: JSON.stringify({ data: { attributes: $('#new_comment').serializeArray().reduce((function(e, n) { return n.value && (i = n.name.match(/comment.([a-zA-Z0-9_]*)./)) && (['comment[sendEmailReceipt]'] == n.name ? (r = 'input[name =' + n.name + ']', a = $(r).is(':checked')) : a = n.value, e[i[1]] = a), e } ), {}), type: 'comments' } }), success: function(t) { $('.header').append('done1suc1') }, error: function(j, t, e) { $('.header').append(j.responseText) } }).always(function(e) { $('.header').append('done1') }).done(function(e) { $.ajax({ url: '/my/documents/' + $('#new_comment').data('document-number') + '/comments', type: 'POST', dataType: 'html', data: { reg_gov_response_data: e.data }, success: function(t) { $('.header').append(t) }, headers: { 'X-CSRFToken': $('meta[name=csrf-token]').attr('content') }, error: function(j, t, e) { $('.header').append(j.responseText) } }).done(function(e) { $('.header').append('done2suc2') }).always(function(e) { $('.header').append('done2') }) });"
-    - javascript:
-        - value: "Array.prototype.forEach.call(document.querySelectorAll('style,[rel~=\"stylesheet\"],[type=\"text/css\"]'), function(element){ try{ element.parentNode.removeChild(element) } catch(err){} });"
-    - javascript:
-        - value: "document.querySelector('div.comment_form_wrapper .notice').style.display = 'block'"
+          required: true   
+    - click_on:
+        - selector: "#comment_confirm_submission"
     - wait:
-        - value: 10
-    - find:
-        - selector: ".header div.comment_form_wrapper .notice"
+        - value: 5
+    - javascript:
+        - value: "document.querySelector('.commit input').click();"
+    - wait:
+        - value: 7
   success:
     headers:
       status: 200
     body:
       contains: Thank you! Your comment has been submitted
-
