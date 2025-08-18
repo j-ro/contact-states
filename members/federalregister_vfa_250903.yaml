@@ -48,7 +48,7 @@ contact_form:
           required: true        
     - select:
         - name: "comment[stateProvinceRegion]"
-          selector: "#select[name='comment[stateProvinceRegion]']"
+          selector: "select[name='comment[stateProvinceRegion]']"
           value: $ADDRESS_STATE_POSTAL_ABBREV
           required: true
           options:
