@@ -18,7 +18,7 @@ contact_form:
           options:
             max_length: 5000
     - click_on:
-        - selector: "#individual"
+        - selector: ".icon-individual"
     - fill_in:
         - name: fname
           selector: input[name='fname']
