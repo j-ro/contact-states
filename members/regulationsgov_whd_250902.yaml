@@ -1,5 +1,5 @@
 ---
-bioguide: federalregister_whd_250902_b
+bioguide: regulationsgov_whd_250902
 contact_form:
   method: POST
   action: https://api.regulations.gov/v4/comments
