@@ -6,6 +6,10 @@ contact_form:
   steps:
     - visit: https://www.regulations.gov/commenton/WHD-2025-0001-0001
     - find:
+        - selector: "#mainNavigation"
+    - javascript:
+        - value: "document.querySelector('#mainNavigation').textContent += window.location.href"
+    - find:
         - selector: "#controlid-ember12"
     - fill_in:
         - selector: "#controlid-ember12"
