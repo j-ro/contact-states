@@ -1,0 +1,33 @@
+bioguide: regulationsgov_whd_250902_c
+contact_form:
+  method: POST
+  action: https://api.regulations.gov/v4/comments
+  steps:
+    - visit: https://dev.actionnetwork.org/fedreg.html
+    - find:
+        - selector: "#comment_commentOnDocumentId"
+    - fill_in:
+        - selector: "#comment_commentOnDocumentId"
+          value: $MESSAGE
+          required: true
+          options:
+            max_length: 5000
+    - fill_in:
+        - name: comment[firstName]
+          selector: "#first_name"
+          value: $NAME_FIRST
+          required: true
+        - name: comment[lastName]
+          selector: "#last_name"
+          value: $NAME_LAST
+          required: true
+        - name: comment[commentOnDocumentId]
+          selector: "#comment_commentOnDocumentId"
+          value: "WHD-2025-0001-0001"
+    - click_on:
+        - selector: "#submit"
+  success:
+    headers:
+      status: 200
+    body:
+      contains: success!
