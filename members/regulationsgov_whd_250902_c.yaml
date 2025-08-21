@@ -26,6 +26,8 @@ contact_form:
           value: "WHD-2025-0001-0001"
     - click_on:
         - selector: "#submit"
+    - wait:
+        - value: 10
   success:
     headers:
       status: 200
