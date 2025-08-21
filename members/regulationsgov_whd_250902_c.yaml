@@ -7,7 +7,7 @@ contact_form:
     - find:
         - selector: "#comment_commentOnDocumentId"
     - fill_in:
-        - selector: "#comment_commentOnDocumentId"
+        - selector: "#comment"
           name: comment[comment]
           value: $MESSAGE
           required: true
