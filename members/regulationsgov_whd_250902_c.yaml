@@ -3,7 +3,7 @@ contact_form:
   method: POST
   action: https://api.regulations.gov/v4/comments
   steps:
-    - visit: https://dev.actionnetwork.org/fedreg.html
+    - visit: https://actionnetwork.org/fedreg.html
     - find:
         - selector: "#comment_commentOnDocumentId"
     - fill_in:
