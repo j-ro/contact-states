@@ -23,7 +23,7 @@ contact_form:
           required: true
         - name: comment[commentOnDocumentId]
           selector: "#comment_commentOnDocumentId"
-          value: "WHD-2025-0001-0001" #replace this with the ID you find in the value for the #comment_commentOnDocumentId hidden input tag on the federal register page
+          value: "WHD-2025-0001-0001" #TODO: replace this with the ID you find in the value for the #comment_commentOnDocumentId hidden input tag on the federal register page
     - click_on:
         - selector: "#submit"
     - wait:
