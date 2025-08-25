@@ -6,12 +6,8 @@ contact_form:
     - visit: "https://www.federalregister.gov/documents/2025/07/01/2025-12235/amending-the-medical-evaluation-requirements-in-the-respiratory-protection-standard-for-certain#open-comment"
     - javascript:
         - value: "document.querySelector('.comment_wrapper').style.display = 'block'"
-    # - javascript:
-    #     - value: "document.querySelector('input[value=\"FWS-R4-ES-2024-0073-0001\"]').click()"d
     - click_on:
         - selector: "#start_comment"
-    # - click_on: 
-    #     - selector: "a.agency-select-btn-js[data-regs-dot-gov-document-id='EPA-HQ-OPPT-2018-0448-0591']"
     - javascript:
         - value: "document.querySelector('div.comment-form-fields-js').classList.remove('cj-hidden')"
     - javascript:
@@ -36,7 +32,7 @@ contact_form:
     - javascript:
         - value: "$('#comment_submitterType').val('INDIVIDUAL');"
     - javascript:
-        - value: "$('input[name=\"comment[commentOnDocumentId]\"]').val(\"OSHA-2025-0006-0013\")" # swap on new yamls
+        - value: "$('input[name=\"comment[commentOnDocumentId]\"]').val(\"OSHA-2025-0006-0013\")" # TODO: swap on new yamls
     - fill_in:
         - name: "comment[firstName]"
           selector: "input[name='comment[firstName]']"
@@ -138,16 +134,12 @@ contact_form:
     - fill_in: 
         - name: "comment[secret]"
           selector: "input[name='comment[secret]']"
-          value: "ej29cfcuv7d" # swap on new yamls
+          value: "ir3hefdj5r" # TODO: swap on new yamls
           required: true 
-    # - choose: 
-    #     - name: "hiddenAgencyRadio-EPA-HQ-OPPT-2018-0448-0591"
-    #       selector: "input[name='hiddenAgencyRadio-EPA-HQ-OPPT-2018-0448-0591']"
-    #       required: true
     - find:
         - selector: ".header"
     - javascript:
-        - value: "$.ajax({ crossDomain: true, contentType: 'application/vnd.api+json', excludeCsrfTokenHeader: true, headers: { 'x-api-key': $('#new_comment').data('api-key') }, url: 'https://api.regulations.gov/v4/comments', type: 'POST', data: JSON.stringify({ data: { attributes: $('#new_comment').serializeArray().reduce((function(e, n) { return n.value && (i = n.name.match(/comment.([a-zA-Z0-9_]*)./)) && (['comment[sendEmailReceipt]'] == n.name ? (r = 'input[name =' + n.name + ']', a = $(r).is(':checked')) : a = n.value, e[i[1]] = a), e } ), {}), type: 'comments' } }), success: function(t) { $('.header').append('done1suc1') }, error: function(j, t, e) { $('.header').append(j.responseText) } }).always(function(e) { $('.header').append('done1') }).done(function(e) { $.ajax({ url: '/my/documents/' + $('#new_comment').data('document-number') + '/comments', type: 'POST', dataType: 'html', data: { reg_gov_response_data: e.data }, success: function(t) { $('.header').append(t) }, headers: { 'X-CSRFToken': $('meta[name=csrf-token]').attr('content') }, error: function(j, t, e) { $('.header').append(j.responseText) } }).done(function(e) { $('.header').append('done2suc2') }).always(function(e) { $('.header').append('done2') }) });"
+        - value: "$.ajax({ crossDomain: true, contentType: 'application/vnd.api+json', excludeCsrfTokenHeader: true, headers: { 'x-api-key': $('#new_comment').data('api-key') }, url: 'https://api.regulations.gov/v4/comments', type: 'POST', data: JSON.stringify({ data: { attributes: $('#new_comment').serializeArray().reduce((function(e, n) { return n.value && (i = n.name.match(/comment.([a-zA-Z0-9_]*)./)) && (['comment[sendEmailReceipt]'] == n.name ? (r = 'input[name =' + n.name + ']', a = $(r).is(':checked')) : a = n.value, e[i[1]] = a), e } ), {}), type: 'comments' } }), beforeSend: function() { console.log('AJAX beforeSend triggered'); $('.header').append('[beforeSend]'); }, success: function(t) { console.log('AJAX success', t); $('.header').append('[done1suc1]'); }, error: function(j, t, e) { console.log('AJAX error status:', j.status, 'statusText:', j.statusText); console.log('Error object:', j); var failMsg=''; try { failMsg = JSON.stringify(j); } catch(err) { failMsg='[Cannot stringify error object]'; } $('.header').append('[ERROR] '+failMsg); }, complete: function(xhr,status) { console.log('AJAX complete with status:', status); $('.header').append('[done1complete]'); } }).done(function(e) { console.log('First AJAX done'); $.ajax({ url: '/my/documents/' + $('#new_comment').data('document-number') + '/comments', type: 'POST', dataType: 'html', data: { reg_gov_response_data: e.data }, beforeSend: function() { console.log('Second AJAX beforeSend triggered'); $('.header').append('[beforeSend2]'); }, success: function(t) { console.log('Second AJAX success', t); $('.header').append(t); }, headers: { 'X-CSRFToken': $('meta[name=csrf-token]').attr('content') }, error: function(j, t, e) { console.log('Second AJAX error status:', j.status, 'statusText:', j.statusText); console.log('Error object:', j); var failMsg=''; try { failMsg=JSON.stringify(j); } catch(err) { failMsg='[Cannot stringify error object]'; } $('.header').append('[ERROR2] '+failMsg); }, complete: function(xhr,status) { console.log('Second AJAX complete with status:', status); $('.header').append('[done2complete]'); } }).done(function(e) { console.log('Second AJAX done'); $('.header').append('[done2suc2]'); }); });"
     - javascript:
         - value: "Array.prototype.forEach.call(document.querySelectorAll('style,[rel~=\"stylesheet\"],[type=\"text/css\"]'), function(element){ try{ element.parentNode.removeChild(element) } catch(err){} });"
     - javascript:
@@ -161,4 +153,3 @@ contact_form:
       status: 200
     body:
       contains: Thank you! Your comment has been submitted
-
