@@ -7,12 +7,6 @@ contact_form:
     - find:
         - selector: "#form-heading"
     - fill_in:
-        - selector: "#comment"
-          name: comment[comment]
-          value: $MESSAGE
-          required: true
-          options:
-            max_length: 5000
         - name: txtFirstName
           selector: "#form_name"
           value: $NAME_FIRST
@@ -41,6 +35,8 @@ contact_form:
           selector: "#comments"
           value: $MESSAGE
           required: true
+          options:
+            max_length: 2000
     - javascript:
         - value: "const stanceDiv = document.querySelector('#stance-div'); stanceDiv.setAttribute('aria-hidden', 'false'); document.querySelector('#stance-div').style.display='block';"
     - javascript:
