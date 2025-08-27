@@ -1,0 +1,50 @@
+bioguide: obed-first-test #TODO: use naming convention to rename each new file
+contact_form:
+  method: POST
+  action: "https://lcmspubcontact.lc.ca.gov/PublicLCMS/ContactPopup.php?district=AD42"
+  steps:
+    - visit: "https://lcmspubcontact.lc.ca.gov/PublicLCMS/ContactPopup.php?district=AD42"
+    - find:
+        - selector: "#form-heading"
+    - fill_in:
+        - selector: "#comment"
+          name: comment[comment]
+          value: $MESSAGE
+          required: true
+          options:
+            max_length: 5000
+        - name: txtFirstName
+          selector: "#form_name"
+          value: $NAME_FIRST
+          required: true
+        - name: txtLastName
+          selector: "#form_lastname"
+          value: $NAME_LAST
+          required: true
+        - name: txtAddress
+          selector: "#form_address"
+          value: $ADDRESS_STREET
+          required: true
+        - name: txtCity
+          selector: "#form_city"
+          value: $ADDRESS_CITY
+          required: true
+        - name: txtZip
+          selector: "#form_zip"
+          value: $ADDRESS_ZIP5
+          required: true
+        - name: txtEmail
+          selector: "#form_email"
+          value: $EMAIL
+          required: true
+        - name: jv_text
+          selector: "#comments"
+          value: $MESSAGE
+          required: true
+    - click_on:
+        - selector: "#submitButton"
+  success:
+    headers:
+      status: 200
+    body:
+      contains: "Your message has been received. Thank you for contacting my office."
