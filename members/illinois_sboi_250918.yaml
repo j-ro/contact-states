@@ -1,0 +1,34 @@
+bioguide: illinois_sboi_20250918 #TODO: use naming convention to rename each new file
+contact_form:
+  method: POST
+  action: "https://www.isbinvestment.com/public-comments-form/"
+  steps:
+    - visit: "https://www.isbinvestment.com/public-comments-form/"
+    - find:
+        - selector: "#form-heading"
+    - fill_in:
+        - name: txtFirstName
+          selector: "#wpforms-7866-field_1"
+          value: $NAME_FIRST
+          required: true
+        - name: txtLastName
+          selector: "#wpforms-7866-field_1-last"
+          value: $NAME_LAST
+          required: false
+        - name: txtEmail
+          selector: "#wpforms-7866-field_2"
+          value: $EMAIL
+          required: true
+        - name: jv_text
+          selector: "#wpforms-7866-field_3"
+          value: $MESSAGE
+          required: true
+          options:
+            max_length: 2000
+    - find:
+        - selector: "#wpforms-submit-7866"
+  success:
+    headers:
+      status: 200
+    body:
+      contains: "Thank you for submitting your public comment. We will notify you if there is enough time for you request."
