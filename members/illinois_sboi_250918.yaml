@@ -5,7 +5,7 @@ contact_form:
   steps:
     - visit: "https://www.isbinvestment.com/public-comments-form/"
     - find:
-        - selector: "#form-heading"
+        - selector: "#wpforms-7866-field_1"
     - fill_in:
         - name: txtFirstName
           selector: "#wpforms-7866-field_1"
