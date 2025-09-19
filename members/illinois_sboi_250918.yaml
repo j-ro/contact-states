@@ -27,6 +27,8 @@ contact_form:
             max_length: 2000
     - find:
         - selector: "#wpforms-submit-7866"
+    - wait:
+        - value: 3 
   success:
     headers:
       status: 200
