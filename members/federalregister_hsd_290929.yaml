@@ -1,0 +1,35 @@
+bioguide: federalregister_hsd_290929 #TODO: use naming convention to rename each new file
+contact_form:
+  method: POST
+  action: https://api.regulations.gov/v4/comments
+  steps:
+    - visit: https://actionnetwork.org/fedreg.html
+    - find:
+        - selector: "#comment_commentOnDocumentId"
+    - fill_in:
+        - selector: "#comment"
+          name: comment[comment]
+          value: $MESSAGE
+          required: true
+          options:
+            max_length: 5000
+        - name: comment[firstName]
+          selector: "#first_name"
+          value: $NAME_FIRST
+          required: true
+        - name: comment[lastName]
+          selector: "#last_name"
+          value: $NAME_LAST
+          required: true
+        - name: comment[commentOnDocumentId]
+          selector: "#comment_commentOnDocumentId"
+          value: "ICEB-2025-0001-0001" #TODO: replace this with the ID you find in the value for the #comment_commentOnDocumentId hidden input tag on the federal register page
+    - click_on:
+        - selector: "#submit"
+    - wait:
+        - value: 2
+  success:
+    headers:
+      status: 200
+    body:
+      contains: success!
