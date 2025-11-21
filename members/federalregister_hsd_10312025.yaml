@@ -23,7 +23,7 @@ contact_form:
           required: true
         - name: comment[commentOnDocumentId]
           selector: "#comment_commentOnDocumentId"
-          value: "DHS_FRDOC_0001-2716" #TODO: replace this with the ID you find in the value for the #comment_commentOnDocumentId hidden input tag on the federal register page
+          value: "USCIS-2025-0337-0002" #TODO: replace this with the ID you find in the value for the #comment_commentOnDocumentId hidden input tag on the federal register page
     - click_on:
         - selector: "#submit"
     - wait:
