@@ -1,4 +1,4 @@
-bioguide: regulationsgov_whd_250902_c #TODO: use naming convention to rename each new file
+bioguide: federalregister_jd_04062026 #TODO: use naming convention to rename each new file
 contact_form:
   method: POST
   action: https://api.regulations.gov/v4/comments
@@ -13,7 +13,7 @@ contact_form:
           required: true
           options:
             max_length: 5000
-        - name: comment[firstName]
+        - name: comment[firstName] 
           selector: "#first_name"
           value: $NAME_FIRST
           required: true
@@ -23,7 +23,7 @@ contact_form:
           required: true
         - name: comment[commentOnDocumentId]
           selector: "#comment_commentOnDocumentId"
-          value: "WHD-2025-0001-0001" #TODO: replace this with the ID you find in the value for the #comment_commentOnDocumentId hidden input tag on the federal register page
+          value: "DOJ-OAG-2026-0001-0001" #TODO: replace this with the ID you find in the value for the  #comment_commentOnDocumentId hidden input tag on the federal register page
     - click_on:
         - selector: "#submit"
     - wait:
