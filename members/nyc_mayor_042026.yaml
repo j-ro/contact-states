@@ -23,10 +23,6 @@ contact_form:
           selector: "input[name='CITY']"
           value: $ADDRESS_CITY
           required: true
-        - name: STATE
-          selector: "input[name='STATE']"
-          value: $ADDRESS_STATE_POSTAL_ABBREV
-          required: true
         - name: ZIP
           selector: "input[name='ZIP']"
           value: $ADDRESS_ZIP5
