@@ -1,54 +1,64 @@
-bioguide: obed-first-test #TODO: use naming convention to rename each new file
+bioguide: nyc_mayor_042026  #TODO: use naming convention to rename each new file
 contact_form:
   method: POST
   action: "https://lcmspubcontact.lc.ca.gov/PublicLCMS/ContactPopup.php?district=AD42"
   steps:
     - visit: "https://lcmspubcontact.lc.ca.gov/PublicLCMS/ContactPopup.php?district=AD42"
     - find:
-        - selector: "#form-heading"
+        - selector: "#form-button-1802421075"
     - fill_in:
-        - name: txtFirstName
-          selector: "#form_name"
+        - name: FIRST
+          selector: "input[name='FIRST']"
           value: $NAME_FIRST
           required: true
-        - name: txtLastName
-          selector: "#form_lastname"
+        - name: LAST
+          selector: "input[name='LAST']"
           value: $NAME_LAST
           required: true
-        - name: txtAddress
-          selector: "#form_address"
+        - name: ADDR1
+          selector: "input[name='ADDR1']"
           value: $ADDRESS_STREET
           required: true
-        - name: txtCity
-          selector: "#form_city"
+        - name: CITY
+          selector: "input[name='CITY']"
           value: $ADDRESS_CITY
           required: true
-        - name: txtZip
-          selector: "#form_zip"
+        - name: STATE
+          selector: "input[name='STATE']"
+          value: $ADDRESS_STATE_POSTAL_ABBREV
+          required: true
+        - name: ZIP
+          selector: "input[name='ZIP']"
           value: $ADDRESS_ZIP5
           required: true
-        - name: txtEmail
-          selector: "#form_email"
+        - name: EMAIL
+          selector: "input[name='EMAIL']"
           value: $EMAIL
           required: true
-        - name: jv_text
-          selector: "#comments"
+        - name: MSG
+          selector: "textarea[name='MSG']"
           value: $MESSAGE
           required: true
+          max_length: 500
+    - select:
+        - name: Topic
+          selector: "select[name='Topic']"
+          value: $TOPIC
+          required: true
           options:
-            max_length: 2000
-    - find:
-        - selector: "#stance-div"
-    - javascript:
-        - value: "const stanceDiv = document.querySelector('#stance-div'); stanceDiv.setAttribute('aria-hidden', 'false'); document.querySelector('#stance-div').style.display='block';"
-    - javascript:
-        - value: "$('input[name=stanceRadioButtonList][value=Y]').prop('checked', true);"
-    - wait: 
-        - value: 1
-    - javascript:
-        - value: "document.ContactForm.submit();"
+            General Views: VIEWS
     - wait:
-        - value: 3 
+        - value: 5 
+    - javascript:
+        - value: document.querySelector("#g-recaptcha-response-100000").style.display = "block";
+    - javascript:
+        - value: document.querySelector("#g-recaptcha-response").style.display = "block";
+    - javascript:
+        - value: $("#g-recaptcha-response-100000").detach().appendTo("#message-to-the-mayor");
+    - recaptcha:
+        - value: true
+    - click_on:
+        - selector: ".form-button-1802421075"
   success:
     headers:
       status: 200
