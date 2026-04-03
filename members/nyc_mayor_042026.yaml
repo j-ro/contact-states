@@ -1,9 +1,9 @@
 bioguide: nyc_mayor_042026  #TODO: use naming convention to rename each new file
 contact_form:
   method: POST
-  action: "https://lcmspubcontact.lc.ca.gov/PublicLCMS/ContactPopup.php?district=AD42"
+  action: "https://apps.nyc.gov/nyc-mailform/validation"
   steps:
-    - visit: "https://lcmspubcontact.lc.ca.gov/PublicLCMS/ContactPopup.php?district=AD42"
+    - visit: "https://www.nyc.gov/mayors-office/contact-the-mayor"
     - find:
         - selector: "#form-button-1802421075"
     - fill_in:
