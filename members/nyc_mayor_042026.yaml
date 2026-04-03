@@ -50,7 +50,7 @@ contact_form:
     - javascript:
         - value: document.querySelector("#g-recaptcha-response").style.display = "block";
     - javascript:
-        - value: $("#g-recaptcha-response-100000").detach().appendTo("#message-to-the-mayor");
+        - value: $("#g-recaptcha-response-100000").detach().appendTo("#contact-the-mayor");
     - recaptcha:
         - value: true
     - click_on:
