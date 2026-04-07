@@ -54,7 +54,7 @@ contact_form:
     - javascript:
         - value: "var field = document.querySelector('textarea[name=\"g-recaptcha-response\"]'); field.style.display = 'block'; field.style.visibility = 'visible'; field.removeAttribute('disabled'); document.querySelector('#form-contact-the-mayor').appendChild(temp1); field.value = '$RECAPTCHA_TOKEN'"
     - javascript:
-        - value: :"var field = document.querySelector('textarea[name=\"g-recaptcha-response\"]'); field.dispatchEvent(new Event('change', { bubbles: true })); field.dispatchEvent(new Event('input', { bubbles: true }))"
+        - value: "var field = document.querySelector('textarea[name=\"g-recaptcha-response\"]'); field.dispatchEvent(new Event('change', { bubbles: true })); field.dispatchEvent(new Event('input', { bubbles: true }))"
     - recaptcha:
         - value: true
     - click_on:
