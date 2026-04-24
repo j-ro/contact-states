@@ -18,8 +18,10 @@ contact_form:
             max_length: 5000
     - javascript:
         - value: "#document.querySelector('#previewBtn').disabled = false;"
+    - find:
+        - selector: "input[value='Preview']"
     - click_on:
-        - selector: "#previewBtn"
+        - selector: "input[value='Preview']"
     - wait:
         - value: 5
     - find:
