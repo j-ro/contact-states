@@ -1,9 +1,9 @@
-bioguide: blm_american_prairie_reserve_20210708
+bioguide: blm_042426
 contact_form:
   method: POST
   action: ""
   steps:
-    - visit: "https://eplanning.blm.gov/eplanning-ui/project/103543/595/8002333/comment"
+    - visit: "https://eplanning.blm.gov/Participate-Now/?id=27cdc866-d02d-f111-8341-001dd804183b&ppid=43C2E68C-E410-F111-8406-001DD8029ED0"
     - wait:
         - value: 5
     - find:
