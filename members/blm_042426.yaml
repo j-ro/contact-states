@@ -22,6 +22,8 @@ contact_form:
         - selector: "input[value='Preview']"
     - click_on:
         - selector: "input[value='Preview']"
+    - javascript:
+        - value: "moveToPreview()"
     - wait:
         - value: 5
     - find:
