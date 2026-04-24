@@ -23,7 +23,7 @@ contact_form:
     - click_on:
         - selector: "input[value='Preview']"
     - javascript:
-        - value: "moveToPreview()"
+        - value: "document.querySelector('#previewContainer').hidden = false;"
     - wait:
         - value: 5
     - find:
