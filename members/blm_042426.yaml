@@ -16,20 +16,14 @@ contact_form:
           required: true
           options:
             max_length: 5000
-        - selector: "#firstName_0"
-          value: $NAME_FIRST
-          required: true
-        - selector: "#lastName_0"
-          value: $NAME_LAST
-          required: false
+    - javascript:
+        - value: "#document.querySelector('#previewBtn').disabled = false;"
     - click_on:
         - selector: "#previewBtn"
     - wait:
         - value: 5
     - find:
         - selector: "#previewContainer"
-    - javascript:
-        - value: "#document.querySelector('#previewBtn').disabled = false;"
     - javascript:
         - value: "Array.prototype.forEach.call(document.querySelectorAll('style,[rel=\"stylesheet\"],[type=\"text/css\"]'), function(element) {try{ element.parentNode.removeChild(element) } catch(err){} });"
     - click_on:
