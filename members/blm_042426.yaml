@@ -1,0 +1,39 @@
+bioguide: blm_american_prairie_reserve_20210708
+contact_form:
+  method: POST
+  action: ""
+  steps:
+    - visit: "https://eplanning.blm.gov/eplanning-ui/project/103543/595/8002333/comment"
+    - wait:
+        - value: 5
+    - find:
+        - selector: "#commentText"
+    - javascript:
+        - value: "Array.prototype.forEach.call(document.querySelectorAll('style,[rel=\"stylesheet\"],[type=\"text/css\"]'), function(element) {try{ element.parentNode.removeChild(element) } catch(err){} });"
+    - fill_in:
+        - selector: "#commentText"
+          value: $MESSAGE
+          required: true
+          options:
+            max_length: 5000
+        - selector: "#firstName_0"
+          value: $NAME_FIRST
+          required: true
+        - selector: "#lastName_0"
+          value: $NAME_LAST
+          required: false
+    - click_on:
+        - selector: "#previewBtn"
+    - wait:
+        - value: 5
+    - click_on:
+        - selector: "#WithholdInfo"
+    - javascript:
+        - value: "Array.prototype.forEach.call(document.querySelectorAll('style,[rel=\"stylesheet\"],[type=\"text/css\"]'), function(element) {try{ element.parentNode.removeChild(element) } catch(err){} });"
+    - click_on:
+        - selector: "#submitBtn"
+  success:
+    headers:
+      status: 200
+    body:
+      contains: Your new comment has been successfully submitted!
