@@ -1,4 +1,4 @@
-bioguide: blm_042426
+bioguide: blm_042426 
 contact_form:
   method: POST
   action: ""
@@ -31,11 +31,11 @@ contact_form:
     - javascript:
         - value: "Array.prototype.forEach.call(document.querySelectorAll('style,[rel=\"stylesheet\"],[type=\"text/css\"]'), function(element) {try{ element.parentNode.removeChild(element) } catch(err){} });"
     - javascript:
-        - value: "document.querySelector('#receiptContainer').hidden = false
+        - value: "document.querySelector('#receiptContainer').hidden = false"
     - click_on:
         - selector: "#submitBtn"
     - javascript:
-        - value: "document.querySelector('#receiptContainer').hidden = false
+        - value: "document.querySelector('#receiptContainer').hidden = false"
     - wait:
         - value: 5
   success:
