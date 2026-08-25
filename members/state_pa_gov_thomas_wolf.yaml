@@ -43,129 +43,129 @@ contact_form:
           value: $ADDRESS_STATE_FULL
           required: true
           options:
-            Alabama: Alabama
-            Alaska: Alaska
-            Arizona: Arizona
-            Arkansas: Arkansas
-            California: California
-            Colorado: Colorado
-            Connecticut: Connecticut
-            Delaware: Delaware
-            Florida: Florida
-            Georgia: Georgia
-            Hawaii: Hawaii
-            Idaho: Idaho
-            Illinois: Illinois
-            Indiana: Indiana
-            Iowa: Iowa
-            Kansas: Kansas
-            Kentucky: Kentucky
-            Louisiana: Louisiana
-            Maine: Maine
-            Maryland: Maryland
-            Massachusetts: Massachusetts
-            Michigan: Michigan
-            Minnesota: Minnesota
-            Mississippi: Mississippi
-            Missouri: Missouri
-            Montana: Montana
-            Nebraska: Nebraska
-            Nevada: Nevada
-            New Hampshire: New Hampshire
-            New Jersey: New Jersey
-            New Mexico: New Mexico
-            New York: New York
-            North Carolina: North Carolina
-            North Dakota: North Dakota
-            Ohio: Ohio
-            Oklahoma: Oklahoma
-            Oregon: Oregon
-            Pennsylvania: Pennsylvania
-            Rhode Island: Rhode Island
-            South Carolina: South Carolina
-            South Dakota: South Dakota
-            Tennessee: Tennessee
-            Texas: Texas
-            Utah: Utah
-            Vermont: Vermont
-            Virginia: Virginia
-            Washington: Washington
-            West Virginia: West Virginia
-            Wisconsin: Wisconsin
-            Wyoming: Wyoming
+            Alabama: alabama
+            Alaska: alaska
+            Arizona: arizona
+            Arkansas: arkansas
+            California: california
+            Colorado: colorado
+            Connecticut: connecticut
+            Delaware: delaware
+            Florida: florida
+            Georgia: georgia
+            Hawaii: hawaii
+            Idaho: idaho
+            Illinois: illinois
+            Indiana: indiana
+            Iowa: iowa
+            Kansas: kansas
+            Kentucky: kentucky
+            Louisiana: louisiana
+            Maine: maine
+            Maryland: maryland
+            Massachusetts: massachusetts
+            Michigan: michigan
+            Minnesota: minnesota
+            Mississippi: mississippi
+            Missouri: missouri
+            Montana: montana
+            Nebraska: nebraska
+            Nevada: nevada
+            New Hampshire: new hampshire
+            New Jersey: new jersey
+            New Mexico: new mexico
+            New York: new york
+            North Carolina: north carolina
+            North Dakota: north dakota
+            Ohio: ohio
+            Oklahoma: oklahoma
+            Oregon: oregon
+            Pennsylvania: pennsylvania
+            Rhode Island: rhode island
+            South Carolina: south carolina
+            South Dakota: south dakota
+            Tennessee: tennessee
+            Texas: texas
+            Utah: utah
+            Vermont: vermont
+            Virginia: virginia
+            Washington: washington
+            West Virginia: west virginia
+            Wisconsin: wisconsin
+            Wyoming: wyoming
         - name: county
           selector: "#dropdown-3c44d1c7f4-widget"
           value: $ADDRESS_COUNTY
           required: true
           options:
-            Out of State: Out of State
-            Adams: Adams
-            Allegheny: Allegheny
-            Armstrong: Armstrong
-            Beaver: Beaver
-            Bedford: Bedford
-            Berks: Berks
-            Blair: Blair
-            Bradford: Bradford
-            Bucks: Bucks
-            Butler: Butler
-            Cambria: Cambria
-            Cameron: Cameron
-            Carbon: Carbon
-            Centre: Centre
-            Chester: Chester
-            Clarion: Clarion
-            Clearfield: Clearfield
-            Clinton: Clinton
-            Columbia: Columbia
-            Crawford: Crawford
-            Cumberland: Cumberland
-            Dauphin: Dauphin
-            Delaware: Delaware
-            Elk: Elk
-            Erie: Erie
-            Fayette: Fayette
-            Forest: Forest
-            Franklin: Franklin
-            Fulton: Fulton
-            Greene: Greene
-            Huntingdon: Huntingdon
-            Indiana: Indiana
-            Jefferson: Jefferson
-            Juniata: Juniata
-            Lackawanna: Lackawanna
-            Lancaster: Lancaster
-            Lawrence: Lawrence
-            Lebanon: Lebanon
-            Lehigh: Lehigh
-            Luzerne: Luzerne
-            Lycoming: Lycoming
-            McKean: McKean
-            Mercer: Mercer
-            Mifflin: Mifflin
-            Monroe: Monroe
-            Montgomery: Montgomery
-            Montour: Montour
-            Northampton: Northampton
-            Northumberland: Northumberland
-            Perry: Perry
-            Philadelphia: Philadelphia
-            Pike: Pike
-            Potter: Potter
-            Schuylkill: Schuylkill
-            Snyder: Snyder
-            Somerset: Somerset
-            Sullivan: Sullivan
-            Susquehanna: Susquehanna
-            Tioga: Tioga
-            Union: Union
-            Venango: Venango
-            Warren: Warren
-            Washington: Washington
-            Wayne: Wayne
-            Westmoreland: Westmoreland
-            Wyoming: Wyoming
-            York: York
+            Out of State: out of state
+            Adams: adams
+            Allegheny: allegheny
+            Armstrong: armstrong
+            Beaver: beaver
+            Bedford: bedford
+            Berks: berks
+            Blair: blair
+            Bradford: bradford
+            Bucks: bucks
+            Butler: butler
+            Cambria: cambria
+            Cameron: cameron
+            Carbon: carbon
+            Centre: centre
+            Chester: chester
+            Clarion: clarion
+            Clearfield: clearfield
+            Clinton: clinton
+            Columbia: columbia
+            Crawford: crawford
+            Cumberland: cumberland
+            Dauphin: dauphin
+            Delaware: delaware
+            Elk: elk
+            Erie: erie
+            Fayette: fayette
+            Forest: forest
+            Franklin: franklin
+            Fulton: fulton
+            Greene: greene
+            Huntingdon: huntingdon
+            Indiana: indiana
+            Jefferson: jefferson
+            Juniata: juniata
+            Lackawanna: lackawanna
+            Lancaster: lancaster
+            Lawrence: lawrence
+            Lebanon: lebanon
+            Lehigh: lehigh
+            Luzerne: luzerne
+            Lycoming: lycoming
+            McKean: mckean
+            Mercer: mercer
+            Mifflin: mifflin
+            Monroe: monroe
+            Montgomery: montgomery
+            Montour: montour
+            Northampton: northampton
+            Northumberland: northumberland
+            Perry: perry
+            Philadelphia: philadelphia
+            Pike: pike
+            Potter: potter
+            Schuylkill: schuylkill
+            Snyder: snyder
+            Somerset: somerset
+            Sullivan: sullivan
+            Susquehanna: susquehanna
+            Tioga: tioga
+            Union: union
+            Venango: venango
+            Warren: warren
+            Washington: washington
+            Wayne: wayne
+            Westmoreland: westmoreland
+            Wyoming: wyoming
+            York: york
         - name: messageTopic
           selector: "#dropdown-01c149a9dc-widget"
           value: $TOPIC
