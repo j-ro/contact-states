@@ -3,52 +3,71 @@ contact_form:
   method: post
   action: /contact-governor-cooper
   steps:
-    - visit: "http://governor.nc.gov/contact-governor-cooper"
+    - visit: "https://oce-connect.governor.nc.gov/iqextranet/EForm.aspx?__cid=FSL_NCGOV&__fid=100004"
     - fill_in:
-        - name: "submitted[first_name]"
-          selector: "#edit-submitted-first-name"
+        - name: qi_1_prefix
+          selector: "#qi_1_prefix"
+          value: $NAME_PREFIX
+        - name: qi_1_first_name
+          selector: "#qi_1_first_name"
           value: $NAME_FIRST
           required: true
-        - name: "submitted[last_name]"
-          selector: "#edit-submitted-last-name"
+        - name: qi_1_last_name
+          selector: "#qi_1_last_name"
           value: $NAME_LAST
           required: true
-        - name: "submitted[email]"
-          selector: "#edit-submitted-email"
+        - name: qi_1_addr_1
+          selector: "#qi_1_addr_1"
+          value: $ADDRESS_STREET
+          required: true
+        - name: qi_1_city
+          selector: "#qi_1_city"
+          value: $ADDRESS_CITY
+          required: true
+        - name: qi_1_zip
+          selector: "#qi_1_zip"
+          value: $ADDRESS_ZIP5
+          required: true
+        - name: qi_1_cphone
+          selector: "#qi_1_cphone"
+          value: $PHONE
+          required: true
+        - name: qi_1_email
+          selector: "#qi_1_email"
           value: $EMAIL
           required: true
-        - name: "submitted[message]"
-          selector: "#edit-submitted-message"
+        - name: qi_3
+          selector: "#qi_3"
           value: $MESSAGE
           required: true
     - select:
-        - name: "submitted[issue]"
-          selector: "#edit-submitted-issue-1"
+        - name: qi_1_state
+          selector: "#qi_1_state"
+          value: "38_NC"
+          required: true
+          options:
+             North Carolina: 38_NC
+        - name: qi_2
+          selector: "#qi_2"
           value: $TOPIC
           required: true
           options:
-             Disaster Recovery: "1"
-             Education: "2"
-             Environment: "3"
-             Healthcare: "4"
-             Infrastructure: "5"
-             Economy: "6"
-             Military/Veterans: "7"
-             Public Safety: "8"
-             Transportation/Eminent Domain: "9"
-             Workforce Development: "10"
-             Other: "11"
-        - name: ISSUE
-          selector: "#edit-submitted-stateSelectBoxItOptions"
-          value: $ADDRESS_STATE_POSTAL_ABBREV
-          required: true
-          options:
-             North Carolina: NC       
+             Disaster Recovery: 0_DISASTER RECOVERY
+             Education: 1_EDUCATION
+             Environment: 2_ENVIRONMENT
+             HealthCare: 3_HEALTHCARE
+             Infrastructure: 4_INFRASTRUCTURE
+             Jobs/Economy: 5_JOBS/ECONOMY
+             Military Veterans: 6_MILITARY/VETERANS
+             Public Safety: 7_PUBLIC SAFETY
+             Transportation/Eminent Domain: 8_TRANSPORTATION/ED
+             Workforce Development: 9_WORKFORCE DEV
+             Other: 10_OTHER ISSUE
     - recaptcha:
         - value: true
     - click_on:
         - value: Submit
-          selector: ".webform-submit"
+          selector: "#btn_submit"
   success:
     headers:
       status: 200
