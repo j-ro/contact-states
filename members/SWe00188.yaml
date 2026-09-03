@@ -1,51 +1,331 @@
 bioguide: SWe00188
 contact_form:
   method: POST
-  action: comments.asp
+  action: /support/GOV_Opinion
   steps:
-    - visit: "http://www4.egov.nh.gov/nhgovernor/comments.asp"
+    - visit: "https://new-hampshire.my.salesforce-sites.com/support/GOV_Opinion"
     - fill_in:
-        - name: firstname
-          selector: "#firstname"
+        - name: firstName
+          selector: "[id='j_id0:j_id2:j_id10:firstName']"
           value: $NAME_FIRST
           required: true
-        - name: lastname
-          selector: "#lastname"
+        - name: contactLastName
+          selector: "[id='j_id0:j_id2:j_id10:contactLastName']"
           value: $NAME_LAST
           required: true
-        - name: address
-          selector: "#address"
+        - name: organizerStreetAddress
+          selector: "[id='j_id0:j_id2:j_id10:organizerStreetAddress']"
           value: $ADDRESS_STREET
           required: true
-        - name: city
-          selector: "#city"
-          value: $ADDRESS_CITY
-          required: true
-        - name: zip
-          selector: "#zip"
+          options:
+            max_length: 255
+        - name: postalCode
+          selector: "[id='j_id0:j_id2:j_id10:postalCode']"
           value: $ADDRESS_ZIP5
           required: true
-        - name: phone
-          selector: "#phone"
+        - name: organizerPhone
+          selector: "[id='j_id0:j_id2:j_id10:organizerPhone']"
           value: $PHONE
           required: true
-        - name: email
-          selector: "#email"
+        - name: organizerEmail
+          selector: "[id='j_id0:j_id2:j_id10:organizerEmail']"
           value: $EMAIL
           required: true
-        - name: comments
-          selector: "#comments"
+        - name: comment
+          selector: "[id='j_id0:j_id2:j_id10:comment']"
           value: $MESSAGE
           required: true
           options:
-            max_length: 800
-    - javascript:
-        - value: document.querySelector("#comments").value = document.querySelector("#comments").value.replace(/\^|\{|\}|\[|\]|\\|\~|\`|\||\u2018|\u2019/g, '');
+            max_length: 32768
+    - select:
+        - name: city
+          selector: "[id='j_id0:j_id2:j_id10:city']"
+          value: $ADDRESS_CITY
+          required: true
+          options:
+            Acworth: Acworth
+            Albany: Albany
+            Alexandria: Alexandria
+            Allenstown: Allenstown
+            Alstead: Alstead
+            Alton: Alton
+            Amherst: Amherst
+            Andover: Andover
+            Antrim: Antrim
+            Ashland: Ashland
+            Atkinson: Atkinson
+            Atkinson and Gilmanton Academy Grant: Atkinson and Gilmanton Academy Grant
+            Auburn: Auburn
+            Barnstead: Barnstead
+            Barrington: Barrington
+            Bartlett: Bartlett
+            Bath: Bath
+            Beanâs Grant: Beanâs Grant
+            Beanâs Purchase: Beanâs Purchase
+            Bedford: Bedford
+            Belmont: Belmont
+            Bennington: Bennington
+            Benton: Benton
+            Berlin: Berlin
+            Bethlehem: Bethlehem
+            Boscawen: Boscawen
+            Bow: Bow
+            Bradford: Bradford
+            Brentwood: Brentwood
+            Bridgewater Bristol: Bridgewater Bristol
+            Brookfield: Brookfield
+            Brookline: Brookline
+            Cambridge: Cambridge
+            Campton: Campton
+            Canaan: Canaan
+            Candia: Candia
+            Canterbury: Canterbury
+            Carroll: Carroll
+            Center Harbor: Center Harbor
+            Chandlerâs Purchase: Chandlerâs Purchase
+            Charlestown: Charlestown
+            Chatham: Chatham
+            Chester: Chester
+            Chesterfield: Chesterfield
+            Chichester: Chichester
+            Claremont: Claremont
+            Clarksville: Clarksville
+            Colebrook: Colebrook
+            Columbia: Columbia
+            Concord: Concord
+            Conway: Conway
+            Cornish: Cornish
+            Crawfordâs Purchase: Crawfordâs Purchase
+            Croydon: Croydon
+            Cuttâs Grant: Cuttâs Grant
+            Dalton: Dalton
+            Danbury: Danbury
+            Danville: Danville
+            Deerfield: Deerfield
+            Deering: Deering
+            Derry: Derry
+            Dixâs Grant: Dixâs Grant
+            Dixville: Dixville
+            Dorchester: Dorchester
+            Dover: Dover
+            Dublin: Dublin
+            Dummer: Dummer
+            Dunbarton: Dunbarton
+            Durham: Durham
+            East Kingston: East Kingston
+            Easton: Easton
+            Eaton: Eaton
+            Effingham: Effingham
+            Ellsworth: Ellsworth
+            Enfield: Enfield
+            Epping: Epping
+            Epsom: Epsom
+            Errol: Errol
+            Ervingâs Location: Ervingâs Location
+            Exeter: Exeter
+            Farmington: Farmington
+            Fitzwilliam: Fitzwilliam
+            Francestown: Francestown
+            Franconia: Franconia
+            Franklin: Franklin
+            Freedom: Freedom
+            Fremont: Fremont
+            Gilford: Gilford
+            Gilmanton: Gilmanton
+            Gilsum: Gilsum
+            Goffstown: Goffstown
+            Gorham: Gorham
+            Goshen: Goshen
+            Grafton: Grafton
+            Grantham: Grantham
+            Greenâs Grant: Greenâs Grant
+            Greenfield: Greenfield
+            Greenland: Greenland
+            Greenville: Greenville
+            Groton: Groton
+            Hadleyâs Purchase: Hadleyâs Purchase
+            Haleâs Location: Haleâs Location
+            Hampstead: Hampstead
+            Hampton: Hampton
+            Hampton Falls: Hampton Falls
+            Hancock: Hancock
+            Hanover: Hanover
+            Harrisville: Harrisville
+            Hart's Location: Hart's Location
+            Haverhill: Haverhill
+            Hebron: Hebron
+            Henniker: Henniker
+            Hill: Hill
+            Hillsborough: Hillsborough
+            Hinsdale: Hinsdale
+            Holderness: Holderness
+            Hollis: Hollis
+            Hooksett: Hooksett
+            Hopkinton: Hopkinton
+            Hudson: Hudson
+            Jackson: Jackson
+            Jaffrey: Jaffrey
+            Jefferson: Jefferson
+            Keene: Keene
+            Kensington: Kensington
+            Kilkenny: Kilkenny
+            Kingston: Kingston
+            Laconia: Laconia
+            Lancaster: Lancaster
+            Landaff: Landaff
+            Langdon: Langdon
+            Lebanon: Lebanon
+            Lee: Lee
+            Lempster: Lempster
+            Lincoln: Lincoln
+            Lisbon: Lisbon
+            Litchfield: Litchfield
+            Littleton: Littleton
+            Livermore: Livermore
+            Londonderry: Londonderry
+            Loudon: Loudon
+            Low and Burbankâs Grant: Low and Burbankâs Grant
+            Lyman: Lyman
+            Lyme: Lyme
+            Lyndeborough: Lyndeborough
+            Madbury: Madbury
+            Madison: Madison
+            Manchester: Manchester
+            Marlborough: Marlborough
+            Marlow: Marlow
+            Martinâs Location: Martinâs Location
+            Mason: Mason
+            Meredith: Meredith
+            Merrimack: Merrimack
+            Middleton: Middleton
+            Milan: Milan
+            Milford: Milford
+            Millsfield: Millsfield
+            Milton: Milton
+            Monroe: Monroe
+            Mont Vernon: Mont Vernon
+            Moultonborough: Moultonborough
+            Nashua: Nashua
+            Nelson: Nelson
+            New Boston: New Boston
+            New Castle: New Castle
+            New Durham: New Durham
+            New Hampton: New Hampton
+            New Ipswich: New Ipswich
+            New London: New London
+            Newbury: Newbury
+            Newfields: Newfields
+            Newington: Newington
+            Newmarket: Newmarket
+            Newport: Newport
+            Newton: Newton
+            North Hampton: North Hampton
+            Northfield: Northfield
+            Northumberland: Northumberland
+            Northwood: Northwood
+            Nottingham: Nottingham
+            Odell: Odell
+            Orange: Orange
+            Orford: Orford
+            Ossipee: Ossipee
+            Pelham: Pelham
+            Pembroke: Pembroke
+            Peterborough: Peterborough
+            Piermont: Piermont
+            Pinkhamâs Grant: Pinkhamâs Grant
+            Pittsburg: Pittsburg
+            Pittsfield: Pittsfield
+            Plainfield: Plainfield
+            Plaistow: Plaistow
+            Plymouth: Plymouth
+            Portsmouth: Portsmouth
+            Randolph: Randolph
+            Raymond: Raymond
+            Richmond: Richmond
+            Rindge: Rindge
+            Rochester: Rochester
+            Rollinsford: Rollinsford
+            Roxbury: Roxbury
+            Rumney: Rumney
+            Rye: Rye
+            Salem: Salem
+            Salisbury: Salisbury
+            Sanbornton: Sanbornton
+            Sandown: Sandown
+            Sandwich: Sandwich
+            Sargentâs Purchase: Sargentâs Purchase
+            Seabrook: Seabrook
+            Second College Grant: Second College Grant
+            Sharon: Sharon
+            Shelburne: Shelburne
+            Somersworth: Somersworth
+            South Hampton: South Hampton
+            Springfield: Springfield
+            Stark: Stark
+            Stewartstown: Stewartstown
+            Stoddard: Stoddard
+            Strafford: Strafford
+            Stratford: Stratford
+            Stratham: Stratham
+            Success: Success
+            Sugar Hill: Sugar Hill
+            Sullivan: Sullivan
+            Sunapee: Sunapee
+            Surry: Surry
+            Sutton: Sutton
+            Swanzey: Swanzey
+            Tamworth: Tamworth
+            Temple: Temple
+            Thompson and Meserveâs Purchase: Thompson and Meserveâs Purchase
+            Thornton: Thornton
+            Tilton: Tilton
+            Troy: Troy
+            Tuftonboro: Tuftonboro
+            Unity: Unity
+            Wakefield: Wakefield
+            Walpole: Walpole
+            Warner: Warner
+            Warren: Warren
+            Washington: Washington
+            Waterville Valley: Waterville Valley
+            Weare: Weare
+            Webster: Webster
+            Wentworth: Wentworth
+            Wentworthâs Location: Wentworthâs Location
+            Westmoreland: Westmoreland
+            Whitefield: Whitefield
+            Wilmot: Wilmot
+            Wilton: Wilton
+            Winchester: Winchester
+            Windham: Windham
+            Windsor: Windsor
+            Wolfeboro: Wolfeboro
+            Woodstock: Woodstock
+        - name: County
+          selector: "[id='j_id0:j_id2:j_id10:County']"
+          value: $ADDRESS_COUNTY
+          required: true
+          options:
+            Belknap: Belknap
+            Carroll: Carroll
+            Cheshire: Cheshire
+            Coos: Coos
+            Grafton: Grafton
+            Hillsborough: Hillsborough
+            Merrimack: Merrimack
+            Rockingham: Rockingham
+            Strafford: Strafford
+            Sullivan: Sullivan
+        - name: correspondenceReq
+          selector: "[id='j_id0:j_id2:j_id10:correspondenceReq']"
+          value: "No"
+          required: true
+          options:
+            Yes: Yes
+            No: No
     - click_on:
-        - value: Send Comments
-          selector: "#Submit1"
+        - value: Submit Request
+          selector: "[name='j_id0:j_id2:j_id10:j_id73']"
   success:
     headers:
       status: 200
-    body:
-      contains: The Governor has received your email.
