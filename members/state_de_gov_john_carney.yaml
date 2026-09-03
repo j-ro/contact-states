@@ -3,7 +3,7 @@ contact_form:
   method: post
   action: "/wp-content/forms/govContact.php"
   steps:
-    - visit: "https://governor.delaware.gov/email-the-governor/"
+    - visit: "https://governor.delaware.gov/contact/submit-a-comment-or-request-help/"
     - wait:
         - value: 1
     - fill_in:
@@ -23,8 +23,8 @@ contact_form:
           selector: "#subject"
           value: $SUBJECT
           required: true
-        - name: description
-          selector: "#description"
+        - name: message
+          selector: "#message"
           value: $MESSAGE
           required: true
     - javascript:
