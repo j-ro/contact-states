@@ -8,6 +8,8 @@ contact_form:
         - value: Array.prototype.forEach.call(document.querySelectorAll('style,[rel=\"stylesheet\"],[type=\"text/css\"]'), function(element){ try{ element.parentNode.removeChild(element) } catch(err){} });
     - find:
         - selector: "#topic"
+          options:
+            wait: 20
     - click_on:
         - selector: "#topic"
     - fill_in:
@@ -17,16 +19,22 @@ contact_form:
           required: true
     - find:
         - selector: "[id*='-option-']"
+          options:
+            wait: 20
     - click_on:
         - selector: "[id*='-option-']"
     - click_on:
         - selector: input[name='Leave a Comment']
     - find:
         - selector: "button:not([disabled])"
+          options:
+            wait: 20
     - click_on:
         - selector: "button:not([disabled])"
     - find:
         - selector: "#message"
+          options:
+            wait: 20
     - fill_in:
         - name: message
           selector: "#message"
@@ -34,10 +42,14 @@ contact_form:
           required: true
     - find:
         - selector: "button:not([disabled])"
+          options:
+            wait: 20
     - click_on:
         - selector: "button:not([disabled])"
     - find:
         - selector: "#firstName"
+          options:
+            wait: 20
     - fill_in:
         - name: firstName
           selector: "#firstName"
