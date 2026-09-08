@@ -27,8 +27,14 @@ contact_form:
           selector: "#message"
           value: $MESSAGE
           required: true
+    - find:
+        - selector: "#govContactForm .g-recaptcha iframe[title='reCAPTCHA']"
+          options:
+            wait: 15
     - javascript:
-        - value: document.querySelector("#g-recaptcha-response").style.display = "block";
+        - value: "document.querySelectorAll('[id^=\"g-recaptcha-response\"], [name=\"g-recaptcha-response\"]').forEach(function(el){ if (!el.closest('#govContactForm')) el.parentNode.removeChild(el); });"
+    - javascript:
+        - value: 'document.querySelector("#govContactForm #g-recaptcha-response").style.display = "block";'
     - recaptcha:
         - value: true
     - wait:
