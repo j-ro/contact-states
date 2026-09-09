@@ -211,6 +211,10 @@ contact_form:
             Unemployment: Unemployment
             Voting: Voting
             "Women's issues": "Women's issues"
+    - javascript:
+        - value: document.querySelector('.recaptcha').insertAdjacentHTML('beforeend', "<textarea name='g-recaptcha-response' id='g-recaptcha-response'></textarea>");
+    - javascript:
+        - value: document.querySelector("#g-recaptcha-response").style.display = "block";
     - recaptcha:
         - value: true
     - click_on:
