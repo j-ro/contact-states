@@ -30,9 +30,9 @@ contact_form:
     - wait:
         - value: 5
     - javascript:
-        - value: "document.querySelectorAll('[id^=\"g-recaptcha-response\"], [name=\"g-recaptcha-response\"]').forEach(function(el){ if (!el.closest('#govContactForm')) el.parentNode.removeChild(el); });"
+        - value: "(function(){ var dups = document.querySelectorAll('[id=\"g-recaptcha-response\"], [name=\"g-recaptcha-response\"]'); for (var i = 0; i < dups.length; i++) { if (!dups[i].form || dups[i].form.id !== 'govContactForm') { dups[i].parentNode.removeChild(dups[i]); } } })()"
     - javascript:
-        - value: "var el = document.querySelector('#govContactForm #g-recaptcha-response'); if (el) { el.style.display = 'block'; }"
+        - value: "(function(){ var el = document.querySelector('#govContactForm #g-recaptcha-response'); if (!el) { el = document.createElement('textarea'); el.id = 'g-recaptcha-response'; el.name = 'g-recaptcha-response'; document.querySelector('#govContactForm').appendChild(el); } el.style.cssText = 'display: block; width: 250px; height: 40px;'; })()"
     - recaptcha:
         - value: true
     - wait:
