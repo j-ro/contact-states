@@ -23,6 +23,7 @@ contact_form:
           selector: "#form_city"
           value: $ADDRESS_CITY
           required: true
+        - name: txtZip
           selector: "#form_zip"
           value: $ADDRESS_ZIP5
           required: true
