@@ -1,56 +1,39 @@
-bioguide: obed-first-test #TODO: use naming convention to rename each new file
+bioguide: sc_des_pnd #TODO: use naming convention to rename each new file
 contact_form:
   method: POST
-  action: "https://lcmspubcontact.lc.ca.gov/PublicLCMS/ContactPopup.php?district=AD42"
+  action: "https://epermitting.des.sc.gov/ext/ncore/external/publicnotice/info/-5546329374364218921/comments"
   steps:
-    - visit: "https://lcmspubcontact.lc.ca.gov/PublicLCMS/ContactPopup.php?district=AD42"
+    - visit: "https://epermitting.des.sc.gov/ext/ncore/external/publicnotice/info/-5546329374364218921/comments"
     - find:
         - selector: "#form-heading"
     - fill_in:
-        - name: txtFirstName
-          selector: "#form_name"
-          value: $NAME_FIRST
+        - name: Name
+          selector: "#id='wndField654374658702666'"
+          value: $NAME_FULL
           required: true
-        - name: txtLastName
-          selector: "#form_lastname"
-          value: $NAME_LAST
-          required: true
-        - name: txtAddress
-          selector: "#form_address"
-          value: $ADDRESS_STREET
-          required: true
-        - name: txtCity
-          selector: "#form_city"
-          value: $ADDRESS_CITY
-          required: true
-        - name: txtZip
-          selector: "#form_zip"
-          value: $ADDRESS_ZIP5
-          required: true
-        - name: txtEmail
-          selector: "#form_email"
+        - name: Email
+          selector: "#id='wndField230165559133243'"
           value: $EMAIL
           required: true
-        - name: jv_text
-          selector: "#comments"
+        - name: comments
+          selector: "#id='wndField246145388079941'"
           value: $MESSAGE
           required: true
           options:
-            max_length: 2000
-    - find:
-        - selector: "#stance-div"
-    - javascript:
-        - value: "const stanceDiv = document.querySelector('#stance-div'); stanceDiv.setAttribute('aria-hidden', 'false'); document.querySelector('#stance-div').style.display='block';"
-    - javascript:
-        - value: "$('input[name=stanceRadioButtonList][value=Y]').prop('checked', true);"
-    - wait: 
-        - value: 1
-    - javascript:
-        - value: "document.ContactForm.submit();"
+            max_length: 4000
+    - select:
+        - name: notificationPreferenceId
+          selector: "#Select...: E-Mail"
+          value: 'Email'
+          required: true
+    - click_on:
+        - selector: "#save()"
+    - recaptcha:
+        - value: true
     - wait:
         - value: 3 
   success:
     headers:
       status: 200
     body:
-      contains: "Your message has been received. Thank you for contacting my office."
+      contains: "Thank you, your comments have been received."
